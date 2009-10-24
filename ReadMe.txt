@@ -1,17 +1,10 @@
 ---------------------------
 Info
 ---------------------------
-Skin Name: Empty
-Resolution: All
-Purpose: A Very Basic Skin
+Skin Name: Lithium
+Resolution: 720p
 
 ---------------------------
-Notes/Comments
+Project goal
 ---------------------------
-All screens and dialogs are labeled in red to help with identification.
-
-.xml files were edited in Microsoft Visual C++ Express Editiion.
-
-Enjoy -Wir3d
-
-This is my Development Branch.
+To create a slick and coherent media center interface that can be comfortably viewed on high definition TV's from across the room.
