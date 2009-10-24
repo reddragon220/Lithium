@@ -1,0 +1,390 @@
+<window id="56">
+<defaultcontrol>50</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+  
+<controls>
+  	<include>background</include>
+  
+	<control type="group">
+		<posx>36</posx>
+		<posy>82</posy>
+		<control type="image">
+			<width>1210</width>
+			<height>556</height>
+			<texture>Zen/panes/settings/settings_bg.png</texture>
+			<aspectratio>stretch</aspectratio> 
+		</control>
+			
+
+		<control type="list" id="50">
+			<description>Settings Wraplist</description>
+			<posx>0</posx>
+			<posy>30</posy>
+			<width>244</width>
+			<height>556</height>
+			<aligny>center</aligny>
+			<orientation>vertical</orientation>
+			<visible>-</visible>
+
+			<onup>100</onup>                       <!-- To move between controls insert control id -->	
+			<onleft>100</onleft>			
+			<onright>200</onright>
+
+			<scrolltime>200</scrolltime>
+			
+			<!-- Unselected Items -->
+			<itemlayout height="50" width="327">
+				<control type="label">
+					<posx>14</posx>
+					<posy>10</posy>
+					<width>237</width>  			<!-- can't have height defined in the block -->
+					<info>ListItem.Label</info> 
+					<font>Large</font>
+				    <shadowcolor>5f000000</shadowcolor>								
+					<textcolor>7fffffff</textcolor> <!-- First two are alpha transparency-->
+													<!-- last 6 are regular  rrggbb      -->
+					<scroll>false</scroll>          
+					<align>left</align>
+				</control>
+				<control type="image">
+					<posx>11</posx>
+					<posy>52</posy>
+					<height>2</height>
+					<width>223</width>
+					<texture>Zen/elements/settings/small_divider.png</texture>
+				</control>
+			</itemlayout>
+
+			<!-- Selected Item -->
+			<focusedlayout height="50" width="237">
+				<control type="image">
+					<visible>!control.hasfocus(50)</visible>
+					<posx>4</posx>
+					<posy>2</posy>
+					<height>52</height>
+					<width>237</width>
+					<texture>Zen/elements/settings/small_highlight_unfocused.png</texture>
+				</control>
+				<control type="image">
+					<visible>control.hasfocus(50)</visible>
+					<posx>4</posx>
+					<posy>2</posy>
+					<height>52</height>
+					<width>237</width> 
+					<texture>Zen/elements/settings/small_highlight_focused.png</texture>
+				</control>	
+				<control type="label">
+					<posx>14</posx>
+					<posy>10</posy>
+					<width>237</width>
+					<info>ListItem.Label</info>
+					<font>Large</font>
+					<textcolor>ffe8e8db</textcolor>
+					<shadowcolor>7f000000</shadowcolor>								
+					<align>left</align>
+				</control>
+				<control type="image">
+					<posx>11</posx>
+					<posy>52</posy>
+					<height>2</height>
+					<width>223</width>
+					<texture>Zen/elements/settings/small_divider.png</texture>
+				</control>
+			</focusedlayout>
+
+			<!-- Menu Items -->
+			<content>
+				<item id="1">
+					<description>Background</description>
+					<label>$LOCALIZE[31055]</label>
+					<onclick>-</onclick>
+				</item>
+				<item id="2">
+					<description>Header</description>
+					<label>$LOCALIZE[31056]</label>
+					<onclick>-</onclick>
+				</item>
+				<item id="3">
+					<description>developer</description>
+					<label>Developer</label>
+					<onclick>-</onclick>
+				</item>
+			</content>
+		</control>
+
+		<control type="group" id="200">
+			<control type="grouplist" id="201">
+				<visible>Container(50).Hasfocus(1)</visible>
+			
+		    	<posx>279</posx>
+		    	<posy>28</posy>
+		    	<width>872</width>
+		    	<height>480</height>
+		    	<itemgap>2</itemgap>
+		    	<orientation>vertical</orientation>
+	
+			
+
+				<onup>100</onup>                       <!-- To move between controls insert control id -->				
+				<onleft>50</onleft>
+
+				<scrolltime>200</scrolltime>
+			
+				<itemlayout>
+					<control type="image">
+						<posx>7</posx>
+						<posy>82</posy>
+						<width>1118</width>
+						<height>2</height>
+						<texture>Zen/elements/list/divider.png</texture>
+						<aspectratio>stretch</aspectratio> 
+					</control>
+				</itemlayout>
+			
+			
+				<control type="button" id="2011">
+					<posx>12</posx>
+					<height>52</height>
+					<width>872</width>
+			    	<textcolor>7fffffff</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<disabledcolor>7f7c7c72</disabledcolor>
+					<shadowcolor>7f000000</shadowcolor>
+			    	<align>left</align>
+					<font>Large</font>
+					<textoffsetx>12</textoffsetx>
+				
+					<label>Change the Background</label>
+					<onclick>Skin.SetImage(backgroundimage)</onclick>
+				
+
+			    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
+			    	<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
+				</control>
+			
+				<control type="radiobutton" id="2012">
+					<posx>12</posx>
+					<height>52</height>
+					<width>872</width>
+			    	<textcolor>7fffffff</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<disabledcolor>7f7c7c72</disabledcolor>
+					<shadowcolor>7f000000</shadowcolor>
+			    	<align>left</align>
+					<font>Large</font>
+					<textoffsetx>12</textoffsetx>
+				
+					<label>Ken Burns Effect</label>
+					<selected>!Skin.HasSetting(ken_burns)</selected>
+					<onclick>Skin.ToggleSetting(ken_burns)</onclick>
+					<onclick>Setfocus(50)</onclick>
+					<onclick>XBMC.ReloadSkin()</onclick>
+				
+
+			    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
+					<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
+
+					<radiowidth>59</radiowidth>
+					<radioheight>39</radioheight>
+					<textureradiofocus>Zen/elements/settings/on_focused.png</textureradiofocus>
+					<textureradionofocus>Zen/elements/settings/off_focused.png</textureradionofocus>
+				</control>
+				
+				<control type="radiobutton" id="2013">
+					<posx>12</posx>
+					<height>52</height>
+					<width>872</width>
+			    	<textcolor>7fffffff</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<disabledcolor>7f7c7c72</disabledcolor>
+					<shadowcolor>7f000000</shadowcolor>
+			    	<align>left</align>
+					<font>Large</font>
+					<textoffsetx>12</textoffsetx>
+				
+					<label>Fanart</label>
+					<selected>!Skin.HasSetting(fanart)</selected>
+					<onclick>Skin.ToggleSetting(fanart)</onclick>				
+
+			    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
+					<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
+
+					<radiowidth>59</radiowidth>
+					<radioheight>39</radioheight>
+					<textureradiofocus>Zen/elements/settings/on_focused.png</textureradiofocus>
+					<textureradionofocus>Zen/elements/settings/off_focused.png</textureradionofocus>
+				</control>
+			</control>
+			<control type="grouplist" id="202">
+					<visible>Container(50).Hasfocus(2)</visible>
+			
+			    	<posx>279</posx>
+			    	<posy>28</posy>
+			    	<width>872</width>
+			    	<height>480</height>
+			    	<itemgap>2</itemgap>
+			    	<orientation>vertical</orientation>
+	
+			
+
+					<onup>100</onup>                       <!-- To move between controls insert control id -->				
+					<onleft>50</onleft>
+
+					<scrolltime>200</scrolltime>
+			
+					<itemlayout>
+						<control type="image">
+							<posx>7</posx>
+							<posy>82</posy>
+							<width>1118</width>
+							<height>2</height>
+							<texture>Zen/elements/list/divider.png</texture>
+							<aspectratio>stretch</aspectratio> 
+						</control>
+					</itemlayout>
+					
+					<control type="radiobutton" id="2021">
+						<posx>12</posx>
+						<height>52</height>
+						<width>872</width>
+				    	<textcolor>7fffffff</textcolor>
+						<focusedcolor>ffe8e8db</focusedcolor>
+						<disabledcolor>7f7c7c72</disabledcolor>
+						<shadowcolor>7f000000</shadowcolor>
+				    	<align>left</align>
+						<font>Large</font>
+						<textoffsetx>12</textoffsetx>
+				
+						<label>Auto hide the header</label>
+						<selected>Skin.HasSetting(slide)</selected>
+						<onclick>Skin.ToggleSetting(slide)</onclick>
+						<onclick>Setfocus(50)</onclick>
+						<onclick>XBMC.ReloadSkin()</onclick>				
+
+				    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
+						<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
+
+						<radiowidth>59</radiowidth>
+						<radioheight>39</radioheight>
+						<textureradiofocus>Zen/elements/settings/on_focused.png</textureradiofocus>
+						<textureradionofocus>Zen/elements/settings/off_focused.png</textureradionofocus>
+					</control>
+			</control>
+			<control type="grouplist" id="203">
+					<visible>Container(50).Hasfocus(3)</visible>
+			
+			    	<posx>279</posx>
+			    	<posy>28</posy>
+			    	<width>872</width>
+			    	<height>480</height>
+			    	<itemgap>2</itemgap>
+			    	<orientation>vertical</orientation>
+	
+			
+
+					<onup>100</onup>                       <!-- To move between controls insert control id -->				
+					<onleft>50</onleft>
+
+					<scrolltime>200</scrolltime>
+			
+					<itemlayout>
+						<control type="image">
+							<posx>7</posx>
+							<posy>82</posy>
+							<width>1118</width>
+							<height>2</height>
+							<texture>Zen/elements/list/divider.png</texture>
+							<aspectratio>stretch</aspectratio> 
+						</control>
+					</itemlayout>
+					
+					
+					<control type="radiobutton" id="2021">
+						<posx>12</posx>
+						<height>52</height>
+						<width>872</width>
+				    	<textcolor>7fffffff</textcolor>
+						<focusedcolor>ffe8e8db</focusedcolor>
+						<disabledcolor>7f7c7c72</disabledcolor>
+						<shadowcolor>7f000000</shadowcolor>
+				    	<align>left</align>
+						<font>Large</font>
+						<textoffsetx>12</textoffsetx>
+				
+						<label>Developer Mode</label>
+						<selected>Skin.HasSetting(developer)</selected>
+						<onclick>Skin.ToggleSetting(developer)</onclick>				
+
+				    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
+						<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
+
+						<radiowidth>59</radiowidth>
+						<radioheight>39</radioheight>
+						<textureradiofocus>Zen/elements/settings/on_focused.png</textureradiofocus>
+						<textureradionofocus>Zen/elements/settings/off_focused.png</textureradionofocus>
+					</control>
+					<control type="button" id="2022">
+						<posx>12</posx>
+						<height>52</height>
+						<width>872</width>
+				    	<textcolor>7fffffff</textcolor>
+						<focusedcolor>ffe8e8db</focusedcolor>
+						<disabledcolor>7f7c7c72</disabledcolor>
+						<shadowcolor>7f000000</shadowcolor>
+				    	<align>left</align>
+						<font>Large</font>
+						<textoffsetx>12</textoffsetx>
+
+						<label>Reload the Skin</label>
+						<onclick>Setfocus(50)</onclick>
+						<onclick>XBMC.ReloadSkin()</onclick>
+
+				    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
+				    	<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
+					</control>
+					<control type="button" id="2023">
+						<posx>12</posx>
+						<height>52</height>
+						<width>872</width>
+				    	<textcolor>7fffffff</textcolor>
+						<focusedcolor>ffe8e8db</focusedcolor>
+						<disabledcolor>7f7c7c72</disabledcolor>
+						<shadowcolor>7f000000</shadowcolor>
+				    	<align>left</align>
+						<font>Large</font>
+						<textoffsetx>12</textoffsetx>
+
+						<label>Reset All Settings</label>
+						<onclick>Skin.ResetSettings</onclick>
+
+				    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
+				    	<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
+					</control>
+
+			</control>
+
+		</control>
+				
+		<control type="image">
+			<width>1210</width>
+			<height>556</height>
+			<texture>Zen/panes/common/center_gradient.png</texture>
+			<aspectratio>stretch</aspectratio> 
+		</control>
+		<control type="image">
+			<width>1210</width>
+			<height>556</height>
+			<texture>Zen/panes/common/center_outline.png</texture>
+			<aspectratio>stretch</aspectratio> 
+		</control>
+	</control>
+	<control type="image">
+		<width>1280</width>
+		<height>720</height>
+		<texture>Zen/elements/common/corners.png</texture>
+		<aspectratio>stretch</aspectratio>
+	</control>	
+  
+</controls>
+  
+</window>

@@ -1,0 +1,183 @@
+<window id="12">
+<defaultcontrol>3</defaultcontrol>
+<allowoverlay>no</allowoverlay>
+
+<controls>
+	<include>background</include>
+  
+	<control type="group">
+		<posx>36</posx>
+		<posy>82</posy>
+		<control type="image">
+			<width>1210</width>
+			<height>556</height>
+			<texture>Zen/panes/settings/settings_bg.png</texture>
+			<aspectratio>stretch</aspectratio> 
+		</control>
+		
+		<control type="grouplist" id="3">			
+			<description>Button Area</description>
+	    	<posx>4</posx>
+			<posy>30</posy>
+			<width>237</width>
+			<height>556</height>
+			<aligny>center</aligny>
+			<orientation>vertical</orientation>
+			<visible>-</visible>
+			<itemgap>0</itemgap>
+			
+	    	<onleft>5</onleft>
+	    	<onright>5</onright>
+	    	<onup>3</onup>
+	    	<ondown>3</ondown>	
+	
+	    	<orientation>vertical</orientation>
+	
+			<itemlayout>
+				<control type="image">
+					<posx>7</posx>
+					<posy>82</posy>
+					<width>1118</width>
+					<height>2</height>
+					<texture>Zen/elements/list/divider.png</texture>
+					<aspectratio>stretch</aspectratio> 
+				</control>
+			</itemlayout>
+		</control>
+		
+		<control type="grouplist" id="5">
+			<description>Control Area</description>
+	    	<posx>279</posx>
+	    	<posy>28</posy>
+	    	<width>872</width>
+	    	<height>480</height>
+	    	<itemgap>2</itemgap>
+	    	<onleft>3</onleft>
+	    	<onright>3</onright>
+	    	<onup>5</onup>
+	    	<ondown>5</ondown>
+	    	<orientation>vertical</orientation>
+	
+			<itemlayout>
+				<control type="image">
+					<posx>7</posx>
+					<posy>82</posy>
+					<width>1118</width>
+					<height>2</height>
+					<texture>Zen/elements/list/divider.png</texture>
+					<aspectratio>stretch</aspectratio> 
+				</control>
+			</itemlayout>
+		</control>
+		
+		<control type="image">
+			<width>1210</width>
+			<height>556</height>
+			<texture>Zen/panes/common/center_gradient.png</texture>
+			<aspectratio>stretch</aspectratio> 
+		</control>
+		<control type="image">
+			<width>1210</width>
+			<height>556</height>
+			<texture>Zen/panes/common/center_outline.png</texture>
+			<aspectratio>stretch</aspectratio> 
+		</control>
+		
+	</control>
+
+
+
+	
+	<control type="button" id="10">
+		<description>Default Category Button</description>
+		<height>52</height>
+		<width>237</width>
+    	<textcolor>7fffffff</textcolor>
+		<focusedcolor>ffe8e8db</focusedcolor>
+		<disabledcolor>7f7c7c72</disabledcolor>
+		<shadowcolor>7f000000</shadowcolor>
+		<font>Large</font>
+		<align>left</align>
+    	<textoffsetx>14</textoffsetx>
+    	<texturefocus>Zen/elements/settings/small_highlight_focused_button.png</texturefocus>
+		<texturenofocus>Zen/elements/settings/small_divider_button.png</texturenofocus>
+	</control>
+	
+	<control type="button" id="7">
+		<description>Default Button</description>
+		<posx>12</posx>
+		<height>52</height>
+		<width>872</width>
+    	<textcolor>7fffffff</textcolor>
+		<focusedcolor>ffe8e8db</focusedcolor>
+		<disabledcolor>7f7c7c72</disabledcolor>
+		<shadowcolor>7f000000</shadowcolor>
+    	<align>left</align>
+		<font>Large</font>
+		<textoffsetx>12</textoffsetx>
+
+    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
+    	<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
+
+	</control>
+	
+
+	
+	
+	<control type="radiobutton" id="8">
+		<description>Default Radio Button</description>
+		<posx>12</posx>
+		<height>52</height>
+		<width>872</width>
+    	<textcolor>7fffffff</textcolor>
+		<focusedcolor>ffe8e8db</focusedcolor>
+		<disabledcolor>7f7c7c72</disabledcolor>
+		<shadowcolor>7f000000</shadowcolor>
+    	<align>left</align>
+		<font>Large</font>
+		<textoffsetx>12</textoffsetx>
+
+    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
+		<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
+		
+		<radiowidth>59</radiowidth>
+		<radioheight>39</radioheight>
+		<textureradiofocus>Zen/elements/settings/on_focused.png</textureradiofocus>
+		<textureradionofocus>Zen/elements/settings/off_focused.png</textureradionofocus>
+	</control>
+	
+	<control type="spincontrolex" id="9">
+		<description>Default Spin Control</description>
+    	<posx>12</posx>
+		<height>52</height>
+		<width>872</width>
+    	<textcolor>7fffffff</textcolor>
+		<focusedcolor>ffe8e8db</focusedcolor>
+		<disabledcolor>7f7c7c72</disabledcolor>
+		<shadowcolor>7f000000</shadowcolor>
+    	<align>left</align>
+		<font>Large</font>
+		<textoffsetx>12</textoffsetx>
+
+    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
+		<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
+		
+		<spinposx>0</spinposx>
+		<spinwidth>31</spinwidth>
+		<spinheight>39</spinheight>
+		<textureup>Zen/elements/settings/spin_up_unfocus.png</textureup>
+		<textureupfocus>Zen/elements/settings/spin_up_focus.png</textureupfocus>
+		<texturedown>Zen/elements/settings/spin_down_unfocus.png</texturedown>
+		<texturedownfocus>Zen/elements/settings/spin_down_focus.png</texturedownfocus>
+	</control>
+  
+	<control type="image">
+		<width>1280</width>
+		<height>720</height>
+		<texture>Zen/elements/common/corners.png</texture>
+		<aspectratio>stretch</aspectratio>
+	</control>
+	
+</controls>
+
+</window>

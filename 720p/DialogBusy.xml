@@ -1,0 +1,20 @@
+<window id="136">
+  
+<coordinates>
+  <system>1</system>
+  <posx>600</posx>
+  <posy>480</posy>
+</coordinates>
+        
+<controls>
+  
+  <control type="label">
+    <posy>40</posy>
+    <include>DialogID</include>
+    <align>right</align>
+    <label>[COLOR=White]$LOCALIZE[20186]...[/COLOR] DialogBusy.xml</label>
+  </control>
+  
+</controls>
+  
+</window>
