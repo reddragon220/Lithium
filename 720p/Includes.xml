@@ -92,37 +92,34 @@
 
 
 			<!-- Weather -->
-			<!--
-			<control type="group">
+	<!--		<control type="group" id="120">
 				<visible effect="fade" time="250">system.hasnetwork</visible>
-				<control type="label">
-					<posx>89</posx>
-					<posy>10</posy>
-					<info>Weather.Temperature</info>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-				</control>
+				<posx>965</posx>
 				<control type="image">
-					<posx>-10</posx>
 					<info>Weather.Conditions</info>
-					<height>53</height>
+					<height>50</height>
 					<aspectratio>keep</aspectratio>
 				</control>
+				<control type="label">
+					<posx>95</posx>
+					<posy>10</posy>
+					<info>Weather.Temperature</info>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+				</control>
 			</control>
-			-->
+		-->
 			
 			<!-- Time -->
 			<control type="label">
 				<posy>10</posy>
-				<posx>1103</posx>
-				<width>173</width>
+				<posx>1265</posx>
 				<info>System.Time(hh:mm xx)</info>
 				<font>Small</font>
 				<textcolor>ffe8e8db</textcolor>
-				<align>center</align>
+				<align>right</align>
 			</control>
-
-			
+						
 			<!-- Options Low -->
 			<control type="group">	
 				<visible>!Window.IsActive(Home) + !Control.IsVisible(106) + !Control.HasFocus(101)</visible>
@@ -268,6 +265,17 @@
 				<aspectratio>stretch</aspectratio>
 				<texture>Zen/panes/common/header_gradient.png</texture>
 			</control>
+
+			<!-- Mute -->
+			<control type="image">
+				<visible>Player.Muted</visible>
+				<posx>1101</posx>
+				<posy>6</posy>
+				<texture>zen/elements/header/mute.png</texture>
+				<height>38</height>
+				<aspectratio>keep</aspectratio>		
+			</control>
+
 
 			<!-- Options High -->
 			<control type="group">
