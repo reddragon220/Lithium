@@ -14,4 +14,4 @@ All screens and dialogs are labeled in red to help with identification.
 
 Enjoy -Wir3d
 
-I've Changed the readme file.
+The Readme File has been changed yet again!
