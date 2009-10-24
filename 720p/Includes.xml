@@ -92,7 +92,7 @@
 
 
 			<!-- Weather -->
-	<!--		<control type="group" id="120">
+		<!--		<control type="group" id="120">
 				<visible effect="fade" time="250">system.hasnetwork</visible>
 				<posx>965</posx>
 				<control type="image">
@@ -257,6 +257,18 @@
 				
 			</control>
 
+			<!-- Update Low -->
+			<control type="label">
+				<animation effect="fade" time="400">VisibleChange</animation>
+				<visible>Window.IsActive(133)</visible>
+				<posy>10</posy>
+				<posx>958</posx>
+				<label>Updating...</label>
+				<font>Small</font>
+				<textcolor>ffe8e8db</textcolor>
+				<align>left</align>
+			</control>
+
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -269,6 +281,7 @@
 			<!-- Mute -->
 			<control type="image">
 				<visible>Player.Muted</visible>
+				<animation effect="fade" time="400">VisibleChange</animation>
 				<posx>1101</posx>
 				<posy>6</posy>
 				<texture>zen/elements/header/mute.png</texture>
@@ -276,6 +289,18 @@
 				<aspectratio>keep</aspectratio>		
 			</control>
 
+			<!-- Updating High -->
+			<control type="image">
+				<animation effect="fade" time="400">VisibleChange</animation>
+				<visible>Window.IsActive(133)</visible>
+				<posx>924</posx>
+				<posy>6</posy>
+				<texture>zen/elements/header/updating.png</texture>
+				<height>38</height>
+				<width>30</width>
+				<aspectratio>keep</aspectratio>		
+			</control>
+			
 
 			<!-- Options High -->
 			<control type="group">
