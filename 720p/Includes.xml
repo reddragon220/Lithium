@@ -41,10 +41,12 @@
 	<!-- My Includes -->
 	<include name="views">
 		<include>thumb list</include>
+		<include>info thumb list</include>
 		
 		<include>fanart_nav</include>
 		<include>cover_nav</include>
 		<include>multiplex</include>
+		
 		<include>episodes</include>
 		<include>songs</include>
 	</include>
@@ -92,37 +94,34 @@
 
 
 			<!-- Weather -->
-			<!--
-			<control type="group">
+		<!--		<control type="group" id="120">
 				<visible effect="fade" time="250">system.hasnetwork</visible>
-				<control type="label">
-					<posx>89</posx>
-					<posy>10</posy>
-					<info>Weather.Temperature</info>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-				</control>
+				<posx>965</posx>
 				<control type="image">
-					<posx>-10</posx>
 					<info>Weather.Conditions</info>
-					<height>53</height>
+					<height>50</height>
 					<aspectratio>keep</aspectratio>
 				</control>
+				<control type="label">
+					<posx>95</posx>
+					<posy>10</posy>
+					<info>Weather.Temperature</info>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+				</control>
 			</control>
-			-->
+		-->
 			
 			<!-- Time -->
 			<control type="label">
 				<posy>10</posy>
-				<posx>1103</posx>
-				<width>173</width>
+				<posx>1265</posx>
 				<info>System.Time(hh:mm xx)</info>
 				<font>Small</font>
 				<textcolor>ffe8e8db</textcolor>
-				<align>center</align>
+				<align>right</align>
 			</control>
-
-			
+						
 			<!-- Options Low -->
 			<control type="group">	
 				<visible>!Window.IsActive(Home) + !Control.IsVisible(106) + !Control.HasFocus(101)</visible>
@@ -260,6 +259,18 @@
 				
 			</control>
 
+			<!-- Update Low -->
+			<control type="label">
+				<animation effect="fade" time="400">VisibleChange</animation>
+				<visible>Window.IsActive(133)</visible>
+				<posy>10</posy>
+				<posx>958</posx>
+				<label>Updating...</label>
+				<font>Small</font>
+				<textcolor>ffe8e8db</textcolor>
+				<align>left</align>
+			</control>
+
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -268,6 +279,30 @@
 				<aspectratio>stretch</aspectratio>
 				<texture>Zen/panes/common/header_gradient.png</texture>
 			</control>
+
+			<!-- Mute -->
+			<control type="image">
+				<visible>Player.Muted</visible>
+				<animation effect="fade" time="400">VisibleChange</animation>
+				<posx>1101</posx>
+				<posy>6</posy>
+				<texture>zen/elements/header/mute.png</texture>
+				<height>38</height>
+				<aspectratio>keep</aspectratio>		
+			</control>
+
+			<!-- Updating High -->
+			<control type="image">
+				<animation effect="fade" time="400">VisibleChange</animation>
+				<visible>Window.IsActive(133)</visible>
+				<posx>924</posx>
+				<posy>6</posy>
+				<texture>zen/elements/header/updating.png</texture>
+				<height>38</height>
+				<width>30</width>
+				<aspectratio>keep</aspectratio>		
+			</control>
+			
 
 			<!-- Options High -->
 			<control type="group">
@@ -871,7 +906,7 @@
 
 	<include name="background">
 		<control type="largeimage">
-			<visible>IsEmpty(ListItem.Property(fanart_image)) | Skin.HasSetting(fanart)</visible>
+			<visible>IsEmpty(ListItem.Property(fanart_image)) | !Skin.HasSetting(fanart)</visible>
 			<description>Background Image</description>
 			<posx>0</posx>
 			<posy>0</posy>

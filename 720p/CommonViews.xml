@@ -57,6 +57,152 @@
 		</control>
 	</include>
 	
+	<include name="footer">
+		<!-- Footer Info -->
+		<control type="group">
+			<posy>667</posy>
+			<include>footer_bg</include>
+		
+			<!-- Center -->
+			<control type="group">
+				<posx>640</posx>
+				<posy>11</posy>
+
+				<control type="label">
+					<visible>Window.IsActive(10025) + !Container.Content(movies) +!Container.Content(episodes)</visible>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Large</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>Window.IsActive(10025) + Container.Content(movies)</visible>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Large</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>Window.IsActive(10025) + Container.Content(episodes)</visible>
+					<label>$INFO[ListItem.Season].$INFO[ListItem.Episode] -  $INFO[ListItem.title]</label>
+					<font>Large</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>Window.IsActive(10024)</visible>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Large</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+				</control>
+
+				<control type="label">
+					<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(song)</visible>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Large</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>Window.IsActive(10502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(song) | Window.IsActive(10501) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(song) </visible>
+					<label>$LOCALIZE[31027]</label>
+					<font>Large</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>Window.IsActive(10002)</visible>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Large</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>Window.IsActive(10001)</visible>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Large</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>Window.IsActive(10020)</visible>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Large</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+				</control>
+
+			</control>
+			<!-- Right 	-->
+			<control type="group">
+				<posx>1073</posx>
+				<posy>11</posy>
+				<control type="image">
+					<visible>Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)</visible>
+					<width>172</width>
+					<height>30</height>
+					<info>ListItem.StarRating</info>
+					<aspectratio>keep</aspectratio>
+					<align>center</align>
+				</control>
+			</control>
+			<!-- Left 	-->
+			<control type="label">
+				<visible>Container.Content(songs) | Container.Content(albums) | Container.Content(artists)</visible>
+				<posx>36</posx>
+				<posy>11</posy>
+				<label>$INFO[ListItem.Genre]</label>
+				<textcolor>ffe8e8db</textcolor>
+				<scroll>false</scroll>
+				<align>left</align>
+			</control>
+			<control type="group">
+				<visible>Container.Content(seasons) | Container.Content(tvshows) | Container.Content(musicvideos)</visible>
+				<width>172</width>
+				<posx>65</posx>
+				<posy>11</posy>
+				<control type=label>
+					<label>$INFO[ListItem.Property(WatchedEpisodes)]</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+				</control>
+				<control type=image>
+					<texture>Zen/elements/common/check.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type=label>
+					<posx>80</posx>
+					<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+				</control>
+				<control type=image>
+					<posx>83</posx>
+					<posy>-1</posy>
+					<texture>Zen/elements/common/x_mark.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+			</control>
+			
+			
+			<include>footer_fg</include>
+		</control>
+		
+	</include>
 	
 	<include name="thumb list">
 		<control type="group">
@@ -470,289 +616,7 @@
 		</control>
 
 		<!-- Footer Info -->
-		<control type="group">
-			<visible>Control.IsVisible(50)</visible>
-			
-			<posy>667</posy>
-			<include>footer_bg</include>
-
-			<control type="group">
-				<posx>640</posx>
-				<posy>11</posy>
-				
-				<control type="label">
-					<visible>Window.IsActive(10025) + !Container.Content(movies)</visible>
-					<label>$LOCALIZE[31032]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10025) + Container.Content(movies)</visible>
-					<label>$LOCALIZE[31033]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10024)</visible>
-					<label>$LOCALIZE[31026]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10502) | Window.IsActive(10501)</visible>
-					<label>$LOCALIZE[31027]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10002)</visible>
-					<label>$LOCALIZE[31028]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10001)</visible>
-					<label>$LOCALIZE[31029]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10020)</visible>
-					<label>$LOCALIZE[31031]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-			</control>
-			<control type="group">
-				<posx>1245</posx>
-				<posy>11</posy>
-				
-				<control type="label">
-					<visible>Container.Content(tvshows)</visible>
-					<label>$INFO[Container.NumItems] $LOCALIZE[31034]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type="label">
-					<visible>Container.Content(seasons)</visible>
-					<label>$INFO[Container.NumItems] $LOCALIZE[31035]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type="label">
-					<visible>Container.Content(episodes)</visible>
-					<label>$INFO[Container.NumItems] $LOCALIZE[31036]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type="label">
-					<visible>Container.Content(movies)</visible>
-					<label>$INFO[Container.NumItems] $LOCALIZE[31037]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type="label">
-					<visible>Container.Content(files)</visible>
-					<label>$INFO[Container.NumItems] $LOCALIZE[31038]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type="label">
-					<visible>Container.Content(songs)</visible>
-					<label>$INFO[Container.NumItems] $LOCALIZE[31039]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type="label">
-					<visible>Container.Content(artists)</visible>
-					<label>$INFO[Container.NumItems] $LOCALIZE[31040]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type="label">
-					<visible>Container.Content(albums)</visible>
-					<label>$INFO[Container.NumItems] $LOCALIZE[31041]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type="label">
-					<visible>Container.Content(musicvideos)</visible>
-					<label>$INFO[Container.NumItems] $LOCALIZE[31042]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type="label">
-					<visible>Container.Content(genres)</visible>
-					<label>$INFO[Container.NumItems] $LOCALIZE[31043]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type="label">
-					<visible>Container.Content(years)</visible>
-					<label>$INFO[Container.NumItems] $LOCALIZE[31044]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type="label">
-					<visible>Container.Content(actors)</visible>
-					<label>$INFO[Container.NumItems] $LOCALIZE[31045]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type="label">
-					<visible>Container.Content(playlists)</visible>
-					<label>$INFO[Container.NumItems] $LOCALIZE[31046]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type="label">
-					<visible>Container.Content(plugins)</visible>
-					<label>$INFO[Container.NumItems] $LOCALIZE[31047]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type="label">
-					<visible>Container.Content(studios)</visible>
-					<label>$INFO[Container.NumItems] $LOCALIZE[31048]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type="label">
-					<visible>Container.Content(directors)</visible>
-					<label>$INFO[Container.NumItems] $LOCALIZE[31049]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type="label">
-					<visible>Container.Content(genres)</visible>
-					<label>$INFO[Container.NumItems] $LOCALIZE[31050]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10020)</visible>
-					<label>$INFO[Container.NumItems] $LOCALIZE[31051]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				
-				<control type="label">
-					<visible>!(Window.IsActive(10020)) | !Container.Content(genres) | !Container.Content(directors) | !Container.Content(studios) | !Container.Content(plugins) | !Container.Content(playlists) | !Container.Content(years) | !Container.Content(genres) | !Container.Content(musicvideos) | !Container.Content(albums) | !Container.Content(artists) | !Container.Content(songs) | !Container.Content(files) | !Container.Content(movies) | !Container.Content(episodes) | !Container.Content(seasons) | !Container.Content(tvshows)</visible>
-					<label>$INFO[Container.NumItems] $LOCALIZE[31038]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				
-<!--
-				
-				
-				<control type="label">
-					<visible>Window.IsActive(10025) + Container.Content(movies)</visible>
-					<label>$LOCALIZE[31033]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10024)</visible>
-					<label>$LOCALIZE[31026]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10502) | Window.IsActive(10501)</visible>
-					<label>$LOCALIZE[31027]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10002)</visible>
-					<label>$LOCALIZE[31028]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10001)</visible>
-					<label>$LOCALIZE[31029]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10020)</visible>
-					<label>$LOCALIZE[31031]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-			-->
-			</control>
-
-
-			<include>footer_fg</include>
-		</control>
-		
+		<include>footer</include>		
 	</include>
 	<!-- Note multiple large image (about 6 or so) crashes Plex as of version 8.2-->
 	<include name="fanart_nav">
@@ -1107,11 +971,11 @@
 					<scroll>false</scroll>
 					<align>right</align>
 				</control>
-				<control type=image>
+				<control type="image">
 					<texture>Zen/elements/common/check.png</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
-				<control type=label>
+				<control type="label">
 					<posx>80</posx>
 					<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
 					<font>Small</font>
@@ -1119,7 +983,7 @@
 					<scroll>false</scroll>
 					<align>right</align>
 				</control>
-				<control type=image>
+				<control type="image">
 					<posx>83</posx>
 					<posy>-1</posy>
 					<texture>Zen/elements/common/x_mark.png</texture>
@@ -1266,142 +1130,7 @@
 			</control>
 		</control>
 		<!-- Footer Info -->
-		<control type="group">
-			<visible>Control.IsVisible(53)</visible>
-
-			<posy>667</posy>
-			<include>footer_bg</include>
-		
-			<!-- Center -->
-			<control type="group">
-				<posx>640</posx>
-				<posy>11</posy>
-
-				<control type="label">
-					<visible>Window.IsActive(10025) + !Container.Content(movies)</visible>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10025) + Container.Content(movies)</visible>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10024)</visible>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-
-				<control type="label">
-					<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(song)</visible>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(song) | Window.IsActive(10501) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(song) </visible>
-					<label>$LOCALIZE[31027]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10002)</visible>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10001)</visible>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10020)</visible>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-
-			</control>
-			<!-- Right 	-->
-			<control type="group">
-				<posx>1073</posx>
-				<posy>11</posy>
-				<control type="image">
-					<visible>Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)</visible>
-					<width>172</width>
-					<height>30</height>
-					<info>ListItem.StarRating</info>
-					<aspectratio>keep</aspectratio>
-					<align>center</align>
-				</control>
-			</control>
-			<!-- Left 	-->
-			<control type="label">
-				<visible>Container.Content(songs) | Container.Content(albums) | Container.Content(artists)</visible>
-				<posx>36</posx>
-				<posy>11</posy>
-				<label>$INFO[ListItem.Genre]</label>
-				<textcolor>ffe8e8db</textcolor>
-				<scroll>false</scroll>
-				<align>left</align>
-			</control>
-			<control type="group">
-				<visible>Container.Content(seasons) | Container.Content(tvshows) | Container.Content(musicvideos)</visible>
-				<width>172</width>
-				<posx>65</posx>
-				<posy>11</posy>
-				<control type=label>
-					<label>$INFO[ListItem.Property(WatchedEpisodes)]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type=image>
-					<texture>Zen/elements/common/check.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type=label>
-					<posx>80</posx>
-					<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type=image>
-					<posx>83</posx>
-					<posy>-1</posy>
-					<texture>Zen/elements/common/x_mark.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-			</control>
-			
-			
-			<include>footer_fg</include>
-		</control>
+		<include>footer</include>
 	</include>
 	<include name="multiplex">
 		<control type="image">
@@ -1538,149 +1267,503 @@
 						<bordersize>11</bordersize>
 						<aspectratio scalediffuse="true" align="center" aligny="bottom">keep</aspectratio>
 					</control>
-					
 				</focusedlayout>
 			</control>
 		</control>
 		<!-- Footer Info -->
-		<control type="group">
-			<visible>Control.IsVisible(54)</visible>
-
-			<posy>667</posy>
-			<include>footer_bg</include>
-
-			<!-- Center -->
-			<control type="group">
-				<posx>640</posx>
-				<posy>11</posy>
-
-				<control type="label">
-					<visible>Window.IsActive(10025) + !Container.Content(movies)</visible>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10025) + Container.Content(movies)</visible>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10024)</visible>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-
-				<control type="label">
-					<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(song)</visible>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(song) | Window.IsActive(10501) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(song) </visible>
-					<label>$LOCALIZE[31027]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10002)</visible>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10001)</visible>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10020)</visible>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-
-			</control>
-			<!-- Right 	-->
-			<control type="group">
-				<posx>1073</posx>
-				<posy>11</posy>
-				<control type="image">
-					<visible>Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)</visible>
-					<width>172</width>
-					<height>30</height>
-					<info>ListItem.StarRating</info>
-					<aspectratio>keep</aspectratio>
-					<align>center</align>
-				</control>
-			</control>
-			<!-- Left 	-->
-			<control type="label">
-				<visible>Container.Content(songs) | Container.Content(albums) | Container.Content(artists)</visible>
-				<posx>36</posx>
-				<posy>11</posy>
-				<label>$INFO[ListItem.Genre]</label>
-				<textcolor>ffe8e8db</textcolor>
-				<scroll>false</scroll>
-				<align>left</align>
-			</control>
-			<control type="group">
-				<visible>Container.Content(seasons) | Container.Content(tvshows) | Container.Content(musicvideos)</visible>
-				<width>172</width>
-				<posx>65</posx>
-				<posy>11</posy>
-				<control type=label>
-					<label>$INFO[ListItem.Property(WatchedEpisodes)]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type=image>
-					<texture>Zen/elements/common/check.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type=label>
-					<posx>80</posx>
-					<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type=image>
-					<posx>83</posx>
-					<posy>-1</posy>
-					<texture>Zen/elements/common/x_mark.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-			</control>
-
-
-			<include>footer_fg</include>
-		</control>
+		<include>footer</include>
 	</include>
 
+	<include name="info thumb list">
+		<control type="group">
+			<visible>Control.IsVisible(58)</visible>
+			<posx>36</posx>
+			<posy>82</posy>
+			<include>center_bg</include>
+			<!-- Info Pane -->
+			<control type="image">
+				<posy>56</posy>
+				<posx>362</posx>
+				<width>2</width>
+				<height>444</height>
+				<texture>Zen/elements/infolist/vertical_divider.png</texture>
+			</control>
+			<control type="group">
+				<visible>
+					!Window.IsActive(musicplaylist) + !Window.IsActive(musicfiles) + !Window.IsActive(musiclibrary)
+					+ !Window.IsActive(programs)
+					+ !Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs)
+				</visible>
+				<control type="textbox">
+					<posx>20</posx>
+					<posy>218</posy>
+					<width>338</width>
+					<height>308</height>
+					<label>$INFO[listitem.Plot]</label>
+					<font>Small</font>
+					<textcolor>ffd7d7d7</textcolor>
+					<autoscroll delay="3000" time="3000" repeat="10000">Control.HasFocus(58)</autoscroll>
+				</control>
+				<control type="largeimage">
+					<posy>26</posy>
+					<posx>-456</posx>
+					<height>196</height>
+					<info>ListItem.Property(fanart_image)</info>
+					<texture diffuse="Zen/elements/infolist/thumb_mask.png"></texture>
+					<bordertexture border="4">Zen/elements/infolist/thumb_shadow.png</bordertexture>
+					<bordersize>4</bordersize>
+					<aligny>bottom</aligny>
+					<aspectratio>keep</aspectratio>
+				</control>
+			</control>
+			<control type="group">
+				<visible>
+					Window.IsActive(musicplaylist) | Window.IsActive(musicfiles) | Window.IsActive(musiclibrary)
+					| Window.IsActive(programs)
+					| Container.Content(albums) | Container.Content(artists) | Container.Content(songs)
+				</visible>
+				<control type="image">
+					<posx>97</posx>
+					<posy>26</posy>
+					<width>194</width>
+					<height>194</height>
+					<info>ListItem.thumb</info>
+					<texture diffuse="Zen/elements/infolist/thumb_mask.png"></texture>
+					<bordertexture border="4">Zen/elements/infolist/thumb_shadow.png</bordertexture>
+					<bordersize>4</bordersize>
+					<aspectratio scalediffuse="true" align="center" aligny="bottom">keep</aspectratio>
+					<align>center</align>
+				</control>
+				<control type="textbox">
+					<visible>!Window.IsActive(programs)</visible>
+					<posx>20</posx>
+					<posy>218</posy>
+					<width>338</width>
+					<height>308</height>
+					<label>$INFO[listitem.artist]</label>
+					<font>Small</font>
+					<textcolor>ffd7d7d7</textcolor>
+					<autoscroll delay="3000" time="3000" repeat="10000">Control.HasFocus(58)</autoscroll>
+				</control>
+				<control type="textbox">
+					<visible>Window.IsActive(programs)</visible>
+					<posx>20</posx>
+					<posy>218</posy>
+					<width>338</width>
+					<height>308</height>
+					<label>$INFO[listitem.plot]</label>
+					<font>Small</font>
+					<textcolor>ffd7d7d7</textcolor>
+					<autoscroll delay="3000" time="3000" repeat="10000">Control.HasFocus(58)</autoscroll>
+				</control>
+			</control>
+			<!-- Select List -->
+			<control type="group">
+				<control type="panel" id="58">
+					<visible>
+						!Window.IsActive(musicplaylist) + !Window.IsActive(musicfiles) + !Window.IsActive(musiclibrary)
+						+ !Window.IsActive(programs)
+						+ !Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs)
+					</visible>
+					<viewtype label="Info List">list</viewtype>
+					<orientation>vertical</orientation>
+
+					<width>1132</width>
+					<height>506</height>
+					<posx>374</posx>
+					<posy>25</posy>
+
+					<ondown>-</ondown>
+					<onup>100</onup>
+					<onleft>100</onleft>
+					<onright>581</onright>
+
+					<pagecontrol>581</pagecontrol>
+
+					<itemlayout width="1132" height="84">
+						<!-- Thumbs -->
+						<control type="group">
+							<posx>8</posx>
+							<posy>1</posy>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>137</width>
+								<height>81</height>
+								<texture>Zen/elements/list/video_shadow.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>				
+							<control type="image">
+								<posx>4</posx>
+								<posy>4</posy>
+								<width>129</width>
+								<height>73</height>
+								<info>ListItem.thumb</info>
+								<texture diffuse="Zen/elements/list/video_mask.png"></texture>
+								<aspectratio scalediffuse="false">scale</aspectratio>
+							</control>
+						</control>
+						<!-- Info -->
+						<control type="group">
+							<visible>
+								!Container.Content(seasons) + !Container.Content(tvshows) + !Container.Content(movies)
+							</visible>					
+							<posx>145</posx>
+							<posy>21</posy>
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<height>42</height>
+								<width>600</width>
+								<info>ListItem.label</info>
+								<font>Large</font>
+								<textcolor>ffffffff</textcolor>
+								<scroll>false</scroll>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container.Content(seasons) | Container.Content(tvshows) | Container.Content(movies)</visible>					
+							<posx>145</posx>
+							<control type="image">
+								<posx>10</posx>
+								<posy>45</posy>
+								<width>172</width>
+								<height>30</height>
+								<info>ListItem.StarRating</info>
+								<aspectratio>keep</aspectratio>
+								<align>center</align>
+							</control>
+							<control type="label">
+								<posx>192</posx>
+								<posy>39</posy>
+								<height>42</height>
+								<width>428</width>
+								<label>$INFO[ListItem.Genre]</label>
+								<font>Small</font>
+								<textcolor>ffd7d7d7</textcolor>
+								<scroll>false</scroll>
+							</control>
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<height>42</height>
+								<width>600</width>
+								<info>ListItem.label</info>
+								<font>Large</font>
+								<textcolor>ffffffff</textcolor>
+								<scroll>false</scroll>
+							</control>
+						</control>
+
+						<control type="image">
+							<posx>7</posx>
+							<posy>82</posy>
+							<width>762</width>
+							<height>2</height>
+							<texture>Zen/elements/infolist/divider.png</texture>
+							<aspectratio>stretch</aspectratio> 
+						</control>
+					</itemlayout>
+					<focusedlayout width="1132" height="84">
+						<control type="image">
+							<posx>0</posx>
+							<posy>-2</posy>
+							<width>776</width>
+							<height>86</height>
+							<texture>Zen/elements/infolist/highlight.png</texture>
+							<aspectratio>stretch</aspectratio>
+						</control>
+							<!-- Thumbs -->
+							<control type="group">
+								<posx>8</posx>
+								<posy>1</posy>
+								<control type="image">
+									<posx>0</posx>
+									<posy>0</posy>
+									<width>137</width>
+									<height>81</height>
+									<texture>Zen/elements/list/video_shadow.png</texture>
+									<aspectratio>stretch</aspectratio>
+								</control>				
+								<control type="image">
+									<posx>4</posx>
+									<posy>4</posy>
+									<width>129</width>
+									<height>73</height>
+									<info>ListItem.thumb</info>
+									<texture diffuse="Zen/elements/list/video_mask.png"></texture>
+									<aspectratio scalediffuse="false">scale</aspectratio>
+								</control>
+							</control>
+							<!-- Info -->
+							<control type="group">
+								<visible>
+									!Container.Content(seasons) + !Container.Content(tvshows) + !Container.Content(movies)
+								</visible>					
+								<posx>145</posx>
+								<posy>21</posy>
+								<control type="label">
+									<posx>10</posx>
+									<posy>0</posy>
+									<height>42</height>
+									<width>600</width>
+									<info>ListItem.label</info>
+									<font>Large</font>
+									<textcolor>ffffffff</textcolor>
+									<scroll>false</scroll>
+								</control>
+							</control>
+							<control type="group">
+								<visible>Container.Content(seasons) | Container.Content(tvshows) | Container.Content(movies)</visible>					
+								<posx>145</posx>
+								<control type="image">
+									<posx>10</posx>
+									<posy>45</posy>
+									<width>172</width>
+									<height>30</height>
+									<info>ListItem.StarRating</info>
+									<aspectratio>keep</aspectratio>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>192</posx>
+									<posy>39</posy>
+									<height>42</height>
+									<width>428</width>
+									<label>$INFO[ListItem.Genre]</label>
+									<font>Small</font>
+									<textcolor>ffd7d7d7</textcolor>
+									<scroll>false</scroll>
+								</control>
+								<control type="label">
+									<posx>10</posx>
+									<posy>0</posy>
+									<height>42</height>
+									<width>600</width>
+									<info>ListItem.label</info>
+									<font>Large</font>
+									<textcolor>ffffffff</textcolor>
+									<scroll>false</scroll>
+								</control>
+							</control>
+
+							<control type="image">
+								<posx>7</posx>
+								<posy>82</posy>
+								<width>762</width>
+								<height>2</height>
+								<texture>Zen/elements/infolist/divider.png</texture>
+								<aspectratio>stretch</aspectratio> 
+							</control>
+					</focusedlayout>
+				</control>
+				<control type="panel" id="58">
+					<visible>
+						Window.IsActive(musicplaylist) | Window.IsActive(musicfiles) | Window.IsActive(musiclibrary)
+						| Window.IsActive(programs)
+						| Container.Content(albums) | Container.Content(artists) | Container.Content(songs)
+					</visible>
+					<viewtype label="Info List">list</viewtype>
+					<orientation>vertical</orientation>
+
+					<width>1132</width>
+					<height>506</height>
+					<posx>374</posx>
+					<posy>25</posy>
+
+					<ondown>-</ondown>
+					<onup>100</onup>
+					<onleft>100</onleft>
+					<onright>581</onright>
+
+					<pagecontrol>581</pagecontrol>
+
+					<itemlayout width="1132" height="84">
+						<!-- Thumbs -->
+						<control type="group">
+							<posx>8</posx>
+							<posy>1</posy>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>81</width>
+								<height>81</height>
+								<texture>Zen/elements/list/music_shadow.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<posx>4</posx>
+								<posy>4</posy>
+								<width>73</width>
+								<height>73</height>
+								<info>ListItem.thumb</info>
+								<texture diffuse="Zen/elements/list/music_mask.png"></texture>
+								<aspectratio scalediffuse="false">scale</aspectratio>
+							</control>
+						</control>
+						<!-- Info -->
+						<control type="group">
+							<visible>!Container.Content(seasons) + !Container.Content(tvshows)</visible>					
+							<posx>90</posx>
+							<posy>21</posy>
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<height>42</height>
+								<width>662</width>
+								<info>ListItem.label</info>
+								<font>Large</font>
+								<textcolor>ffffffff</textcolor>
+								<scroll>false</scroll>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container.Content(seasons) | Container.Content(tvshows)</visible>					
+							<posx>90</posx>
+							<control type="label">
+								<posx>10</posx>
+								<posy>35</posy>
+								<height>42</height>
+								<width>662</width>
+								<label>$LOCALIZE[31020] $INFO[ListItem.Episode]</label>
+								<font>Small</font>
+								<textcolor>ffd7d7d7</textcolor>
+								<scroll>false</scroll>
+							</control>
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<height>42</height>
+								<width>662</width>
+								<info>ListItem.label</info>
+								<font>Large</font>
+								<textcolor>ffffffff</textcolor>
+								<scroll>false</scroll>
+							</control>
+						</control>
+						
+						<control type="image">
+							<posx>7</posx>
+							<posy>82</posy>
+							<width>762</width>
+							<height>2</height>
+							<texture>Zen/elements/infolist/divider.png</texture>
+							<aspectratio>stretch</aspectratio> 
+						</control>
+					</itemlayout>
+					<focusedlayout width="1132" height="84">
+						<control type="image">
+							<posx>0</posx>
+							<posy>-2</posy>
+							<width>776</width>
+							<height>86</height>
+							<texture>Zen/elements/infolist/highlight.png</texture>
+							<aspectratio>stretch</aspectratio>
+						</control>
+						<!-- Thumbs -->
+						<control type="group">
+							<posx>8</posx>
+							<posy>1</posy>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>81</width>
+								<height>81</height>
+								<texture>Zen/elements/list/music_shadow.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<posx>4</posx>
+								<posy>4</posy>
+								<width>73</width>
+								<height>73</height>
+								<info>ListItem.thumb</info>
+								<texture diffuse="Zen/elements/list/music_mask.png"></texture>
+								<aspectratio scalediffuse="false">scale</aspectratio>
+							</control>
+						</control>
+						<!-- Info -->
+						<control type="group">
+							<visible>!Container.Content(seasons) + !Container.Content(tvshows)</visible>					
+							<posx>90</posx>
+							<posy>21</posy>
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<height>42</height>
+								<width>662</width>
+								<info>ListItem.label</info>
+								<font>Large</font>
+								<textcolor>ffffffff</textcolor>
+								<scroll>false</scroll>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container.Content(seasons) | Container.Content(tvshows)</visible>					
+							<posx>90</posx>
+							<control type="label">
+								<posx>10</posx>
+								<posy>35</posy>
+								<height>42</height>
+								<width>662</width>
+								<label>$LOCALIZE[31020] $INFO[ListItem.Episode]</label>
+								<font>Small</font>
+								<textcolor>ffd7d7d7</textcolor>
+								<scroll>false</scroll>
+							</control>
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<height>42</height>
+								<width>662</width>
+								<info>ListItem.label</info>
+								<font>Large</font>
+								<textcolor>ffffffff</textcolor>
+								<scroll>false</scroll>
+							</control>
+						</control>
+						
+						<control type="image">
+							<posx>7</posx>
+							<posy>82</posy>
+							<width>762</width>
+							<height>2</height>
+							<texture>Zen/elements/infolist/divider.png</texture>
+							<aspectratio>stretch</aspectratio> 
+						</control>
+					</focusedlayout>
+				</control>
+
+			</control>
+			<!-- Scrollbar -->
+			<control type="group">
+				<posy>155</posy>
+				<posx>1165</posx>
+				<control type="image">
+					<width>26</width>
+					<height>267</height>
+					<posy>7</posy>
+					<texture>Zen/elements/common/scrollbar/scrollbar_bg.png</texture>
+				</control>
+				<control type="scrollbar" id="581">
+					<width>26</width>
+					<height>267</height>
+					<orientation>vertical</orientation>
+					<onup>-</onup>
+					<onleft>58</onleft>
+					<onright>58</onright>
+					<ondown>-</ondown>
+					<textureslidernib>Zen/elements/common/scrollbar/scrollbar_nib.png</textureslidernib>
+					<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
+				</control>
+			</control>
+
+			<include>center_fg</include>
+		</control>
+
+		<!-- Footer Info -->
+		<include>footer</include>		
+	</include>
 
 
 	<include name="episodes">
@@ -1903,143 +1986,7 @@
 				<include>center_fg</include>
 			</control>
 			<!-- Footer Info -->
-			<control type="group">
-				<visible>Control.IsVisible(56)</visible>
-
-				<posy>667</posy>
-				<include>footer_bg</include>
-			
-				<!-- Center -->
-				<control type="group">
-					<posx>640</posx>
-					<posy>11</posy>
-
-					<control type="label">
-						<visible>Window.IsActive(10025) + !Container.Content(movies)</visible>
-						<label>$INFO[ListItem.title]</label>
-						<font>Large</font>
-						<textcolor>ffe8e8db</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-					</control>
-					<control type="label">
-						<visible>Window.IsActive(10025) + Container.Content(movies)</visible>
-						<label>$INFO[ListItem.Label]</label>
-						<font>Large</font>
-						<textcolor>ffe8e8db</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-					</control>
-					<control type="label">
-						<visible>Window.IsActive(10024)</visible>
-						<label>$INFO[ListItem.Label]</label>
-						<font>Large</font>
-						<textcolor>ffe8e8db</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-					</control>
-
-					<control type="label">
-						<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(song)</visible>
-						<label>$INFO[ListItem.Label]</label>
-						<font>Large</font>
-						<textcolor>ffe8e8db</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-					</control>
-					<control type="label">
-						<visible>Window.IsActive(10502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(song) | Window.IsActive(10501) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(song) </visible>
-						<label>$LOCALIZE[31027]</label>
-						<font>Large</font>
-						<textcolor>ffe8e8db</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-					</control>
-					<control type="label">
-						<visible>Window.IsActive(10002)</visible>
-						<label>$INFO[ListItem.Label]</label>
-						<font>Large</font>
-						<textcolor>ffe8e8db</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-					</control>
-					<control type="label">
-						<visible>Window.IsActive(10001)</visible>
-						<label>$INFO[ListItem.Label]</label>
-						<font>Large</font>
-						<textcolor>ffe8e8db</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-					</control>
-					<control type="label">
-						<visible>Window.IsActive(10020)</visible>
-						<label>$INFO[ListItem.Label]</label>
-						<font>Large</font>
-						<textcolor>ffe8e8db</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-					</control>
-
-				</control>
-				<!-- Right 	-->
-				<control type="group">
-					<posx>1073</posx>
-					<posy>11</posy>
-					<control type="image">
-						<visible>Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)</visible>
-						<width>172</width>
-						<height>30</height>
-						<info>ListItem.StarRating</info>
-						<aspectratio>keep</aspectratio>
-						<align>center</align>
-					</control>
-				</control>
-				<!-- Left 	-->
-				<control type="label">
-					<visible>Container.Content(songs) | Container.Content(albums) | Container.Content(artists)</visible>
-					<posx>36</posx>
-					<posy>11</posy>
-					<label>$INFO[ListItem.Genre]</label>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>left</align>
-				</control>
-				<control type="group">
-					<visible>Container.Content(seasons) | Container.Content(tvshows) | Container.Content(musicvideos)</visible>
-					<width>172</width>
-					<posx>65</posx>
-					<posy>11</posy>
-					<control type=label>
-						<label>$INFO[ListItem.Property(WatchedEpisodes)]</label>
-						<font>Small</font>
-						<textcolor>ffe8e8db</textcolor>
-						<scroll>false</scroll>
-						<align>right</align>
-					</control>
-					<control type=image>
-						<texture>Zen/elements/common/check.png</texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
-					<control type=label>
-						<posx>80</posx>
-						<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
-						<font>Small</font>
-						<textcolor>ffe8e8db</textcolor>
-						<scroll>false</scroll>
-						<align>right</align>
-					</control>
-					<control type=image>
-						<posx>83</posx>
-						<posy>-1</posy>
-						<texture>Zen/elements/common/x_mark.png</texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
-				</control>
-				
-				
-				<include>footer_fg</include>
-			</control>
-
+			<include>footer</include>
 	</include>
 	<include name="songs">
 			<visible>Control.IsVisible(57)</visible>
@@ -2270,143 +2217,7 @@
 				<include>center_fg</include>
 			</control>
 			<!-- Footer Info -->
-			<control type="group">
-				<visible>Control.IsVisible(57)</visible>
-
-				<posy>667</posy>
-				<include>footer_bg</include>
-			
-				<!-- Center -->
-				<control type="group">
-					<posx>640</posx>
-					<posy>11</posy>
-
-					<control type="label">
-						<visible>Window.IsActive(10025) + !Container.Content(movies)</visible>
-						<label>$INFO[ListItem.title]</label>
-						<font>Large</font>
-						<textcolor>ffe8e8db</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-					</control>
-					<control type="label">
-						<visible>Window.IsActive(10025) + Container.Content(movies)</visible>
-						<label>$INFO[ListItem.Label]</label>
-						<font>Large</font>
-						<textcolor>ffe8e8db</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-					</control>
-					<control type="label">
-						<visible>Window.IsActive(10024)</visible>
-						<label>$INFO[ListItem.Label]</label>
-						<font>Large</font>
-						<textcolor>ffe8e8db</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-					</control>
-
-					<control type="label">
-						<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(song)</visible>
-						<label>$INFO[ListItem.Label]</label>
-						<font>Large</font>
-						<textcolor>ffe8e8db</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-					</control>
-					<control type="label">
-						<visible>Window.IsActive(10502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(song) | Window.IsActive(10501) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(song) </visible>
-						<label>$LOCALIZE[31027]</label>
-						<font>Large</font>
-						<textcolor>ffe8e8db</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-					</control>
-					<control type="label">
-						<visible>Window.IsActive(10002)</visible>
-						<label>$INFO[ListItem.Label]</label>
-						<font>Large</font>
-						<textcolor>ffe8e8db</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-					</control>
-					<control type="label">
-						<visible>Window.IsActive(10001)</visible>
-						<label>$INFO[ListItem.Label]</label>
-						<font>Large</font>
-						<textcolor>ffe8e8db</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-					</control>
-					<control type="label">
-						<visible>Window.IsActive(10020)</visible>
-						<label>$INFO[ListItem.Label]</label>
-						<font>Large</font>
-						<textcolor>ffe8e8db</textcolor>
-						<scroll>false</scroll>
-						<align>center</align>
-					</control>
-
-				</control>
-				<!-- Right 	-->
-				<control type="group">
-					<posx>1073</posx>
-					<posy>11</posy>
-					<control type="image">
-						<visible>Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)</visible>
-						<width>172</width>
-						<height>30</height>
-						<info>ListItem.StarRating</info>
-						<aspectratio>keep</aspectratio>
-						<align>center</align>
-					</control>
-				</control>
-				<!-- Left 	-->
-				<control type="label">
-					<visible>Container.Content(songs) | Container.Content(albums) | Container.Content(artists)</visible>
-					<posx>36</posx>
-					<posy>11</posy>
-					<label>$INFO[ListItem.Genre]</label>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>left</align>
-				</control>
-				<control type="group">
-					<visible>Container.Content(seasons) | Container.Content(tvshows) | Container.Content(musicvideos)</visible>
-					<width>172</width>
-					<posx>65</posx>
-					<posy>11</posy>
-					<control type=label>
-						<label>$INFO[ListItem.Property(WatchedEpisodes)]</label>
-						<font>Small</font>
-						<textcolor>ffe8e8db</textcolor>
-						<scroll>false</scroll>
-						<align>right</align>
-					</control>
-					<control type=image>
-						<texture>Zen/elements/common/check.png</texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
-					<control type=label>
-						<posx>80</posx>
-						<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
-						<font>Small</font>
-						<textcolor>ffe8e8db</textcolor>
-						<scroll>false</scroll>
-						<align>right</align>
-					</control>
-					<control type=image>
-						<posx>83</posx>
-						<posy>-1</posy>
-						<texture>Zen/elements/common/x_mark.png</texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
-				</control>
-				
-				
-				<include>footer_fg</include>
-			</control>
-
+			<include>footer</include>
 	</include>
 
 

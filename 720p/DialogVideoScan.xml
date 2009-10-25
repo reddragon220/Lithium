@@ -9,7 +9,7 @@
 </coordinates>
 
 <controls>
-
+<!--
   <include>DialogBack</include>
 
   <control type="label">
@@ -44,7 +44,7 @@
     <posx>10</posx>
     <posy>136</posy>
   </control>
-  
+  -->
 </controls>
   
 </window>
