@@ -109,6 +109,11 @@
 					<label>Developer</label>
 					<onclick>-</onclick>
 				</item>
+                <item id="4">
+					<description>Script menu</description>
+					<label>Scripts</label>
+					<onclick>-</onclick>
+				</item>
 			</content>
 		</control>
 
@@ -360,8 +365,142 @@
 				    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
 				    	<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
 					</control>
+                    
+                    
 
 			</control>
+            
+            
+            <control type="grouplist" id="204">
+					<visible>Container(50).Hasfocus(4)</visible>
+			
+			    	<posx>279</posx>
+			    	<posy>28</posy>
+			    	<width>872</width>
+			    	<height>480</height>
+			    	<itemgap>2</itemgap>
+			    	<orientation>vertical</orientation>
+	
+			
+
+					<onup>100</onup>                       <!-- To move between controls insert control id -->				
+					<onleft>50</onleft>
+
+					<scrolltime>200</scrolltime>
+			
+					<itemlayout>
+						<control type="image">
+							<posx>7</posx>
+							<posy>82</posy>
+							<width>1118</width>
+							<height>2</height>
+							<texture>Zen/elements/list/divider.png</texture>
+							<aspectratio>stretch</aspectratio> 
+						</control>
+
+                        
+                        
+					</itemlayout>
+					
+					<control type="radiobutton" id="2041">
+						<posx>12</posx>
+						<height>52</height>
+						<width>872</width>
+				    	<textcolor>7fffffff</textcolor>
+						<focusedcolor>ffe8e8db</focusedcolor>
+						<disabledcolor>7f7c7c72</disabledcolor>
+						<shadowcolor>7f000000</shadowcolor>
+				    	<align>left</align>
+						<font>Large</font>
+						<textoffsetx>12</textoffsetx>
+				
+						<label>Enable Subtitle button in OSD</label>
+						<selected>Skin.HasSetting(SubsScript_Enable)</selected>
+						<onclick>Skin.ToggleSetting(SubsScript_Enable)</onclick>
+				
+
+				    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
+						<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
+
+						<radiowidth>59</radiowidth>
+						<radioheight>39</radioheight>
+						<textureradiofocus>Zen/elements/settings/on_focused.png</textureradiofocus>
+						<textureradionofocus>Zen/elements/settings/off_focused.png</textureradionofocus>
+					</control>
+                                 
+                    <control type="button" id="2042">
+                        
+                        <posx>12</posx>
+						<height>52</height>
+                        <width>872</width>
+                        <font>Small</font>
+                        <label>- Script Path</label>
+                        <label2>$INFO[Skin.String(SubsScript_Path)]</label2>
+				    	<textcolor>7fffffff</textcolor>
+						<focusedcolor>ffe8e8db</focusedcolor>
+						<disabledcolor>7f7c7c72</disabledcolor>
+						<shadowcolor>7f000000</shadowcolor>
+				    	<align>left</align>
+						<font>Large</font>
+						<textoffsetx>12</textoffsetx>
+                        <onclick>Skin.SetFile(SubsScript_Path,.py)</onclick>
+                        <enable>Skin.HasSetting(SubsScript_Enable)</enable>
+                        <texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
+						<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
+                    </control>
+                    
+                    
+					<control type="radiobutton" id="2043">
+						<posx>12</posx>
+						<height>52</height>
+						<width>872</width>
+				    	<textcolor>7fffffff</textcolor>
+						<focusedcolor>ffe8e8db</focusedcolor>
+						<disabledcolor>7f7c7c72</disabledcolor>
+						<shadowcolor>7f000000</shadowcolor>
+				    	<align>left</align>
+						<font>Large</font>
+						<textoffsetx>12</textoffsetx>
+				
+						<label>Enable Lyrics button in OSD</label>
+						<selected>Skin.HasSetting(LyricScript_Enable)</selected>
+						<onclick>Skin.ToggleSetting(LyricScript_Enable)</onclick>
+				
+
+				    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
+						<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
+
+						<radiowidth>59</radiowidth>
+						<radioheight>39</radioheight>
+						<textureradiofocus>Zen/elements/settings/on_focused.png</textureradiofocus>
+						<textureradionofocus>Zen/elements/settings/off_focused.png</textureradionofocus>
+					</control>
+                                 
+                    <control type="button" id="2044">
+                        
+                        <posx>12</posx>
+						<height>52</height>
+                        <width>872</width>
+                        <font>Small</font>
+                        <label>- Script Path</label>
+                        <label2>$INFO[Skin.String(SubsScript_Path)]</label2>
+				    	<textcolor>7fffffff</textcolor>
+						<focusedcolor>ffe8e8db</focusedcolor>
+						<disabledcolor>7f7c7c72</disabledcolor>
+						<shadowcolor>7f000000</shadowcolor>
+				    	<align>left</align>
+						<font>Large</font>
+						<textoffsetx>12</textoffsetx>
+                        <onclick>Skin.SetFile(LyricScript_Path,.py)</onclick>
+                        <enable>Skin.HasSetting(LyricScript_Enable)</enable>
+                        <texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
+						<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
+                    </control>                    
+                    
+
+                    
+                    
+			</control>            
 
 		</control>
 				

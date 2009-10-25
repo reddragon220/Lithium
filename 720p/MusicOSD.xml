@@ -1,4 +1,4 @@
-﻿<window id="120">
+<window id="120">
 <defaultcontrol always="true">1</defaultcontrol>
   
 <coordinates>
@@ -82,6 +82,14 @@
       <texturefocus border="1">ButtonFo.png</texturefocus>
       <texturenofocus border="1">ButtonNF.png</texturenofocus>
 		  <onclick>XBMC.ActivateWindow(121)</onclick>
+	  </control>
+      <control type="button" id="10">
+		  <description>Lyric Button</description>
+		  <label>Lyrics</label>
+      <texturefocus border="1">ButtonFo.png</texturefocus>
+      <texturenofocus border="1">ButtonNF.png</texturenofocus>
+		  <onclick>XBMC.RunScript($INFO[Skin.String(LyricScript_Path)])</onclick>
+          <visible>Skin.HasSetting(LyricScript_Enable)</visible>
 	  </control>
 </control>
     

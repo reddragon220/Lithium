@@ -57,6 +57,11 @@
     <aspectratio>stretch</aspectratio>
 		<texture>-</texture>
 	</control>
+    <control type="label" id="7">
+        <description>separator label</description>
+        <align>center</align>
+        <textcolor>red</textcolor>
+    </control>    
 	
 	<control type="group" id="9000">
 		<control type="button" id="10">
