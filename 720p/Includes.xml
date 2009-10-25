@@ -49,6 +49,8 @@
 		
 		<include>episodes</include>
 		<include>songs</include>
+		
+		<include>footer</include>
 	</include>
 	
 	
@@ -854,10 +856,6 @@
 			<aspectratio>stretch</aspectratio>
 		</control>
 	</include>
-	<include name="options_submenu">
-		
-	</include>
-	
 
 	<include name="bg_animation">
 		<animation type="Conditional" condition="true" pulse="true">

@@ -34,34 +34,18 @@
 			<aspectratio>stretch</aspectratio> 
 		</control>
 	</include>
-	<include name="footer_bg">
-		<control type="image">
-			<width>1280</width>
-			<height>53</height>
-			<texture>Zen/panes/common/footer_bg.png</texture>
-			<aspectratio>stretch</aspectratio>
-		</control>
-	</include>
-	<include name="footer_fg">
-		<control type="image">
-			<width>1280</width>
-			<height>53</height>
-			<texture>Zen/panes/common/footer_gradient.png</texture>
-			<aspectratio>stretch</aspectratio>
-		</control>
-		<control type="image">
-			<width>1280</width>
-			<height>53</height>
-			<texture>Zen/panes/common/footer_outline.png</texture>
-			<aspectratio>stretch</aspectratio>
-		</control>
-	</include>
+
 	
 	<include name="footer">
 		<!-- Footer Info -->
 		<control type="group">
 			<posy>667</posy>
-			<include>footer_bg</include>
+			<control type="image">
+				<width>1280</width>
+				<height>53</height>
+				<texture>Zen/panes/common/header_bg.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
 		
 			<!-- Center -->
 			<control type="group">
@@ -155,7 +139,7 @@
 					<aspectratio>keep</aspectratio>
 					<align>center</align>
 				</control>
-			</control>
+			</control>				
 			<!-- Left 	-->
 			<control type="label">
 				<visible>Container.Content(songs) | Container.Content(albums) | Container.Content(artists)</visible>
@@ -197,9 +181,21 @@
 					<aspectratio>stretch</aspectratio>
 				</control>
 			</control>
+		
 			
-			
-			<include>footer_fg</include>
+			<control type="image">
+				<width>1280</width>
+				<height>53</height>
+				<texture>Zen/panes/common/footer_gradient.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<width>1280</width>
+				<height>53</height>
+				<texture>Zen/panes/common/footer_outline.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+
 		</control>
 		
 	</include>
@@ -616,7 +612,6 @@
 		</control>
 
 		<!-- Footer Info -->
-		<include>footer</include>		
 	</include>
 	<!-- Note multiple large image (about 6 or so) crashes Plex as of version 8.2-->
 	<include name="fanart_nav">
@@ -858,143 +853,6 @@
 
 		</control>
 		<!-- Footer Info -->
-		<control type="group">
-			<visible>Control.IsVisible(52)</visible>
-
-			<posy>667</posy>
-			<include>footer_bg</include>
-		
-			<!-- Center -->
-			<control type="group">
-				<posx>640</posx>
-				<posy>11</posy>
-
-				<control type="label">
-					<visible>Window.IsActive(10025) + !Container.Content(movies)</visible>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10025) + Container.Content(movies)</visible>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10024)</visible>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-
-				<control type="label">
-					<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(song)</visible>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(song) | Window.IsActive(10501) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(song) </visible>
-					<label>$LOCALIZE[31027]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10002)</visible>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10001)</visible>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<visible>Window.IsActive(10020)</visible>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Large</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>center</align>
-				</control>
-
-			</control>
-			<!-- Right 	-->
-			<control type="group">
-				<posx>1073</posx>
-				<posy>11</posy>
-				<control type="image">
-					<visible>Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)</visible>
-					<width>172</width>
-					<height>30</height>
-					<info>ListItem.StarRating</info>
-					<aspectratio>keep</aspectratio>
-					<align>center</align>
-				</control>
-			</control>
-			<!-- Left 	-->
-			<control type="label">
-				<visible>Container.Content(songs) | Container.Content(albums) | Container.Content(artists)</visible>
-				<posx>36</posx>
-				<posy>11</posy>
-				<label>$INFO[ListItem.Genre]</label>
-				<textcolor>ffe8e8db</textcolor>
-				<scroll>false</scroll>
-				<align>left</align>
-			</control>
-			<control type="group">
-				<visible>Container.Content(seasons) | Container.Content(tvshows) | Container.Content(musicvideos)</visible>
-				<width>172</width>
-				<posx>65</posx>
-				<posy>11</posy>
-				<control type=label>
-					<label>$INFO[ListItem.Property(WatchedEpisodes)]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type="image">
-					<texture>Zen/elements/common/check.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type="label">
-					<posx>80</posx>
-					<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type="image">
-					<posx>83</posx>
-					<posy>-1</posy>
-					<texture>Zen/elements/common/x_mark.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-			</control>
-			
-			
-			<include>footer_fg</include>
-		</control>
-		
 	</include>
 	<include name="cover_nav">
 		<visible>Control.IsVisible(53)</visible>
@@ -1130,7 +988,6 @@
 			</control>
 		</control>
 		<!-- Footer Info -->
-		<include>footer</include>
 	</include>
 	<include name="multiplex">
 		<control type="image">
@@ -1271,7 +1128,6 @@
 			</control>
 		</control>
 		<!-- Footer Info -->
-		<include>footer</include>
 	</include>
 
 	<include name="info thumb list">
@@ -1302,7 +1158,7 @@
 					<label>$INFO[listitem.Plot]</label>
 					<font>Small</font>
 					<textcolor>ffd7d7d7</textcolor>
-					<autoscroll delay="3000" time="3000" repeat="10000">Control.HasFocus(58)</autoscroll>
+					<autoscroll delay="6000" time="3000" repeat="10000">Control.HasFocus(58)</autoscroll>
 				</control>
 				
 				<control type="largeimage">
@@ -1368,7 +1224,7 @@
 					<label>$INFO[listitem.artist]</label>
 					<font>Small</font>
 					<textcolor>ffd7d7d7</textcolor>
-					<autoscroll delay="3000" time="3000" repeat="10000">Control.HasFocus(58)</autoscroll>
+					<autoscroll delay="6000" time="3000" repeat="10000">Control.HasFocus(58)</autoscroll>
 				</control>
 				<control type="textbox">
 					<visible>Window.IsActive(programs)</visible>
@@ -1787,7 +1643,6 @@
 		</control>
 
 		<!-- Footer Info -->
-		<include>footer</include>		
 	</include>
 
 
@@ -1809,7 +1664,7 @@
 					<scroll>false</scroll>
 					<align>left</align>
 				</control>
-					<!--				<control type="label">
+				<control type="label">
 					<posx>1196</posx>
 					<posy>18</posy>
 					<label>$LOCALIZE[31053] $INFO[ListItem.Season]</label>
@@ -1818,9 +1673,74 @@
 					<scroll>false</scroll>
 					<align>right</align>
 				</control>
-					-->				
+				<control type="label">
+					<posx>1146</posx>
+					<posy>515</posy>
+					<label>$INFO[Container.NumItems] Episodes</label>
+					<font>Mini</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+				</control>
+							
 					
 				<!-- images -->
+				<control type="group">
+					<posy>50</posy>
+					<visible>
+						!Window.IsActive(musicplaylist) + !Window.IsActive(musicfiles) + !Window.IsActive(musiclibrary)
+						+ !Window.IsActive(programs)
+						+ !Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs)
+					</visible>
+					<control type="textbox">
+						<posx>20</posx>
+						<posy>206</posy>
+						<width>338</width>
+						<height>275</height>
+						<label>$INFO[listitem.Plot]</label>
+						<font>Small</font>
+						<textcolor>ffd7d7d7</textcolor>
+						<autoscroll delay="6000" time="3000" repeat="10000">Control.HasFocus(56)</autoscroll>
+					</control>
+
+					<control type="largeimage">
+						<visible>Window.Isactive(10025) + !Container.Content(episodes)</visible>
+						<posx>11</posx>
+						<posy>0</posy>
+						<width>338</width>
+						<height>194</height>
+						<info>Listitem.Property(Fanart_Image)</info>
+						<texture diffuse="Zen/elements/infolist/thumb_mask.png"></texture>
+						<bordertexture border="4">Zen/elements/infolist/thumb_shadow.png</bordertexture>
+						<bordersize>4</bordersize>
+						<aspectratio scalediffuse="true" align="center" aligny="bottom">keep</aspectratio>
+					</control>
+					<control type="largeimage">
+						<visible>Window.Isactive(10025) + Container.Content(episodes)</visible>
+						<posx>11</posx>
+						<posy>12</posy>
+						<width>338</width>
+						<height>194</height>
+						<info>Listitem.thumb</info>
+						<texture diffuse="Zen/elements/infolist/thumb_mask.png"></texture>
+						<bordertexture border="4">Zen/elements/infolist/thumb_shadow.png</bordertexture>
+						<bordersize>4</bordersize>
+						<aspectratio scalediffuse="true" align="center" aligny="bottom">keep</aspectratio>
+					</control>
+					<control type="largeimage">
+						<visible>!Window.Isactive(10025)</visible>
+						<posx>11</posx>
+						<posy>12</posy>
+						<width>338</width>
+						<height>194</height>
+						<info>Listitem.thumb</info>
+						<texture diffuse="Zen/elements/infolist/thumb_mask.png"></texture>
+						<bordertexture border="4">Zen/elements/infolist/thumb_shadow.png</bordertexture>
+						<bordersize>4</bordersize>
+						<aspectratio scalediffuse="true" align="center" aligny="bottom">keep</aspectratio>
+					</control>
+				</control>
+<!--				
 				<control type="group">
 					<posx>786</posx>
 					<posy>55</posy>
@@ -1854,8 +1774,9 @@
 						<autoscroll delay="3000" time="2000" repeat="10000">!Control.HasFocus(13)</autoscroll>
 					</control>
 				</control>				
+-->
 				<control type="image">
-					<posx>21</posx>
+					<posx>375</posx>
 					<posy>65</posy>
 					<width>104</width>
 					<height>450</height>
@@ -1863,7 +1784,7 @@
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="image">
-					<posx>685</posx>
+					<posx>1104</posx>
 					<posy>65</posy>
 					<width>45</width>
 					<height>450</height>
@@ -1878,7 +1799,7 @@
 
 						<width>1132</width>
 						<height>450</height>
-						<posx>19</posx>
+						<posx>374</posx>
 						<posy>65</posy>
 
 						<ondown>-</ondown>
@@ -1889,7 +1810,7 @@
 						<pagecontrol>561</pagecontrol>
 
 
-						<itemlayout width="713" height="50">
+						<itemlayout width="776" height="50">
 							<!-- Info -->
 							<control type="group">
 								<posx>0</posx>
@@ -1916,7 +1837,7 @@
 								</control>
 							</control>
 							<control type="image">
-								<posx>673</posx>
+								<posx>735</posx>
 								<posy>10</posy>
 								<width>32</width>
 								<height>30</height>
@@ -1926,17 +1847,17 @@
 							<control type="image">
 								<posx>7</posx>
 								<posy>48</posy>
-								<width>698</width>
+								<width>762</width>
 								<height>2</height>
 								<texture>Zen/elements/episode/divider.png</texture>
 								<aspectratio>stretch</aspectratio> 
 							</control>
 						</itemlayout>
-						<focusedlayout width="713" height="50">
+						<focusedlayout width="776" height="50">
 							<control type="image">
 								<posx>0</posx>
 								<posy>-2</posy>
-								<width>713</width>
+								<width>776</width>
 								<height>52</height>
 								<texture>Zen/elements/episode/highlight.png</texture>
 								<aspectratio>stretch</aspectratio>
@@ -1966,7 +1887,7 @@
 									<scroll>true</scroll>
 								</control>
 								<control type="image">
-									<posx>673</posx>
+									<posx>735</posx>
 									<posy>10</posy>
 									<width>32</width>
 									<height>30</height>
@@ -1977,7 +1898,7 @@
 							<control type="image">
 								<posx>7</posx>
 								<posy>48</posy>
-								<width>698</width>
+								<width>762</width>
 								<height>2</height>
 								<texture>Zen/elements/episode/divider.png</texture>
 								<aspectratio>stretch</aspectratio> 
@@ -1988,7 +1909,7 @@
 				<!-- Scrollbar -->
 				<control type="group">
 					<posy>155</posy>
-					<posx>748</posx>
+					<posx>1165</posx>
 					<control type="image">
 						<width>26</width>
 						<height>267</height>
@@ -2011,7 +1932,6 @@
 				<include>center_fg</include>
 			</control>
 			<!-- Footer Info -->
-			<include>footer</include>
 	</include>
 	<include name="songs">
 			<visible>Control.IsVisible(57)</visible>
@@ -2242,7 +2162,6 @@
 				<include>center_fg</include>
 			</control>
 			<!-- Footer Info -->
-			<include>footer</include>
 	</include>
 
 
