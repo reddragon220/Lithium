@@ -1296,7 +1296,7 @@
 				</visible>
 				<control type="textbox">
 					<posx>20</posx>
-					<posy>218</posy>
+					<posy>206</posy>
 					<width>338</width>
 					<height>308</height>
 					<label>$INFO[listitem.Plot]</label>
@@ -1304,16 +1304,42 @@
 					<textcolor>ffd7d7d7</textcolor>
 					<autoscroll delay="3000" time="3000" repeat="10000">Control.HasFocus(58)</autoscroll>
 				</control>
+				
 				<control type="largeimage">
-					<posy>26</posy>
-					<posx>-456</posx>
-					<height>196</height>
-					<info>ListItem.Property(fanart_image)</info>
+					<visible>Window.Isactive(10025) + !Container.Content(episodes)</visible>
+					<posx>11</posx>
+					<posy>12</posy>
+					<width>338</width>
+					<height>194</height>
+					<info>Listitem.Property(Fanart_Image)</info>
 					<texture diffuse="Zen/elements/infolist/thumb_mask.png"></texture>
 					<bordertexture border="4">Zen/elements/infolist/thumb_shadow.png</bordertexture>
 					<bordersize>4</bordersize>
-					<aligny>bottom</aligny>
-					<aspectratio>keep</aspectratio>
+					<aspectratio scalediffuse="true" align="center" aligny="bottom">keep</aspectratio>
+				</control>
+				<control type="largeimage">
+					<visible>Window.Isactive(10025) + Container.Content(episodes)</visible>
+					<posx>11</posx>
+					<posy>12</posy>
+					<width>338</width>
+					<height>194</height>
+					<info>Listitem.thumb</info>
+					<texture diffuse="Zen/elements/infolist/thumb_mask.png"></texture>
+					<bordertexture border="4">Zen/elements/infolist/thumb_shadow.png</bordertexture>
+					<bordersize>4</bordersize>
+					<aspectratio scalediffuse="true" align="center" aligny="bottom">keep</aspectratio>
+				</control>
+				<control type="largeimage">
+					<visible>!Window.Isactive(10025)</visible>
+					<posx>11</posx>
+					<posy>12</posy>
+					<width>338</width>
+					<height>194</height>
+					<info>Listitem.thumb</info>
+					<texture diffuse="Zen/elements/infolist/thumb_mask.png"></texture>
+					<bordertexture border="4">Zen/elements/infolist/thumb_shadow.png</bordertexture>
+					<bordersize>4</bordersize>
+					<aspectratio scalediffuse="true" align="center" aligny="bottom">keep</aspectratio>
 				</control>
 			</control>
 			<control type="group">
@@ -1322,22 +1348,21 @@
 					| Window.IsActive(programs)
 					| Container.Content(albums) | Container.Content(artists) | Container.Content(songs)
 				</visible>
-				<control type="image">
-					<posx>97</posx>
-					<posy>26</posy>
-					<width>194</width>
+				<control type="largeimage">
+					<posx>11</posx>
+					<posy>12</posy>
+					<width>338</width>
 					<height>194</height>
-					<info>ListItem.thumb</info>
+					<info>Listitem.thumb</info>
 					<texture diffuse="Zen/elements/infolist/thumb_mask.png"></texture>
 					<bordertexture border="4">Zen/elements/infolist/thumb_shadow.png</bordertexture>
 					<bordersize>4</bordersize>
 					<aspectratio scalediffuse="true" align="center" aligny="bottom">keep</aspectratio>
-					<align>center</align>
 				</control>
 				<control type="textbox">
 					<visible>!Window.IsActive(programs)</visible>
 					<posx>20</posx>
-					<posy>218</posy>
+					<posy>206</posy>
 					<width>338</width>
 					<height>308</height>
 					<label>$INFO[listitem.artist]</label>

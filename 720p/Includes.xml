@@ -262,7 +262,7 @@
 			<!-- Update Low -->
 			<control type="label">
 				<animation effect="fade" time="400">VisibleChange</animation>
-				<visible>Window.IsActive(133)</visible>
+				<visible>Window.IsActive(133) | Window.IsActive(101)</visible>
 				<posy>10</posy>
 				<posx>958</posx>
 				<label>Updating...</label>
@@ -294,7 +294,7 @@
 			<!-- Updating High -->
 			<control type="image">
 				<animation effect="fade" time="400">VisibleChange</animation>
-				<visible>Window.IsActive(133)</visible>
+				<visible>Window.IsActive(133) | Window.IsActive(101)</visible>
 				<posx>924</posx>
 				<posy>6</posy>
 				<texture>zen/elements/header/updating.png</texture>
