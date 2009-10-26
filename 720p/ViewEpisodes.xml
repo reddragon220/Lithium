@@ -1,0 +1,289 @@
+<includes>
+	<include name="episodes">
+			<visible>Control.IsVisible(56)</visible>
+
+			<control type="group">
+				<visible>Control.IsVisible(56)</visible>
+				<posx>36</posx>
+				<posy>82</posy>
+				<include>center_bg</include>
+				
+				<control type="label">
+					<posx>18</posx>
+					<posy>18</posy>
+					<label>$INFO[ListItem.TVShowTitle]</label>
+					<font>Title</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+				</control>
+				<control type="label">
+					<posx>1196</posx>
+					<posy>18</posy>
+					<label>$LOCALIZE[31053] $INFO[ListItem.Season]</label>
+					<font>Large</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+				</control>
+				<control type="label">
+					<posx>1146</posx>
+					<posy>515</posy>
+					<label>$INFO[Container.NumItems] Episodes</label>
+					<font>Mini</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+				</control>
+							
+					
+				<!-- images -->
+				<control type="group">
+					<posy>50</posy>
+					<visible>
+						!Window.IsActive(musicplaylist) + !Window.IsActive(musicfiles) + !Window.IsActive(musiclibrary)
+						+ !Window.IsActive(programs)
+						+ !Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs)
+					</visible>
+					<control type="textbox">
+						<posx>20</posx>
+						<posy>206</posy>
+						<width>338</width>
+						<height>275</height>
+						<label>$INFO[listitem.Plot]</label>
+						<font>Small</font>
+						<textcolor>ffd7d7d7</textcolor>
+						<autoscroll delay="6000" time="3000" repeat="10000">Control.HasFocus(56)</autoscroll>
+					</control>
+
+					<control type="largeimage">
+						<visible>Window.Isactive(10025) + !Container.Content(episodes)</visible>
+						<posx>11</posx>
+						<posy>0</posy>
+						<width>338</width>
+						<height>194</height>
+						<info>Listitem.Property(Fanart_Image)</info>
+						<texture diffuse="Zen/elements/infolist/thumb_mask.png"></texture>
+						<bordertexture border="4">Zen/elements/infolist/thumb_shadow.png</bordertexture>
+						<bordersize>4</bordersize>
+						<aspectratio scalediffuse="true" align="center" aligny="bottom">keep</aspectratio>
+					</control>
+					<control type="largeimage">
+						<visible>Window.Isactive(10025) + Container.Content(episodes)</visible>
+						<posx>11</posx>
+						<posy>12</posy>
+						<width>338</width>
+						<height>194</height>
+						<info>Listitem.thumb</info>
+						<texture diffuse="Zen/elements/infolist/thumb_mask.png"></texture>
+						<bordertexture border="4">Zen/elements/infolist/thumb_shadow.png</bordertexture>
+						<bordersize>4</bordersize>
+						<aspectratio scalediffuse="true" align="center" aligny="bottom">keep</aspectratio>
+					</control>
+					<control type="largeimage">
+						<visible>!Window.Isactive(10025)</visible>
+						<posx>11</posx>
+						<posy>12</posy>
+						<width>338</width>
+						<height>194</height>
+						<info>Listitem.thumb</info>
+						<texture diffuse="Zen/elements/infolist/thumb_mask.png"></texture>
+						<bordertexture border="4">Zen/elements/infolist/thumb_shadow.png</bordertexture>
+						<bordersize>4</bordersize>
+						<aspectratio scalediffuse="true" align="center" aligny="bottom">keep</aspectratio>
+					</control>
+				</control>
+<!--				
+				<control type="group">
+					<posx>786</posx>
+					<posy>55</posy>
+					
+					<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>408</width>
+						<height>234</height>
+						<texture>Zen/elements/episode/thumb_shadow.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>		
+						
+					<control type="image">
+						<posx>4</posx>
+						<posy>4</posy>
+						<width>400</width>
+						<height>226</height>
+						<info>ListItem.thumb</info>
+						<texture diffuse="Zen/elements/episode/thumb_mask.png"></texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+					</control>
+					<control type="textbox">
+						<posx>0</posx>
+						<posy>230</posy>
+						<width>408</width>
+						<height>230</height>
+						<info>listitem.Plot</info>
+						<font>Small</font>
+						<textcolor>ffe8e8db</textcolor>
+						<autoscroll delay="3000" time="2000" repeat="10000">!Control.HasFocus(13)</autoscroll>
+					</control>
+				</control>				
+-->
+				<control type="image">
+					<posx>375</posx>
+					<posy>65</posy>
+					<width>104</width>
+					<height>450</height>
+					<texture>Zen/elements/episode/number_bay.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>1104</posx>
+					<posy>65</posy>
+					<width>45</width>
+					<height>450</height>
+					<texture>Zen/elements/episode/watched_bay.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<!-- Select List -->
+				<control type="group">
+					<control type="panel" id="56">
+						<viewtype label="Episode">list</viewtype>
+						<orientation>vertical</orientation>
+
+						<width>1132</width>
+						<height>450</height>
+						<posx>374</posx>
+						<posy>65</posy>
+
+						<ondown>-</ondown>
+						<onup>100</onup>
+						<onleft>100</onleft>
+						<onright>561</onright>
+
+						<pagecontrol>561</pagecontrol>
+
+
+						<itemlayout width="776" height="50">
+							<!-- Info -->
+							<control type="group">
+								<posx>0</posx>
+								<control type="label">
+									<posx>52</posx>
+									<posy>-7</posy>
+									<height>50</height>
+									<width>104</width>
+									<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]</label>
+									<font>Large</font>
+									<textcolor>ffe8e8db</textcolor>
+									<scroll>false</scroll>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>128</posx>
+									<posy>-7</posy>
+									<height>50</height>
+									<width>556</width>
+									<info>ListItem.title</info>
+									<font>Large</font>
+									<textcolor>ffe8e8db</textcolor>
+									<scroll>false</scroll>
+								</control>
+							</control>
+							<control type="image">
+								<posx>735</posx>
+								<posy>10</posy>
+								<width>32</width>
+								<height>30</height>
+								<info>listitem.overlay</info>
+								<aspectratio>stretch</aspectratio> 
+							</control>
+							<control type="image">
+								<posx>7</posx>
+								<posy>48</posy>
+								<width>762</width>
+								<height>2</height>
+								<texture>Zen/elements/episode/divider.png</texture>
+								<aspectratio>stretch</aspectratio> 
+							</control>
+						</itemlayout>
+						<focusedlayout width="776" height="50">
+							<control type="image">
+								<posx>0</posx>
+								<posy>-2</posy>
+								<width>776</width>
+								<height>52</height>
+								<texture>Zen/elements/episode/highlight.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<!-- Info -->
+							<control type="group">
+								<posx>0</posx>
+								<control type="label">
+									<posx>52</posx>
+									<posy>-7</posy>
+									<height>50</height>
+									<width>104</width>
+									<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]</label>
+									<font>Large</font>
+									<textcolor>ffffffff</textcolor>
+									<scroll>false</scroll>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>128</posx>
+									<posy>-7</posy>
+									<height>50</height>
+									<width>556</width>
+									<info>ListItem.title</info>
+									<font>Large</font>
+									<textcolor>ffffffff</textcolor>
+									<scroll>true</scroll>
+								</control>
+								<control type="image">
+									<posx>735</posx>
+									<posy>10</posy>
+									<width>32</width>
+									<height>30</height>
+									<info>listitem.overlay</info>
+									<aspectratio>stretch</aspectratio> 
+								</control>
+							</control>
+							<control type="image">
+								<posx>7</posx>
+								<posy>48</posy>
+								<width>762</width>
+								<height>2</height>
+								<texture>Zen/elements/episode/divider.png</texture>
+								<aspectratio>stretch</aspectratio> 
+							</control>
+						</focusedlayout>
+					</control>
+				</control>
+				<!-- Scrollbar -->
+				<control type="group">
+					<posy>155</posy>
+					<posx>1165</posx>
+					<control type="image">
+						<width>26</width>
+						<height>267</height>
+						<posy>7</posy>
+						<texture>Zen/elements/common/scrollbar/scrollbar_bg.png</texture>
+					</control>
+					<control type="scrollbar" id="561">
+						<width>26</width>
+						<height>267</height>
+						<orientation>vertical</orientation>
+						<onup>-</onup>
+						<onleft>56</onleft>
+						<onright>56</onright>
+						<ondown>-</ondown>
+						<textureslidernib>Zen/elements/common/scrollbar/scrollbar_nib.png</textureslidernib>
+						<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
+					</control>
+				</control>
+
+				<include>center_fg</include>
+			</control>
+			<!-- Footer Info -->
+	</include>
+</includes>

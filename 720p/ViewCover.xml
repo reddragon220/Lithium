@@ -1,0 +1,137 @@
+<includes>
+	<include name="cover_nav">
+		<visible>Control.IsVisible(53)</visible>
+		<control type="group">
+			<visible>Control.IsVisible(53)</visible>
+			<posx>36</posx>
+			<posy>82</posy>
+			<include>center_bg</include>
+			<include>center_fg</include>						
+		
+			<!-- Select List -->
+			<control type="group">
+				<control type="panel" id="53">
+					<visible>
+						!Window.IsActive(musicplaylist) + !Window.IsActive(musicfiles) + !Window.IsActive(musiclibrary)
+						+ !Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs)
+						+ !Window.IsActive(pictures)				
+					</visible>
+				
+				
+					<viewtype label="Cover">panel</viewtype>
+					<orientation>vertical</orientation>
+
+					<width>1107</width>
+					<height>541</height>
+					<posx>45</posx>
+					<posy>6</posy>
+
+					<ondown>-</ondown>
+					<onup>100</onup>
+					<onleft>100</onleft>
+					<onright>531</onright>
+
+					<pagecontrol>531</pagecontrol>
+
+					<itemlayout width="183" height="265">
+
+						<control type="image">
+							<posx>11</posx>
+							<posy>12</posy>
+							<width>170</width>
+							<height>250</height>
+							<info>ListItem.thumb</info>
+							<texture diffuse="Zen/elements/cover/dvd/thumb_mask.png"></texture>
+							<bordertexture border="6">Zen/elements/cover/dvd/thumb_shadow.png</bordertexture>
+							<bordersize>6</bordersize>
+						</control>
+					</itemlayout>
+					<focusedlayout width="193" height="265">
+						<control type="image">
+							<animation effect="zoom" end="120" center="auto" time="100">Focus</animation>
+							<posx>11</posx>
+							<posy>14</posy>
+							<width>170</width>
+							<height>250</height>
+							<info>ListItem.thumb</info>
+							<texture diffuse="Zen/elements/cover/dvd/thumb_mask.png"></texture>
+							<bordertexture border="11">Zen/elements/cover/dvd/thumb_focus_overlay2.png</bordertexture>
+							<bordersize>11</bordersize>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="panel" id="53">
+					<visible>
+						Window.IsActive(musicplaylist) | Window.IsActive(musicfiles) | Window.IsActive(musiclibrary)
+						| Container.Content(albums) | Container.Content(artists) | Container.Content(songs)
+						| Window.IsActive(pictures)
+					</visible>
+				
+					<viewtype label="Cover">panel</viewtype>
+					<orientation>vertical</orientation>
+
+					<width>1107</width>
+					<height>547</height>
+					<posx>45</posx>
+					<posy>2</posy>
+
+					<ondown>-</ondown>
+					<onup>100</onup>
+					<onleft>100</onleft>
+					<onright>531</onright>
+
+					<pagecontrol>531</pagecontrol>
+
+					<itemlayout width="183" height="177">
+						<control type="image">
+							<posx>11</posx>
+							<posy>12</posy>
+							<width>170</width>
+							<height>170</height>
+							<info>ListItem.thumb</info>
+							<texture diffuse="Zen/elements/cover/album/thumb_mask.png"></texture>
+							<bordertexture border="6">Zen/elements/cover/album/thumb_shadow.png</bordertexture>
+							<bordersize>6</bordersize>
+						</control>
+					</itemlayout>
+					<focusedlayout width="193" height="193">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>193</width>
+							<height>193</height>
+							<info>ListItem.thumb</info>
+							<texture diffuse="Zen/elements/cover/album/thumb_mask.png"></texture>
+							<bordertexture border="11">Zen/elements/cover/album/thumb_focus_overlay.png</bordertexture>
+							<bordersize>11</bordersize>
+						</control>
+					</focusedlayout>
+				</control>
+
+			</control>
+			<!-- Scrollbar -->
+			<control type="group">
+				<posy>155</posy>
+				<posx>1165</posx>
+				<control type="image">
+					<width>26</width>
+					<height>267</height>
+					<posy>7</posy>
+					<texture>Zen/elements/common/scrollbar/scrollbar_bg.png</texture>
+				</control>
+				<control type="scrollbar" id="531">
+					<width>26</width>
+					<height>267</height>
+					<orientation>vertical</orientation>
+					<onup>-</onup>
+					<onleft>53</onleft>
+					<onright>53</onright>
+					<ondown>-</ondown>
+					<textureslidernib>Zen/elements/common/scrollbar/scrollbar_nib.png</textureslidernib>
+					<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
+				</control>
+			</control>
+		</control>
+		<!-- Footer Info -->
+	</include>
+</includes>

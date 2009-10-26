@@ -1,0 +1,233 @@
+<includes>
+	<include name="songs">
+			<visible>Control.IsVisible(57)</visible>
+
+			<control type="group">
+				<visible>Control.IsVisible(57)</visible>
+				<posx>36</posx>
+				<posy>82</posy>
+				<include>center_bg</include>
+				
+				<control type="label">
+					<posx>18</posx>
+					<posy>18</posy>
+					<label>$INFO[ListItem.Album]</label>
+					<font>Title</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>left</align>
+				</control>
+				<control type="label">
+					<posx>-14</posx>
+					<posy>270</posy>
+					<width>277</width>
+					<label>$INFO[ListItem.Artist]</label>
+					<font>Mini</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<wrapmultiline>true</wrapmultiline>
+					<align>center</align>
+					<aligny>top</aligny>
+				</control>
+				<control type="label">
+					<posx>1146</posx>
+					<posy>515</posy>
+					<label>$INFO[Container.NumItems] Songs</label>
+					<font>Mini</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+				</control>		
+					
+				<!-- images -->
+				<control type="image">
+					<posx>23</posx>
+					<posy>62</posy>
+					<width>207</width>
+					<height>207</height>
+					<info>ListItem.thumb</info>
+					<texture diffuse="Zen/elements/song/thumb_mask.png"></texture>
+					<bordertexture border="4">Zen/elements/song/thumb_shadow.png</bordertexture>
+					<bordersize>4</bordersize>
+				</control>
+				
+				<control type="image">
+					<posx>242</posx>
+					<posy>62</posy>
+					<width>75</width>
+					<height>450</height>
+					<texture>Zen/elements/song/number_bay.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>868</posx>
+					<posy>62</posy>
+					<width>179</width>
+					<height>450</height>
+					<texture>Zen/elements/song/star_bay.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<!-- Select List -->
+				<control type="group">
+					<control type="panel" id="57">
+						<viewtype label="Song">list</viewtype>
+						<orientation>vertical</orientation>
+
+						<width>1132</width>
+						<height>450</height>
+						<posx>240</posx>
+						<posy>62</posy>
+
+						<ondown>-</ondown>
+						<onup>100</onup>
+						<onleft>100</onleft>
+						<onright>571</onright>
+
+						<pagecontrol>571</pagecontrol>
+
+
+						<itemlayout width="914" height="50">
+							<!-- Info -->
+							<control type="group">
+								<control type="label">
+									<posx>37.2</posx>
+									<posy>-7</posy>
+									<height>50</height>
+									<width>75</width>
+									<label>$INFO[listitem.tracknumber]</label>
+									<font>Large</font>
+									<textcolor>ffe8e8db</textcolor>
+									<scroll>false</scroll>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>108</posx>
+									<posy>-7</posy>
+									<height>50</height>
+									<width>556</width>
+									<info>ListItem.title</info>
+									<font>Large</font>
+									<textcolor>ffe8e8db</textcolor>
+									<scroll>false</scroll>
+								</control>
+								<control type="image">
+									<posy>7</posy>
+									<posx>631</posx>
+									<visible>Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)</visible>
+									<width>172</width>
+									<height>30</height>
+									<info>ListItem.StarRating</info>
+									<aspectratio>keep</aspectratio>
+								</control>
+								<control type="label">
+									<posx>820</posx>
+									<posy>-7</posy>
+									<height>50</height>
+									<info>ListItem.duration</info>
+									<font>Large</font>
+									<textcolor>ffe8e8db</textcolor>
+									<scroll>false</scroll>
+									<align>right</align>
+								</control>
+							</control>
+							<control type="image">
+								<posx>7</posx>
+								<posy>48</posy>
+								<width>898</width>
+								<height>2</height>
+								<texture>Zen/elements/song/divider.png</texture>
+								<aspectratio>stretch</aspectratio> 
+							</control>
+						</itemlayout>
+						<focusedlayout width="914" height="50">
+							<control type="image">
+								<posx>0</posx>
+								<posy>-2</posy>
+								<width>914</width>
+								<height>52</height>
+								<texture>Zen/elements/song/highlight.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<!-- Info -->
+							<control type="group">
+								<control type="label">
+									<posx>37.2</posx>
+									<posy>-7</posy>
+									<height>50</height>
+									<width>75</width>
+									<label>$INFO[listitem.tracknumber]</label>
+									<font>Large</font>
+									<textcolor>ffe8e8db</textcolor>
+									<scroll>false</scroll>
+									<align>center</align>
+								</control>
+								<control type="label">
+									<posx>108</posx>
+									<posy>-7</posy>
+									<height>50</height>
+									<width>556</width>
+									<info>ListItem.title</info>
+									<font>Large</font>
+									<textcolor>ffe8e8db</textcolor>
+									<scroll>false</scroll>
+								</control>
+								<control type="image">
+									<posy>7</posy>
+									<posx>631</posx>
+									<visible>Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)</visible>
+									<width>172</width>
+									<height>30</height>
+									<info>ListItem.StarRating</info>
+									<aspectratio>keep</aspectratio>
+								</control>
+								<control type="label">
+									<posx>820</posx>
+									<posy>-7</posy>
+									<height>50</height>
+									<info>ListItem.duration</info>
+									<font>Large</font>
+									<textcolor>ffe8e8db</textcolor>
+									<scroll>false</scroll>
+									<align>right</align>
+								</control>
+							</control>
+							<control type="image">
+								<posx>7</posx>
+								<posy>48</posy>
+								<width>898</width>
+								<height>2</height>
+								<texture>Zen/elements/song/divider.png</texture>
+								<aspectratio>stretch</aspectratio> 
+							</control>
+						</focusedlayout>
+					</control>
+				</control>
+				<!-- Scrollbar -->
+				<control type="group">
+					<posy>155</posy>
+					<posx>1165</posx>
+					<control type="image">
+						<width>26</width>
+						<height>267</height>
+						<posy>7</posy>
+						<texture>Zen/elements/common/scrollbar/scrollbar_bg.png</texture>
+					</control>
+					<control type="scrollbar" id="571">
+						<width>26</width>
+						<height>267</height>
+						<orientation>vertical</orientation>
+						<onup>-</onup>
+						<onleft>56</onleft>
+						<onright>56</onright>
+						<ondown>-</ondown>
+						<textureslidernib>Zen/elements/common/scrollbar/scrollbar_nib.png</textureslidernib>
+						<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
+					</control>
+				</control>
+
+				<include>center_fg</include>
+			</control>
+			<!-- Footer Info -->
+	</include>
+
+</includes>
