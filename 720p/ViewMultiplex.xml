@@ -21,7 +21,7 @@
 					Container.Content(episodes)			
 				</visible>
 			
-				<posx>-330</posx>
+				<posx>-338</posx>
 			    <posy>60</posy>
 				<width>1610</width>
 				<height>300</height>
