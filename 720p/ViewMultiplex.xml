@@ -18,8 +18,96 @@
 			<!-- Select List -->
 			<control type="fixedlist" id="54">
 				<visible>
+					Container.Content(episodes)			
+				</visible>
+			
+				<posx>-47</posx>
+			    <posy>60</posy>
+				<width>1387</width>
+				<height>300</height>
+
+				<ondown>-</ondown>
+				<onup>100</onup>
+				<onleft>-</onleft>
+				<onright>-</onright>
+
+			    <viewtype label="Multiplex">list</viewtype>
+			    <orientation>horizontal</orientation>
+			    <scrolltime>200</scrolltime>
+			    <focusposition>1</focusposition>
+
+				<itemlayout width="364" height="266">
+					<control type="image">
+						<posx>0</posx>
+						<posy>250</posy>
+						<width>170</width>
+						<height>250</height>
+						<info>ListItem.thumb</info>
+						<texture flipy="true" diffuse="Zen/elements/multiplex/dvd/reflection_mask.png"/>
+						<bordersize>6</bordersize>
+						<aspectratio scalediffuse="true" align="center" aligny="top">keep</aspectratio>
+					</control>
+					<control type="image">
+						<info>listitem.thumb</info>
+						<posx>100</posx>
+						<posy>32</posy>
+						<width>364</width>
+						<height>250</height>
+						<info>ListItem.Property(fanart_image)</info>
+						<texture diffuse="shared/fanart/thumb_mask.png"></texture>
+						<aspectratio scalediffuse="false"></aspectratio>
+						<bordertexture border="6">shared/fanart/thumb_shadow.png</bordertexture>
+						<bordersize>6</bordersize>
+					</control>
+					<!--><control type="image">
+						<posx>11</posx>
+						<posy>12</posy>
+						<width>170</width>
+						<height>250</height>
+						<info>ListItem.thumb</info>
+						<texture diffuse="Zen/elements/cover/dvd/thumb_mask.png"></texture>
+						<bordertexture border="6">Zen/elements/cover/dvd/thumb_shadow.png</bordertexture>
+						<bordersize>6</bordersize>
+						<aspectratio scalediffuse="true" align="center" aligny="bottom">keep</aspectratio>
+					</control>-->
+				</itemlayout>
+				<focusedlayout width="364" height="266">
+					<control type="image">
+						<animation effect="zoom" end="120" center="auto" time="200">Focus</animation>
+					
+						<posx>100</posx>
+						<posy>26</posy>
+						<width>364</width>
+						<height>250</height>
+						<info>listitem.thumb</info>
+						<texture diffuse="shared/fanart/thumb_mask.png"></texture>
+						<aspectratio scalediffuse="false"></aspectratio>
+						<bordertexture border="11">shared/fanart/thumb_focus_overlayv2.png</bordertexture>
+						<bordersize>11</bordersize>
+					</control>
+
+					
+					<!--><control type="image">
+						
+					
+						<posx>11</posx>
+						<posy>6</posy>
+						<width>170</width>
+						<height>250</height>
+						<info>ListItem.thumb</info>
+						<texture diffuse="Zen/elements/cover/dvd/thumb_mask.png"></texture>
+						<bordertexture border="11">Zen/elements/cover/dvd/thumb_focus_overlay2.png</bordertexture>
+						<bordersize>11</bordersize>
+						<aspectratio scalediffuse="true" align="center" aligny="bottom">keep</aspectratio>
+					</control>-->
+				</focusedlayout>
+			</control>
+
+			<control type="fixedlist" id="54">
+				<visible>
 					!Window.IsActive(musicplaylist) + !Window.IsActive(musicfiles) + !Window.IsActive(musiclibrary)
-					+ !Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs)				
+					+ !Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs)
+					+ !Container.Content(episodes)			
 				</visible>
 			
 				<posx>-45</posx>
