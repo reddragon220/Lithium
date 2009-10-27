@@ -1073,7 +1073,7 @@
 
 	<include name="background">
 		<control type="largeimage">
-			<visible>IsEmpty(ListItem.Property(fanart_image)) | !Skin.HasSetting(fanart)</visible>
+			<visible>IsEmpty(ListItem.Property(fanart_image)) | Skin.HasSetting(fanart)</visible>
 			<description>Background Image</description>
 			<posx>0</posx>
 			<posy>0</posy>

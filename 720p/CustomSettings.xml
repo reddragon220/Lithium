@@ -204,7 +204,9 @@
 				
 					<label>Fanart</label>
 					<selected>!Skin.HasSetting(fanart)</selected>
-					<onclick>Skin.ToggleSetting(fanart)</onclick>				
+					<onclick>Skin.ToggleSetting(fanart)</onclick>	
+					<onclick>Setfocus(50)</onclick>
+					<onclick>XBMC.ReloadSkin()</onclick>			
 
 			    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
 					<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
