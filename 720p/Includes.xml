@@ -732,5 +732,21 @@
 		
 		<include condition="!Skin.HasSetting(fanart)">fanart</include>
 
+		<control type="image">
+			<visible>!Window.IsActive(10000) + !Control.IsVisible(54)</visible>
+			<animation type="Conditional" condition="true">
+				<effect type="fade" end="80" time="0"/>
+			</animation>
+			<description>Dimming</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>backgrounds/nav_overlay.png</texture>
+			<fadetime>200</fadetime>
+			
+		</control>
+
 	</include>
 </includes>

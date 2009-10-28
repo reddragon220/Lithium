@@ -11,9 +11,14 @@
 		</control>
 
 		<control type="group">
+			
 			<visible>Control.IsVisible(54)</visible>
 			<posx>40</posx>
 			<posy>328</posy>
+			
+			<animation type="Conditional" condition="Control.hasfocus(541)">
+				<effect type="slide" end="0,-30" center="auto" time="200"/>
+			</animation>
 
 			<!-- Select List -->
 			<control type="fixedlist" id="54">
@@ -26,7 +31,7 @@
 				<width>1610</width>
 				<height>300</height>
 
-				<ondown>-</ondown>
+				<ondown>541</ondown>
 				<onup>100</onup>
 				<onleft>-</onleft>
 				<onright>-</onright>
@@ -35,6 +40,8 @@
 			    <orientation>horizontal</orientation>
 			    <scrolltime>200</scrolltime>
 			    <focusposition>2</focusposition>
+			
+				<pagecontrol>541</pagecontrol>
 
 				<itemlayout width="377" height="266">
 					<control type="image">
@@ -88,7 +95,7 @@
 				<width>1280</width>
 				<height>300</height>
 
-				<ondown>-</ondown>
+				<ondown>541</ondown>
 				<onup>100</onup>
 				<onleft>-</onleft>
 				<onright>-</onright>
@@ -97,6 +104,8 @@
 			    <orientation>horizontal</orientation>
 			    <scrolltime>200</scrolltime>
 			    <focusposition>3</focusposition>
+			
+				<pagecontrol>541</pagecontrol>
 
 				<itemlayout width="183" height="265">
 					<control type="image">
@@ -148,7 +157,7 @@
 				<width>1280</width>
 				<height>300</height>
 
-				<ondown>-</ondown>
+				<ondown>541</ondown>
 				<onup>100</onup>
 				<onleft>-</onleft>
 				<onright>-</onright>
@@ -157,6 +166,8 @@
 			    <orientation>horizontal</orientation>
 			    <scrolltime>200</scrolltime>
 			    <focusposition>3</focusposition>
+			
+				<pagecontrol>541</pagecontrol>
 
 				<itemlayout width="183" height="177">
 					<control type="image">
@@ -198,6 +209,36 @@
 				</focusedlayout>
 			</control>
 		</control>
-		<!-- Footer Info -->
+		<!-- Scrollbar -->
+		<control type="group">
+			<visible allowhiddenfocus="true">Control.hasfocus(541)</visible>
+				<animation type="Conditional" condition="Control.hasfocus(541)">
+					<effect type="fade" end="100" time="200"/>
+				</animation>
+			<posy>516</posy>
+			<posx>620</posx>
+			<control type="image">
+				<animation type="Conditional" condition="true">
+					<effect type="rotate" end="90" center="auto" time="0"/>
+				</animation>
+				<width>26</width>
+				<height>267</height>
+				<posy>0</posy>
+				<texture>Zen/elements/common/scrollbar/scrollbar_bg.png</texture>
+			</control>
+			<control type="scrollbar" id="541">
+				<width>267</width>
+				<height>26</height>
+				<posy>120</posy>
+				<posx>-120</posx>
+				<orientation>horizontal</orientation>
+				<onup>50</onup>
+				<onleft>501</onleft>
+				<onright>501</onright>
+				<ondown>-</ondown>
+				<textureslidernib>Zen/elements/common/scrollbar/scrollbar_nib.png</textureslidernib>
+				<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
+			</control>
+		</control>
 	</include>
 </includes>
