@@ -36,7 +36,7 @@
 			<control type="group">
 				<control type="panel" id="52">
 					<viewtype label="Fanart">panel</viewtype>
-					<orientation>vertical</orientation>
+					<orientation>horizontal</orientation>
 
 					<width>1107</width>
 					<height>532</height>

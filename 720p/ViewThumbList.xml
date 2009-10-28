@@ -9,7 +9,7 @@
 			<control type="panel" id="50">
 
 				<viewtype label="List">list</viewtype>
-				<orientation>vertical</orientation>
+				<orientation>horizontal</orientation>
 
 				<width>1132</width>
 				<height>506</height>

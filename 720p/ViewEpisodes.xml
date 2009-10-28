@@ -148,9 +148,9 @@
 				<control type="group">
 					<control type="panel" id="56">
 						<viewtype label="Episode">list</viewtype>
-						<orientation>vertical</orientation>
+						<orientation>horizontal</orientation>
 
-						<width>1132</width>
+						<width>776</width>
 						<height>450</height>
 						<posx>374</posx>
 						<posy>65</posy>

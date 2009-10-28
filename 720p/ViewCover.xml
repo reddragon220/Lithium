@@ -16,10 +16,9 @@
 						+ !Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs)
 						+ !Window.IsActive(pictures)				
 					</visible>
-				
-				
+						
 					<viewtype label="Cover">panel</viewtype>
-					<orientation>vertical</orientation>
+					<orientation>horizontal</orientation>
 
 					<width>1107</width>
 					<height>541</height>
@@ -68,7 +67,7 @@
 					</visible>
 				
 					<viewtype label="Cover">panel</viewtype>
-					<orientation>vertical</orientation>
+					<orientation>horizontal</orientation>
 
 					<width>1107</width>
 					<height>547</height>

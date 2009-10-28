@@ -116,7 +116,7 @@
 						+ !Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs)
 					</visible>
 					<viewtype label="Info List">list</viewtype>
-					<orientation>vertical</orientation>
+					<orientation>horizontal</orientation>
 
 					<width>1132</width>
 					<height>506</height>

@@ -71,9 +71,9 @@
 				<control type="group">
 					<control type="panel" id="57">
 						<viewtype label="Song">list</viewtype>
-						<orientation>vertical</orientation>
+						<orientation>horizontal</orientation>
 
-						<width>1132</width>
+						<width>914</width>
 						<height>450</height>
 						<posx>240</posx>
 						<posy>62</posy>
