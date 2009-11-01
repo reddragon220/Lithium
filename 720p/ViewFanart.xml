@@ -1,11 +1,13 @@
 <includes>
 
 	
-	<include name="fanart_jump_horizontal">
+	<include name="fanart_horizontal">
+		<posx>73</posx>
 		<ondown>521</ondown>
 		<onright>-</onright>
 	</include>
-	<include name="fanart_jump_vertical">
+	<include name="fanart_vertical">
+		<posx>60</posx>
 		<ondown>-</ondown>
 		<onright>521</onright>
 	</include>
@@ -83,14 +85,14 @@
 
 					<width>1107</width>
 					<height>532</height>
-					<posx>60</posx>
+					
 					<posy>21</posy>
 
 					
 					<onup>100</onup>
 					<onleft>100</onleft>
-					<include condition="Skin.HasSetting(horizontal_scroll)">fanart_jump_horizontal</include>
-				 	<include condition="!Skin.HasSetting(horizontal_scroll)">fanart_jump_vertical</include>
+					<include condition="Skin.HasSetting(horizontal_scroll)">fanart_horizontal</include>
+				 	<include condition="!Skin.HasSetting(horizontal_scroll)">fanart_vertical</include>
 
 					<pagecontrol>521</pagecontrol>
 

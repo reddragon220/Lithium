@@ -44,6 +44,9 @@
 	<include name="orientation_vertical">
 		<orientation>vertical</orientation>
 	</include>
+	<include name="bay_horizontal">
+		<posx>13</posx>
+	</include>
 
 	<include file="ViewThumbList.xml"/>
 	<include file="ViewFanart.xml"/>

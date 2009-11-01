@@ -1,9 +1,11 @@
 <includes>	
-	<include name="episode_jump_horizontal">
+	<include name="episode_horizontal">
+		<posx>387</posx>
 		<ondown>561</ondown>
 		<onright>-</onright>
 	</include>
-	<include name="episode_jump_vertical">
+	<include name="episode_vertical">
+		<posx>374</posx>
 		<ondown>-</ondown>
 		<onright>561</onright>
 	</include>
@@ -46,7 +48,7 @@
 				</control>
 							
 					
-				<!-- images -->
+				<!-- Plot and Thumb -->
 				<control type="group">
 					<posy>50</posy>
 					<visible>
@@ -103,21 +105,24 @@
 					</control>
 				</control>
 
-				<control type="image">
-					<posx>375</posx>
-					<posy>65</posy>
-					<width>104</width>
-					<height>450</height>
-					<texture>Zen/elements/episode/number_bay.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image">
-					<posx>1104</posx>
-					<posy>65</posy>
-					<width>45</width>
-					<height>450</height>
-					<texture>Zen/elements/episode/watched_bay.png</texture>
-					<aspectratio>stretch</aspectratio>
+				<control type="group">
+					<include condition="Skin.HasSetting(horizontal_scroll)">bay_horizontal</include>
+					<control type="image">
+						<posx>375</posx>
+						<posy>65</posy>
+						<width>104</width>
+						<height>450</height>
+						<texture>Zen/elements/episode/number_bay.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<posx>1104</posx>
+						<posy>65</posy>
+						<width>45</width>
+						<height>450</height>
+						<texture>Zen/elements/episode/watched_bay.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
 				</control>
 				<!-- Select List -->
 				<control type="group">
@@ -129,14 +134,13 @@
 
 						<width>776</width>
 						<height>450</height>
-						<posx>374</posx>
 						<posy>65</posy>
 
 						
 						<onup>100</onup>
 						<onleft>100</onleft>
-						<include condition="Skin.HasSetting(horizontal_scroll)">episode_jump_horizontal</include>
-					 	<include condition="!Skin.HasSetting(horizontal_scroll)">episode_jump_vertical</include>
+						<include condition="Skin.HasSetting(horizontal_scroll)">episode_horizontal</include>
+					 	<include condition="!Skin.HasSetting(horizontal_scroll)">episode_vertical</include>
 
 						<pagecontrol>561</pagecontrol>
 

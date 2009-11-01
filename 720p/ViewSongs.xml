@@ -1,11 +1,15 @@
 <includes>
-	<include name="song_jump_horizontal">
+	<include name="song_horizontal">
+		<posx>253</posx>
 		<ondown>571</ondown>
 		<onright>-</onright>
 	</include>
-	<include name="song_jump_vertical">
+	<include name="song_vertical">
+		<posx>240</posx>
+		
 		<ondown>-</ondown>
 		<onright>571</onright>
+		
 	</include>
 	<include name="songs">
 			<visible>Control.IsVisible(57)</visible>
@@ -59,21 +63,24 @@
 					<bordersize>4</bordersize>
 				</control>
 				
-				<control type="image">
-					<posx>242</posx>
-					<posy>62</posy>
-					<width>75</width>
-					<height>450</height>
-					<texture>Zen/elements/song/number_bay.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type="image">
-					<posx>868</posx>
-					<posy>62</posy>
-					<width>179</width>
-					<height>450</height>
-					<texture>Zen/elements/song/star_bay.png</texture>
-					<aspectratio>stretch</aspectratio>
+				<control type="group">
+					<include condition="Skin.HasSetting(horizontal_scroll)">bay_horizontal</include>
+					<control type="image">
+						<posx>242</posx>
+						<posy>62</posy>
+						<width>75</width>
+						<height>450</height>
+						<texture>Zen/elements/song/number_bay.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<posx>868</posx>
+						<posy>62</posy>
+						<width>179</width>
+						<height>450</height>
+						<texture>Zen/elements/song/star_bay.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
 				</control>
 				<!-- Select List -->
 				<control type="group">
@@ -84,14 +91,14 @@
 
 						<width>914</width>
 						<height>450</height>
-						<posx>240</posx>
 						<posy>62</posy>
 
 						
 						<onup>100</onup>
 						<onleft>100</onleft>
-						<include condition="Skin.HasSetting(horizontal_scroll)">song_jump_horizontal</include>
-					 	<include condition="!Skin.HasSetting(horizontal_scroll)">song_jump_vertical</include>
+						
+						<include condition="Skin.HasSetting(horizontal_scroll)">song_horizontal</include>
+					 	<include condition="!Skin.HasSetting(horizontal_scroll)">song_vertical</include>
 
 
 						<pagecontrol>571</pagecontrol>

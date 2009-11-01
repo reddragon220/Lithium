@@ -1,10 +1,12 @@
 <includes>
 
-	<include name="cover_jump_horizontal">
+	<include name="cover_horizontal">
+		<posx>58</posx>
 		<ondown>531</ondown>
 		<onright>-</onright>
 	</include>
-	<include name="cover_jump_vertical">
+	<include name="cover_vertical">
+		<posx>45</posx>
 		<ondown>-</ondown>
 		<onright>531</onright>
 	</include>
@@ -36,14 +38,13 @@
 
 					<width>1107</width>
 					<height>541</height>
-					<posx>45</posx>
 					<posy>6</posy>
 
 					
 					<onup>100</onup>
 					<onleft>100</onleft>
-					<include condition="Skin.HasSetting(horizontal_scroll)">cover_jump_horizontal</include>
-				 	<include condition="!Skin.HasSetting(horizontal_scroll)">cover_jump_vertical</include>
+					<include condition="Skin.HasSetting(horizontal_scroll)">cover_horizontal</include>
+				 	<include condition="!Skin.HasSetting(horizontal_scroll)">cover_vertical</include>
 
 					<pagecontrol>531</pagecontrol>
 
@@ -86,13 +87,13 @@
 
 					<width>1107</width>
 					<height>547</height>
-					<posx>45</posx>
+					
 					<posy>2</posy>
 
 					<onup>100</onup>
 					<onleft>100</onleft>
-					<include condition="Skin.HasSetting(horizontal_scroll)">cover_jump_horizontal</include>
-				 	<include condition="!Skin.HasSetting(horizontal_scroll)">cover_jump_vertical</include>
+					<include condition="Skin.HasSetting(horizontal_scroll)">cover_horizontal</include>
+				 	<include condition="!Skin.HasSetting(horizontal_scroll)">cover_vertical</include>
 
 					<pagecontrol>531</pagecontrol>
 

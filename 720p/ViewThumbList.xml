@@ -1,9 +1,11 @@
 <includes>
 	<include name="thumblist_jump_horizontal">
+		<posx>31</posx>
 		<ondown>501</ondown>
 		<onright>-</onright>
 	</include>
 	<include name="thumblist_jump_vertical">
+		<posx>18</posx>
 		<ondown>-</ondown>
 		<onright>501</onright>
 	</include>
@@ -23,7 +25,6 @@
 
 				<width>1132</width>
 				<height>506</height>
-				<posx>18</posx>
 				<posy>25</posy>
 
 				<onup>100</onup>
