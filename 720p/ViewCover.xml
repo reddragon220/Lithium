@@ -1,4 +1,14 @@
 <includes>
+
+	<include name="cover_jump_horizontal">
+		<ondown>531</ondown>
+		<onright>-</onright>
+	</include>
+	<include name="cover_jump_vertical">
+		<ondown>-</ondown>
+		<onright>531</onright>
+	</include>
+	
 	<include name="cover_nav">
 		<visible>Control.IsVisible(53)</visible>
 		<control type="group">
@@ -29,10 +39,11 @@
 					<posx>45</posx>
 					<posy>6</posy>
 
-					<ondown>531</ondown>
+					
 					<onup>100</onup>
 					<onleft>100</onleft>
-					<onright>531</onright>
+					<include condition="Skin.HasSetting(horizontal_scroll)">cover_jump_horizontal</include>
+				 	<include condition="!Skin.HasSetting(horizontal_scroll)">cover_jump_vertical</include>
 
 					<pagecontrol>531</pagecontrol>
 
@@ -78,10 +89,10 @@
 					<posx>45</posx>
 					<posy>2</posy>
 
-					<ondown>531</ondown>
 					<onup>100</onup>
 					<onleft>100</onleft>
-					<onright>531</onright>
+					<include condition="Skin.HasSetting(horizontal_scroll)">cover_jump_horizontal</include>
+				 	<include condition="!Skin.HasSetting(horizontal_scroll)">cover_jump_vertical</include>
 
 					<pagecontrol>531</pagecontrol>
 

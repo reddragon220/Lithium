@@ -1,4 +1,13 @@
 <includes>
+	<include name="thumblist_jump_horizontal">
+		<ondown>501</ondown>
+		<onright>-</onright>
+	</include>
+	<include name="thumblist_jump_vertical">
+		<ondown>-</ondown>
+		<onright>501</onright>
+	</include>
+	
 	<include name="thumb list">
 		<control type="group">
 			<visible>Control.IsVisible(50)</visible>
@@ -17,10 +26,10 @@
 				<posx>18</posx>
 				<posy>25</posy>
 
-				<ondown>501</ondown>
 				<onup>100</onup>
 				<onleft>100</onleft>
-				<onright>501</onright>
+				<include condition="Skin.HasSetting(horizontal_scroll)">thumblist_jump_horizontal</include>
+			 	<include condition="!Skin.HasSetting(horizontal_scroll)">thumblist_jump_vertical</include>
 
 				<pagecontrol>501</pagecontrol>
 
@@ -356,6 +365,7 @@
 			</control>
 
 			<include>center_fg</include>
+			<!-- scroll bar -->
 			<control type="group">
 				<visible>!Skin.HasSetting(horizontal_scroll)</visible>
 				<posy>155</posy>

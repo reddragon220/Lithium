@@ -1,4 +1,13 @@
 <includes>
+	<include name="infothumblist_jump_horizontal">
+		<ondown>581</ondown>
+		<onright>-</onright>
+	</include>
+	<include name="infothumblist_jump_vertical">
+		<ondown>-</ondown>
+		<onright>581</onright>
+	</include>
+	
 	<include name="info thumb list">
 		<control type="group">
 			<visible>Control.IsVisible(58)</visible>
@@ -124,10 +133,10 @@
 					<posx>374</posx>
 					<posy>25</posy>
 
-					<ondown>-</ondown>
 					<onup>100</onup>
 					<onleft>100</onleft>
-					<onright>581</onright>
+					<include condition="Skin.HasSetting(horizontal_scroll)">infothumblist_jump_horizontal</include>
+				 	<include condition="!Skin.HasSetting(horizontal_scroll)">infothumblist_jump_vertical</include>
 
 					<pagecontrol>581</pagecontrol>
 
@@ -323,10 +332,10 @@
 					<posx>374</posx>
 					<posy>25</posy>
 
-					<ondown>-</ondown>
 					<onup>100</onup>
 					<onleft>100</onleft>
-					<onright>581</onright>
+					<include condition="Skin.HasSetting(horizontal_scroll)">infothumblist_jump_horizontal</include>
+				 	<include condition="!Skin.HasSetting(horizontal_scroll)">infothumblist_jump_vertical</include>
 
 					<pagecontrol>581</pagecontrol>
 

@@ -110,11 +110,16 @@
 					<onclick>-</onclick>
 				</item>
 				<item id="4">
-					<description>Subtitles</description>
-					<label>Subtitles</label>
+					<description>Plugins</description>
+					<label>Plugins</label>
 					<onclick>-</onclick>
 				</item>
 				<item id="5">
+					<description>Mods</description>
+					<label>Mods</label>
+					<onclick>-</onclick>
+				</item>
+				<item id="6">
 					<description>developer</description>
 					<label>Developer</label>
 					<onclick>-</onclick>
@@ -340,8 +345,8 @@
 					
 			</control>
 
-			<control type="grouplist" id="205">
-					<visible>Container(50).Hasfocus(5)</visible>
+			<control type="grouplist" id="206">
+					<visible>Container(50).Hasfocus(6)</visible>
 			
 			    	<posx>279</posx>
 			    	<posy>28</posy>
@@ -369,7 +374,7 @@
 					</itemlayout>
 					
 					
-					<control type="radiobutton" id="2051">
+					<control type="radiobutton" id="2061">
 						<posx>12</posx>
 						<height>52</height>
 						<width>872</width>
@@ -393,7 +398,7 @@
 						<textureradiofocus>Zen/elements/settings/on_focused.png</textureradiofocus>
 						<textureradionofocus>Zen/elements/settings/off_focused.png</textureradionofocus>
 					</control>
-					<control type="button" id="2052">
+					<control type="button" id="2062">
 						<posx>12</posx>
 						<height>52</height>
 						<width>872</width>
@@ -407,12 +412,12 @@
 
 						<label>Reload the Skin</label>
 						<onclick>XBMC.ReloadSkin()</onclick>
-						<onclick>Control.Move(50,1)</onclick>
+						<onclick>Control.Move(50,5)</onclick>
 
 				    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
 				    	<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
 					</control>
-					<control type="button" id="2053">
+					<control type="button" id="2063">
 						<posx>12</posx>
 						<height>52</height>
 						<width>872</width>

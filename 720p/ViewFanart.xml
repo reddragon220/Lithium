@@ -1,5 +1,16 @@
 <includes>
-	<!-- Note multiple large image (about 6 or so) crashes Plex as of version 8.2-->
+
+	
+	<include name="fanart_jump_horizontal">
+		<ondown>521</ondown>
+		<onright>-</onright>
+	</include>
+	<include name="fanart_jump_vertical">
+		<ondown>-</ondown>
+		<onright>521</onright>
+	</include>
+	
+	<!-- Note multiple large image (about 6 or so) crashes Plex as of version 8.3-->
 	<include name="fanart_nav">
 		<visible>Control.IsVisible(52)</visible>
 		<control type="group">
@@ -75,10 +86,11 @@
 					<posx>60</posx>
 					<posy>21</posy>
 
-					<ondown>521</ondown>
+					
 					<onup>100</onup>
 					<onleft>100</onleft>
-					<onright>521</onright>
+					<include condition="Skin.HasSetting(horizontal_scroll)">fanart_jump_horizontal</include>
+				 	<include condition="!Skin.HasSetting(horizontal_scroll)">fanart_jump_vertical</include>
 
 					<pagecontrol>521</pagecontrol>
 
