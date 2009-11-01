@@ -128,7 +128,7 @@
 					<include condition="Skin.HasSetting(horizontal_scroll)">orientation_horizontal</include>
 				 	<include condition="!Skin.HasSetting(horizontal_scroll)">orientation_vertical</include>
 
-					<width>1132</width>
+					<width>776</width>
 					<height>506</height>
 					<posx>374</posx>
 					<posy>25</posy>
@@ -140,7 +140,7 @@
 
 					<pagecontrol>581</pagecontrol>
 
-					<itemlayout width="1132" height="84">
+					<itemlayout width="776" height="84">
 						<!-- Thumbs -->
 						<control type="group">
 							<posx>8</posx>
@@ -224,7 +224,7 @@
 							<aspectratio>stretch</aspectratio> 
 						</control>
 					</itemlayout>
-					<focusedlayout width="1132" height="84">
+					<focusedlayout width="776" height="84">
 						<control type="image">
 							<posx>0</posx>
 							<posy>-2</posy>
@@ -327,7 +327,7 @@
 					<include condition="Skin.HasSetting(horizontal_scroll)">orientation_horizontal</include>
 				 	<include condition="!Skin.HasSetting(horizontal_scroll)">orientation_vertical</include>
 
-					<width>1132</width>
+					<width>776</width>
 					<height>506</height>
 					<posx>374</posx>
 					<posy>25</posy>
@@ -339,7 +339,7 @@
 
 					<pagecontrol>581</pagecontrol>
 
-					<itemlayout width="1132" height="84">
+					<itemlayout width="776" height="84">
 						<!-- Thumbs -->
 						<control type="group">
 							<posx>8</posx>
@@ -412,7 +412,7 @@
 							<aspectratio>stretch</aspectratio> 
 						</control>
 					</itemlayout>
-					<focusedlayout width="1132" height="84">
+					<focusedlayout width="776" height="84">
 						<control type="image">
 							<posx>0</posx>
 							<posy>-2</posy>
