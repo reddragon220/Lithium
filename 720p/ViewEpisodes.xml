@@ -93,41 +93,7 @@
 						<aspectratio scalediffuse="true" align="center" aligny="bottom">keep</aspectratio>
 					</control>
 				</control>
-<!--				
-				<control type="group">
-					<posx>786</posx>
-					<posy>55</posy>
-					
-					<control type="image">
-						<posx>0</posx>
-						<posy>0</posy>
-						<width>408</width>
-						<height>234</height>
-						<texture>Zen/elements/episode/thumb_shadow.png</texture>
-						<aspectratio>stretch</aspectratio>
-					</control>		
-						
-					<control type="image">
-						<posx>4</posx>
-						<posy>4</posy>
-						<width>400</width>
-						<height>226</height>
-						<info>ListItem.thumb</info>
-						<texture diffuse="Zen/elements/episode/thumb_mask.png"></texture>
-						<aspectratio scalediffuse="false">scale</aspectratio>
-					</control>
-					<control type="textbox">
-						<posx>0</posx>
-						<posy>230</posy>
-						<width>408</width>
-						<height>230</height>
-						<info>listitem.Plot</info>
-						<font>Small</font>
-						<textcolor>ffe8e8db</textcolor>
-						<autoscroll delay="3000" time="2000" repeat="10000">!Control.HasFocus(13)</autoscroll>
-					</control>
-				</control>				
--->
+
 				<control type="image">
 					<posx>375</posx>
 					<posy>65</posy>
@@ -148,7 +114,9 @@
 				<control type="group">
 					<control type="panel" id="56">
 						<viewtype label="Episode">list</viewtype>
-						<orientation>horizontal</orientation>
+						<include condition="Skin.HasSetting(horizontal_scroll)">orientation_horizontal</include>
+					 	<include condition="!Skin.HasSetting(horizontal_scroll)">orientation_vertical</include>
+						
 
 						<width>776</width>
 						<height>450</height>
@@ -261,6 +229,7 @@
 				</control>
 				<!-- Scrollbar -->
 				<control type="group">
+					<visible>!Skin.HasSetting(horizontal_scroll)</visible>
 					<posy>155</posy>
 					<posx>1165</posx>
 					<control type="image">

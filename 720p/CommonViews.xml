@@ -38,6 +38,13 @@
 		</control>
 	</include>
 
+	<include name="orientation_horizontal">
+		<orientation>horizontal</orientation>
+	</include>
+	<include name="orientation_vertical">
+		<orientation>vertical</orientation>
+	</include>
+
 	<include file="ViewThumbList.xml"/>
 	<include file="ViewFanart.xml"/>
 	<include file="ViewCover.xml"/>

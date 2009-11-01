@@ -105,6 +105,16 @@
 					<onclick>-</onclick>
 				</item>
 				<item id="3">
+					<description>Views</description>
+					<label>Views</label>
+					<onclick>-</onclick>
+				</item>
+				<item id="4">
+					<description>Subtitles</description>
+					<label>Subtitles</label>
+					<onclick>-</onclick>
+				</item>
+				<item id="5">
 					<description>developer</description>
 					<label>Developer</label>
 					<onclick>-</onclick>
@@ -177,8 +187,8 @@
 					<label>Ken Burns Effect</label>
 					<selected>!Skin.HasSetting(ken_burns)</selected>
 					<onclick>Skin.ToggleSetting(ken_burns)</onclick>
-					<onclick>Setfocus(50)</onclick>
 					<onclick>XBMC.ReloadSkin()</onclick>
+					<onclick>Control.Move(50,0)</onclick>
 				
 
 			    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
@@ -205,8 +215,8 @@
 					<label>Fanart</label>
 					<selected>!Skin.HasSetting(fanart)</selected>
 					<onclick>Skin.ToggleSetting(fanart)</onclick>	
-					<onclick>Setfocus(50)</onclick>
-					<onclick>XBMC.ReloadSkin()</onclick>			
+					<onclick>XBMC.ReloadSkin()</onclick>
+					<onclick>Control.Move(50,0)</onclick>			
 
 			    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
 					<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
@@ -260,8 +270,8 @@
 						<label>Auto hide the header</label>
 						<selected>Skin.HasSetting(slide)</selected>
 						<onclick>Skin.ToggleSetting(slide)</onclick>
-						<onclick>Setfocus(50)</onclick>
-						<onclick>XBMC.ReloadSkin()</onclick>				
+						<onclick>XBMC.ReloadSkin()</onclick>	
+						<onclick>Control.Move(50,1)</onclick>			
 
 				    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
 						<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
@@ -301,7 +311,65 @@
 					</itemlayout>
 					
 					
-					<control type="radiobutton" id="2021">
+					<control type="radiobutton" id="2031">
+						<posx>12</posx>
+						<height>52</height>
+						<width>872</width>
+				    	<textcolor>7fffffff</textcolor>
+						<focusedcolor>ffe8e8db</focusedcolor>
+						<disabledcolor>7f7c7c72</disabledcolor>
+						<shadowcolor>7f000000</shadowcolor>
+				    	<align>left</align>
+						<font>Large</font>
+						<textoffsetx>12</textoffsetx>
+				
+						<label>Horizontal scrolling</label>
+						<selected>Skin.HasSetting(horizontal_scroll)</selected>
+						<onclick>Skin.ToggleSetting(horizontal_scroll)</onclick>
+						<onclick>XBMC.ReloadSkin()</onclick>
+						<onclick>Control.Move(50,2)</onclick>				
+
+				    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
+						<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
+
+						<radiowidth>59</radiowidth>
+						<radioheight>39</radioheight>
+						<textureradiofocus>Zen/elements/settings/on_focused.png</textureradiofocus>
+						<textureradionofocus>Zen/elements/settings/off_focused.png</textureradionofocus>
+					</control>
+					
+			</control>
+
+			<control type="grouplist" id="205">
+					<visible>Container(50).Hasfocus(5)</visible>
+			
+			    	<posx>279</posx>
+			    	<posy>28</posy>
+			    	<width>872</width>
+			    	<height>480</height>
+			    	<itemgap>2</itemgap>
+			    	<orientation>vertical</orientation>
+	
+			
+
+					<onup>100</onup>                       <!-- To move between controls insert control id -->				
+					<onleft>50</onleft>
+
+					<scrolltime>200</scrolltime>
+			
+					<itemlayout>
+						<control type="image">
+							<posx>7</posx>
+							<posy>82</posy>
+							<width>1118</width>
+							<height>2</height>
+							<texture>Zen/elements/list/divider.png</texture>
+							<aspectratio>stretch</aspectratio> 
+						</control>
+					</itemlayout>
+					
+					
+					<control type="radiobutton" id="2051">
 						<posx>12</posx>
 						<height>52</height>
 						<width>872</width>
@@ -325,7 +393,7 @@
 						<textureradiofocus>Zen/elements/settings/on_focused.png</textureradiofocus>
 						<textureradionofocus>Zen/elements/settings/off_focused.png</textureradionofocus>
 					</control>
-					<control type="button" id="2022">
+					<control type="button" id="2052">
 						<posx>12</posx>
 						<height>52</height>
 						<width>872</width>
@@ -338,13 +406,13 @@
 						<textoffsetx>12</textoffsetx>
 
 						<label>Reload the Skin</label>
-						<onclick>Setfocus(50)</onclick>
 						<onclick>XBMC.ReloadSkin()</onclick>
+						<onclick>Control.Move(50,1)</onclick>
 
 				    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
 				    	<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
 					</control>
-					<control type="button" id="2023">
+					<control type="button" id="2053">
 						<posx>12</posx>
 						<height>52</height>
 						<width>872</width>

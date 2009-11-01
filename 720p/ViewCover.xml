@@ -10,7 +10,7 @@
 		
 			<!-- Select List -->
 			<control type="group">
-				<animation type="Conditional" condition="Control.hasfocus(531)">
+				<animation type="Conditional" condition="Control.hasfocus(531) + Skin.HasSetting(horizontal_scroll)">
 					<effect type="slide" end="0,-30" center="auto" time="200"/>
 				</animation>
 				<control type="panel" id="53">
@@ -21,7 +21,8 @@
 					</visible>
 						
 					<viewtype label="Cover">panel</viewtype>
-					<orientation>horizontal</orientation>
+					<include condition="Skin.HasSetting(horizontal_scroll)">orientation_horizontal</include>
+				 	<include condition="!Skin.HasSetting(horizontal_scroll)">orientation_vertical</include>
 
 					<width>1107</width>
 					<height>541</height>
@@ -111,8 +112,9 @@
 				</control>
 
 			</control>
-			<!-- Scrollbar -->
-	<!--		<control type="group">
+			<!-- Scrollbar vertical -->
+			<control type="group">
+				<visible>!Skin.HasSetting(horizontal_scroll)</visible>
 				<posy>155</posy>
 				<posx>1165</posx>
 				<control type="image">
@@ -133,11 +135,10 @@
 					<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
 				</control>
 			</control>
-	-->
 		</control>
-		<!-- Scrollbar -->
+		<!-- Scrollbar horizontal -->
 		<control type="group">
-			<visible allowhiddenfocus="true">Control.hasfocus(531)</visible>
+			<visible allowhiddenfocus="true">Control.hasfocus(531) + Skin.HasSetting(horizontal_scroll)</visible>
 				<animation type="Conditional" condition="Control.hasfocus(531)">
 					<effect type="fade" end="100" time="200"/>
 				</animation>

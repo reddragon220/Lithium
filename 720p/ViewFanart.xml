@@ -3,7 +3,7 @@
 	<include name="fanart_nav">
 		<visible>Control.IsVisible(52)</visible>
 		<control type="group">
-			<animation type="Conditional" condition="Control.hasfocus(521)">
+			<animation type="Conditional" condition="Control.hasfocus(521) + Skin.HasSetting(horizontal_scroll)">
 				<effect type="slide" end="0,-30" center="auto" time="200"/>
 			</animation>
 			<visible>Control.IsVisible(52)</visible>
@@ -12,8 +12,9 @@
 			<include>center_bg</include>
 			<include>center_fg</include>						
 		
-			<!-- Scrollbar -->
-<!--			<control type="group">
+			<!-- Scrollbar vertical -->
+			<control type="group">
+				<visible>!Skin.HasSetting(horizontal_scroll)</visible>
 				<posy>155</posy>
 				<posx>1165</posx>
 				<control type="image">
@@ -34,12 +35,40 @@
 					<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
 				</control>
 			</control>
--->		
+
+			<!-- Scrollbar horizontal -->
+			<control type="group">
+				<visible allowhiddenfocus="true">Control.hasfocus(521) + Skin.HasSetting(horizontal_scroll)</visible>
+					<animation type="Conditional" condition="Control.hasfocus(521)">
+						<effect type="fade" end="100" time="200"/>
+					</animation>
+				<posy>546</posy>
+				<posx>506.5</posx>
+				<control type="image">
+					<width>267</width>
+					<height>26</height>
+					<posy>0</posy>
+					<texture>Zen/elements/common/scrollbar/scrollbar_bg_horizontal.png</texture>
+				</control>
+				<control type="scrollbar" id="521">
+					<width>267</width>
+					<height>26</height>
+					<orientation>horizontal</orientation>
+					<onup>50</onup>
+					<onleft>501</onleft>
+					<onright>501</onright>
+					<ondown>-</ondown>
+					<textureslidernib>Zen/elements/common/scrollbar/scrollbar_nib.png</textureslidernib>
+					<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
+				</control>
+			</control>
 			<!-- Select List -->
 			<control type="group">
 				<control type="panel" id="52">
 					<viewtype label="Fanart">panel</viewtype>
-					<orientation>horizontal</orientation>
+					<include condition="Skin.HasSetting(horizontal_scroll)">orientation_horizontal</include>
+				 	<include condition="!Skin.HasSetting(horizontal_scroll)">orientation_vertical</include>
+					
 
 					<width>1107</width>
 					<height>532</height>
@@ -232,37 +261,7 @@
 			</control>
 
 		</control>
-		<!-- Scrollbar -->
-		<control type="group">
-			<visible allowhiddenfocus="true">Control.hasfocus(521)</visible>
-				<animation type="Conditional" condition="Control.hasfocus(521)">
-					<effect type="fade" end="100" time="200"/>
-				</animation>
-			<posy>486</posy>
-			<posx>620</posx>
-			<control type="image">
-				<animation type="Conditional" condition="true">
-					<effect type="rotate" end="90" center="auto" time="0"/>
-				</animation>
-				<width>26</width>
-				<height>267</height>
-				<posy>0</posy>
-				<texture>Zen/elements/common/scrollbar/scrollbar_bg.png</texture>
-			</control>
-			<control type="scrollbar" id="521">
-				<width>267</width>
-				<height>26</height>
-				<posy>120</posy>
-				<posx>-120</posx>
-				<orientation>horizontal</orientation>
-				<onup>50</onup>
-				<onleft>501</onleft>
-				<onright>501</onright>
-				<ondown>-</ondown>
-				<textureslidernib>Zen/elements/common/scrollbar/scrollbar_nib.png</textureslidernib>
-				<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
-			</control>
-		</control>
+
 
 	</include>
 </includes>
