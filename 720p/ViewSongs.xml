@@ -104,7 +104,7 @@
 									<posx>108</posx>
 									<posy>-7</posy>
 									<height>50</height>
-									<width>556</width>
+									<width>519</width>
 									<info>ListItem.title</info>
 									<font>Large</font>
 									<textcolor>ffe8e8db</textcolor>
@@ -123,11 +123,12 @@
 									<posx>820</posx>
 									<posy>-7</posy>
 									<height>50</height>
+									<width>80</width>
 									<info>ListItem.duration</info>
 									<font>Large</font>
 									<textcolor>ffe8e8db</textcolor>
 									<scroll>false</scroll>
-									<align>right</align>
+									<align>left</align>
 								</control>
 							</control>
 							<control type="image">
@@ -165,11 +166,11 @@
 									<posx>108</posx>
 									<posy>-7</posy>
 									<height>50</height>
-									<width>556</width>
+									<width>519</width>
 									<info>ListItem.title</info>
 									<font>Large</font>
 									<textcolor>ffe8e8db</textcolor>
-									<scroll>false</scroll>
+									<scroll>true</scroll>
 								</control>
 								<control type="image">
 									<posy>7</posy>
@@ -184,11 +185,12 @@
 									<posx>820</posx>
 									<posy>-7</posy>
 									<height>50</height>
+									<width>80</width>
 									<info>ListItem.duration</info>
 									<font>Large</font>
 									<textcolor>ffe8e8db</textcolor>
 									<scroll>false</scroll>
-									<align>right</align>
+									<align>left</align>
 								</control>
 							</control>
 							<control type="image">

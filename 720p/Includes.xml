@@ -735,7 +735,7 @@
 		<control type="image">
 			<visible>!Window.IsActive(10000) + !Control.IsVisible(54)</visible>
 			<animation type="Conditional" condition="true">
-				<effect type="fade" end="80" time="0"/>
+				<effect type="fade" end="40" time="0"/>
 			</animation>
 			<description>Dimming</description>
 			<posx>0</posx>

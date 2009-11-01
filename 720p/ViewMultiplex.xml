@@ -1,4 +1,4 @@
-<includes>
+<includes>	
 	<include name="multiplex">
 		<control type="image">
 			<visible>Control.IsVisible(54)</visible>

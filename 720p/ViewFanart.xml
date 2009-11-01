@@ -54,15 +54,6 @@
 					<pagecontrol>521</pagecontrol>
 
 					<itemlayout width="363" height="266">
-						<!-- <control type="image">
-							<posx>2</posx>
-							<posy>2</posy>
-							<width>364</width>
-							<height>210</height>
-							<texture>shared/fanart/thumb_shadow.png</texture>
-							<aspectratio>stretch</aspectratio> 
-						</control> 
-						-->
 						<control type="image">
 							<visible>!Container.Content(episodes) + !Container.Content(seasons) + !Container.Content(albums) + !Container.Content(songs)</visible>
 							<posx>2</posx>
@@ -140,7 +131,7 @@
 							<width>305</width>
 							<label>$INFO[ListItem.Season].$INFO[ListItem.Episode] $INFO[listitem.title]</label>
 							<font>Large</font>
-							<textcolor>ffe8e8db</textcolor>
+							<textcolor>ffffffff</textcolor>
 							<align>center</align>
 							<scroll>false</scroll>
 						</control>

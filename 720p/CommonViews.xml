@@ -12,8 +12,9 @@
 
 
 <includes>
-<!--	<include name="center_bg">
+	<include name="center_bg">
 		<control type="image">
+			<visible>Control.IsVisible(50) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(56)</visible>
 			<width>1210</width>
 			<height>556</height>
 			<texture>Zen/panes/common/center_bg.png</texture>
@@ -22,19 +23,21 @@
 	</include>
 	<include name="center_fg">
 		<control type="image">
+			<visible>Control.IsVisible(50) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(56)</visible>
 			<width>1210</width>
 			<height>556</height>
 			<texture>Zen/panes/common/center_gradient.png</texture>
 			<aspectratio>stretch</aspectratio> 
 		</control>
 		<control type="image">
+			<visible>Control.IsVisible(50) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(56)</visible>
 			<width>1210</width>
 			<height>556</height>
 			<texture>Zen/panes/common/center_outline.png</texture>
 			<aspectratio>stretch</aspectratio> 
 		</control>
 	</include>
--->
+
 	<include file="ViewThumbList.xml"/>
 	<include file="ViewFanart.xml"/>
 	<include file="ViewCover.xml"/>

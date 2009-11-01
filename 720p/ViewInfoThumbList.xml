@@ -26,7 +26,7 @@
 					<height>308</height>
 					<label>$INFO[listitem.Plot]</label>
 					<font>Small</font>
-					<textcolor>ffd7d7d7</textcolor>
+					<textcolor>ffffffff</textcolor>
 					<autoscroll delay="6000" time="3000" repeat="10000">Control.HasFocus(58)</autoscroll>
 				</control>
 				
