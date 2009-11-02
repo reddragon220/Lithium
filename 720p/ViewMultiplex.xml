@@ -215,22 +215,17 @@
 				<animation type="Conditional" condition="Control.hasfocus(541)">
 					<effect type="fade" end="100" time="200"/>
 				</animation>
-			<posy>516</posy>
-			<posx>620</posx>
+			<posy>630</posy>
+			<posx>506.5</posx>
 			<control type="image">
-				<animation type="Conditional" condition="true">
-					<effect type="rotate" end="90" center="auto" time="0"/>
-				</animation>
-				<width>26</width>
-				<height>267</height>
+				<width>267</width>
+				<height>26</height>
 				<posy>0</posy>
-				<texture>Zen/elements/common/scrollbar/scrollbar_bg.png</texture>
+				<texture>Zen/elements/common/scrollbar/scrollbar_bg_horizontal.png</texture>
 			</control>
 			<control type="scrollbar" id="541">
 				<width>267</width>
 				<height>26</height>
-				<posy>120</posy>
-				<posx>-120</posx>
 				<orientation>horizontal</orientation>
 				<onup>50</onup>
 				<onleft>501</onleft>
