@@ -23,7 +23,7 @@
 			<!-- Select List -->
 			<control type="group">
 				<animation type="Conditional" condition="Control.hasfocus(531) + Skin.HasSetting(horizontal_scroll)">
-					<effect type="slide" end="0,-30" center="auto" time="200"/>
+					<effect type="slide" end="0,-20" center="auto" time="200"/>
 				</animation>
 				<control type="panel" id="53">
 					<visible>
@@ -154,7 +154,7 @@
 					<animation type="Conditional" condition="Control.hasfocus(521)">
 						<effect type="fade" end="100" time="200"/>
 					</animation>
-				<posy>546</posy>
+				<posy>526</posy>
 				<posx>506</posx>
 				<control type="image">
 					<width>267</width>
