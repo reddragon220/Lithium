@@ -83,7 +83,8 @@
 					</visible>
 				
 					<viewtype label="Cover">panel</viewtype>
-					<orientation>horizontal</orientation>
+					<include condition="Skin.HasSetting(horizontal_scroll)">orientation_horizontal</include>
+				 	<include condition="!Skin.HasSetting(horizontal_scroll)">orientation_vertical</include>
 
 					<width>1107</width>
 					<height>547</height>

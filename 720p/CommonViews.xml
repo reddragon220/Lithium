@@ -15,6 +15,7 @@
 	<include name="light_bg">
 		<!-- No Container Light -->
 		<control type="image">
+			<visible>!Control.IsVisible(54)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -27,6 +28,7 @@
 	<include name="dark_bg">
 		<!-- No Container dark -->
 		<control type="image">
+			<visible>!Control.IsVisible(54)</visible>
 			<posx>0</posx>
 			<posy>0</posy>
 			<width>1280</width>
@@ -39,7 +41,6 @@
 	
 	<include name="center_bg">
 		<control type="image">
-			<visible>Control.IsVisible(50) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(56)</visible>
 			<width>1210</width>
 			<height>556</height>
 			<texture>Zen/panes/common/center_bg.png</texture>
@@ -48,14 +49,12 @@
 	</include>
 	<include name="center_fg">
 		<control type="image">
-			<visible>Control.IsVisible(50) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(56)</visible>
 			<width>1210</width>
 			<height>556</height>
 			<texture>Zen/panes/common/center_gradient.png</texture>
 			<aspectratio>stretch</aspectratio> 
 		</control>
 		<control type="image">
-			<visible>Control.IsVisible(50) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(56)</visible>
 			<width>1210</width>
 			<height>556</height>
 			<texture>Zen/panes/common/center_outline.png</texture>

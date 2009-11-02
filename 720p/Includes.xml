@@ -40,8 +40,8 @@
 	
 	<!-- My Includes -->
 	<include name="views">
-		<include condition="Skin.HasSetting(dark_bg) + !Control.IsVisible(54)">light_bg</include>
-		<include condition="Skin.HasSetting(light_bg) + !Control.IsVisible(54)">dark_bg</include>
+		<include condition="Skin.HasSetting(dark_bg)">light_bg</include>
+		<include condition="Skin.HasSetting(light_bg)">dark_bg</include>
 		
 
 		<include>thumb list</include>
