@@ -15,7 +15,7 @@
 			<visible>Control.IsVisible(58)</visible>
 			<posx>36</posx>
 			<posy>82</posy>
-			<include>center_bg</include>
+			<include condition ="!Skin.HasSetting(container_bg_on)">center_bg</include>
 			<!-- Info Pane -->
 			<control type="image">
 				<posy>56</posy>
@@ -521,7 +521,7 @@
 				</control>
 			</control>
 
-			<include>center_fg</include>
+			<include condition ="!Skin.HasSetting(container_bg_on)">center_fg</include>
 		</control>
 
 		<!-- Footer Info -->

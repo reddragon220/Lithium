@@ -22,8 +22,8 @@
 			<visible>Control.IsVisible(52)</visible>
 			<posx>36</posx>
 			<posy>82</posy>
-			<include>center_bg</include>
-			<include>center_fg</include>						
+			<include condition ="!Skin.HasSetting(container_bg_on)">center_bg</include>
+			<include condition ="!Skin.HasSetting(container_bg_on)">center_fg</include>						
 		
 			<!-- Scrollbar vertical -->
 			<control type="group">

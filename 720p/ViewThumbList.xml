@@ -15,7 +15,7 @@
 			<visible>Control.IsVisible(50)</visible>
 			<posx>36</posx>
 			<posy>82</posy>
-			<include>center_bg</include>
+			<include condition ="!Skin.HasSetting(container_bg_on)">center_bg</include>
 			<!-- Select List -->
 			<control type="panel" id="50">
 
@@ -365,7 +365,7 @@
 				</focusedlayout>
 			</control>
 
-			<include>center_fg</include>
+			<include condition ="!Skin.HasSetting(container_bg_on)">center_fg</include>
 			<!-- scroll bar -->
 			<control type="group">
 				<visible>!Skin.HasSetting(horizontal_scroll)</visible>

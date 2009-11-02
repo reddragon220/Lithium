@@ -12,6 +12,31 @@
 
 
 <includes>
+	<include name="light_bg">
+		<!-- No Container Light -->
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>Zen/panes/common/light_bg.png</texture>
+			<fadetime>200</fadetime>
+		</control>
+	</include>
+	<include name="dark_bg">
+		<!-- No Container dark -->
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>backgrounds/darkened_bg.png</texture>
+			<fadetime>200</fadetime>
+		</control>
+	</include>
+	
 	<include name="center_bg">
 		<control type="image">
 			<visible>Control.IsVisible(50) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(56)</visible>
