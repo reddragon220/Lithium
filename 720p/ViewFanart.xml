@@ -1,0 +1,281 @@
+<includes>
+
+	
+	<include name="fanart_horizontal">
+		<posx>73</posx>
+		<ondown>521</ondown>
+		<onright>-</onright>
+	</include>
+	<include name="fanart_vertical">
+		<posx>60</posx>
+		<ondown>-</ondown>
+		<onright>521</onright>
+	</include>
+	
+	<!-- Note multiple large image (about 6 or so) crashes Plex as of version 8.3-->
+	<include name="fanart_nav">
+		<visible>Control.IsVisible(52)</visible>
+		<control type="group">
+			<visible>Control.IsVisible(52)</visible>
+			<posx>36</posx>
+			<posy>82</posy>
+			<include condition ="!Skin.HasSetting(container_bg_on)">center_bg</include>
+			<include condition ="!Skin.HasSetting(container_bg_on)">center_fg</include>						
+		
+			<!-- Scrollbar vertical -->
+			<control type="group">
+				<visible>!Skin.HasSetting(horizontal_scroll)</visible>
+				<posy>155</posy>
+				<posx>1165</posx>
+				<control type="image">
+					<width>26</width>
+					<height>267</height>
+					<posy>7</posy>
+					<texture>Zen/elements/common/scrollbar/scrollbar_bg.png</texture>
+				</control>
+				<control type="scrollbar" id="521">
+					<width>26</width>
+					<height>267</height>
+					<orientation>vertical</orientation>
+					<onup>-</onup>
+					<onleft>52</onleft>
+					<onright>52</onright>
+					<ondown>-</ondown>
+					<textureslidernib>Zen/elements/common/scrollbar/scrollbar_nib.png</textureslidernib>
+					<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
+				</control>
+			</control>
+
+			<!-- Scrollbar horizontal -->
+			<control type="group">
+				<visible allowhiddenfocus="true">Control.hasfocus(521) + Skin.HasSetting(horizontal_scroll)</visible>
+					<animation type="Conditional" condition="Control.hasfocus(521)">
+						<effect type="fade" end="100" time="200"/>
+					</animation>
+				<posy>526</posy>
+				<posx>506.5</posx>
+				<control type="image">
+					<width>267</width>
+					<height>26</height>
+					<posy>0</posy>
+					<texture>Zen/elements/common/scrollbar/scrollbar_bg_horizontal.png</texture>
+				</control>
+				<control type="scrollbar" id="521">
+					<width>267</width>
+					<height>26</height>
+					<orientation>horizontal</orientation>
+					<onup>50</onup>
+					<onleft>501</onleft>
+					<onright>501</onright>
+					<ondown>-</ondown>
+					<textureslidernib>Zen/elements/common/scrollbar/scrollbar_nib.png</textureslidernib>
+					<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
+				</control>
+			</control>
+			<!-- Select List -->
+			<control type="group">
+				<animation type="Conditional" condition="Control.hasfocus(521) + Skin.HasSetting(horizontal_scroll)">
+					<effect type="slide" end="0,-20" center="auto" time="200"/>
+				</animation>
+				<control type="panel" id="52">
+					<viewtype label="Fanart">panel</viewtype>
+					<include condition="Skin.HasSetting(horizontal_scroll)">orientation_horizontal</include>
+				 	<include condition="!Skin.HasSetting(horizontal_scroll)">orientation_vertical</include>
+					
+
+					<width>1107</width>
+					<height>532</height>
+					
+					<posy>21</posy>
+
+					
+					<onup>100</onup>
+					<onleft>100</onleft>
+					<include condition="Skin.HasSetting(horizontal_scroll)">fanart_horizontal</include>
+				 	<include condition="!Skin.HasSetting(horizontal_scroll)">fanart_vertical</include>
+
+					<pagecontrol>521</pagecontrol>
+
+					<itemlayout width="363" height="266">
+						<control type="largeimage">
+							<visible>!Container.Content(episodes) + !Container.Content(seasons) + !Container.Content(albums) + !Container.Content(songs)</visible>
+							<posx>2</posx>
+							<posy>2</posy>
+							<width>364</width>
+							<height>210</height>
+							<info>ListItem.Property(fanart_image)</info>
+							<texture diffuse="shared/fanart/thumb_mask.png"></texture>
+							<bordertexture border="6">shared/fanart/thumb_shadow.png</bordertexture>
+							<bordersize>6</bordersize>
+						</control>
+						<control type="largeimage">
+							<visible>Container.Content(albums) | Container.Content(songs)</visible>
+							<posx>2</posx>
+							<posy>2</posy>
+							<width>364</width>
+							<height>210</height>
+							<info>listitem.thumb</info>
+							<texture diffuse="shared/fanart/thumb_mask.png"></texture>
+							<aspectratio scalediffuse="false"></aspectratio>
+							<bordertexture border="6">shared/fanart/thumb_shadow.png</bordertexture>
+							<bordersize>6</bordersize>
+						</control>
+						<control type="group">
+							<description>seasons hack</description>
+						
+							<control type="largeimage">
+								<visible>Container.Content(seasons)</visible>
+								<posx>8</posx>
+								<posy>8</posy>
+								<width>352</width>
+								<height>198</height>
+								<info>ListItem.thumb</info>
+								<texture diffuse="shared/fanart/thumb_mask.png"></texture>
+								<aspectratio scalediffuse="false">scale</aspectratio>
+							</control>
+							<control type="image">
+								<visible>Container.Content(seasons)</visible>
+								<posx>2</posx>
+								<posy>2</posy>
+								<width>364</width>
+								<height>210</height>
+								<texture>shared/fanart/thumb_shadow.png</texture>
+								<aspectratio>stretch</aspectratio> 
+							</control>
+						</control>
+						<control type="largeimage">
+							<visible>Container.Content(episodes)</visible>
+							<info>listitem.thumb</info>
+							<posx>2</posx>
+							<posy>2</posy>
+							<width>364</width>
+							<height>210</height>
+							<info>ListItem.Property(fanart_image)</info>
+							<texture diffuse="shared/fanart/thumb_mask.png"></texture>
+							<aspectratio scalediffuse="false"></aspectratio>
+							<bordertexture border="6">shared/fanart/thumb_shadow.png</bordertexture>
+							<bordersize>6</bordersize>
+						</control>
+						<control type="label">
+							<visible>!container.content(episodes)</visible>
+							<posx>181</posx>
+							<posy>215</posy>
+							<width>305</width>
+							<info>ListItem.Label</info>
+							<font>Large</font>
+							<textcolor>ffffffff</textcolor>
+							<align>center</align>
+							<scroll>false</scroll>
+						</control>
+						<control type="label">
+							<visible>container.content(episodes)</visible>						
+							<posx>181</posx>
+							<posy>215</posy>
+							<width>305</width>
+							<label>$INFO[ListItem.Season].$INFO[ListItem.Episode] $INFO[listitem.title]</label>
+							<font>Large</font>
+							<textcolor>ffffffff</textcolor>
+							<align>center</align>
+							<scroll>false</scroll>
+						</control>
+					</itemlayout>
+					<focusedlayout width="363" height="266">
+						<control type="largeimage">
+							<visible>!Container.Content(episodes) + !Container.Content(seasons) + !Container.Content(albums) + !Container.Content(songs)</visible>
+							<animation effect="zoom" end="120" center="auto" time="200">Focus</animation>
+							<posx>2</posx>
+							<posy>2</posy>
+							<width>364</width>
+							<height>210</height>
+							<info>ListItem.Property(fanart_image)</info>
+							<texture diffuse="shared/fanart/thumb_mask.png"></texture>
+							<bordertexture border="11">shared/fanart/thumb_focus_overlayv2.png</bordertexture>
+							<bordersize>11</bordersize>
+						</control>
+						<control type="largeimage">
+							<visible>Container.Content(albums) | Container.Content(songs)</visible>
+							<animation effect="zoom" end="120" center="auto" time="200">Focus</animation>
+						
+							<posx>2</posx>
+							<posy>2</posy>
+							<width>364</width>
+							<height>210</height>
+							<info>listitem.thumb</info>
+							<texture diffuse="shared/fanart/thumb_mask.png"></texture>
+							<aspectratio scalediffuse="false"></aspectratio>
+							<bordertexture border="11">shared/fanart/thumb_focus_overlayv2.png</bordertexture>
+							<bordersize>11</bordersize>
+						</control>
+						<control type="group">
+							<description>seasons hack</description>
+							<control type="largeimage">
+								<animation effect="zoom" end="118" center="auto" time="200">Focus</animation>
+							
+								<visible>Container.Content(seasons)</visible>
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>368</width>
+								<height>214</height>
+								<texture>shared/fanart/thumb_focus_overlayv2.png</texture>
+								<aspectratio>scale</aspectratio> 
+							</control>
+							<control type="image">
+								<animation effect="zoom" end="118" center="auto" time="200">Focus</animation>
+							
+								<visible>Container.Content(seasons)</visible>
+								<posx>8</posx>
+								<posy>8</posy>
+								<width>352</width>
+								<height>198</height>
+								<info>listitem.thumb</info>
+								<texture diffuse="shared/fanart/thumb_mask.png"></texture>
+								<aspectratio scalediffuse="false">scale</aspectratio>
+							</control>
+						</control>
+						<control type="largeimage">
+							<visible>Container.Content(episodes)</visible>
+							<animation effect="zoom" end="120" center="auto" time="200">Focus</animation>
+							<info>listitem.thumb</info>
+							<posx>2</posx>
+							<posy>2</posy>
+							<width>364</width>
+							<height>210</height>
+							<info>ListItem.Property(fanart_image)</info>
+							<texture diffuse="shared/fanart/thumb_mask.png"></texture>
+							<aspectratio scalediffuse="false"></aspectratio>
+							<bordertexture border="11">shared/fanart/thumb_focus_overlayv2.png</bordertexture>
+							<bordersize>11</bordersize>
+						</control>
+						<control type="label">
+							<animation effect="slide" end="0,15" center="auto" time="200">Focus</animation>		
+							<visible>!container.content(episodes)</visible>					
+							<posx>181</posx>
+							<posy>215</posy>
+							<width>305</width>
+							<info>ListItem.Label</info>
+							<font>Large</font>
+							<textcolor>ffe8e8db</textcolor>
+							<align>center</align>
+							<scroll>true</scroll>
+						</control>
+						<control type="label">
+							<animation effect="slide" end="0,15" center="auto" time="200">Focus</animation>	
+							<visible>container.content(episodes)</visible>						
+							<posx>181</posx>
+							<posy>215</posy>
+							<width>305</width>
+							<label>$INFO[ListItem.Season].$INFO[ListItem.Episode] $INFO[listitem.title]</label>
+							<font>Large</font>
+							<textcolor>ffe8e8db</textcolor>
+							<align>center</align>
+							<scroll>true</scroll>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+
+		</control>
+
+
+	</include>
+</includes>

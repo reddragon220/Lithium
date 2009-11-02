@@ -1,0 +1,184 @@
+<includes>
+
+	<include name="cover_horizontal">
+		<posx>58</posx>
+		<ondown>531</ondown>
+		<onright>-</onright>
+	</include>
+	<include name="cover_vertical">
+		<posx>45</posx>
+		<ondown>-</ondown>
+		<onright>531</onright>
+	</include>
+	
+	<include name="cover_nav">
+		<visible>Control.IsVisible(53)</visible>
+		<control type="group">
+			<visible>Control.IsVisible(53)</visible>
+			<posx>36</posx>
+			<posy>82</posy>
+			<include condition ="!Skin.HasSetting(container_bg_on)">center_bg</include>
+			<include condition ="!Skin.HasSetting(container_bg_on)">center_fg</include>						
+		
+			<!-- Select List -->
+			<control type="group">
+
+				<control type="panel" id="53">
+					<animation type="Conditional" condition="Control.hasfocus(531) + Skin.HasSetting(horizontal_scroll)">
+						<effect type="slide" end="0,-20" center="auto" time="200"/>
+					</animation>
+					<visible>
+						!Window.IsActive(musicplaylist) + !Window.IsActive(musicfiles) + !Window.IsActive(musiclibrary)
+						+ !Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs)
+						+ !Window.IsActive(pictures)				
+					</visible>
+						
+					<viewtype label="Cover">panel</viewtype>
+					<include condition="Skin.HasSetting(horizontal_scroll)">orientation_horizontal</include>
+				 	<include condition="!Skin.HasSetting(horizontal_scroll)">orientation_vertical</include>
+
+					<width>1107</width>
+					<height>541</height>
+					<posy>6</posy>
+
+					
+					<onup>100</onup>
+					<onleft>100</onleft>
+					<include condition="Skin.HasSetting(horizontal_scroll)">cover_horizontal</include>
+				 	<include condition="!Skin.HasSetting(horizontal_scroll)">cover_vertical</include>
+
+					<pagecontrol>531</pagecontrol>
+
+					<itemlayout width="183" height="265">
+
+						<control type="image">
+							<posx>11</posx>
+							<posy>12</posy>
+							<width>170</width>
+							<height>250</height>
+							<info>ListItem.thumb</info>
+							<texture diffuse="Zen/elements/cover/dvd/thumb_mask.png"></texture>
+							<bordertexture border="6">Zen/elements/cover/dvd/thumb_shadow.png</bordertexture>
+							<bordersize>6</bordersize>
+						</control>
+					</itemlayout>
+					<focusedlayout width="193" height="265">
+						<control type="image">
+							<animation effect="zoom" end="120" center="auto" time="100">Focus</animation>
+							<posx>11</posx>
+							<posy>14</posy>
+							<width>170</width>
+							<height>250</height>
+							<info>ListItem.thumb</info>
+							<texture diffuse="Zen/elements/cover/dvd/thumb_mask.png"></texture>
+							<bordertexture border="11">Zen/elements/cover/dvd/thumb_focus_overlay2.png</bordertexture>
+							<bordersize>11</bordersize>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="panel" id="53">
+					<animation type="Conditional" condition="Control.hasfocus(531) + Skin.HasSetting(horizontal_scroll)">
+						<effect type="slide" end="0,-15" center="auto" time="200"/>
+					</animation>
+					<visible>
+						Window.IsActive(musicplaylist) | Window.IsActive(musicfiles) | Window.IsActive(musiclibrary)
+						| Container.Content(albums) | Container.Content(artists) | Container.Content(songs)
+						| Window.IsActive(pictures)
+					</visible>
+				
+					<viewtype label="Cover">panel</viewtype>
+					<include condition="Skin.HasSetting(horizontal_scroll)">orientation_horizontal</include>
+				 	<include condition="!Skin.HasSetting(horizontal_scroll)">orientation_vertical</include>
+
+					<width>1107</width>
+					<height>547</height>
+					
+					<posy>2</posy>
+
+					<onup>100</onup>
+					<onleft>100</onleft>
+					<include condition="Skin.HasSetting(horizontal_scroll)">cover_horizontal</include>
+				 	<include condition="!Skin.HasSetting(horizontal_scroll)">cover_vertical</include>
+
+					<pagecontrol>531</pagecontrol>
+
+					<itemlayout width="183" height="177">
+						<control type="image">
+							<posx>11</posx>
+							<posy>12</posy>
+							<width>170</width>
+							<height>170</height>
+							<info>ListItem.thumb</info>
+							<texture diffuse="Zen/elements/cover/album/thumb_mask.png"></texture>
+							<bordertexture border="6">Zen/elements/cover/album/thumb_shadow.png</bordertexture>
+							<bordersize>6</bordersize>
+						</control>
+					</itemlayout>
+					<focusedlayout width="193" height="193">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>193</width>
+							<height>193</height>
+							<info>ListItem.thumb</info>
+							<texture diffuse="Zen/elements/cover/album/thumb_mask.png"></texture>
+							<bordertexture border="11">Zen/elements/cover/album/thumb_focus_overlay.png</bordertexture>
+							<bordersize>11</bordersize>
+						</control>
+					</focusedlayout>
+				</control>
+
+			</control>
+			<!-- Scrollbar vertical -->
+			<control type="group">
+				<visible>!Skin.HasSetting(horizontal_scroll)</visible>
+				<posy>155</posy>
+				<posx>1165</posx>
+				<control type="image">
+					<width>26</width>
+					<height>267</height>
+					<posy>7</posy>
+					<texture>Zen/elements/common/scrollbar/scrollbar_bg.png</texture>
+				</control>
+				<control type="scrollbar" id="531">
+					<width>26</width>
+					<height>267</height>
+					<orientation>vertical</orientation>
+					<onup>-</onup>
+					<onleft>53</onleft>
+					<onright>53</onright>
+					<ondown>-</ondown>
+					<textureslidernib>Zen/elements/common/scrollbar/scrollbar_nib.png</textureslidernib>
+					<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
+				</control>
+			</control>
+			<!-- Scrollbar horizontal -->
+			<control type="group">
+				<visible allowhiddenfocus="true">Control.hasfocus(531) + Skin.HasSetting(horizontal_scroll)</visible>
+					<animation type="Conditional" condition="Control.hasfocus(521)">
+						<effect type="fade" end="100" time="200"/>
+					</animation>
+				<posy>526</posy>
+				<posx>506</posx>
+				<control type="image">
+					<width>267</width>
+					<height>26</height>
+					<posy>0</posy>
+					<texture>Zen/elements/common/scrollbar/scrollbar_bg_horizontal.png</texture>
+				</control>
+				<control type="scrollbar" id="531">
+					<width>267</width>
+					<height>26</height>
+					<orientation>horizontal</orientation>
+					<onup>50</onup>
+					<onleft>501</onleft>
+					<onright>501</onright>
+					<ondown>-</ondown>
+					<textureslidernib>Zen/elements/common/scrollbar/scrollbar_nib.png</textureslidernib>
+					<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
+				</control>
+			</control>
+
+		</control>
+	</include>
+</includes>

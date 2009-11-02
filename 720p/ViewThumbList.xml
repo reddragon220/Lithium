@@ -1,0 +1,398 @@
+<includes>
+	<include name="thumblist_jump_horizontal">
+		<posx>31</posx>
+		<ondown>501</ondown>
+		<onright>-</onright>
+	</include>
+	<include name="thumblist_jump_vertical">
+		<posx>18</posx>
+		<ondown>-</ondown>
+		<onright>501</onright>
+	</include>
+	
+	<include name="thumb list">
+		<control type="group">
+			<visible>Control.IsVisible(50)</visible>
+			<posx>36</posx>
+			<posy>82</posy>
+			<include condition ="!Skin.HasSetting(container_bg_on)">center_bg</include>
+			<!-- Select List -->
+			<control type="panel" id="50">
+
+				<viewtype label="List">list</viewtype>
+				<include condition="Skin.HasSetting(horizontal_scroll)">orientation_horizontal</include>
+			 	<include condition="!Skin.HasSetting(horizontal_scroll)">orientation_vertical</include>
+
+				<width>1132</width>
+				<height>506</height>
+				<posy>25</posy>
+
+				<onup>100</onup>
+				<onleft>100</onleft>
+				<include condition="Skin.HasSetting(horizontal_scroll)">thumblist_jump_horizontal</include>
+			 	<include condition="!Skin.HasSetting(horizontal_scroll)">thumblist_jump_vertical</include>
+
+				<pagecontrol>501</pagecontrol>
+
+				<itemlayout width="1132" height="84">
+					<control type="group">
+						<visible>
+							!Window.IsActive(musicplaylist) + !Window.IsActive(musicfiles) + !Window.IsActive(musiclibrary)
+							+ !Window.IsActive(programs)
+							+ !Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs)
+						</visible>
+						<!-- Thumbs -->
+						<control type="group">
+							<posx>8</posx>
+							<posy>1</posy>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>137</width>
+								<height>81</height>
+								<texture>Zen/elements/list/video_shadow.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>				
+							<control type="image">
+								<posx>4</posx>
+								<posy>4</posy>
+								<width>129</width>
+								<height>73</height>
+								<info>ListItem.thumb</info>
+								<texture diffuse="Zen/elements/list/video_mask.png"></texture>
+								<aspectratio scalediffuse="false">scale</aspectratio>
+							</control>
+						</control>
+						<!-- Info -->
+						<control type="group">
+							<visible>
+								!Container.Content(seasons) + !Container.Content(tvshows) + !Container.Content(movies)
+							</visible>					
+							<posx>145</posx>
+							<posy>21</posy>
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<height>42</height>
+								<width>956</width>
+								<info>ListItem.label</info>
+								<font>Large</font>
+								<textcolor>ffffffff</textcolor>
+								<scroll>false</scroll>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container.Content(seasons) | Container.Content(tvshows) | Container.Content(movies)</visible>					
+							<posx>145</posx>
+							<control type="image">
+								<posx>10</posx>
+								<posy>45</posy>
+								<width>172</width>
+								<height>30</height>
+								<info>ListItem.StarRating</info>
+								<aspectratio>keep</aspectratio>
+								<align>center</align>
+							</control>
+							<control type="label">
+								<posx>192</posx>
+								<posy>39</posy>
+								<height>42</height>
+								<width>956</width>
+								<label>$INFO[ListItem.Genre]</label>
+								<font>Small</font>
+								<textcolor>ffd7d7d7</textcolor>
+								<scroll>false</scroll>
+							</control>
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<height>42</height>
+								<width>956</width>
+								<info>ListItem.label</info>
+								<font>Large</font>
+								<textcolor>ffffffff</textcolor>
+								<scroll>false</scroll>
+							</control>
+						</control>
+					</control>
+					<control type="group">
+						<visible>
+							Window.IsActive(musicplaylist) | Window.IsActive(musicfiles) | Window.IsActive(musiclibrary)
+							| Window.IsActive(programs)
+							| Container.Content(albums) | Container.Content(artists) | Container.Content(songs)
+						</visible>
+						<!-- Thumbs -->
+						<control type="group">
+							<posx>8</posx>
+							<posy>1</posy>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>81</width>
+								<height>81</height>
+								<texture>Zen/elements/list/music_shadow.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<posx>4</posx>
+								<posy>4</posy>
+								<width>73</width>
+								<height>73</height>
+								<info>ListItem.thumb</info>
+								<texture diffuse="Zen/elements/list/music_mask.png"></texture>
+								<aspectratio scalediffuse="false">scale</aspectratio>
+							</control>
+						</control>
+						<!-- Info -->
+						<control type="group">
+							<visible>!Container.Content(seasons) + !Container.Content(tvshows)</visible>					
+							<posx>90</posx>
+							<posy>21</posy>
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<height>42</height>
+								<width>1018</width>
+								<info>ListItem.label</info>
+								<font>Large</font>
+								<textcolor>ffffffff</textcolor>
+								<scroll>false</scroll>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container.Content(seasons) | Container.Content(tvshows)</visible>					
+							<posx>90</posx>
+							<control type="label">
+								<posx>10</posx>
+								<posy>35</posy>
+								<height>42</height>
+								<width>1018</width>
+								<label>$LOCALIZE[31020] $INFO[ListItem.Episode]</label>
+								<font>Small</font>
+								<textcolor>ffd7d7d7</textcolor>
+								<scroll>false</scroll>
+							</control>
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<height>42</height>
+								<width>1018</width>
+								<info>ListItem.label</info>
+								<font>Large</font>
+								<textcolor>ffffffff</textcolor>
+								<scroll>false</scroll>
+							</control>
+						</control>
+
+					</control>
+					<control type="image">
+						<posx>7</posx>
+						<posy>82</posy>
+						<width>1118</width>
+						<height>2</height>
+						<texture>Zen/elements/list/divider.png</texture>
+						<aspectratio>stretch</aspectratio> 
+					</control>
+				</itemlayout>
+				<focusedlayout width="1132" height="84">
+					<control type="image">
+						<posx>0</posx>
+						<posy>-2</posy>
+						<width>1132</width>
+						<height>86</height>
+						<texture>Zen/elements/list/highlight.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="group">
+						<visible>
+							!Window.IsActive(musicplaylist) + !Window.IsActive(musicfiles) + !Window.IsActive(musiclibrary)
+							+ !Window.IsActive(programs)
+							+ !Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs)
+						</visible>
+						<!-- Thumbs -->
+						<control type="group">
+							<posx>8</posx>
+							<posy>1</posy>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>137</width>
+								<height>81</height>
+								<texture>Zen/elements/list/video_shadow.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>				
+							<control type="image">
+								<posx>4</posx>
+								<posy>4</posy>
+								<width>129</width>
+								<height>73</height>
+								<info>ListItem.thumb</info>
+								<texture diffuse="Zen/elements/list/video_mask.png"></texture>
+								<aspectratio scalediffuse="false">scale</aspectratio>
+							</control>
+						</control>
+						<!-- Info -->
+						<control type="group">
+							<visible>
+								!Container.Content(seasons) + !Container.Content(tvshows) + !Container.Content(movies)
+							</visible>					
+							<posx>145</posx>
+							<posy>21</posy>
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<height>42</height>
+								<width>956</width>
+								<info>ListItem.label</info>
+								<font>Large</font>
+								<textcolor>ffffffff</textcolor>
+								<scroll>false</scroll>
+							</control>
+						</control>
+						<control type="group">
+							<visible>
+								Container.Content(seasons) | Container.Content(tvshows) | Container.Content(movies)
+							</visible>					
+							<posx>145</posx>
+							<control type="image">
+								<posx>10</posx>
+								<posy>45</posy>
+								<width>172</width>
+								<height>30</height>
+								<info>ListItem.StarRating</info>
+								<aspectratio>keep</aspectratio>
+								<align>center</align>
+							</control>
+							<control type="label">
+								<posx>192</posx>
+								<posy>39</posy>
+								<height>42</height>
+								<width>956</width>
+								<label>$INFO[ListItem.Genre]</label>
+								<font>Small</font>
+								<textcolor>ffd7d7d7</textcolor>
+								<scroll>false</scroll>
+							</control>
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<height>42</height>
+								<width>956</width>
+								<info>ListItem.label</info>
+								<font>Large</font>
+								<textcolor>ffffffff</textcolor>
+								<scroll>false</scroll>
+							</control>
+						</control>
+					</control>
+					<control type="group">
+						<visible>
+							Window.IsActive(musicplaylist) | Window.IsActive(musicfiles) | Window.IsActive(musiclibrary)
+							| Window.IsActive(programs)
+							| Container.Content(albums) | Container.Content(artists) | Container.Content(songs)
+						</visible>
+						<!-- Thumbs -->
+						<control type="group">
+							<posx>8</posx>
+							<posy>1</posy>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>81</width>
+								<height>81</height>
+								<texture>Zen/elements/list/music_shadow.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<posx>4</posx>
+								<posy>4</posy>
+								<width>73</width>
+								<height>73</height>
+								<info>ListItem.thumb</info>
+								<texture diffuse="Zen/elements/list/music_mask.png"></texture>
+								<aspectratio scalediffuse="false">scale</aspectratio>
+							</control>
+						</control>
+						<!-- Info -->
+						<control type="group">
+							<visible>!Container.Content(seasons) + !Container.Content(tvshows)</visible>					
+							<posx>90</posx>
+							<posy>21</posy>
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<height>42</height>
+								<width>1018</width>
+								<info>ListItem.label</info>
+								<font>Large</font>
+								<textcolor>ffffffff</textcolor>
+								<scroll>false</scroll>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container.Content(seasons) | Container.Content(tvshows)</visible>					
+							<posx>90</posx>
+							<control type="label">
+								<posx>10</posx>
+								<posy>35</posy>
+								<height>42</height>
+								<width>1018</width>
+								<label>$LOCALIZE[31020] $INFO[ListItem.Episode]</label>
+								<font>Small</font>
+								<textcolor>ffd7d7d7</textcolor>
+								<scroll>false</scroll>
+							</control>
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<height>42</height>
+								<width>1018</width>
+								<info>ListItem.label</info>
+								<font>Large</font>
+								<textcolor>ffffffff</textcolor>
+								<scroll>false</scroll>
+							</control>
+						</control>
+					</control>
+					<control type="image">
+						<posx>7</posx>
+						<posy>82</posy>
+						<width>1118</width>
+						<height>2</height>
+						<texture>Zen/elements/list/divider.png</texture>
+						<aspectratio>stretch</aspectratio> 
+					</control>
+				</focusedlayout>
+			</control>
+
+			<include condition ="!Skin.HasSetting(container_bg_on)">center_fg</include>
+			<!-- scroll bar -->
+			<control type="group">
+				<visible>!Skin.HasSetting(horizontal_scroll)</visible>
+				<posy>155</posy>
+				<posx>1165</posx>
+				<control type="image">
+					<width>26</width>
+					<height>267</height>
+					<posy>7</posy>
+					<texture>Zen/elements/common/scrollbar/scrollbar_bg.png</texture>
+				</control>
+				<control type="scrollbar" id="501">
+					<width>26</width>
+					<height>267</height>
+					<orientation>vertical</orientation>
+					<onup>-</onup>
+					<onleft>53</onleft>
+					<onright>53</onright>
+					<ondown>-</ondown>
+					<textureslidernib>Zen/elements/common/scrollbar/scrollbar_nib.png</textureslidernib>
+					<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
+				</control>
+			</control>
+		</control>
+
+		
+
+		<!-- Footer Info -->
+	</include>
+</includes>

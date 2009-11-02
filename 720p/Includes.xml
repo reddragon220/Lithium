@@ -40,6 +40,10 @@
 	
 	<!-- My Includes -->
 	<include name="views">
+		<include condition="Skin.HasSetting(dark_bg)">light_bg</include>
+		<include condition="Skin.HasSetting(light_bg)">dark_bg</include>
+		
+
 		<include>thumb list</include>
 		<include>info thumb list</include>
 		
@@ -49,6 +53,7 @@
 		
 		<include>episodes</include>
 		<include>songs</include>
+
 		
 		<include>footer</include>
 	</include>
@@ -74,7 +79,7 @@
 		<!-- Header -->
 		<control type="group" id="100">
 
-			<defaultcontrol>101</defaultcontrol>		
+			<defaultcontrol>106</defaultcontrol>		
 
 			<include condition="Skin.HasSetting(slide)">slide_on</include>
 			<include condition="!Skin.HasSetting(slide)">slide_off</include>
@@ -85,14 +90,6 @@
 				<aspectratio>stretch</aspectratio>
 				<texture>Zen/panes/common/header_bg.png</texture>
 			</control>
-			<!-- bounce -->
-<!--			<control type="button" id="130">
-				<visible>Control.IsVisible(101) + Control.IsVisible(102)</visible>
-				<posx>-200</posx>
-				<posy>0</posy>
-				<onfocus>SetFocus(50)</onfocus>
-			</control>-->
-
 
 
 			<!-- Weather -->
@@ -123,144 +120,89 @@
 				<textcolor>ffe8e8db</textcolor>
 				<align>right</align>
 			</control>
-						
-			<!-- Options Low -->
-			<control type="group">	
-				<visible>!Window.IsActive(Home) + !Control.IsVisible(106) + !Control.HasFocus(101)</visible>
 			
-				<control type="button" id="101">
-					<posx>24</posx>
-					<posy>8</posy>
-
-					<width>37</width>
-					<height>38</height>
-
-					<onup>301</onup>
-					<ondown>50</ondown>
-					<onleft>101</onleft>
-					<onright>102</onright>
-
-					<onclick>SetFocus(106)</onclick>		
-					<visible>-</visible>
-
-					<texturenofocus>Zen/elements/header/gear.png</texturenofocus>
-					<texturefocus>Zen/elements/header/gear.png</texturefocus>
-					<aspectratio>keep</aspectratio>
+			<!-- Window Name -->
+			<control type="group">
+				<posx>15</posx>
+				<posy>10</posy>
+				<control type="label">
+					<visible>Window.IsVisible(10024)</visible>
+					<label>$LOCALIZE[31026]</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<align>left</align>
 				</control>
 				<control type="label">
-					<posy>10</posy>
-					<posx>66</posx>
-					<label>Options</label>
+					<visible>Window.IsVisible(10025) + !Control.IsVisible(201) + !Control.IsVisible(202)
+					</visible>
+					<label>$LOCALIZE[31026]</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<align>left</align>
+				</control>
+				<control type="label" id="201">
+					<visible>Container.Content(tvshows)
+					</visible>
+					<label>$LOCALIZE[31032]</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<align>left</align>
+				</control>
+				<control type="label" id="201">
+					<visible>Container.Content(seasons) | Container.Content(episodes)
+					</visible>
+					<label>$LOCALIZE[31032] - $INFO[ListItem.TVShowTitle]</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<align>left</align>
+				</control>
+				<control type="label" id="202">
+					<visible>Container.Content(movies)</visible>
+					<label>$LOCALIZE[31033]</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<align>left</align>
+				</control>
+				<control type="label">
+					<visible>
+						Window.IsActive(musicplaylist) | Window.IsActive(musicfiles) | Window.IsActive(musiclibrary)
+						| Container.Content(albums) | Container.Content(artists) | Container.Content(songs)
+					</visible>
+					<label>$LOCALIZE[31027]</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<align>left</align>
+				</control>
+				<control type="label">
+					<visible>Window.IsVisible(10002)</visible>
+					<label>$LOCALIZE[31028]</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<align>left</align>
+				</control>
+				<control type="label">
+					<visible>Window.IsVisible(10001)</visible>
+					<label>$LOCALIZE[31029]</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<align>left</align>
+				</control>
+				<control type="label">
+					<visible>Window.IsVisible(10001)</visible>
+					<label>$LOCALIZE[31029]</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<align>left</align>
+				</control>
+				<control type="label">
+					<visible>Window.IsVisible(10020)</visible>
+					<label>$LOCALIZE[31031]</label>
 					<font>Small</font>
 					<textcolor>ffe8e8db</textcolor>
 					<align>left</align>
 				</control>
 			</control>
-
-			<!-- Now Playing Low -->
-			<control type="group">
-				<visible>!Control.HasFocus(102) + !Control.IsVisible(121) + Player.HasMedia</visible>
-				<include condition="Window.IsActive(Home)">now_playing_pos1</include>
-				<include condition="!Window.IsActive(Home)">now_playing_pos2</include>
-						
-				<control type="button" id="102">
-					<posx>0</posx>
-					<posy>0</posy>
-					
-					<onup>301</onup>
-					<ondown>50</ondown>
-					<onleft>101</onleft>
-					<onright>102</onright>
-
-					<onclick>SetFocus(121)</onclick>		
-
-					<texturenofocus>-</texturenofocus>
-					<texturefocus>-</texturefocus>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type="group" id="102">
-					<visible>Player.HasAudio</visible>
-					<posx>20</posx>
-					<posy>4</posy>
-					
-					<onup>301</onup>
-					<ondown>50</ondown>
-					<onleft>101</onleft>
-					<onright>102</onright>
-
-					<onclick>SetFocus(121)</onclick>
-					
-					<control type="image" >
-						<posx>4</posx>
-						<posy>-2</posy>
-						
-						<info>MusicPlayer.Cover</info>
-						<width>47</width>
-						<height>47</height>
-						<texture diffuse="Zen/elements/header/music_mask.png"></texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
-
-					
-					<control type="label">
-						<posy>6</posy>
-						<posx>55</posx>
-						
-						<width>237</width>
-						
-						<label>$INFO[MusicPlayer.Title]</label>
-						<font>Small</font>
-						<textcolor>ffe8e8db</textcolor>
-						<align>left</align>
-						<scroll>false</scroll>
-					</control>
-
-				</control>
-				<control type="group" id="102">
-					<visible>Player.HasVideo</visible>
-					<posx>20</posx>
-					<posy>4</posy>
-					
-					<onup>301</onup>
-					<ondown>50</ondown>
-					<onleft>101</onleft>
-					<onright>102</onright>
-
-					<onclick>SetFocus(121)</onclick>
-					
-					<control type="image" >
-						<posx>4</posx>
-						<posy>-2</posy>
-						
-						<info>VideoPlayer.Cover</info>
-						<width>84</width>
-						<height>47</height>
-						<texture diffuse="Zen/elements/header/movie_mask.png"></texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
-					<control type="image">
-						<width>74</width>
-						<height>45</height>
-						<texture>Zen/elements/header/movie_shadow.png</texture>
-					</control>
-					
-					<control type="label">
-						<posy>6</posy>
-						<posx>90</posx>
-						
-						<width>229</width>
-						
-						<label>$INFO[VideoPlayer.Title]</label>
-						<font>Small</font>
-						<textcolor>ffe8e8db</textcolor>
-						<align>left</align>
-						<scroll>false</scroll>
-					</control>
-
-				</control>
-				
-			</control>
-
+			
 			<!-- Update Low -->
 			<control type="label">
 				<animation effect="fade" time="400">VisibleChange</animation>
@@ -305,147 +247,6 @@
 				<aspectratio>keep</aspectratio>		
 			</control>
 			
-
-			<!-- Options High -->
-			<control type="group">
-				<visible>Control.IsVisible(106) | Control.HasFocus(101)</visible>		
-				<control type="image">
-					<visible>Control.IsVisible(106) | Control.HasFocus(101)</visible>
-					<posx>16</posx>
-					<posy>0</posy>
-
-					<width>150</width>
-					<height>53</height>
-
-					<texture>Zen/elements/header/options_highlight.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-			
-				<control type="button" id="101">
-					<posx>24</posx>
-					<posy>8</posy>
-
-					<width>37</width>
-					<height>38</height>
-
-					<onup>301</onup>
-					<ondown>50</ondown>
-					<onleft>101</onleft>
-					<onright>102</onright>
-
-					<onclick>SetFocus(106)</onclick>		
-					<visible>-</visible>
-
-					<texturenofocus>Zen/elements/header/gear_highlight.png</texturenofocus>
-					<texturefocus>Zen/elements/header/gear_highlight.png</texturefocus>
-					<aspectratio>keep</aspectratio>
-				</control>
-				<control type="label">
-					<posy>10</posy>
-					<posx>66</posx>
-					<label>Options</label>
-					<font>Small</font>
-					<textcolor>ffe8e8db</textcolor>
-					<align>left</align>
-				</control>
-			</control>
-
-			<!-- Now Playing High -->
-			<control type="group">
-				<visible>Control.IsVisible(121) | Control.HasFocus(102)</visible>
-				<include condition="Window.IsActive(Home)">now_playing_pos1</include>
-				<include condition="!Window.IsActive(Home)">now_playing_pos2</include>
-				
-				
-				<control type="image">
-					<visible>Player.HasMedia</visible>
-					<posx>16</posx>
-					<posy>0</posy>
-
-					<width>305</width>
-					<height>53</height>
-
-					<texture>Zen/elements/header/now_playing_highlight.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type="group" id="102">
-					<visible>Player.HasAudio</visible>
-					<posx>20</posx>
-					<posy>4</posy>
-					
-					<onup>301</onup>
-					<ondown>50</ondown>
-					<onleft>101</onleft>
-					<onright>102</onright>
-
-					<onclick>SetFocus(121)</onclick>
-					
-					<control type="image" >
-						<posx>4</posx>
-						<posy>-2</posy>
-						
-						<info>MusicPlayer.Cover</info>
-						<width>47</width>
-						<height>47</height>
-						<texture diffuse="Zen/elements/header/music_mask.png"></texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
-
-					
-					<control type="label">
-						<posy>6</posy>
-						<posx>55</posx>
-						
-						<width>237</width>
-						
-						<label>$INFO[MusicPlayer.Title]</label>
-						<font>Small</font>
-						<textcolor>ffe8e8db</textcolor>
-						<align>left</align>
-						<scroll>false</scroll>
-					</control>
-
-				</control>
-				<control type="group" id="102">
-					<visible>Player.HasVideo</visible>
-					<posx>20</posx>
-					<posy>4</posy>
-					
-					<onup>301</onup>
-					<ondown>50</ondown>
-					<onleft>101</onleft>
-					<onright>102</onright>
-
-					<onclick>SetFocus(121)</onclick>
-					
-					<control type="image" >
-						<posx>4</posx>
-						<posy>-2</posy>
-						
-						<info>VideoPlayer.Cover</info>
-						<width>84</width>
-						<height>47</height>
-						<texture diffuse="Zen/elements/header/movie_mask.png"></texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
-					
-					<control type="label">
-						<posy>6</posy>
-						<posx>90</posx>
-						
-						<width>229</width>
-						
-						<label>$INFO[VideoPlayer.Title]</label>
-						<font>Small</font>
-						<textcolor>ffe8e8db</textcolor>
-						<align>left</align>
-						<scroll>false</scroll>
-					</control>
-
-				</control>
-
-			</control>
-
 			<control type="image">
 				<width>1280</width>
 				<height>53</height>
@@ -523,10 +324,10 @@
 						<height>37</height>
 						<align>left</align>
 
-						<onup>SetFocus(101)</onup>
+						<onup>107</onup>
 						<ondown>108</ondown>
-						<onleft>107</onleft>
-						<onright>SetFocus(101)</onright>
+						<onleft>SetFocus(50)</onleft>
+						<onright>SetFocus(50)</onright>
 						<onclick>Container.NextViewMode</onclick>
 
 						<description>Change View</description>
@@ -551,8 +352,8 @@
 
 							<onup>107</onup>
 							<ondown>109</ondown>
-							<onleft>SetFocus(101)</onleft>
-							<onright>SetFocus(101)</onright>
+							<onleft>SetFocus(50)</onleft>
+							<onleft>SetFocus(50)</onleft>
 							<onclick>Container.NextSortMethod</onclick>
 
 							<description>Sort Order</description>
@@ -575,8 +376,8 @@
 
 						<onup>108</onup>
 						<ondown>110</ondown>
-						<onleft>SetFocus(101)</onleft>
-						<onright>SetFocus(101)</onright>
+						<onleft>SetFocus(50)</onleft>
+						<onright>SetFocus(50)</onright>
 
 						<onclick>Container.SortDirection</onclick>
 
@@ -602,9 +403,9 @@
 						<align>left</align>
 
 						<onup>109</onup>
-						<ondown>110</ondown>
-						<onleft>SetFocus(101)</onleft>
-						<onright>SetFocus(101)</onright>
+						<ondown>SetFocus(50)</ondown>
+						<onleft>SetFocus(50)</onleft>
+						<onright>SetFocus(50)</onright>
 						<onclick>XBMC.ActivateWindow(settings)</onclick>
 
 						<description>Settings</description>
@@ -627,8 +428,8 @@
 
 						<onup>109</onup>
 						<ondown>111</ondown>
-						<onleft>SetFocus(101)</onleft>
-						<onright>SetFocus(101)</onright>
+						<onleft>SetFocus(50)</onleft>
+						<onright>SetFocus(50)</onright>
 						<onclick>XBMC.ActivateWindow(settings)</onclick>
 
 						<description>Settings</description>
@@ -650,9 +451,9 @@
 						<align>left</align>
 
 						<onup>110</onup>
-						<ondown>SetFocus(101)</ondown>
-						<onleft>SetFocus(101)</onleft>
-						<onright>SetFocus(101)</onright>
+						<ondown>SetFocus(50)</ondown>
+						<onleft>SetFocus(50)</onleft>
+						<onright>SetFocus(50)</onright>
 						<onclick>XBMC.ReloadSkin()</onclick>
 
 						<description>Refresh</description>
@@ -692,160 +493,6 @@
 					<texture>Zen/panes/header/options_outline.png</texture>
 				</control>
 			</control>
-
-
-			<!-- Now Playing Submenu -->
-			<control type="group" id="121">
-				<defaultcontrol>122</defaultcontrol>
-				<visible allowhiddenfocus="true">Control.HasFocus(122) | Control.HasFocus(123) | Control.HasFocus(124) | Control.HasFocus(125) | Control.HasFocus(126)</visible> 
-				<animation type="VisibleChange" reversible="true">
-					<effect type="slide" start="0,10" time="200" />
-				</animation> 
-				<include condition="!Window.IsActive(Home)">now_playing_submenu_pos2</include>
-				<include condition="Window.IsActive(Home)">now_playing_submenu_pos1</include>
-				<posy>53</posy>
-				
-				<control type="image">
-					<width>251</width>
-					<height>121</height>
-					<texture>Zen/panes/header/now_playing_bg.png</texture>
-				</control>
-
-				<control type="progress">
-					<posx>10</posx>
-					<posy>32</posy>
-					<width>231</width>
-					<height>31</height>
-					<visible>true</visible>
-					<reveal>true</reveal>
-					<texturebg>Zen/elements/header/progress_bg.png</texturebg>
-					<midtexture>Zen/elements/header/progress_mid.png</midtexture>
-					<lefttexture></lefttexture>
-					<righttexture>-</righttexture>
-					<overlaytexture>-</overlaytexture>
-					<info>Player.Progress</info>
-				</control>
-
-				<control type="group">
-					
-					<posx>12</posx>
-					<posy>8</posy>
-					<control type="button" id="122">
-						<posy>71</posy>
-						<posx>0</posx>
-
-						<width>27</width>
-						<height>23</height>
-						<align>left</align>
-
-						<onup>SetFocus(102)</onup>
-						<ondown>SetFocus(102)</ondown>
-						<onleft>SetFocus(102)</onleft>
-						<onright>123</onright>
-						<onclick>PlayerControl(Previous)</onclick>
-
-						<description>previous</description>				
-						
-						<texturenofocus>Zen/elements/osd/previous_unfocused.png</texturenofocus>
-						<texturefocus>Zen/elements/osd/previous_focused.png</texturefocus>					
-
-					</control>
-					<control type="button" id="123">
-						<posy>71</posy>
-						<posx>46</posx>
-
-						<width>38</width>
-						<height>23</height>
-						<align>left</align>
-
-						<onup>SetFocus(102)</onup>
-						<ondown>SetFocus(102)</ondown>
-						<onleft>122</onleft>
-						<onright>124</onright>
-						<onclick>PlayerControl(Rewind)</onclick>
-						
-						<description>rewind</description>
-
-						
-						<texturenofocus>Zen/elements/osd/rewind_unfocused.png</texturenofocus>
-						<texturefocus>Zen/elements/osd/rewind_focused.png</texturefocus>
-					</control>
-					<control type="togglebutton" id="124">
-						<posy>66</posy>
-						<posx>103</posx>
-
-						<width>26</width>
-						<height>32</height>
-						<align>left</align>
-
-						<onup>SetFocus(102)</onup>
-						<ondown>SetFocus(102)</ondown>
-						<onleft>123</onleft>
-						<onright>125</onright>
-						
-						<onclick>PlayerControl(Play)</onclick>
-						
-
-						<description>Pause</description>
-
-
-						<texturenofocus>Zen/elements/osd/pause_unfocused.png</texturenofocus>
-						<texturefocus>Zen/elements/osd/pause_focused.png</texturefocus>
-						<alttexturenofocus>Zen/elements/osd/play_unfocused.png</alttexturenofocus>
-						<alttexturefocus>Zen/elements/osd/play_focused.png</alttexturefocus>
-					</control>
-					<control type="button" id="125">
-						<posy>71</posy>
-						<posx>148</posx>
-
-						<width>38</width>
-						<height>23</height>
-						<align>left</align>
-
-						<onup>SetFocus(102)</onup>
-						<ondown>SetFocus(102)</ondown>
-						<onleft>124</onleft>
-						<onright>126</onright>
-						<onclick>PlayerControl(Foward)</onclick>
-
-						<description>fast foward</description>		
-
-						<texturenofocus>Zen/elements/osd/fast_foward_unfocused.png</texturenofocus>
-						<texturefocus>Zen/elements/osd/fast_foward_focused.png</texturefocus>
-					</control>
-					<control type="button" id="126">
-						<posy>71</posy>
-						<posx>205</posx>
-
-						<width>27</width>
-						<height>23</height>
-						<align>left</align>
-
-						<onup>SetFocus(102)</onup>
-						<ondown>SetFocus(102)</ondown>
-						<onleft>125</onleft>
-						<onright>126</onright>
-						<onclick>PlayerControl(Next)</onclick>
-
-						<description>fast foward</description>		
-
-						<texturenofocus>Zen/elements/osd/next_unfocused.png</texturenofocus>
-						<texturefocus>Zen/elements/osd/next_focused.png</texturefocus>
-					</control>
-
-				</control>
-
-				<control type="image">
-					<width>251</width>
-					<height>121</height>
-					<texture>Zen/panes/header/now_playing_gradient.png</texture>
-				</control> -->
-				<control type="image">
-					<width>251</width>
-					<height>121</height>
-					<texture>Zen/panes/header/now_playing_outline.png</texture>
-				</control>
-			</control>
 			
 
 		</control>
@@ -857,12 +504,173 @@
 		</control>
 	</include>
 
-	<include name="bg_animation">
-		<animation type="Conditional" condition="true" pulse="true">
-			<effect type="slide" start="40,40" end="0,0" time="19000" tween="linear"/>
-			<effect type="zoom" delay="19000" start="130" end="100" center="auto" time="85000" tween="linear"/>		
-		</animation>
+	<include name="footer">
+		<!-- Footer Info -->
+		<control type="group">
+			<posy>667</posy>
+			<control type="image">
+				<width>1280</width>
+				<height>53</height>
+				<texture>Zen/panes/common/header_bg.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		
+			<!-- Center -->
+			<control type="group">
+				<posx>640</posx>
+				<posy>11</posy>
+
+				<control type="label">
+					<visible>Window.IsActive(10025) + !Container.Content(movies) +!Container.Content(episodes)</visible>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Large</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>Window.IsActive(10025) + Container.Content(movies)</visible>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Large</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>Window.IsActive(10025) + Container.Content(episodes)</visible>
+					<label>$INFO[ListItem.Season].$INFO[ListItem.Episode] -  $INFO[ListItem.title]</label>
+					<font>Large</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>Window.IsActive(10024)</visible>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Large</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+				</control>
+
+				<control type="label">
+					<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(song)</visible>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Large</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>Window.IsActive(10502) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(song) | Window.IsActive(10501) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(song) </visible>
+					<label>$LOCALIZE[31027]</label>
+					<font>Large</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>Window.IsActive(10002)</visible>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Large</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>Window.IsActive(10001)</visible>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Large</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<visible>Window.IsActive(10020)</visible>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Large</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>center</align>
+				</control>
+
+			</control>
+			<!-- Right 	-->
+			<control type="group">
+				<posx>1073</posx>
+				<posy>11</posy>
+				<control type="image">
+					<visible>Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)</visible>
+					<width>172</width>
+					<height>30</height>
+					<info>ListItem.StarRating</info>
+					<aspectratio>keep</aspectratio>
+					<align>center</align>
+				</control>
+			</control>				
+			<!-- Left 	-->
+			<control type="label">
+				<visible>Container.Content(songs) | Container.Content(albums) | Container.Content(artists)</visible>
+				<posx>36</posx>
+				<posy>11</posy>
+				<label>$INFO[ListItem.Genre]</label>
+				<textcolor>ffe8e8db</textcolor>
+				<scroll>false</scroll>
+				<align>left</align>
+			</control>
+			<control type="group">
+				<visible>Container.Content(seasons) | Container.Content(tvshows) | Container.Content(musicvideos)</visible>
+				<width>172</width>
+				<posx>65</posx>
+				<posy>11</posy>
+				<control type=label>
+					<label>$INFO[ListItem.Property(WatchedEpisodes)]</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+				</control>
+				<control type=image>
+					<texture>Zen/elements/common/check.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type=label>
+					<posx>80</posx>
+					<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+				</control>
+				<control type=image>
+					<posx>83</posx>
+					<posy>-1</posy>
+					<texture>Zen/elements/common/x_mark.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+			</control>
+		
+			
+			<control type="image">
+				<width>1280</width>
+				<height>53</height>
+				<texture>Zen/panes/common/footer_gradient.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="image">
+				<width>1280</width>
+				<height>53</height>
+				<texture>Zen/panes/common/footer_outline.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+
+		</control>
+		
 	</include>
+	
+
+
+
 
 <!--
 	<animation type="Conditional" condition="true" pulse="true">
@@ -872,6 +680,14 @@
 	</animation>
 -->
 
+	<!-- Background Items -->
+	<include name="bg_animation">
+		<animation type="Conditional" condition="true" pulse="true">
+			<effect type="slide" start="40,40" end="0,0" time="19000" tween="linear"/>
+			<effect type="zoom" delay="19000" start="130" end="100" center="auto" time="85000" tween="linear"/>		
+		</animation>
+	</include>
+	
 	<include name="fanart">
 		<control type="largeimage">
 			<visible>!Container.content(episodes) | !Container.content(seasons)</visible>
@@ -904,7 +720,7 @@
 
 	<include name="background">
 		<control type="largeimage">
-			<visible>IsEmpty(ListItem.Property(fanart_image)) | !Skin.HasSetting(fanart)</visible>
+			<visible>IsEmpty(ListItem.Property(fanart_image)) | Skin.HasSetting(fanart)</visible>
 			<description>Background Image</description>
 			<posx>0</posx>
 			<posy>0</posy>
@@ -918,6 +734,5 @@
 		</control>
 		
 		<include condition="!Skin.HasSetting(fanart)">fanart</include>
-
 	</include>
 </includes>
