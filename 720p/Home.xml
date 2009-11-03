@@ -463,9 +463,9 @@
 				<visible allowhiddenfocus="true">Control.hasfocus(7)</visible>
 
 				<description>Preferences sublist</description>
-				<posx>418</posx>
+				<posx>400</posx>
 				<posy>83</posy>
-				<width>444</width>
+				<width>480</width>
 				<height>89</height>
 				<orientation>horizontal</orientation>
 				<align>center</align>
@@ -477,7 +477,7 @@
 				<scrolltime>200</scrolltime>
 
 				<!-- Unselected Items -->
-				<itemlayout width="148">
+				<itemlayout width="160">
 					<control type="label">
 						<posx>74</posx>
 						<width>148</width>  			<!-- can't have height defined in the block -->
@@ -492,7 +492,7 @@
 				</itemlayout>
 
 				<!-- Selected Item -->
-				<focusedlayout width="148">
+				<focusedlayout width="160">
 					<control type="label">
 						<posx>74</posx>
 						<width>148</width>
