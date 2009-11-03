@@ -137,6 +137,11 @@
 						<onclick>xbmc.activatewindow(3)</onclick>
 					</item>
 					<item id="9">
+						<description>Quit</description>
+						<label>Quit</label>
+						<onclick>ShutDown</onclick>
+					</item>
+					<item id="10">
 						<description>Preferences</description>
 						<label>31008</label>
 						<onclick>xbmc.activatewindow(settings)</onclick>
@@ -178,6 +183,12 @@
 				<visible>Container(2).hasfocus(9)</visible>				
 				<onfocus>SetFocus(7)</onfocus>
 			</control>
+			<control type="button" id="3">
+				<posx>-200</posx>
+				<posy>0</posy>
+				<visible>Container(2).hasfocus(10)</visible>				
+				<onfocus>SetFocus(8)</onfocus>
+			</control>
 
 			<!-- RSS Feed -->
 			<control type="group">
@@ -185,7 +196,7 @@
 				<posy>89</posy>
 				<visible>
 					!Window.IsVisible(134) + !Control.hasfocus(4) + !Control.hasfocus(5) + !Control.hasfocus(6)
-					+ !Control.hasfocus(7)
+					+ !Control.hasfocus(7) + !Control.hasfocus(8)
 				</visible>
 				<control type="rss">
 					<description>RSS Feed</description>
@@ -447,9 +458,77 @@
 
 			</control>
 
-			<!-- Preferences Sublist -->
+			<!-- Shut Down Sublist -->
 			<control type="list" id="7">
 				<visible allowhiddenfocus="true">Control.hasfocus(7)</visible>
+
+				<description>Preferences sublist</description>
+				<posx>418</posx>
+				<posy>83</posy>
+				<width>444</width>
+				<height>89</height>
+				<orientation>horizontal</orientation>
+				<align>center</align>
+
+				<onup>setfocus(2)</onup>
+
+
+
+				<scrolltime>200</scrolltime>
+
+				<!-- Unselected Items -->
+				<itemlayout width="148">
+					<control type="label">
+						<posx>74</posx>
+						<width>148</width>  			<!-- can't have height defined in the block -->
+						<info>ListItem.Label</info> 
+						<font>RSS</font>
+					    <shadowcolor>5f000000</shadowcolor>								
+						<textcolor>7fffffff</textcolor> <!-- First two are alpha transparency-->
+														<!-- last 6 are regular  rrggbb      -->
+						<scroll>false</scroll>
+												<align>center</align>
+					</control>
+				</itemlayout>
+
+				<!-- Selected Item -->
+				<focusedlayout width="148">
+					<control type="label">
+						<posx>74</posx>
+						<width>148</width>
+						<info>ListItem.Label</info>
+						<font>RSS</font>
+						<textcolor>ffe8e8db</textcolor>
+						<shadowcolor>7f000000</shadowcolor>
+						<align>center</align>
+					</control>
+				</focusedlayout>
+
+				<!-- Menu Items -->
+				<content>
+					<item id="1">
+						<description>Shut Down</description>
+						<label>Shut Down</label>
+						<onclick>Powerdown</onclick>
+					</item>
+					<item id="2">
+						<description>Suspend</description>
+						<label>Suspend</label>
+						<onclick>Suspend</onclick>
+					</item>
+					<item id="3">
+						<description>Hibernate</description>
+						<label>Hibernate</label>
+						<onclick>Hibernate</onclick>
+					</item>
+				</content>
+
+			</control>
+			
+
+			<!-- Preferences Sublist -->
+			<control type="list" id="8">
+				<visible allowhiddenfocus="true">Control.hasfocus(8)</visible>
 
 				<description>Preferences sublist</description>
 				<posx>48</posx>
