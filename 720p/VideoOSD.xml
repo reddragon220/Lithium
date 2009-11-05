@@ -15,28 +15,57 @@
 		</control>
 
 		<control type="button" id="1">
-			<width>38</width>
-			<height>23</height>
+			<width>31</width>
+			<height>26</height>
 			<posx>61</posx>
-			<posy>632</posy>
+			<posy>630</posy>
 		
 			<onleft>1</onleft>
 			<onright>2</onright>
+
+			<onclick>xbmc.playercontrol(previous)</onclick>
+
+			<texturefocus>Zen/elements/osd/previous_focused.png</texturefocus>
+			<texturenofocus>Zen/elements/osd/previous_unfocused.png</texturenofocus>
+		</control>
+		<control type="button" id="2">
+			<width>42</width>
+			<height>26</height>
+			<posx>108</posx>
+			<posy>630</posy>
+		
+			<onleft>1</onleft>
+			<onright>3</onright>
 
 			<onclick>xbmc.playercontrol(rewind)</onclick>
 
 			<texturefocus>Zen/elements/osd/rewind_focused.png</texturefocus>
 			<texturenofocus>Zen/elements/osd/rewind_unfocused.png</texturenofocus>
 		</control>
-	
-		<control type="togglebutton" id="2">
+		<control type="button" id="3">
 			<width>26</width>
-			<height>32</height>
-			<posx>118</posx>
-			<posy>626</posy>
+			<height>26</height>
+			<posx>164</posx>
+			<posy>630</posy>
+		
+			<onleft>2</onleft>
+			<onright>4</onright>
 
-			<onleft>1</onleft>
-			<onright>3</onright>
+			<onclick>xbmc.playercontrol(stop)</onclick>
+
+			<texturefocus>Zen/elements/osd/stop_focused.png</texturefocus>
+			<texturenofocus>Zen/elements/osd/stop_unfocused.png</texturenofocus>
+		</control>
+	
+	
+		<control type="togglebutton" id="4">
+			<width>30</width>
+			<height>36</height>
+			<posx>205</posx>
+			<posy>624</posy>
+
+			<onleft>3</onleft>
+			<onright>5</onright>
 			<onclick>xbmc.playercontrol(play)</onclick>
 
 			<texturefocus>Zen/elements/osd/pause_focused.png</texturefocus>
@@ -47,29 +76,44 @@
 		</control>
 
 	
-		<control type="button" id="3">
-			<width>38</width>
-			<height>23</height>
-			<posx>163</posx>
-			<posy>632</posy>
+		<control type="button" id="5">
+			<width>41</width>
+			<height>26</height>
+			<posx>250</posx>
+			<posy>630</posy>
 		
-			<onleft>2</onleft>
-			<onright>4</onright>
+			<onleft>4</onleft>
+			<onright>6</onright>
 
 			<onclick>xbmc.playercontrol(forward)</onclick>
 
 			<texturefocus>Zen/elements/osd/fast_foward_focused.png</texturefocus>
 			<texturenofocus>Zen/elements/osd/fast_foward_unfocused.png</texturenofocus>
 		</control>
-
-		<control type="button" id="4">
+		
+		<control type="button" id="6">
 			<width>31</width>
-			<height>32</height>
-			<posx>214</posx>
-			<posy>626</posy>
+			<height>26</height>
+			<posx>307</posx>
+			<posy>630</posy>
+		
+			<onleft>5</onleft>
+			<onright>7</onright>
 
-			<onleft>3</onleft>
-			<onright>4</onright>
+			<onclick>xbmc.playercontrol(next)</onclick>
+
+			<texturefocus>Zen/elements/osd/next_focused.png</texturefocus>
+			<texturenofocus>Zen/elements/osd/next_unfocused.png</texturenofocus>
+		</control>
+
+		<control type="button" id="7">
+			<width>37</width>
+			<height>38</height>
+			<posx>355</posx>
+			<posy>623</posy>
+
+			<onleft>6</onleft>
+			<onright>7</onright>
 			<onclick>xbmc.activatewindow(playercontrols)</onclick>
 
 			<texturefocus>Zen/elements/osd/advanced_focused.png</texturefocus>
@@ -77,19 +121,17 @@
 		</control>
 
 
-		<control type="progress" id="10">
-			<onup>10</onup>
-			<ondown>901</ondown>
+		<control type="progress">
 		
-			<posx>268</posx>
+			<posx>411</posx>
 			<posy>627</posy>
-			<width>704</width>
-			<height>31</height>
+			<width>572</width>
+			<height>30</height>
 			<visible>true</visible>
 			<reveal>true</reveal>
-			<texturebg>Zen/elements/osd/progress_small_bg.png</texturebg>
-			<midtexture>Zen/elements/osd/progress_small_mid.png</midtexture>
-			<lefttexture></lefttexture>
+			<texturebg>Zen/elements/osd/progress_bg.png</texturebg>
+			<midtexture>Zen/elements/osd/progress_mid.png</midtexture>
+			<lefttexture>-</lefttexture>
 			<righttexture>-</righttexture>
 			<overlaytexture>-</overlaytexture>
 			<info>Player.Progress</info>
@@ -97,11 +139,11 @@
 		<control type="label">
 			<width>300</width>
 			<posx>959</posx>
-			<posy>626</posy>
+			<posy>627</posy>
 		
 			<font>Small</font>
 			<textcolor>ffe8e8db</textcolor>
-			<label>$INFO[Player.Time]/$INFO[Player.Duration ]</label>
+			<label>$INFO[Player.Time]/$INFO[Player.Duration]</label>
 			<align>center</align>
 		</control>
 
