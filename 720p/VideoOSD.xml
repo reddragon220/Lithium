@@ -12,6 +12,7 @@
 			<height>50</height>
 		
 			<texture>Zen/panes/osd/osd_bg.png</texture>
+			<aspectratio>-</aspectratio>
 		</control>
 
 		<control type="button" id="1">
@@ -72,7 +73,7 @@
 			
 			<alttexturefocus>Zen/elements/osd/play_focused.png</alttexturefocus>
 			<alttexturenofocus>Zen/elements/osd/play_unfocused.png</alttexturenofocus>
-			<usealttexture>!Player.Paused</usealttexture>
+			<usealttexture>Player.Paused</usealttexture>
 		</control>
 		<control type="button" id="5">
 			<width>41</width>
@@ -151,6 +152,7 @@
 			<height>50</height>
 		
 			<texture>Zen/panes/osd/osd_shadow.png</texture>
+			<aspectratio>-</aspectratio>
 		</control>
 		<control type="image">
 			<posx>36</posx>
@@ -160,6 +162,7 @@
 			<height>50</height>
 		
 			<texture>Zen/panes/osd/osd_outline.png</texture>
+			<aspectratio>-</aspectratio>
 		</control>
 
 		<control type="group">
@@ -172,6 +175,7 @@
 				<height>32</height>
 
 				<texture>Zen/panes/osd/pop_up_bg.png</texture>
+				<aspectratio>-</aspectratio>
 			</control>
 
 			<control type="label">
@@ -305,6 +309,7 @@
 				<height>32</height>
 
 				<texture>Zen/panes/osd/pop_up_shadow.png</texture>
+				<aspectratio>-</aspectratio>
 			</control>
 			<control type="image">
 				<posx>529</posx>
@@ -314,6 +319,7 @@
 				<height>32</height>
 
 				<texture>Zen/panes/osd/pop_up_outline.png</texture>
+				<aspectratio>-</aspectratio>
 			</control>
 
 		</control>
@@ -327,6 +333,7 @@
 				<height>32</height>
 
 				<texture>Zen/panes/osd/pop_up_bg.png</texture>
+				<aspectratio>-</aspectratio>
 			</control>
 
 			<control type="label">
@@ -348,6 +355,7 @@
 				<height>32</height>
 
 				<texture>Zen/panes/osd/pop_up_shadow.png</texture>
+				<aspectratio>-</aspectratio>
 			</control>
 			<control type="image">
 				<posx>529</posx>
@@ -357,6 +365,7 @@
 				<height>32</height>
 
 				<texture>Zen/panes/osd/pop_up_outline.png</texture>
+				<aspectratio>-</aspectratio>
 			</control>
 
 		</control>

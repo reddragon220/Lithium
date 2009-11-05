@@ -15,7 +15,7 @@
 				<height>50</height>
 		
 				<texture>Zen/panes/osd/osd_small_bg.png</texture>
-				<aspectratio>keep</aspectratio>
+				<aspectratio>-</aspectratio>
 			</control>
 
 			<control type="progress" id="10">
@@ -57,7 +57,7 @@
 				<height>50</height>
 		
 				<texture>Zen/panes/osd/osd_small_shadow.png</texture>
-				<aspectratio>keep</aspectratio>
+				<aspectratio>-</aspectratio>
 			</control>
 
 			<control type="image">
@@ -68,7 +68,7 @@
 				<height>50</height>
 		
 				<texture>Zen/panes/osd/osd_small_outline.png</texture>
-				<aspectratio>keep</aspectratio>
+				<aspectratio>-</aspectratio>
 			</control>
 
 			<control type="group">
@@ -81,6 +81,7 @@
 					<height>32</height>
 
 					<texture>Zen/panes/osd/pop_up_bg.png</texture>
+					<aspectratio>-</aspectratio>
 				</control>
 
 				<control type="label">
@@ -214,6 +215,7 @@
 					<height>32</height>
 
 					<texture>Zen/panes/osd/pop_up_shadow.png</texture>
+					<aspectratio>-</aspectratio>
 				</control>
 				<control type="image">
 					<posx>529</posx>
@@ -223,6 +225,7 @@
 					<height>32</height>
 
 					<texture>Zen/panes/osd/pop_up_outline.png</texture>
+					<aspectratio>-</aspectratio>
 				</control>
 
 			</control>
@@ -236,6 +239,7 @@
 					<height>32</height>
 
 					<texture>Zen/panes/osd/pop_up_bg.png</texture>
+					<aspectratio>-</aspectratio>
 				</control>
 
 				<control type="label">
@@ -257,6 +261,7 @@
 					<height>32</height>
 
 					<texture>Zen/panes/osd/pop_up_shadow.png</texture>
+					<aspectratio>-</aspectratio>
 				</control>
 				<control type="image">
 					<posx>529</posx>
@@ -266,6 +271,7 @@
 					<height>32</height>
 
 					<texture>Zen/panes/osd/pop_up_outline.png</texture>
+					<aspectratio>-</aspectratio>
 				</control>
 
 			</control>
