@@ -15,6 +15,7 @@
 				<height>50</height>
 		
 				<texture>Zen/panes/osd/osd_small_bg.png</texture>
+				<aspectratio>keep</aspectratio>
 			</control>
 
 			<control type="progress" id="10">
@@ -56,6 +57,7 @@
 				<height>50</height>
 		
 				<texture>Zen/panes/osd/osd_small_shadow.png</texture>
+				<aspectratio>keep</aspectratio>
 			</control>
 
 			<control type="image">
@@ -66,6 +68,7 @@
 				<height>50</height>
 		
 				<texture>Zen/panes/osd/osd_small_outline.png</texture>
+				<aspectratio>keep</aspectratio>
 			</control>
 
 			<control type="group">

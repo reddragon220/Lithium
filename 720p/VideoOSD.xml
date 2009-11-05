@@ -56,8 +56,6 @@
 			<texturefocus>Zen/elements/osd/stop_focused.png</texturefocus>
 			<texturenofocus>Zen/elements/osd/stop_unfocused.png</texturenofocus>
 		</control>
-	
-	
 		<control type="togglebutton" id="4">
 			<width>30</width>
 			<height>36</height>
@@ -67,15 +65,15 @@
 			<onleft>3</onleft>
 			<onright>5</onright>
 			<onclick>xbmc.playercontrol(play)</onclick>
+			<onclick>SetFocus(4)</onclick>
 
 			<texturefocus>Zen/elements/osd/pause_focused.png</texturefocus>
 			<texturenofocus>Zen/elements/osd/pause_unfocused.png</texturenofocus>
 			
 			<alttexturefocus>Zen/elements/osd/play_focused.png</alttexturefocus>
 			<alttexturenofocus>Zen/elements/osd/play_unfocused.png</alttexturenofocus>
+			<usealttexture>!Player.Paused</usealttexture>
 		</control>
-
-	
 		<control type="button" id="5">
 			<width>41</width>
 			<height>26</height>
@@ -90,7 +88,6 @@
 			<texturefocus>Zen/elements/osd/fast_foward_focused.png</texturefocus>
 			<texturenofocus>Zen/elements/osd/fast_foward_unfocused.png</texturenofocus>
 		</control>
-		
 		<control type="button" id="6">
 			<width>31</width>
 			<height>26</height>
@@ -105,7 +102,6 @@
 			<texturefocus>Zen/elements/osd/next_focused.png</texturefocus>
 			<texturenofocus>Zen/elements/osd/next_unfocused.png</texturenofocus>
 		</control>
-
 		<control type="button" id="7">
 			<width>37</width>
 			<height>38</height>
@@ -156,7 +152,6 @@
 		
 			<texture>Zen/panes/osd/osd_shadow.png</texture>
 		</control>
-
 		<control type="image">
 			<posx>36</posx>
 			<posy>617</posy>
