@@ -84,7 +84,7 @@
 				<width>381</width>
 				<height>37</height>
 				<posx>0</posx>
-				<posy>-11</posy>
+				<posy>-12</posy>
 				<texture>Zen/panes/contextmenu/context_menu_shadow_bottom.png</texture>
 				<aspectratio>-</aspectratio>
 			</control>
