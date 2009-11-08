@@ -8,24 +8,25 @@
 		<control type="group">
 			<visible>!Window.IsVisible(videoosd) + Player.HasVideo</visible>
 			<control type="image">
-				<posx>116.5</posx>
+				<posx>208</posx>
 				<posy>617</posy>
 		
-				<width>1047</width>
+				<width>862</width>
 				<height>50</height>
 		
 				<texture>Zen/panes/osd/osd_small_bg.png</texture>
+				<aspectratio>-</aspectratio>
 			</control>
 
 			<control type="progress" id="10">
 				<onup>10</onup>
 				<ondown>901</ondown>
 		
-				<posx>141.5</posx>
+				<posx>233</posx>
 				<posy>627</posy>
 		
-				<width>753</width>
-				<height>31</height>
+				<width>572</width>
+				<height>30</height>
 		
 				<visible>true</visible>
 				<reveal>true</reveal>
@@ -39,8 +40,8 @@
 
 			<control type="label">
 				<width>300</width>
-				<posx>876.5</posx>
-				<posy>626</posy>
+				<posx>783</posx>
+				<posy>627</posy>
 
 				<font>Small</font>
 				<textcolor>ffe8e8db</textcolor>
@@ -49,23 +50,25 @@
 			</control>
 
 			<control type="image">
-				<posx>116.5</posx>
+				<posx>208</posx>
 				<posy>617</posy>
 		
-				<width>1047</width>
+				<width>862</width>
 				<height>50</height>
 		
 				<texture>Zen/panes/osd/osd_small_shadow.png</texture>
+				<aspectratio>-</aspectratio>
 			</control>
 
 			<control type="image">
-				<posx>116.5</posx>
+				<posx>208</posx>
 				<posy>617</posy>
 		
-				<width>1047</width>
+				<width>862</width>
 				<height>50</height>
 		
 				<texture>Zen/panes/osd/osd_small_outline.png</texture>
+				<aspectratio>-</aspectratio>
 			</control>
 
 			<control type="group">
@@ -78,6 +81,7 @@
 					<height>32</height>
 
 					<texture>Zen/panes/osd/pop_up_bg.png</texture>
+					<aspectratio>-</aspectratio>
 				</control>
 
 				<control type="label">
@@ -211,6 +215,7 @@
 					<height>32</height>
 
 					<texture>Zen/panes/osd/pop_up_shadow.png</texture>
+					<aspectratio>-</aspectratio>
 				</control>
 				<control type="image">
 					<posx>529</posx>
@@ -220,6 +225,7 @@
 					<height>32</height>
 
 					<texture>Zen/panes/osd/pop_up_outline.png</texture>
+					<aspectratio>-</aspectratio>
 				</control>
 
 			</control>
@@ -233,6 +239,7 @@
 					<height>32</height>
 
 					<texture>Zen/panes/osd/pop_up_bg.png</texture>
+					<aspectratio>-</aspectratio>
 				</control>
 
 				<control type="label">
@@ -254,6 +261,7 @@
 					<height>32</height>
 
 					<texture>Zen/panes/osd/pop_up_shadow.png</texture>
+					<aspectratio>-</aspectratio>
 				</control>
 				<control type="image">
 					<posx>529</posx>
@@ -263,6 +271,7 @@
 					<height>32</height>
 
 					<texture>Zen/panes/osd/pop_up_outline.png</texture>
+					<aspectratio>-</aspectratio>
 				</control>
 
 			</control>

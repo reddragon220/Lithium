@@ -360,12 +360,13 @@
 						<onclick>Skin.ToggleSetting(container_bg_on)</onclick>
 						<onclick>Skin.ToggleSetting(dark_bg)</onclick>
 						<onclick>XBMC.ReloadSkin()</onclick>
-						<onclick>Control.Move(50,2)</onclick>				
+						<onclick>Control.Move(50,2)</onclick>
+						<onclick>SetFocus(2033)</onclick>				
 
 				    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
 						<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
 					</control>
-					<control type="button" id="2032">
+					<control type="button" id="2033">
 						<visible>Skin.HasSetting(dark_bg)</visible>
 						<posx>12</posx>
 						<height>52</height>
@@ -382,12 +383,13 @@
 						<onclick>Skin.ToggleSetting(dark_bg)</onclick>
 						<onclick>Skin.ToggleSetting(light_bg)</onclick>
 						<onclick>XBMC.ReloadSkin()</onclick>
-						<onclick>Control.Move(50,2)</onclick>				
+						<onclick>Control.Move(50,2)</onclick>
+						<onclick>SetFocus(2034)</onclick>				
 
 				    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
 						<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
 					</control>
-					<control type="button" id="2032">
+					<control type="button" id="2034">
 						<visible>Skin.HasSetting(light_bg)</visible>
 						<posx>12</posx>
 						<height>52</height>
@@ -404,7 +406,8 @@
 						<onclick>Skin.ToggleSetting(light_bg)</onclick>
 						<onclick>Skin.ToggleSetting(container_bg_on)</onclick>
 						<onclick>XBMC.ReloadSkin()</onclick>
-						<onclick>Control.Move(50,2)</onclick>				
+						<onclick>Control.Move(50,2)</onclick>
+						<onclick>SetFocus(2032)</onclick>				
 
 				    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
 						<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>

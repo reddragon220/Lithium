@@ -17,7 +17,7 @@
 			<posy>0</posy>
 			<width>381</width>
 			<texture>Zen/panes/contextmenu/context_menu_bg_middle.png</texture>
-			<aspectratio>center</aspectratio>
+			<aspectratio>stretch</aspectratio>
 		</control>
 
 		<control type="button" width="365" id="1000">
@@ -40,58 +40,53 @@
 	    	<texturenofocus>-</texturenofocus>		
 		</control>
 		
-
-
-		
-		<control type="group" id="997">
+		<!-- Top -->
+		<control type="group" 	id="997"> 
 			<width>381</width>
-			<height>26</height>
+			<height>37</height>
 			<posy>-26</posy>
-			<aspectratio>stretch</aspectratio>
-			<control type="image">
+			<control type="image" >
 				<description>background top image</description>
 				<width>381</width>
 				<height>26</height>
 				<posx>0</posx>
-				<posy>0</posy>
 				<texture>Zen/panes/contextmenu/context_menu_bg_top.png</texture>
+				<aspectratio>-</aspectratio>
 			</control>
-			<!--><control type="image">
+			<control type="image">
 				<description>background top image</description>
 				<width>381</width>
 				<height>37</height>
 				<posx>0</posx>
-				<posy>0</posy>
 				<texture>Zen/panes/contextmenu/context_menu_shadow_top.png</texture>
-			</control> -->
+			</control>
 			<control type="image">
 				<description>background top image</description>
 				<width>381</width>
 				<height>26</height>
 				<posx>0</posx>
-				<posy>0</posy>
 				<texture>Zen/panes/contextmenu/context_menu_outline_top.png</texture>
 			</control>
 		</control>
-
 		<control type="group" id="998">
 			<width>381</width>
-			<height>26</height>
+			<height>37</height>
 			<posy>26</posy>
 			<control type="image">
 				<description>background bottom image</description>
 				<width>381</width>
 				<height>26</height>
-				<posx>0</posx>
 				<texture>Zen/panes/contextmenu/context_menu_bg_bottom.png</texture>
+				<aspectratio>-</aspectratio>
 			</control>
 			<control type="image">
-				<description>background top image</description>
+				<description>background bottom image</description>
 				<width>381</width>
 				<height>37</height>
 				<posx>0</posx>
-				<posy>-11</posy>
+				<posy>-12</posy>
 				<texture>Zen/panes/contextmenu/context_menu_shadow_bottom.png</texture>
+				<aspectratio>-</aspectratio>
 			</control>
 			<control type="image">
 				<description>background bottom image</description>
@@ -99,24 +94,10 @@
 				<height>26</height>
 				<posx>0</posx>
 				<texture>Zen/panes/contextmenu/context_menu_outline_bottom.png</texture>
+				<aspectratio>-</aspectratio>
 			</control>
 		</control>
 
-		
-<!--
-		<control type="image">
-			<width>381</width>
-			<height>618</height>
-			<texture>Zen/panes/contextmenu/context_menu_shadow.png</texture>
-			<aspectratio>stretch</aspectratio> 
-		</control>
-		<control type="image">
-			<width>381</width>
-			<height>618</height>
-			<texture>Zen/panes/contextmenu/context_menu_outline.png</texture>
-			<aspectratio>stretch</aspectratio> 
-		</control>
-	-->
 </controls>
 
 </window>
