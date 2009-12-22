@@ -56,6 +56,7 @@
 
 		
 		<include>footer</include>
+		<include>preferences</include>
 	</include>
 	
 	
@@ -75,25 +76,26 @@
 	
 	
 	
-	<include name="header"> 
+	<include name="header">
 		<!-- Header -->
 		<control type="group" id="100">
-
 			<defaultcontrol>106</defaultcontrol>		
 
 			<include condition="Skin.HasSetting(slide)">slide_on</include>
 			<include condition="!Skin.HasSetting(slide)">slide_off</include>
 
+			<include>preferences_animation</include>
+
 			<control type="image">
 				<width>1280</width>
 				<height>53</height>
 				<aspectratio>stretch</aspectratio>
-				<texture>Zen/panes/common/header_bg.png</texture>
+				<texture>common/header_bg.png</texture>
 			</control>
 
 
 			<!-- Weather -->
-		<!--		<control type="group" id="120">
+			<!--<control type="group" id="120">
 				<visible effect="fade" time="250">system.hasnetwork</visible>
 				<posx>965</posx>
 				<control type="image">
@@ -250,7 +252,7 @@
 			<control type="image">
 				<width>1280</width>
 				<height>53</height>
-				<texture>Zen/panes/common/header_outline.png</texture>
+				<texture>common/header_shadow.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 
@@ -503,15 +505,17 @@
 			<aspectratio>stretch</aspectratio>
 		</control>
 	</include>
-
+	
 	<include name="footer">
 		<!-- Footer Info -->
 		<control type="group">
 			<posy>667</posy>
+			<include>preferences_animation</include>
+			
 			<control type="image">
 				<width>1280</width>
 				<height>53</height>
-				<texture>Zen/panes/common/header_bg.png</texture>
+				<texture>common/footer_bg.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 		
@@ -654,18 +658,168 @@
 			<control type="image">
 				<width>1280</width>
 				<height>53</height>
-				<texture>Zen/panes/common/footer_gradient.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="image">
-				<width>1280</width>
-				<height>53</height>
-				<texture>Zen/panes/common/footer_outline.png</texture>
+				<texture>common/footer_shadow.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 
 		</control>
-		
+	</include>
+	
+	<include name="preferences_animation">
+		<animation effect="slide" end="0,-119" time="200" condition="Control.HasFocus(101)">Conditional</animation>
+	</include>
+	
+	<include name="preferences">
+		<control type="group">
+			<include>preferences_animation</include>	
+			<posy>720</posy>
+			<control type="image">
+				<width>1280</width>
+				<height>119</height>
+				<texture>common/prefs_bg.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="list" id="101">
+				<posx>55</posx>
+				<posy>0</posy>
+				<width>1170</width>
+				<height>119</height>
+				<orientation>horizontal</orientation>
+				<align>center</align>
+				 	
+
+				<onup>setfocus(50)</onup>
+
+				<scrolltime>200</scrolltime>
+
+				<!-- Unselected Items -->
+				<itemlayout width="130">
+					<control type="image">
+						<posx>35</posx>
+						<posy>14</posy>
+						<width>70</width>
+						<height>70</height>
+						<texture>common/prefs_icon.png</texture>
+						<aspectratio>keep</aspectratio>						
+					</control>
+					<control type="label">
+						<posx>65</posx>
+						<posy>84</posy>
+						<width>130</width>
+						<info>ListItem.Label</info>
+						<font>Small</font>
+						<textcolor>5f000000</textcolor>
+						<align>center</align>							
+					</control>
+					<control type="label">
+						<posx>65</posx>
+						<posy>86</posy>
+						<width>130</width>
+						<info>ListItem.Label</info>
+						<font>Small</font>
+						<textcolor>ffe8e8db</textcolor>
+						<align>center</align>							
+					</control>
+				</itemlayout>
+
+				<!-- Selected Item -->
+				<focusedlayout width="130">
+					<control type="image">
+						<visible>control.hasfocus(101)</visible>
+						<posx>15</posx>
+						<posy>14</posy>
+						<width>100</width>
+						<height>100</height>
+						<texture>common/prefs_icon.png</texture>
+						<aspectratio>keep</aspectratio>						
+					</control>
+					<control type="image">
+						<visible>!control.hasfocus(101)</visible>
+						<posx>35</posx>
+						<posy>14</posy>
+						<width>70</width>
+						<height>70</height>
+						<texture>common/prefs_icon.png</texture>
+						<aspectratio>keep</aspectratio>						
+					</control>
+					<control type="label">
+						<posx>65</posx>
+						<posy>84</posy>
+						<width>130</width>
+						<info>ListItem.Label</info>
+						<font>Small</font>
+						<textcolor>5f000000</textcolor>
+						<align>center</align>							
+					</control>
+					<control type="label">
+						<posx>65</posx>
+						<posy>86</posy>
+						<width>140</width>
+						<info>ListItem.Label</info>
+						<font>Small</font>
+						<textcolor>ffe8e8db</textcolor>
+						<align>center</align>							
+					</control>
+				</focusedlayout>
+
+				<!-- Menu Items -->
+				<content>
+					<item id="1">
+						<description>View</description>
+						<label>View</label>
+						<onclick>Container.NextViewMode</onclick>
+					</item>
+					<item id="2">
+						<description>Sort Method</description>
+						<label>$INFO[Container.SortMethod]</label>
+						<onclick>Container.NextSortMethod</onclick>
+					</item>
+					<item id="3">
+						<description>Sort Direction</description>
+						<label>584</label>
+						<onclick>Container.SortDirection</onclick>
+					</item>
+					<item id="4">
+						<description>Flags</description>
+						<label>Flags</label>
+						<onclick>XBMC.ReplaceWindow(MyVideoLibrary,tvshowactors,return)</onclick>
+					</item> 
+					<item id="5">
+						<description>Fanart</description>
+						<label>Fanart</label>
+						<onclick>Fanart</onclick>
+					</item>
+					<item id="6">
+						<description>Search</description>
+						<label>Search</label>
+						<onclick>Search</onclick>
+					</item>
+					<item id="7">
+						<description>Library</description>
+						<label>Library</label>
+						<onclick>Library</onclick>
+					</item>
+					<item id="8">
+						<description>Refresh</description>
+						<label>31009</label>
+						<onclick>XBMC.ReloadSkin()</onclick>
+					</item>
+					<item id="9">
+						<description>Memory</description>
+						<label>$INFO[System.FreeMemory]</label>
+						<onclick>$INFO[System.FreeMemory]</onclick>
+					</item>
+				</content>
+
+			</control>
+			
+			<control type="image">
+				<width>1280</width>
+				<height>119</height>
+				<texture>common/prefs_shadow.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		</control>
 	</include>
 	
 
@@ -701,6 +855,7 @@
 			<fadetime>200</fadetime>
 			
 			<include condition="!Skin.HasSetting(ken_burns)">bg_animation</include>
+			<include>preferences_animation</include>
 		</control>
 		
 		<control type="largeimage">
@@ -715,6 +870,7 @@
       		<fadetime>200</fadetime>
 
 			<include condition="!Skin.HasSetting(ken_burns)">bg_animation</include>
+			<include>preferences_animation</include>
 		</control>
 	</include>
 
@@ -731,6 +887,7 @@
 			<fadetime>200</fadetime>
 			
 			<include condition="!Skin.HasSetting(ken_burns)">bg_animation</include>
+			<include>preferences_animation</include>
 		</control>
 		
 		<include condition="!Skin.HasSetting(fanart)">fanart</include>

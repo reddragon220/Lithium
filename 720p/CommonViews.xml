@@ -72,6 +72,10 @@
 		<posx>13</posx>
 	</include>
 
+	<include name="preferences_direction">
+		<ondown>101</ondown>
+	</include>
+
 	<include file="ViewThumbList.xml"/>
 	<include file="ViewFanart.xml"/>
 	<include file="ViewCover.xml"/>

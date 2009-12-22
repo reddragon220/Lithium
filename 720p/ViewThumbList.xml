@@ -1,12 +1,10 @@
 <includes>
 	<include name="thumblist_jump_horizontal">
 		<posx>31</posx>
-		<ondown>501</ondown>
 		<onright>-</onright>
 	</include>
 	<include name="thumblist_jump_vertical">
 		<posx>18</posx>
-		<ondown>-</ondown>
 		<onright>501</onright>
 	</include>
 	
@@ -16,6 +14,8 @@
 			<posx>36</posx>
 			<posy>82</posy>
 			<include condition ="!Skin.HasSetting(container_bg_on)">center_bg</include>
+			<include>preferences_animation</include>
+			
 			<!-- Select List -->
 			<control type="panel" id="50">
 
@@ -26,9 +26,8 @@
 				<width>1132</width>
 				<height>506</height>
 				<posy>25</posy>
-
-				<onup>100</onup>
-				<onleft>100</onleft>
+				
+				<include>preferences_direction</include>
 				<include condition="Skin.HasSetting(horizontal_scroll)">thumblist_jump_horizontal</include>
 			 	<include condition="!Skin.HasSetting(horizontal_scroll)">thumblist_jump_vertical</include>
 
