@@ -1,7 +1,6 @@
 <includes>
 	<include name="thumblist_jump_horizontal">
 		<posx>31</posx>
-		<onright>-</onright>
 	</include>
 	<include name="thumblist_jump_vertical">
 		<posx>18</posx>
@@ -10,8 +9,27 @@
 	
 	<include name="thumb list">
 		<control type="group">
+			<include condition ="!Skin.HasSetting(container_bg_on)">center_fg</include>
+
+			<control type ="image">
+				<posx>-38</posx>
+				<posy>-29</posy>
+				<width>1280</width>
+				<height>119</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>list/shadow_top.png</texture>
+			</control>
+			<control type ="image">
+				<posx>-38</posx>
+				<posy>638</posy>
+				<width>1280</width>
+				<height>119</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>list/shadow_bottom.png</texture>
+			</control>
+			
 			<visible>Control.IsVisible(50)</visible>
-			<posx>36</posx>
+			<posx>38</posx>
 			<posy>82</posy>
 			<include condition ="!Skin.HasSetting(container_bg_on)">center_bg</include>
 			<include>preferences_animation</include>
@@ -23,8 +41,8 @@
 				<include condition="Skin.HasSetting(horizontal_scroll)">orientation_horizontal</include>
 			 	<include condition="!Skin.HasSetting(horizontal_scroll)">orientation_vertical</include>
 
-				<width>1132</width>
-				<height>506</height>
+				<width>1128</width>
+				<height>510</height>
 				<posy>25</posy>
 				
 				<include>preferences_direction</include>
@@ -33,7 +51,7 @@
 
 				<pagecontrol>501</pagecontrol>
 
-				<itemlayout width="1132" height="84">
+				<itemlayout width="1128" height="85">
 					<control type="group">
 						<visible>
 							!Window.IsActive(musicplaylist) + !Window.IsActive(musicfiles) + !Window.IsActive(musiclibrary)
@@ -76,7 +94,7 @@
 								<width>956</width>
 								<info>ListItem.label</info>
 								<font>Large</font>
-								<textcolor>ffffffff</textcolor>
+								<textcolor>ffe8e8db</textcolor>
 								<scroll>false</scroll>
 							</control>
 						</control>
@@ -99,7 +117,7 @@
 								<width>956</width>
 								<label>$INFO[ListItem.Genre]</label>
 								<font>Small</font>
-								<textcolor>ffd7d7d7</textcolor>
+								<textcolor>ffe8e8db</textcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
@@ -109,7 +127,7 @@
 								<width>956</width>
 								<info>ListItem.label</info>
 								<font>Large</font>
-								<textcolor>ffffffff</textcolor>
+								<textcolor>ffe8e8db</textcolor>
 								<scroll>false</scroll>
 							</control>
 						</control>
@@ -154,7 +172,7 @@
 								<width>1018</width>
 								<info>ListItem.label</info>
 								<font>Large</font>
-								<textcolor>ffffffff</textcolor>
+								<textcolor>ffe8e8db</textcolor>
 								<scroll>false</scroll>
 							</control>
 						</control>
@@ -168,7 +186,7 @@
 								<width>1018</width>
 								<label>$LOCALIZE[31020] $INFO[ListItem.Episode]</label>
 								<font>Small</font>
-								<textcolor>ffd7d7d7</textcolor>
+								<textcolor>ffe8e8db</textcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
@@ -178,28 +196,28 @@
 								<width>1018</width>
 								<info>ListItem.label</info>
 								<font>Large</font>
-								<textcolor>ffffffff</textcolor>
+								<textcolor>ffe8e8db</textcolor>
 								<scroll>false</scroll>
 							</control>
 						</control>
 
 					</control>
 					<control type="image">
-						<posx>7</posx>
-						<posy>82</posy>
+						<posx>5</posx>
+						<posy>83</posy>
 						<width>1118</width>
 						<height>2</height>
-						<texture>Zen/elements/list/divider.png</texture>
+						<texture>list/divider.png</texture>
 						<aspectratio>stretch</aspectratio> 
 					</control>
 				</itemlayout>
-				<focusedlayout width="1132" height="84">
+				<focusedlayout width="1128" height="85">
 					<control type="image">
 						<posx>0</posx>
-						<posy>-2</posy>
-						<width>1132</width>
-						<height>86</height>
-						<texture>Zen/elements/list/highlight.png</texture>
+						<posy>0</posy>
+						<width>1128</width>
+						<height>83</height>
+						<texture>list/highlight.png</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
 					<control type="group">
@@ -239,19 +257,29 @@
 							<posy>21</posy>
 							<control type="label">
 								<posx>10</posx>
+								<posy>-2</posy>
+								<height>42</height>
+								<width>956</width>
+								<info>ListItem.label</info>
+								<font>Large</font>
+								<textcolor>7f000000</textcolor>
+								<scroll>false</scroll>
+							</control>
+							<control type="label">
+								<posx>10</posx>
 								<posy>0</posy>
 								<height>42</height>
 								<width>956</width>
 								<info>ListItem.label</info>
 								<font>Large</font>
-								<textcolor>ffffffff</textcolor>
+								<textcolor>ffe8e8db</textcolor>
 								<scroll>false</scroll>
 							</control>
 						</control>
 						<control type="group">
 							<visible>
 								Container.Content(seasons) | Container.Content(tvshows) | Container.Content(movies)
-							</visible>					
+							</visible>			
 							<posx>145</posx>
 							<control type="image">
 								<posx>10</posx>
@@ -262,6 +290,27 @@
 								<aspectratio>keep</aspectratio>
 								<align>center</align>
 							</control>
+							
+							<control type="label">
+								<posx>192</posx>
+								<posy>37</posy>
+								<height>42</height>
+								<width>956</width>
+								<label>$INFO[ListItem.Genre]</label>
+								<font>Small</font>
+								<textcolor>7f000000</textcolor>
+								<scroll>false</scroll>
+							</control>
+							<control type="label">
+								<posx>10</posx>
+								<posy>-2</posy>
+								<height>42</height>
+								<width>956</width>
+								<info>ListItem.label</info>
+								<font>Large</font>
+								<textcolor>7f000000</textcolor>
+								<scroll>false</scroll>
+							</control>
 							<control type="label">
 								<posx>192</posx>
 								<posy>39</posy>
@@ -269,7 +318,7 @@
 								<width>956</width>
 								<label>$INFO[ListItem.Genre]</label>
 								<font>Small</font>
-								<textcolor>ffd7d7d7</textcolor>
+								<textcolor>ffe8e8db</textcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
@@ -279,7 +328,7 @@
 								<width>956</width>
 								<info>ListItem.label</info>
 								<font>Large</font>
-								<textcolor>ffffffff</textcolor>
+								<textcolor>ffe8e8db</textcolor>
 								<scroll>false</scroll>
 							</control>
 						</control>
@@ -320,25 +369,11 @@
 							<control type="label">
 								<posx>10</posx>
 								<posy>0</posy>
-								<height>42</height>
+								<height>40</height>
 								<width>1018</width>
 								<info>ListItem.label</info>
 								<font>Large</font>
-								<textcolor>ffffffff</textcolor>
-								<scroll>false</scroll>
-							</control>
-						</control>
-						<control type="group">
-							<visible>Container.Content(seasons) | Container.Content(tvshows)</visible>					
-							<posx>90</posx>
-							<control type="label">
-								<posx>10</posx>
-								<posy>35</posy>
-								<height>42</height>
-								<width>1018</width>
-								<label>$LOCALIZE[31020] $INFO[ListItem.Episode]</label>
-								<font>Small</font>
-								<textcolor>ffd7d7d7</textcolor>
+								<textcolor>7f000000</textcolor>
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
@@ -348,23 +383,67 @@
 								<width>1018</width>
 								<info>ListItem.label</info>
 								<font>Large</font>
-								<textcolor>ffffffff</textcolor>
+								<textcolor>ffe8e8db</textcolor>
+								<scroll>false</scroll>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Container.Content(seasons) | Container.Content(tvshows)</visible>					
+							<posx>90</posx>							
+							<control type="label">
+								<posx>10</posx>
+								<posy>33</posy>
+								<height>42</height>
+								<width>1018</width>
+								<label>$LOCALIZE[31020] $INFO[ListItem.Episode]</label>
+								<font>Small</font>
+								<textcolor>7f000000</textcolor>
+								<scroll>false</scroll>
+							</control>
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<height>40</height>
+								<width>1018</width>
+								<info>ListItem.label</info>
+								<font>Large</font>
+								<textcolor>7f000000</textcolor>
+								<scroll>false</scroll>
+							</control>
+							
+							<control type="label">
+								<posx>10</posx>
+								<posy>35</posy>
+								<height>42</height>
+								<width>1018</width>
+								<label>$LOCALIZE[31020] $INFO[ListItem.Episode]</label>
+								<font>Small</font>
+								<textcolor>ffe8e8db</textcolor>
+								<scroll>false</scroll>
+							</control>
+							<control type="label">
+								<posx>10</posx>
+								<posy>0</posy>
+								<height>42</height>
+								<width>1018</width>
+								<info>ListItem.label</info>
+								<font>Large</font>
+								<textcolor>ffe8e8db</textcolor>
 								<scroll>false</scroll>
 							</control>
 						</control>
 					</control>
 					<control type="image">
-						<posx>7</posx>
-						<posy>82</posy>
+						<posx>5</posx>
+						<posy>83</posy>
 						<width>1118</width>
 						<height>2</height>
-						<texture>Zen/elements/list/divider.png</texture>
+						<texture>list/divider.png</texture>
 						<aspectratio>stretch</aspectratio> 
 					</control>
 				</focusedlayout>
 			</control>
 
-			<include condition ="!Skin.HasSetting(container_bg_on)">center_fg</include>
 			<!-- scroll bar -->
 			<control type="group">
 				<visible>!Skin.HasSetting(horizontal_scroll)</visible>
@@ -387,6 +466,12 @@
 					<textureslidernib>Zen/elements/common/scrollbar/scrollbar_nib.png</textureslidernib>
 					<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
 				</control>
+			</control>
+			
+			<control type="image">
+				<width>1280</width>
+				<height>720</height>
+				<texture>background/background.png</texture>
 			</control>
 		</control>
 

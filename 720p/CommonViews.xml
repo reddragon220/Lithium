@@ -21,7 +21,7 @@
 			<width>1280</width>
 			<height>720</height>
 			<aspectratio>stretch</aspectratio>
-			<texture>Zen/panes/common/light_bg.png</texture>
+			<texture>common/light_bg.png</texture>
 			<fadetime>200</fadetime>
 		</control>
 	</include>
@@ -59,6 +59,50 @@
 			<height>556</height>
 			<texture>Zen/panes/common/center_outline.png</texture>
 			<aspectratio>stretch</aspectratio> 
+		</control>
+	</include>
+
+	<include name="direction_arrows">
+		<control type="group">
+			<visible>Skin.HasSetting(horizontal_scroll)</visible>
+			<include>preferences_animation</include>
+			<posy>356</posy>
+			<control type="image">
+				<posx>7</posx>
+				<width>48</width>
+				<height>48</height>
+				<texture>common/left_arrow.png</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="image">
+				<posx>1225</posx>
+				<width>48</width>
+				<height>48</height>
+				<texture>common/right_arrow.png</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+		</control>
+		<control type="group">
+			<visible>!Skin.HasSetting(horizontal_scroll)</visible>
+			<include>preferences_animation</include>
+			
+			<control type="image">
+				<posx>616</posx>
+				<posy>612</posy>
+				<posx>7</posx>
+				<width>48</width>
+				<height>48</height>
+				<texture>common/down_arrow.png</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="image">
+				<posx>616</posx>
+				<posy>60</posy>
+				<width>48</width>
+				<height>48</height>
+				<texture>common/up_arrow.png</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
 		</control>
 	</include>
 
