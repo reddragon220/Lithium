@@ -59,13 +59,47 @@
 							<bordersize>5</bordersize>
 						</control>
 					</itemlayout>
-					<focusedlayout width="210" height="306">
+					<focusedlayout width="210" height="308">
 						<control type="image">
 							<animation effect="zoom" start="84" end="100" center="auto" time="100">Focus</animation>
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>210</width>
-							<height>306</height>
+							<height>308</height>
+							<info>ListItem.thumb</info>
+							<texture diffuse="cover/dvd/thumb_mask_big2.png"></texture>
+							<bordertexture border="20">cover/dvd/thumb_focus_overlay_bottom.png</bordertexture>
+							<bordersize>10</bordersize>
+						</control>
+						<control type="image">
+							<animation effect="zoom" start="84" end="100" center="auto" time="100">Focus</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>308</height>
+							<info>ListItem.thumb</info>
+							<texture diffuse="cover/dvd/thumb_mask_big.png"></texture>
+							<bordersize>8</bordersize>
+						</control>
+						<control type="image">
+							<animation effect="zoom" start="84" end="100" center="auto" time="100">Focus</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>308</height>
+							<info>ListItem.thumb</info>
+							<texture diffuse="cover/dvd/thumb_mask_big2.png"></texture>
+							<bordertexture border="20">cover/dvd/thumb_focus_overlay_top.png</bordertexture>
+							<bordersize>10</bordersize>
+						</control>
+					</focusedlayout>
+<!--					<focusedlayout width="210" height="308">
+						<control type="image">
+							<animation effect="zoom" start="84" end="100" center="auto" time="100">Focus</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>308</height>
 							<texture>cover/dvd/thumb_focus_overlay_bottom.png</texture>
 						</control>
 						<control type="image">
@@ -73,7 +107,7 @@
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>210</width>
-							<height>306</height>
+							<height>308</height>
 							<info>ListItem.thumb</info>
 							<texture diffuse="cover/dvd/thumb_mask_big.png"></texture>
 						</control>
@@ -82,10 +116,11 @@
 							<posx>0</posx>
 							<posy>0</posy>
 							<width>210</width>
-							<height>306</height>
+							<height>308</height>
 							<texture>cover/dvd/thumb_focus_overlay_top.png</texture>
 						</control>
 					</focusedlayout>
+-->
 				</control>
 				<control type="panel" id="53">
 					<animation type="Conditional" condition="Control.hasfocus(531) + Skin.HasSetting(horizontal_scroll)">
@@ -114,10 +149,10 @@
 
 					<pagecontrol>531</pagecontrol>
 
-					<itemlayout width="184" height="177">
+					<itemlayout width="184" height="180">
 						<control type="image">
-							<posx>11</posx>
-							<posy>5</posy>
+							<posx>6</posx>
+							<posy>6</posy>
 							<width>172</width>
 							<height>172</height>
 							<info>ListItem.thumb</info>
@@ -126,17 +161,34 @@
 							<bordersize>5</bordersize>
 						</control>
 					</itemlayout>
-					<focusedlayout width="193" height="193">
+					<focusedlayout width="180" height="180">
 						<control type="image">
-							<animation effect="zoom" end="120" center="auto" time="100">Focus</animation>
-							<posx>11</posx>
-							<posy>5</posy>
-							<width>174</width>
-							<height>174</height>
+							<animation effect="zoom" start="95"end="100" center="auto" time="100">Focus</animation>
+							<posx>2</posx>
+							<posy>2</posy>
+							<width>180</width>
+							<height>180</height>
+							<texture>cover/album/thumb_focus_overlay_bottom.png</texture>
+							<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
+						</control>
+						<control type="image">
+							<animation effect="zoom" start="95" end="100" center="auto" time="100">Focus</animation>
+							<posx>2</posx>
+							<posy>2</posy>
+							<width>180</width>
+							<height>180</height>
 							<info>ListItem.thumb</info>
-							<texture diffuse="cover/album/thumb_mask.png"></texture>
-							<bordertexture border="4">cover/album/thumb_focus_overlay.png</bordertexture>
-							<bordersize>10</bordersize>
+							<texture diffuse="cover/album/thumb_mask_big.png"></texture>
+							<aspectratio scalediffuse="true" align="center" aligny="bottom">keep</aspectratio>
+						</control>
+						<control type="image">
+							<animation effect="zoom" start="95" end="100" center="auto" time="100">Focus</animation>
+							<posx>2</posx>
+							<posy>2</posy>
+							<width>180</width>
+							<height>180</height>
+							<texture>cover/album/thumb_focus_overlay_top.png</texture>
+							<aspectratio scalediffuse="true" align="center" aligny="bottom">keep</aspectratio>
 						</control>
 					</focusedlayout>
 				</control>
