@@ -66,7 +66,10 @@
 		<control type="group">
 			<visible>Skin.HasSetting(horizontal_scroll)</visible>
 			<include>preferences_animation</include>
-			<posy>356</posy>
+			<posy>336</posy>
+			<animation type="Conditional" condition="Control.hasfocus(531) + Skin.HasSetting(horizontal_scroll)">
+				<effect type="slide" end="0,-20" center="auto" time="200"/>
+			</animation>
 			<control type="image">
 				<posx>7</posx>
 				<width>48</width>

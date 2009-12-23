@@ -8,15 +8,6 @@
 	<include>views</include>
 
 	<include>header</include>
-	<control type="image">
-		<posx>-38</posx>
-		<posy>-82</posy>
-		<width>1280</width>
-		<height>720</height>
-		<aspectratio>stretch</aspectratio>
-		<texture>backgrounds/background.png</texture>
-		<fadetime>200</fadetime>
-	</control>
 </controls>
   
 </window>
