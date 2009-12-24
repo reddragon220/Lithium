@@ -57,12 +57,13 @@
 		
 <!--		<include>fanart_nav</include> -->
 		<include>cover_nav</include>
-<!--		<include>multiplex</include>
+		<include>multiplex</include>
 		
 		<include>episodes</include>
 		<include>songs</include>
 
--->
+
+		<include>show_case</include>
 		<include>footer</include>
 		<include>preferences</include>
 		
@@ -608,19 +609,6 @@
 				</control>
 
 			</control>
-			<!-- Right 	-->
-			<control type="group">
-				<posx>1073</posx>
-				<posy>11</posy>
-				<control type="image">
-					<visible>Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)</visible>
-					<width>172</width>
-					<height>30</height>
-					<info>ListItem.StarRating</info>
-					<aspectratio>keep</aspectratio>
-					<align>center</align>
-				</control>
-			</control>				
 			<!-- Left 	-->
 			<control type="label">
 				<visible>Container.Content(songs) | Container.Content(albums) | Container.Content(artists)</visible>
@@ -643,10 +631,6 @@
 					<scroll>false</scroll>
 					<align>right</align>
 				</control>
-				<control type=image>
-					<texture>Zen/elements/common/check.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
 				<control type=label>
 					<posx>80</posx>
 					<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
@@ -654,12 +638,6 @@
 					<textcolor>ffe8e8db</textcolor>
 					<scroll>false</scroll>
 					<align>right</align>
-				</control>
-				<control type=image>
-					<posx>83</posx>
-					<posy>-1</posy>
-					<texture>Zen/elements/common/x_mark.png</texture>
-					<aspectratio>stretch</aspectratio>
 				</control>
 			</control>
 		
@@ -670,6 +648,41 @@
 				<texture>common/footer_shadow.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
+
+			<!-- Left -->
+			<control type="group">
+				<visible>Container.Content(seasons) | Container.Content(tvshows) | Container.Content(musicvideos)</visible>
+				<width>172</width>
+				<posx>65</posx>
+				<posy>11</posy>
+
+				<control type=image>	
+					<texture>Zen/elements/common/check.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+
+				<control type=image>
+					<posx>83</posx>
+					<posy>-1</posy>
+					<texture>Zen/elements/common/x_mark.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+			</control>
+			
+			<!-- Right 	-->
+			<control type="group">
+				<posx>1073</posx>
+				<posy>11</posy>
+				<control type="image">
+					<visible>Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)</visible>
+					<width>172</width>
+					<height>30</height>
+					<info>ListItem.StarRating</info>
+					<aspectratio>keep</aspectratio>
+					<align>center</align>
+				</control>
+			</control>				
+
 
 		</control>
 	</include>
