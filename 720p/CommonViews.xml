@@ -64,7 +64,7 @@
 
 	<include name="direction_arrows">
 		<control type="group">
-			<visible>Skin.HasSetting(horizontal_scroll) + !control.isvisible(58)</visible>
+			<visible>Skin.HasSetting(horizontal_scroll) + !control.isvisible(58) + !control.isvisible(59)</visible>
 			<include>preferences_animation</include>
 			<posy>336</posy>
 			<animation type="Conditional" condition="Control.hasfocus(531) + Skin.HasSetting(horizontal_scroll)">
@@ -86,7 +86,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>!Skin.HasSetting(horizontal_scroll) + !control.isvisible(58)</visible>
+			<visible>!Skin.HasSetting(horizontal_scroll) + !control.isvisible(58) + !control.isvisible(59)</visible>
 			<include>preferences_animation</include>
 			
 			<control type="image">
@@ -133,5 +133,6 @@
 	<include file="ViewSongs.xml"/>	
 	
 	<include file="ViewShowCase.xml"/>
+	<include file="ViewLowList.xml"/>
 
 </includes>

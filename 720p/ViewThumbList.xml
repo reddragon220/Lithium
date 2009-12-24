@@ -26,6 +26,7 @@
 				<height>119</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>list/shadow_bottom.png</texture>
+				<aspectratio>stretch</aspectratio> 
 			</control>
 			
 			<visible>Control.IsVisible(50)</visible>

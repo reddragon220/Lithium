@@ -64,7 +64,12 @@
 
 
 		<include>show_case</include>
+
 		<include>footer</include>
+		
+		<include>low_list</include>
+
+
 		<include>preferences</include>
 		
 	</include>
@@ -639,6 +644,12 @@
 					<scroll>false</scroll>
 					<align>right</align>
 				</control>
+				<control type=image>
+					<posx>83</posx>
+					<posy>-1</posy>
+					<texture>Zen/elements/common/x_mark.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
 			</control>
 		
 			
@@ -808,6 +819,44 @@
 	
 	<!-- Preferences Menu Items -->
 	<include name="normal_prefs">
+		<content>
+			<item id="1">
+				<description>View</description>
+				<label>View</label>
+				<onclick>Container.NextViewMode</onclick>
+			</item>
+			<item id="2">
+				<description>Sort Method</description>
+				<label>$INFO[Container.SortMethod]</label>
+				<onclick>Container.NextSortMethod</onclick>
+			</item>
+			<item id="3">
+				<description>Sort Direction</description>
+				<label>584</label>
+				<onclick>Container.SortDirection</onclick>
+			</item>
+			<item id="4">
+				<description>Flags</description>
+				<label>Flags</label>
+				<onclick>XBMC.ReplaceWindow(MyVideoLibrary,tvshowactors,return)</onclick>
+			</item> 
+			<item id="5">
+				<description>Fanart</description>
+				<label>Fanart</label>
+				<onclick>Skin.ToggleSetting(fanart)</onclick>	
+				<onclick>XBMC.ReloadSkin()</onclick>
+			</item>
+			<item id="6">
+				<description>Search</description>
+				<label>Search</label>
+				<onclick>Search</onclick>
+			</item>
+			<item id="7">
+				<description>Library</description>
+				<label>Library</label>
+				<onclick>Library</onclick>
+			</item>
+		</content>
 
 	</include>
 	<include name="dev_prefs">
@@ -835,7 +884,9 @@
 			<item id="5">
 				<description>Fanart</description>
 				<label>Fanart</label>
-				<onclick>Fanart</onclick>
+				<onclick>Skin.ToggleSetting(fanart)</onclick>	
+				<onclick>XBMC.ReloadSkin()</onclick>
+				<onclick>Control.Move(101,4)</onclick>
 			</item>
 			<item id="6">
 				<description>Search</description>
