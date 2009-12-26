@@ -43,7 +43,7 @@
 
 					<pagecontrol>521</pagecontrol>
 
-					<itemlayout width="420" height="288">
+					<itemlayout width="420" height="287">
 						
 						<control type="image">
 							<visible>!Container.Content(episodes) + !Container.Content(seasons) + !Container.Content(albums) + !Container.Content(songs)</visible>
@@ -154,7 +154,7 @@
 						</control>
 
 					</itemlayout>
-					<focusedlayout width="420" height="288">
+					<focusedlayout width="420" height="287">
 						<control type="image">
 							<animation effect="zoom" start="96" end="100" center="auto" time="100">Focus</animation>
 							<posx>.5</posx>
