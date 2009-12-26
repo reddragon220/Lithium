@@ -55,7 +55,7 @@
 		<include>thumb list</include>
 <!--		<include>info thumb list</include> -->
 		
-<!--		<include>fanart_nav</include> -->
+		<include>fanart_nav</include>
 		<include>cover_nav</include>
 		<include>multiplex</include>
 		
