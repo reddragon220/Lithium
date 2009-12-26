@@ -22,56 +22,6 @@
 			<include condition ="!Skin.HasSetting(container_bg_on)">center_bg</include>
 			<include condition ="!Skin.HasSetting(container_bg_on)">center_fg</include>						
 		
-			<!-- Scrollbar vertical -->
-			<control type="group">
-				<visible>!Skin.HasSetting(horizontal_scroll)</visible>
-				<posy>155</posy>
-				<posx>1165</posx>
-				<control type="image">
-					<width>26</width>
-					<height>267</height>
-					<posy>7</posy>
-					<texture>Zen/elements/common/scrollbar/scrollbar_bg.png</texture>
-				</control>
-				<control type="scrollbar" id="521">
-					<width>26</width>
-					<height>267</height>
-					<orientation>vertical</orientation>
-					<onup>-</onup>
-					<onleft>52</onleft>
-					<onright>52</onright>
-					<ondown>-</ondown>
-					<textureslidernib>Zen/elements/common/scrollbar/scrollbar_nib.png</textureslidernib>
-					<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
-				</control>
-			</control>
-
-			<!-- Scrollbar horizontal -->
-			<control type="group">
-				<visible allowhiddenfocus="true">Control.hasfocus(521) + Skin.HasSetting(horizontal_scroll)</visible>
-					<animation type="Conditional" condition="Control.hasfocus(521)">
-						<effect type="fade" end="100" time="200"/>
-					</animation>
-				<posy>526</posy>
-				<posx>506.5</posx>
-				<control type="image">
-					<width>267</width>
-					<height>26</height>
-					<posy>0</posy>
-					<texture>Zen/elements/common/scrollbar/scrollbar_bg_horizontal.png</texture>
-				</control>
-				<control type="scrollbar" id="521">
-					<width>267</width>
-					<height>26</height>
-					<orientation>horizontal</orientation>
-					<onup>50</onup>
-					<onleft>501</onleft>
-					<onright>501</onright>
-					<ondown>101</ondown>
-					<textureslidernib>Zen/elements/common/scrollbar/scrollbar_nib.png</textureslidernib>
-					<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
-				</control>
-			</control>
 			<!-- Select List -->
 			<control type="group">
 				<animation type="Conditional" condition="Control.hasfocus(521) + Skin.HasSetting(horizontal_scroll)">
@@ -154,6 +104,28 @@
 							<control type="label">
 								<visible>!container.content(episodes)</visible>
 								<posx>176</posx>
+								<posy>-5</posy>
+								<width>352</width>
+								<height>40</height>
+								<label>$INFO[listitem.title]</label>
+								<font>Large</font>
+								<textcolor>7f000000</textcolor>
+								<align>center</align>
+							</control>
+							<control type="label">
+								<visible>container.content(episodes)</visible>
+								<posx>176</posx>
+								<posy>-5</posy>
+								<width>352</width>
+								<height>40</height>
+								<label>$INFO[ListItem.Season].$INFO[ListItem.Episode] $INFO[listitem.title]</label>
+								<font>Large</font>
+								<textcolor>7f000000</textcolor>
+								<align>center</align>
+							</control>							
+							<control type="label">
+								<visible>!container.content(episodes)</visible>
+								<posx>176</posx>
 								<posy>-3</posy>
 								<width>352</width>
 								<height>40</height>
@@ -161,7 +133,6 @@
 								<font>Large</font>
 								<textcolor>ffe8e8db</textcolor>
 								<align>center</align>
-								<scroll>false</scroll>
 							</control>
 							<control type="label">
 								<visible>container.content(episodes)</visible>
@@ -173,7 +144,6 @@
 								<font>Large</font>
 								<textcolor>ffe8e8db</textcolor>
 								<align>center</align>
-								<scroll>false</scroll>
 							</control>
 							<control type="image">
 								<width>352</width>
@@ -254,6 +224,28 @@
 							<control type="label">
 								<visible>!container.content(episodes)</visible>
 								<posx>176</posx>
+								<posy>-5</posy>
+								<width>352</width>
+								<height>40</height>
+								<label>$INFO[listitem.title]</label>
+								<font>Large</font>
+								<textcolor>7f000000</textcolor>
+								<align>center</align>
+							</control>
+							<control type="label">
+								<visible>container.content(episodes)</visible>
+								<posx>176</posx>
+								<posy>-5</posy>
+								<width>352</width>
+								<height>40</height>
+								<label>$INFO[ListItem.Season].$INFO[ListItem.Episode] $INFO[listitem.title]</label>
+								<font>Large</font>
+								<textcolor>7f000000</textcolor>
+								<align>center</align>
+							</control>							
+							<control type="label">
+								<visible>!container.content(episodes)</visible>
+								<posx>176</posx>
 								<posy>-3</posy>
 								<width>352</width>
 								<height>40</height>
@@ -286,6 +278,55 @@
 
 					</focusedlayout>
 					
+				</control>
+			</control>
+			<!-- Scrollbar vertical -->
+			<control type="group">
+				<visible>!Skin.HasSetting(horizontal_scroll)</visible>
+				<posy>155</posy>
+				<posx>1165</posx>
+				<control type="image">
+					<width>26</width>
+					<height>267</height>
+					<posy>7</posy>
+					<texture>Zen/elements/common/scrollbar/scrollbar_bg.png</texture>
+				</control>
+				<control type="scrollbar" id="521">
+					<width>26</width>
+					<height>267</height>
+					<orientation>vertical</orientation>
+					<onup>-</onup>
+					<onleft>52</onleft>
+					<onright>52</onright>
+					<ondown>-</ondown>
+					<textureslidernib>Zen/elements/common/scrollbar/scrollbar_nib.png</textureslidernib>
+					<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
+				</control>
+			</control>
+			<!-- Scrollbar horizontal -->
+			<control type="group">
+				<visible allowhiddenfocus="true">Control.hasfocus(521) + Skin.HasSetting(horizontal_scroll)</visible>
+					<animation type="Conditional" condition="Control.hasfocus(521)">
+						<effect type="fade" end="100" time="200"/>
+					</animation>
+				<posy>526</posy>
+				<posx>506.5</posx>
+				<control type="image">
+					<width>267</width>
+					<height>26</height>
+					<posy>0</posy>
+					<texture>Zen/elements/common/scrollbar/scrollbar_bg_horizontal.png</texture>
+				</control>
+				<control type="scrollbar" id="521">
+					<width>267</width>
+					<height>26</height>
+					<orientation>horizontal</orientation>
+					<onup>50</onup>
+					<onleft>501</onleft>
+					<onright>501</onright>
+					<ondown>101</ondown>
+					<textureslidernib>Zen/elements/common/scrollbar/scrollbar_nib.png</textureslidernib>
+					<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
 				</control>
 			</control>
 
