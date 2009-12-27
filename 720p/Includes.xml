@@ -918,7 +918,7 @@
 			<effect type="zoom" delay="19000" start="130" end="100" center="auto" time="85000" tween="linear"/>		
 		</animation>
 	</include>
-	
+
 	<include name="fanart">
 		<control type="largeimage">
 			<visible>!Container.content(episodes) | !Container.content(seasons)</visible>
@@ -952,6 +952,7 @@
 	</include>
 
 	<include name="background">
+
 		<control type="largeimage">
 			<visible>IsEmpty(ListItem.Property(fanart_image)) | Skin.HasSetting(fanart)</visible>
 			<description>Background Image</description>
@@ -966,7 +967,6 @@
 			<include condition="!Skin.HasSetting(ken_burns)">bg_animation</include>
 			<include>preferences_animation</include>
 		</control>
-		
 		<include condition="!Skin.HasSetting(fanart)">fanart</include>
 	</include>
 </includes>

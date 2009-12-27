@@ -10,20 +10,45 @@
 
 <controls>
 	<control type="group">
-		<posx>500</posx>
-		<posy>560</posy>	
+		<posx>465</posx>
+		<posy>235</posy>	
 	
+		<control type="image">
+			<width>350</width>
+			<height>250</height>
+			<texture>alert dialogue/alert_bg.png</texture>
+		</control>
+
 	  	<control type="label">
-	    	<posx>45</posx>
-	    	<include>DialogID</include>
-	    	<label>DialogMuteBug.xml</label>
+			<width>340</width>
+	    	<posx>5</posx>
+			<posy>200</posy>
+	    	<label>Audio Muted</label>
+			<font>Large</font>
+			<textcolor>7f000000</textcolor>
+			<align>center</align>
+	  	</control>	
+	  	<control type="label">
+			<width>340</width>
+	    	<posx>5</posx>
+			<posy>202</posy>
+	    	<label>Audio Muted</label>
+			<font>Large</font>
+			<textcolor>ffe8e8db</textcolor>
+			<align>center</align>
 	  	</control>
   
 		<control type="image" id="901">
 			<texture>zen/elements/header/mute.png</texture>
+			<posx>156</posx>
+			<posy>106</posy>
 			<height>38</height>
 			<width>38</width>
-			<aspectratio>keep</aspectratio>
+		</control>
+		<control type="image">
+			<width>350</width>
+			<height>250</height>
+			<texture>alert dialogue/alert_overlay.png</texture>
 		</control>
 	</control>
     
