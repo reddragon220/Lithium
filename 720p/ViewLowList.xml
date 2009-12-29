@@ -41,7 +41,7 @@
 						<effect type="slide" end="0,-20" center="auto" time="200"/>
 					</animation>
 
-					<viewtype label="Low List">list</viewtype>
+					<viewtype label="List">list</viewtype>
 					<include condition="Skin.HasSetting(horizontal_scroll)">orientation_horizontal</include>
 				 	<include condition="!Skin.HasSetting(horizontal_scroll)">orientation_vertical</include>
 

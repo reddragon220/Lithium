@@ -95,7 +95,7 @@
 	
 	<include name="header">
 		<!-- Header -->
-		<control type="group" id="100">
+		<control type="group">
 			<defaultcontrol>106</defaultcontrol>		
 
 			<include condition="Skin.HasSetting(slide)">slide_on</include>
@@ -274,7 +274,7 @@
 			</control>
 
 
-			<!-- Options Submenu -->
+			<!-- Options Submenu
 			<control type="group" id="106">
 				<defaultcontrol>107</defaultcontrol>
 				<visible allowhiddenfocus="true">Control.HasFocus(107) | Control.HasFocus(108) | Control.HasFocus(109) | Control.HasFocus(110) | Control.HasFocus(111)</visible>
@@ -512,7 +512,7 @@
 					<texture>Zen/panes/header/options_outline.png</texture>
 				</control>
 			</control>
-			
+		-->
 
 		</control>
 		<control type="image">
@@ -701,7 +701,8 @@
 	</include>
 	
 	<include name="preferences_animation">
-		<animation effect="slide" end="0,-119" time="200" condition="Control.HasFocus(101)">Conditional</animation>
+		<animation effect="slide" end="0,-119" time="200" condition="Control.HasFocus(101) | Control.HasFocus(102) | Control.HasFocus(103) | Control.HasFocus(104) | Control.HasFocus(105) | Control.HasFocus(106) | Control.HasFocus(107) | Control.HasFocus(108) | Control.HasFocus(109) | Control.HasFocus(1010) | Control.HasFocus(1011)
+			">Conditional</animation>
 	</include>
 	
 	<include name="preferences">
@@ -714,100 +715,297 @@
 				<texture>common/prefs_bg.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
-			<control type="list" id="101">
-				<posx>10</posx>
+			<control type="grouplist" id="101">
+				<posx>0</posx>
 				<posy>0</posy>
-				<width>1260</width>
+				<width>1280</width>
 				<height>119</height>
 				<orientation>horizontal</orientation>
-				<align>center</align>
+				<scrolltime>200</scrolltime>
 				 	
 
-				<onup>setfocus(50)</onup>
+				
+				
+				<control type="button" id="102">
+					<description>View</description>
+					
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>170</width>
+					<height>119</height>
 
-				<scrolltime>200</scrolltime>
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>					
 
-				<!-- Unselected Items -->
-				<itemlayout width="140">
-					<control type="image">
-						<posx>35</posx>
-						<posy>14</posy>
-						<width>70</width>
-						<height>70</height>
-						<texture>common/prefs_icon.png</texture>
-						<aspectratio>keep</aspectratio>						
-					</control>
-					<control type="label">
-						<posx>70</posx>
-						<posy>84</posy>
-						<width>140</width>
-						<info>ListItem.Label</info>
-						<font>Small</font>
-						<textcolor>5f000000</textcolor>
-						<align>center</align>							
-					</control>
-					<control type="label">
-						<posx>70</posx>
-						<posy>86</posy>
-						<width>140</width>
-						<info>ListItem.Label</info>
-						<font>Small</font>
-						<textcolor>ffe8e8db</textcolor>
-						<align>center</align>							
-					</control>
-				</itemlayout>
+					<onup>setfocus(50)</onup>
+					<onleft>1011</onleft>
+					<onright>103</onright>
+					<onclick>Container.NextViewMode</onclick>
 
-				<!-- Selected Item -->
-				<focusedlayout width="140">
-					<control type="image">
-						<visible>control.hasfocus(101)</visible>
-						<posx>20</posx>
-						<posy>14</posy>
-						<width>100</width>
-						<height>100</height>
-						<texture>common/prefs_icon.png</texture>
-						<aspectratio>keep</aspectratio>						
-					</control>
-					<control type="image">
-						<visible>!control.hasfocus(101)</visible>
-						<posx>40</posx>
-						<posy>14</posy>
-						<width>70</width>
-						<height>70</height>
-						<texture>common/prefs_icon.png</texture>
-						<aspectratio>keep</aspectratio>						
-					</control>
-					<control type="image">
-						<posx>35</posx>
-						<posy>14</posy>
-						<width>70</width>
-						<height>70</height>
-						<texture>common/prefs_icon.png</texture>
-						<aspectratio>keep</aspectratio>						
-					</control>
-					<control type="label">
-						<posx>70</posx>
-						<posy>84</posy>
-						<width>140</width>
-						<info>ListItem.Label</info>
-						<font>Small</font>
-						<textcolor>5f000000</textcolor>
-						<align>center</align>							
-					</control>
-					<control type="label">
-						<posx>70</posx>
-						<posy>86</posy>
-						<width>140</width>
-						<info>ListItem.Label</info>
-						<font>Small</font>
-						<textcolor>ffe8e8db</textcolor>
-						<align>center</align>							
-					</control>
-				</focusedlayout>
+					<label>$INFO[Container.Viewmode]</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>	
 
-				<!-- Menu Items -->
-				<include condition="!Skin.HasSetting(developer)">normal_prefs</include>
-				<include condition="Skin.HasSetting(developer)">dev_prefs</include>
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>common/prefs_highlight_big.png</texturefocus>					
+
+				</control>
+				<control type="button" id="103">
+					<description>Sort Method</description>
+					
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>					
+
+					<onleft>102</onleft>
+					<onright>104</onright>
+					<onup>setfocus(50)</onup>
+					<onclick>Container.NextSortMethod</onclick>
+
+					<label>$INFO[Container.SortMethod]</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>	
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>common/prefs_highlight.png</texturefocus>					
+				</control>
+				<control type="togglebutton" id="104">
+					<description>Sort Direction</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+					
+					<onleft>103</onleft>
+					<onright>105</onright>
+					<onup>setfocus(50)</onup>
+					<onclick>Container.SortDirection</onclick>
+
+					<description>SortDirection</description>
+					<label>584</label>
+		          	<altlabel>585</altlabel>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>	
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>common/prefs_highlight.png</texturefocus>					
+					<alttexturenofocus></alttexturenofocus>
+					<texturefocus>common/prefs_highlight.png</texturefocus>					
+				</control>
+				<control type="button" id="105">
+					<description>Flags</description>
+					
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+					
+					<onleft>104</onleft>
+					<onright>106</onright>
+					<onup>setfocus(50)</onup>
+					<onclick>XBMC.ActivateWindow(settings)</onclick>
+
+					<label>Flags</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>common/prefs_highlight.png</texturefocus>					
+				</control>	
+				<control type="togglebutton" id="106">
+					<description>Sort Direction</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+
+					<onleft>105</onleft>
+					<onright>107</onright>
+					<onup>setfocus(50)</onup>
+					<onclick>Skin.ToggleSetting(fanart)</onclick>	
+					<onclick>XBMC.ReloadSkin()</onclick>
+					
+					<description>SortDirection</description>
+					<label>Fanart</label>
+		          	<altlabel>Fanart</altlabel>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>	
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>common/prefs_highlight.png</texturefocus>					
+					<alttexturenofocus></alttexturenofocus>
+					<alttexturefocus>common/prefs_highlight.png</alttexturefocus>					
+				</control>
+				<control type="button" id="107">
+					<description>Search</description>
+					
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+					
+					<onleft>106</onleft>
+					<onright>108</onright>
+					<onup>setfocus(50)</onup>
+
+					<label>Search</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>common/prefs_highlight.png</texturefocus>					
+				</control>	
+				<control type="button" id="108">
+					<description>Library</description>
+					
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+
+					<onleft>107</onleft>
+					<onright>109</onright>
+					<onup>setfocus(50)</onup>
+
+					<label>Library</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>common/prefs_highlight.png</texturefocus>					
+				</control>	
+				<control type="button" id="109">
+					<visible>Skin.HasSetting(developer)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+
+					<onleft>108</onleft>
+					<onright>1010 </onright>
+					<onup>setfocus(50)</onup>
+					<onclick>XBMC.ActivateWindow(settings)</onclick>
+					
+
+					<description>Settings</description>
+					<label>Preferences</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>common/prefs_highlight.png</texturefocus>					
+				</control>	
+				<control type="button"id="1010">
+					<visible>Skin.HasSetting(developer)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+					
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+
+					<onleft>109</onleft>
+					<onright>1011</onright>
+					<onup>setfocus(50)</onup>
+					<onclick>XBMC.ReloadSkin()</onclick>
+
+					<description>Refresh</description>
+					<label>31009</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>common/prefs_highlight.png</texturefocus>					
+				</control>
+				<control type="button" id="1011">
+					<description>Free Memory</description>
+					
+					<visible>Skin.HasSetting(developer)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+					
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+
+					<onleft>1010</onleft>
+					<onright>102</onright>
+					<onup>setfocus(50)</onup>
+					
+					<label>$INFO[System.FreeMemory]</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>common/prefs_highlight.png</texturefocus>					
+				</control>
+
+				
 			</control>
 			
 			<control type="image">
@@ -953,9 +1151,11 @@
 		</control>
 	</include>
 
+	<include name="lower_bg">
+		<posy>53</posy>
+	</include>
 	<include name="background">
-
-		<control type="largeimage">
+			<control type="largeimage">
 			<visible>IsEmpty(ListItem.Property(fanart_image)) | Skin.HasSetting(fanart)</visible>
 			<description>Background Image</description>
 			<posx>0</posx>
@@ -969,6 +1169,6 @@
 			<include condition="!Skin.HasSetting(ken_burns)">bg_animation</include>
 			<include>preferences_animation</include>
 		</control>
-		<include condition="!Skin.HasSetting(fanart)">fanart</include>
+			<include condition="!Skin.HasSetting(fanart)">fanart</include>
 	</include>
 </includes>

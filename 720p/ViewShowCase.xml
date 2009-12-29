@@ -5,8 +5,6 @@
 			<visible>Control.IsVisible(58)</visible>
 			<posx>-163</posx>
 			<posy>74</posy>
-			<include condition ="!Skin.HasSetting(container_bg_on)">center_bg</include>
-			<include condition ="!Skin.HasSetting(container_bg_on)">center_fg</include>						
 
 			<!-- Select List -->
 			<control type="group">

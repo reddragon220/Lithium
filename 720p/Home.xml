@@ -8,8 +8,6 @@
 		<include>background</include>
 
 
-
-			
 		<!-- Main Menu -->
   		<control type="group" id="50">
 			<posx>0</posx>

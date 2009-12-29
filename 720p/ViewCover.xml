@@ -5,7 +5,7 @@
 		<ondown>531</ondown>
 	</include>
 	<include name="cover_vertical">
-		<posx>45</posx>
+		<posx>-39</posx>
 		<ondown>101</ondown>
 	</include>
 	
@@ -15,8 +15,7 @@
 			<visible>Control.IsVisible(53)</visible>
 			<posx>36</posx>
 			<posy>82</posy>
-			<include condition ="!Skin.HasSetting(container_bg_on)">center_bg</include>
-			<include condition ="!Skin.HasSetting(container_bg_on)">center_fg</include>						
+		
 		
 			<!-- Select List -->
 			<control type="group">

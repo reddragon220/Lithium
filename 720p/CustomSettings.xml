@@ -272,7 +272,7 @@
 						<font>Large</font>
 						<textoffsetx>12</textoffsetx>
 				
-						<label>Auto hide the header</label>
+						<label>Hide the header</label>
 						<selected>Skin.HasSetting(slide)</selected>
 						<onclick>Skin.ToggleSetting(slide)</onclick>
 						<onclick>XBMC.ReloadSkin()</onclick>	
@@ -342,77 +342,7 @@
 						<textureradiofocus>Zen/elements/settings/on_focused.png</textureradiofocus>
 						<textureradionofocus>Zen/elements/settings/off_focused.png</textureradionofocus>
 					</control>
-					<!-- Background Options -->
-					<control type="button" id="2032">
-						<visible>!Skin.HasSetting(container_bg_on)</visible>
-						<posx>12</posx>
-						<height>52</height>
-						<width>872</width>
-				    	<textcolor>7fffffff</textcolor>
-						<focusedcolor>ffe8e8db</focusedcolor>
-						<disabledcolor>7f7c7c72</disabledcolor>
-						<shadowcolor>7f000000</shadowcolor>
-				    	<align>left</align>
-						<font>Large</font>
-						<textoffsetx>12</textoffsetx>
-				
-						<label>Container (click for more options)</label>
-						<onclick>Skin.ToggleSetting(container_bg_on)</onclick>
-						<onclick>Skin.ToggleSetting(dark_bg)</onclick>
-						<onclick>XBMC.ReloadSkin()</onclick>
-						<onclick>Control.Move(50,2)</onclick>
-						<onclick>SetFocus(2033)</onclick>				
-
-				    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
-						<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
-					</control>
-					<control type="button" id="2033">
-						<visible>Skin.HasSetting(dark_bg)</visible>
-						<posx>12</posx>
-						<height>52</height>
-						<width>872</width>
-				    	<textcolor>7fffffff</textcolor>
-						<focusedcolor>ffe8e8db</focusedcolor>
-						<disabledcolor>7f7c7c72</disabledcolor>
-						<shadowcolor>7f000000</shadowcolor>
-				    	<align>left</align>
-						<font>Large</font>
-						<textoffsetx>12</textoffsetx>
-				
-						<label>Dark Background (click for more options)</label>
-						<onclick>Skin.ToggleSetting(dark_bg)</onclick>
-						<onclick>Skin.ToggleSetting(light_bg)</onclick>
-						<onclick>XBMC.ReloadSkin()</onclick>
-						<onclick>Control.Move(50,2)</onclick>
-						<onclick>SetFocus(2034)</onclick>				
-
-				    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
-						<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
-					</control>
-					<control type="button" id="2034">
-						<visible>Skin.HasSetting(light_bg)</visible>
-						<posx>12</posx>
-						<height>52</height>
-						<width>872</width>
-				    	<textcolor>7fffffff</textcolor>
-						<focusedcolor>ffe8e8db</focusedcolor>
-						<disabledcolor>7f7c7c72</disabledcolor>
-						<shadowcolor>7f000000</shadowcolor>
-				    	<align>left</align>
-						<font>Large</font>
-						<textoffsetx>12</textoffsetx>
-				
-						<label>Light background (click for more options)</label>
-						<onclick>Skin.ToggleSetting(light_bg)</onclick>
-						<onclick>Skin.ToggleSetting(container_bg_on)</onclick>
-						<onclick>XBMC.ReloadSkin()</onclick>
-						<onclick>Control.Move(50,2)</onclick>
-						<onclick>SetFocus(2032)</onclick>				
-
-				    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
-						<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
-					</control>
-					
+					<!-- Background Options -->					
 			</control>
 
             <control type="grouplist" id="204">
