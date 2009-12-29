@@ -40,20 +40,20 @@
 	
 	<!-- My Includes -->
 	<include name="views">
-		<include condition="Skin.HasSetting(dark_bg)">light_bg</include>
-		<include condition="Skin.HasSetting(light_bg)">dark_bg</include>
 		<control type="image">
 			<include>preferences_animation</include>
-			<visible>control.isvisible(50)</visible>
+			<visible>control.isvisible(52) | control.isvisible(53) | control.isvisible(58)</visible>
 			<width>1280</width>
 			<height>720</height>
-			<texture>list/bg_overlay.png</texture>
+			<texture>common/light_bg.png</texture>
 		</control>
 		
 		<include>direction_arrows</include>
 
-		<include>thumb list</include>
-<!--		<include>info thumb list</include> -->
+<!--		<include>thumb list</include>
+		<include>info thumb list</include> -->
+
+
 		
 		<include>fanart_nav</include>
 		<include>cover_nav</include>
@@ -66,8 +66,10 @@
 		<include>show_case</include>
 
 		<include>footer</include>
-		
 		<include>low_list</include>
+		<include>info_low_list</include>
+		
+
 
 
 		<include>preferences</include>

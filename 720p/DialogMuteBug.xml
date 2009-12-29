@@ -17,6 +17,7 @@
 			<width>350</width>
 			<height>250</height>
 			<texture>alert dialogue/alert_bg.png</texture>
+			<aspectratio>stretch</aspectratio>
 		</control>
 
 	  	<control type="label">
@@ -44,11 +45,14 @@
 			<posy>106</posy>
 			<height>38</height>
 			<width>38</width>
+			<aspectratio>stretch</aspectratio>
+			
 		</control>
 		<control type="image">
 			<width>350</width>
 			<height>250</height>
 			<texture>alert dialogue/alert_overlay.png</texture>
+			<aspectratio>stretch</aspectratio>
 		</control>
 	</control>
     

@@ -1,8 +1,8 @@
 <includes>	
-	<include name="low_list">
+	<include name="info_low_list">
 		<control type="group">
 			<include>preferences_animation</include>
-			<visible>Control.IsVisible(50)</visible>
+			<visible>Control.IsVisible(51)</visible>
 			<posx>0</posx>
 			<posy>472</posy>
 
@@ -11,61 +11,52 @@
 				<posy>0</posy>
 				<width>1280</width>
 				<height>248</height>
-				<texture>lowlist/low_list_bg.png</texture>
+				<texture>lowlist/info/low_list_bg.png</texture>
 				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="image">
-				<visible>
-					container.content(tvshows) | container.content(movies) | container.content(episodes) | container.content(songs)
-				</visible>
-				<posx>1011</posx>
-				<posy>1</posy>
-				<width>177</width>
-				<height>247</height>
-				<texture>lowlist/ratings_overlay.png</texture>
-				<aspectratio>stretch</aspectratio> 
 			</control>
 			<control type="image">
 				<posx>320</posx>
 				<posy>0</posy>
-				<width>960</width>
+				<width>576</width>
 				<height>247</height>
-				<texture>lowlist/overlay.png</texture>
+				<texture>lowlist/info/overlay.png</texture>
 				<aspectratio>stretch</aspectratio> 
+			</control>
+
+
+			<control type="textbox">
+				<posx>907</posx>
+				<posy>1</posy>
+				<width>370</width>
+				<height>247</height>
+				<label>$INFO[listitem.Plot]</label>
+				<font>Small</font>
+				<textcolor>ffe8e8db</textcolor>
+				<autoscroll delay="6000" time="3000" repeat="10000"></autoscroll>
 			</control>
 			
 			<!-- Select List -->
 			<control type="group">
-				<control type="panel" id="50">
+				<control type="panel" id="51">
 					<animation type="Conditional" condition="Control.hasfocus(581) + Skin.HasSetting(horizontal_scroll)">
 						<effect type="slide" end="0,-20" center="auto" time="200"/>
 					</animation>
 
-					<viewtype label="Low List">list</viewtype>
+					<viewtype label="Info Low List">list</viewtype>
 					<include condition="Skin.HasSetting(horizontal_scroll)">orientation_horizontal</include>
 				 	<include condition="!Skin.HasSetting(horizontal_scroll)">orientation_vertical</include>
 
 					<posx>320</posx>
 					<posy>1</posy>
 
-					<width>960</width>
+					<width>576</width>
 					<height>250</height>
 					
 					<ondown>101</ondown>
 					
 					<focusposition>3</focusposition>
 
-					<itemlayout width="960" height="50">
-						<control type="image">
-							<visible>Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)</visible>
-							<posx>693</posx>
-							<posy>8</posy>
-							<width>172</width>
-							<height>30</height>
-							<info>ListItem.StarRating</info>
-							<aspectratio>keep</aspectratio>
-							<align>center</align>
-						</control>
+					<itemlayout width="576" height="50">
 						<control type="group">
 							<visible>
 								!container.content(tvshows) + !container.content(movies) + !container.content(episodes) + !container.content(songs)
@@ -107,39 +98,17 @@
 						<control type="image">
 							<posx>0</posx>
 							<posy>48</posy>
-							<width>960</width>
+							<width>576</width>
 							<height>2</height>
-							<texture>lowlist/divider.png</texture>
+							<texture>lowlist/info/divider.png</texture>
 						</control>
 					</itemlayout>
-					<focusedlayout width="960" height="50">
+					<focusedlayout width="576" height="50">
 						<control type="image">
 							<posy>0</posy>
-							<width>960</width>
+							<width>576</width>
 							<height>48</height>
 							<texture>lowlist/highlight.png</texture>
-						</control>
-						<control type="image">
-							<visible>
-								container.content(tvshows) | container.content(movies) | container.content(episodes) | container.content(songs)
-							</visible>
-							<posx>689</posx>
-							<posy>0</posy>
-							<width>181</width>
-							<height>48</height>
-							<texture>lowlist/highlight_ratings_overlay.png</texture>
-						</control>
-						<control type="image">
-							<visible>
-								container.content(tvshows) | container.content(movies) | container.content(episodes) | container.content(songs)
-							</visible>
-							<posx>693</posx>
-							<posy>8</posy>
-							<width>172</width>
-							<height>30</height>
-							<info>ListItem.StarRating</info>
-							<aspectratio>keep</aspectratio>
-							<align>center</align>
 						</control>
 						<control type="group">
 							<visible>
@@ -164,7 +133,6 @@
 								<scroll>true</scroll>
 							</control>
 						</control>
-						
 						<control type="group">
 							<visible>!container.content(episodes) + !container.content(albums)</visible>
 							<control type="label">
@@ -210,9 +178,9 @@
 						<control type="image">
 							<posx>0</posx>
 							<posy>48</posy>
-							<width>960</width>
+							<width>576</width>
 							<height>2</height>
-							<texture>lowlist/divider.png</texture>
+							<texture>lowlist/info/divider.png</texture>
 						</control>
 					</focusedlayout>
 				</control>
@@ -257,7 +225,7 @@
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="image">
-				<posx>1232</posx>
+				<posx>848</posx>
 				<posy>101</posy>
 				<width>48</width>
 				<height>48</height>

@@ -111,6 +111,7 @@
 								<font>Large</font>
 								<textcolor>7f000000</textcolor>
 								<align>center</align>
+								<scroll>false</scroll>
 							</control>
 							<control type="label">
 								<visible>container.content(episodes)</visible>
@@ -122,6 +123,7 @@
 								<font>Large</font>
 								<textcolor>7f000000</textcolor>
 								<align>center</align>
+								<scroll>false</scroll>
 							</control>							
 							<control type="label">
 								<visible>!container.content(episodes)</visible>
@@ -133,6 +135,7 @@
 								<font>Large</font>
 								<textcolor>ffe8e8db</textcolor>
 								<align>center</align>
+								<scroll>false</scroll>
 							</control>
 							<control type="label">
 								<visible>container.content(episodes)</visible>
@@ -144,6 +147,7 @@
 								<font>Large</font>
 								<textcolor>ffe8e8db</textcolor>
 								<align>center</align>
+								<scroll>false</scroll>
 							</control>
 							<control type="image">
 								<width>352</width>

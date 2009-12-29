@@ -7,7 +7,6 @@
 	<include name="cover_vertical">
 		<posx>45</posx>
 		<ondown>101</ondown>
-		<onright>531</onright>
 	</include>
 	
 	<include name="cover_nav">
@@ -40,8 +39,6 @@
 					<posy>-19</posy>
 
 					
-					<onup>100</onup>
-					<onleft>100</onleft>
 					<include condition="Skin.HasSetting(horizontal_scroll)">cover_horizontal</include>
 				 	<include condition="!Skin.HasSetting(horizontal_scroll)">cover_vertical</include>
 
@@ -114,8 +111,6 @@
 					<posy>-2</posy>
 					<posx>47</posx>
 					
-					<onup>100</onup>
-					<onleft>100</onleft>
 					<include condition="Skin.HasSetting(horizontal_scroll)">cover_horizontal</include>
 				 	<include condition="!Skin.HasSetting(horizontal_scroll)">cover_vertical</include>
 
