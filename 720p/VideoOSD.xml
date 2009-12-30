@@ -5,138 +5,123 @@
 		
 	
 		<control type="image">
-			<posx>36</posx>
-			<posy>617</posy>
+			<posx>0</posx>
+			<posy>637</posy>
 		
-			<width>1210</width>
-			<height>50</height>
+			<width>1280</width>
+			<height>83</height>
 		
-			<texture>Zen/panes/osd/osd_bg.png</texture>
+			<texture>osd/osd_bg.png</texture>
 			<aspectratio>-</aspectratio>
 		</control>
-
-		<control type="button" id="1">
-			<width>31</width>
-			<height>26</height>
-			<posx>61</posx>
-			<posy>630</posy>
 		
-			<onleft>1</onleft>
-			<onright>2</onright>
-
-			<onclick>xbmc.playercontrol(previous)</onclick>
-
-			<texturefocus>Zen/elements/osd/previous_focused.png</texturefocus>
-			<texturenofocus>Zen/elements/osd/previous_unfocused.png</texturenofocus>
-		</control>
-		<control type="button" id="2">
-			<width>42</width>
-			<height>26</height>
-			<posx>108</posx>
-			<posy>630</posy>
+		<control type="grouplist" id="101">
+			<posx>465</posx>
+			<posy>666</posy>
+			<width>360</width>
+			<height>119</height>
+			<orientation>horizontal</orientation>
+			<scrolltime>200</scrolltime>
+			<itemgap>9</itemgap>
 		
-			<onleft>1</onleft>
-			<onright>3</onright>
 
-			<onclick>xbmc.playercontrol(rewind)</onclick>
-
-			<texturefocus>Zen/elements/osd/rewind_focused.png</texturefocus>
-			<texturenofocus>Zen/elements/osd/rewind_unfocused.png</texturenofocus>
-		</control>
-		<control type="button" id="3">
-			<width>26</width>
-			<height>26</height>
-			<posx>164</posx>
-			<posy>630</posy>
+			<control type="button" id="1">
+				<width>51</width>
+				<height>51</height>
 		
-			<onleft>2</onleft>
-			<onright>4</onright>
+				<onleft>1</onleft>
+				<onright>2</onright>
 
-			<onclick>xbmc.playercontrol(stop)</onclick>
+				<onclick>xbmc.playercontrol(previous)</onclick>
 
-			<texturefocus>Zen/elements/osd/stop_focused.png</texturefocus>
-			<texturenofocus>Zen/elements/osd/stop_unfocused.png</texturenofocus>
-		</control>
-		<control type="togglebutton" id="4">
-			<width>30</width>
-			<height>36</height>
-			<posx>205</posx>
-			<posy>624</posy>
+				<texturefocus>osd/buttons/previous_focused.png</texturefocus>
+				<texturenofocus>osd/buttons/previous_unfocused.png</texturenofocus>
+			</control>
+			<control type="button" id="2">
+				<width>51</width>
+				<height>51</height>
+		
+				<onleft>1</onleft>
+				<onright>3</onright>
 
-			<onleft>3</onleft>
-			<onright>5</onright>
-			<onclick>xbmc.playercontrol(play)</onclick>
-			<onclick>SetFocus(4)</onclick>
+				<onclick>xbmc.playercontrol(rewind)</onclick>
 
-			<texturefocus>Zen/elements/osd/pause_focused.png</texturefocus>
-			<texturenofocus>Zen/elements/osd/pause_unfocused.png</texturenofocus>
+				<texturefocus>osd/buttons/rewind_focused.png</texturefocus>
+				<texturenofocus>osd/buttons/rewind_unfocused.png</texturenofocus>
+			</control>
+			<control type="button" id="3">
+				<width>51</width>
+				<height>51</height>
+		
+				<onleft>2</onleft>
+				<onright>4</onright>
+
+				<onclick>xbmc.playercontrol(stop)</onclick>
+
+				<texturefocus>osd/buttons/stop_focused.png</texturefocus>
+				<texturenofocus>osd/buttons/stop_unfocused.png</texturenofocus>
+			</control>
+			<control type="togglebutton" id="4">
+				<width>51</width>
+				<height>51</height>
+
+				<onleft>3</onleft>
+				<onright>5</onright>
+				<onclick>xbmc.playercontrol(play)</onclick>
+				<onclick>SetFocus(4)</onclick>
+
+				<texturefocus>osd/buttons/pause_focused.png</texturefocus>
+				<texturenofocus>osd/buttons/pause_unfocused.png</texturenofocus>
 			
-			<alttexturefocus>Zen/elements/osd/play_focused.png</alttexturefocus>
-			<alttexturenofocus>Zen/elements/osd/play_unfocused.png</alttexturenofocus>
-			<usealttexture>Player.Paused</usealttexture>
-		</control>
-		<control type="button" id="5">
-			<width>41</width>
-			<height>26</height>
-			<posx>250</posx>
-			<posy>630</posy>
+				<alttexturefocus>osd/buttons/play_focused.png</alttexturefocus>
+				<alttexturenofocus>osd/buttons/play_unfocused.png</alttexturenofocus>
+				<usealttexture>Player.Paused</usealttexture>
+			</control>
+			<control type="button" id="5">
+				<width>51</width>
+				<height>51</height>
 		
-			<onleft>4</onleft>
-			<onright>6</onright>
+				<onleft>4</onleft>
+				<onright>6</onright>
 
-			<onclick>xbmc.playercontrol(forward)</onclick>
+				<onclick>xbmc.playercontrol(forward)</onclick>
 
-			<texturefocus>Zen/elements/osd/fast_foward_focused.png</texturefocus>
-			<texturenofocus>Zen/elements/osd/fast_foward_unfocused.png</texturenofocus>
-		</control>
-		<control type="button" id="6">
-			<width>31</width>
-			<height>26</height>
-			<posx>307</posx>
-			<posy>630</posy>
+				<texturefocus>osd/buttons/fastfoward_focused.png</texturefocus>
+				<texturenofocus>osd/buttons/fastfoward_unfocused.png</texturenofocus>
+			</control>
+			<control type="button" id="6">
+				<width>51</width>
+				<height>51</height>
 		
-			<onleft>5</onleft>
-			<onright>7</onright>
+				<onleft>5</onleft>
+				<onright>7</onright>
 
-			<onclick>xbmc.playercontrol(next)</onclick>
+				<onclick>xbmc.playercontrol(next)</onclick>
 
-			<texturefocus>Zen/elements/osd/next_focused.png</texturefocus>
-			<texturenofocus>Zen/elements/osd/next_unfocused.png</texturenofocus>
+				<texturefocus>osd/buttons/next_focused.png</texturefocus>
+				<texturenofocus>osd/buttons/next_unfocused.png</texturenofocus>
+			</control>
 		</control>
-		<control type="button" id="7">
-			<width>37</width>
-			<height>38</height>
-			<posx>355</posx>
-			<posy>623</posy>
-
-			<onleft>6</onleft>
-			<onright>7</onright>
-			<onclick>xbmc.activatewindow(playercontrols)</onclick>
-
-			<texturefocus>Zen/elements/osd/advanced_focused.png</texturefocus>
-			<texturenofocus>Zen/elements/osd/advanced_unfocused.png</texturenofocus>
-		</control>
-
 
 		<control type="progress">
-		
-			<posx>411</posx>
-			<posy>627</posy>
-			<width>572</width>
-			<height>30</height>
+			<posx>0</posx>
+			<posy>637</posy>
+			<width>1280</width>
+			<height>25</height>
 			<visible>true</visible>
 			<reveal>true</reveal>
-			<texturebg>Zen/elements/osd/progress_bg.png</texturebg>
-			<midtexture>Zen/elements/osd/progress_mid.png</midtexture>
-			<lefttexture>-</lefttexture>
-			<righttexture>-</righttexture>
+			<texturebg>osd/progress_bg.png</texturebg>
+			<midtexture>osd/progress_center.png</midtexture>
+			<lefttexture>osd/progress_left.png</lefttexture>
+			<righttexture>osd/progress_right.png</righttexture>
 			<overlaytexture>-</overlaytexture>
 			<info>Player.Progress</info>
 		</control>
+
 		<control type="label">
 			<width>300</width>
-			<posx>959</posx>
-			<posy>627</posy>
+			<posx>-17</posx>
+			<posy>674</posy>
 		
 			<font>Small</font>
 			<textcolor>ffe8e8db</textcolor>
@@ -145,229 +130,152 @@
 		</control>
 
 		<control type="image">
-			<posx>36</posx>
-			<posy>617</posy>
+			<posx>0</posx>
+			<posy>637</posy>
 		
-			<width>1210</width>
-			<height>50</height>
+			<width>1280</width>
+			<height>83</height>
 		
-			<texture>Zen/panes/osd/osd_shadow.png</texture>
+			<texture>osd/osd_overlay.png</texture>
 			<aspectratio>-</aspectratio>
 		</control>
-		<control type="image">
-			<posx>36</posx>
-			<posy>617</posy>
-		
-			<width>1210</width>
-			<height>50</height>
-		
-			<texture>Zen/panes/osd/osd_outline.png</texture>
-			<aspectratio>-</aspectratio>
-		</control>
+
 
 		<control type="group">
+			<width>1280</width>
+			<height>720</height>
+
 			<visible>!Player.Playing</visible>
-			<control type="image">
-				<posx>529</posx>
-				<posy>667</posy>
-
-				<width>222</width>
-				<height>32</height>
-
-				<texture>Zen/panes/osd/pop_up_bg.png</texture>
-				<aspectratio>-</aspectratio>
-			</control>
-
 			<control type="label">
 				<visible>Player.Paused</visible>
-				<posy>665</posy>
-				<posx>529</posx>
-				<width>222</width>
+				<width>1280</width>
+				<height>720</height>
 				<align>center</align>
+				<aligny>center</aligny>
 				<label>Paused</label>
-				<font>Small</font>
-				<textcolor>ffe8e8db</textcolor>
-			</control>
-			
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
+			</control>		
 			<control type="label">
 				<visible>Player.Seeking</visible>
-				<posy>665</posy>
-				<posx>529</posx>
-				<width>222</width>
+				<width>1280</width>
+				<height>720</height>
 				<align>center</align>
+				<aligny>center</aligny>
 				<label>Seeking</label>
-				<font>Small</font>
-				<textcolor>ffe8e8db</textcolor>
-			</control>
-			
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
+			</control>			
 			<control type="label">
 				<visible>Player.Forwarding2x</visible>
-				<posy>665</posy>
-				<posx>529</posx>
-				<width>222</width>
+				<width>1280</width>
+				<height>720</height>
 				<align>center</align>
-				<label>Fast Foward 2x</label>
-				<font>Small</font>
-				<textcolor>ffe8e8db</textcolor>
+				<aligny>center</aligny>
+				<label>Fast Forward 2x</label>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
 			</control>
 			<control type="label">
 				<visible>Player.Forwarding4x</visible>
-				<posy>665</posy>
-				<posx>529</posx>
-				<width>222</width>
+				<width>1280</width>
+				<height>720</height>
 				<align>center</align>
-				<label>Fast Foward 4x</label>
-				<font>Small</font>
-				<textcolor>ffe8e8db</textcolor>
+				<aligny>center</aligny>
+				<label>Fast Forward 4x</label>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
 			</control>
 			<control type="label">
 				<visible>Player.Forwarding8x</visible>
-				<posy>665</posy>
-				<posx>529</posx>
-				<width>222</width>
+				<width>1280</width>
+				<height>720</height>
 				<align>center</align>
-				<label>Fast Foward 8x</label>
-				<font>Small</font>
-				<textcolor>ffe8e8db</textcolor>
+				<aligny>center</aligny>
+				<label>Fast Forward 8x</label>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
 			</control>
 			<control type="label">
 				<visible>Player.Forwarding16x</visible>
-				<posy>665</posy>
-				<posx>529</posx>
-				<width>222</width>
+				<width>1280</width>
+				<height>720</height>
 				<align>center</align>
-				<label>Fast Foward 16x</label>
-				<font>Small</font>
-				<textcolor>ffe8e8db</textcolor>
+				<aligny>center</aligny>
+				<label>Fast Forward 16x</label>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
 			</control>
 			<control type="label">
 				<visible>Player.Forwarding32x</visible>
-				<posy>665</posy>
-				<posx>529</posx>
-				<width>222</width>
+				<width>1280</width>
+				<height>720</height>
 				<align>center</align>
-				<label>Fast Foward 32x</label>
-				<font>Small</font>
-				<textcolor>ffe8e8db</textcolor>
+				<aligny>center</aligny>
+				<label>Fast Forward 32x</label>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
 			</control>
 			<control type="label">
 				<visible>Player.Rewinding2x</visible>
-				<posy>665</posy>
-				<posx>529</posx>
-				<width>222</width>
+				<width>1280</width>
+				<height>720</height>
 				<align>center</align>
+				<aligny>center</aligny>
 				<label>Rewind 2x</label>
-				<font>Small</font>
-				<textcolor>ffe8e8db</textcolor>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
 			</control>
 			<control type="label">
 				<visible>Player.Rewinding4x</visible>
-				<posy>665</posy>
-				<posx>529</posx>
-				<width>222</width>
+				<width>1280</width>
+				<height>720</height>
 				<align>center</align>
+				<aligny>center</aligny>
 				<label>Rewind 4x</label>
-				<font>Small</font>
-				<textcolor>ffe8e8db</textcolor>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
 			</control>
 			<control type="label">
 				<visible>Player.Rewinding8x</visible>
-				<posy>665</posy>
-				<posx>529</posx>
-				<width>222</width>
+				<width>1280</width>
+				<height>720</height>
 				<align>center</align>
+				<aligny>center</aligny>
 				<label>Rewind 8x</label>
-				<font>Small</font>
-				<textcolor>ffe8e8db</textcolor>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
 			</control>
 			<control type="label">
 				<visible>Player.Rewinding16x</visible>
-				<posy>665</posy>
-				<posx>529</posx>
-				<width>222</width>
+				<width>1280</width>
+				<height>720</height>
 				<align>center</align>
+				<aligny>center</aligny>
 				<label>Rewind 16x</label>
-				<font>Small</font>
-				<textcolor>ffe8e8db</textcolor>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
 			</control>
 			<control type="label">
 				<visible>Player.Rewinding32x</visible>
-				<posy>665</posy>
-				<posx>529</posx>
-				<width>222</width>
+				<width>1280</width>
+				<height>720</height>
 				<align>center</align>
+				<aligny>center</aligny>
 				<label>Rewind 32x</label>
-				<font>Small</font>
-				<textcolor>ffe8e8db</textcolor>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
 			</control>
-
-			<control type="image">
-				<posx>529</posx>
-				<posy>667</posy>
-
-				<width>222</width>
-				<height>32</height>
-
-				<texture>Zen/panes/osd/pop_up_shadow.png</texture>
-				<aspectratio>-</aspectratio>
-			</control>
-			<control type="image">
-				<posx>529</posx>
-				<posy>667</posy>
-
-				<width>222</width>
-				<height>32</height>
-
-				<texture>Zen/panes/osd/pop_up_outline.png</texture>
-				<aspectratio>-</aspectratio>
-			</control>
-
-		</control>
-		<control type="group">
-			<visible>Player.Caching + !Player.Playing</visible>
-			<control type="image">
-				<posx>529</posx>
-				<posy>667</posy>
-
-				<width>222</width>
-				<height>32</height>
-
-				<texture>Zen/panes/osd/pop_up_bg.png</texture>
-				<aspectratio>-</aspectratio>
-			</control>
-
 			<control type="label">
-				<visible>Player.Caching</visible>
-				<posy>665</posy>
-				<posx>529</posx>
-				<width>222</width>
+				<visible>Player.Caching + !Player.Playing</visible>
+				<width>1280</width>
+				<height>720</height>
 				<align>center</align>
+				<aligny>center</aligny>
 				<label>Caching...</label>
-				<font>Small</font>
-				<textcolor>ffe8e8db</textcolor>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
 			</control>
-
-			<control type="image">
-				<posx>534</posx>
-				<posy>667</posy>
-
-				<width>22</width>
-				<height>32</height>
-
-				<texture>Zen/panes/osd/pop_up_shadow.png</texture>
-				<aspectratio>-</aspectratio>
-			</control>
-			<control type="image">
-				<posx>529</posx>
-				<posy>667</posy>
-
-				<width>22</width>
-				<height>32</height>
-
-				<texture>Zen/panes/osd/pop_up_outline.png</texture>
-				<aspectratio>-</aspectratio>
-			</control>
-
 		</control>
 
 
