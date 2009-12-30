@@ -14,8 +14,7 @@
 					</animation>
 
 					<viewtype label="Show Case">list</viewtype>
-					<include condition="Skin.HasSetting(horizontal_scroll)">orientation_horizontal</include>
-				 	<include condition="!Skin.HasSetting(horizontal_scroll)">orientation_vertical</include>
+					<include>orientation_horizontal</include>
 
 					<width>1443</width>
 					<height>612</height>

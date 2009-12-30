@@ -5,7 +5,7 @@
 		<ondown>531</ondown>
 	</include>
 	<include name="cover_vertical">
-		<posx>-39</posx>
+		<posx>-26</posx>
 		<ondown>101</ondown>
 	</include>
 	
@@ -29,7 +29,7 @@
 						+ !Window.IsActive(pictures)				
 					</visible>
 						
-					<viewtype label="Cover">panel</viewtype>
+					<viewtype label="Wall">panel</viewtype>
 					<include condition="Skin.HasSetting(horizontal_scroll)">orientation_horizontal</include>
 				 	<include condition="!Skin.HasSetting(horizontal_scroll)">orientation_vertical</include>
 
@@ -100,7 +100,7 @@
 						| Window.IsActive(pictures)
 					</visible>
 				
-					<viewtype label="Cover">panel</viewtype>
+					<viewtype label="Wall">panel</viewtype>
 					<include condition="Skin.HasSetting(horizontal_scroll)">orientation_horizontal</include>
 				 	<include condition="!Skin.HasSetting(horizontal_scroll)">orientation_vertical</include>
 
@@ -163,7 +163,7 @@
 				</control>
 
 			</control>
-			<!-- Scrollbar vertical -->
+			<!-- Scrollbar vertical
 			<control type="group">
 				<visible>!Skin.HasSetting(horizontal_scroll)</visible>
 				<posy>155</posy>
@@ -186,6 +186,7 @@
 					<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
 				</control>
 			</control>
+-->
 			<!-- Scrollbar horizontal -->
 			<control type="group">
 				<visible allowhiddenfocus="true">Control.hasfocus(531) + Skin.HasSetting(horizontal_scroll)</visible>

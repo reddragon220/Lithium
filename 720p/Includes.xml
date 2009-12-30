@@ -810,7 +810,7 @@
 					<texturenofocus></texturenofocus>
 					<texturefocus>common/prefs_highlight.png</texturefocus>					
 					<alttexturenofocus></alttexturenofocus>
-					<texturefocus>common/prefs_highlight.png</texturefocus>					
+					<alttexturefocus>common/prefs_highlight.png</alttexturefocus>					
 				</control>
 				<control type="button" id="105">
 					<description>Flags</description>

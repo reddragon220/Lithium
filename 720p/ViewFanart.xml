@@ -6,7 +6,7 @@
 		<ondown>521</ondown>
 	</include>
 	<include name="fanart_vertical">
-		<posx>23</posx>
+		<posx>10</posx>
 		<ondown>101</ondown>
 		<onright>521</onright>
 	</include>
@@ -282,7 +282,7 @@
 					
 				</control>
 			</control>
-			<!-- Scrollbar vertical -->
+			<!-- Scrollbar vertical
 			<control type="group">
 				<visible>!Skin.HasSetting(horizontal_scroll)</visible>
 				<posy>155</posy>
@@ -305,6 +305,7 @@
 					<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
 				</control>
 			</control>
+-->
 			<!-- Scrollbar horizontal -->
 			<control type="group">
 				<visible allowhiddenfocus="true">Control.hasfocus(521) + Skin.HasSetting(horizontal_scroll)</visible>

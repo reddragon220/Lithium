@@ -314,8 +314,7 @@
 							<aspectratio>stretch</aspectratio> 
 						</control>
 					</itemlayout>
-					
-					
+
 					<control type="radiobutton" id="2031">
 						<posx>12</posx>
 						<height>52</height>
@@ -331,6 +330,32 @@
 						<label>Horizontal scrolling</label>
 						<selected>Skin.HasSetting(horizontal_scroll)</selected>
 						<onclick>Skin.ToggleSetting(horizontal_scroll)</onclick>
+						<onclick>XBMC.ReloadSkin()</onclick>
+						<onclick>Control.Move(50,2)</onclick>				
+
+				    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
+						<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
+
+						<radiowidth>59</radiowidth>
+						<radioheight>39</radioheight>
+						<textureradiofocus>Zen/elements/settings/on_focused.png</textureradiofocus>
+						<textureradionofocus>Zen/elements/settings/off_focused.png</textureradionofocus>
+					</control>
+					<control type="radiobutton" id="2032">
+						<posx>12</posx>
+						<height>52</height>
+						<width>872</width>
+				    	<textcolor>7fffffff</textcolor>
+						<focusedcolor>ffe8e8db</focusedcolor>
+						<disabledcolor>7f7c7c72</disabledcolor>
+						<shadowcolor>7f000000</shadowcolor>
+				    	<align>left</align>
+						<font>Large</font>
+						<textoffsetx>12</textoffsetx>
+				
+						<label>Low List horizontal scroll</label>
+						<selected>Skin.HasSetting(low_list_horizontal_scroll)</selected>
+						<onclick>Skin.ToggleSetting(low_list_horizontal_scroll)</onclick>
 						<onclick>XBMC.ReloadSkin()</onclick>
 						<onclick>Control.Move(50,2)</onclick>				
 

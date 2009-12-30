@@ -12,59 +12,9 @@
 
 
 <includes>
-	<include name="light_bg">
-		<!-- No Container Light -->
-		<control type="image">
-			<visible>!Control.IsVisible(54)</visible>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
-			<texture>common/light_bg.png</texture>
-			<fadetime>200</fadetime>
-		</control>
-	</include>
-	<include name="dark_bg">
-		<!-- No Container dark -->
-		<control type="image">
-			<visible>!Control.IsVisible(54)</visible>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
-			<texture>backgrounds/darkened_bg.png</texture>
-			<fadetime>200</fadetime>
-		</control>
-	</include>
-	
-	<include name="center_bg">
-		<control type="image">
-			<width>1210</width>
-			<height>556</height>
-			<texture>Zen/panes/common/center_bg.png</texture>
-			<aspectratio>stretch</aspectratio> 
-		</control>
-	</include>
-	<include name="center_fg">
-		<control type="image">
-			<width>1210</width>
-			<height>556</height>
-			<texture>Zen/panes/common/center_gradient.png</texture>
-			<aspectratio>stretch</aspectratio> 
-		</control>
-		<control type="image">
-			<width>1210</width>
-			<height>556</height>
-			<texture>Zen/panes/common/center_outline.png</texture>
-			<aspectratio>stretch</aspectratio> 
-		</control>
-	</include>
-
 	<include name="direction_arrows">
 		<control type="group">
-			<visible>Skin.HasSetting(horizontal_scroll) + !control.isvisible(50) + !control.isvisible(51)</visible>
+			<visible>Skin.HasSetting(horizontal_scroll) + !control.isvisible(50) + !control.isvisible(51) + !control.isvisible(58) + !Control.IsVisible(54)</visible>
 			<include>preferences_animation</include>
 			<posy>336</posy>
 			<animation type="Conditional" condition="Control.hasfocus(531) + Skin.HasSetting(horizontal_scroll)">
@@ -86,7 +36,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<visible>!Skin.HasSetting(horizontal_scroll) + !control.isvisible(58) + !control.isvisible(59)</visible>
+			<visible>!Skin.HasSetting(horizontal_scroll) + !control.isvisible(50) + !control.isvisible(51) + !control.isvisible(58) + !Control.IsVisible(54)</visible>
 			<include>preferences_animation</include>
 			
 			<control type="image">
