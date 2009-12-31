@@ -73,7 +73,17 @@
 
 
 		<include>preferences</include>
-		
+
+		<control type="image">
+			<visible>Window.IsVisible(106)</visible>
+			<description>overlay image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>contextmenu/bg_overlay.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
 	</include>
 	
 	
