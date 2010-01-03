@@ -164,30 +164,6 @@
 				</control>
 
 			</control>
-			<!-- Scrollbar vertical
-			<control type="group">
-				<visible>!Skin.HasSetting(horizontal_scroll)</visible>
-				<posy>155</posy>
-				<posx>1165</posx>
-				<control type="image">
-					<width>26</width>
-					<height>267</height>
-					<posy>7</posy>
-					<texture>Zen/elements/common/scrollbar/scrollbar_bg.png</texture>
-				</control>
-				<control type="scrollbar" id="531">
-					<width>26</width>
-					<height>267</height>
-					<orientation>vertical</orientation>
-					<onup>-</onup>
-					<onleft>53</onleft>
-					<onright>53</onright>
-					<ondown>-</ondown>
-					<textureslidernib>Zen/elements/common/scrollbar/scrollbar_nib.png</textureslidernib>
-					<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
-				</control>
-			</control>
--->
 			<!-- Scrollbar horizontal -->
 			<control type="group">
 				<visible allowhiddenfocus="true">Control.hasfocus(531) + Skin.HasSetting(horizontal_scroll)</visible>

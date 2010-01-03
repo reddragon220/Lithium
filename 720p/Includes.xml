@@ -39,6 +39,14 @@
 	</include>
 	
 	<!-- My Includes -->
+	<!--
+		<include>thumb list</include>
+		<include>info thumb list</include>
+		<include>episodes</include>
+		<include>songs</include>
+		<include>multiplex</include>
+		
+	-->
 	<include name="views">
 		<control type="image">
 			<include>preferences_animation</include>
@@ -50,30 +58,18 @@
 		
 		<include>direction_arrows</include>
 
-<!--		<include>thumb list</include>
-		<include>info thumb list</include> -->
-
-
-		
-		<include>fanart_nav</include>
-		<include>cover_nav</include>
-		<include>multiplex</include>
-		
-		<include>episodes</include>
-		<include>songs</include>
-
-
-		<include>show_case</include>
-
 		<include>footer</include>
+		
 		<include>low_list</include>
 		<include>info_low_list</include>
-		
+		<include>fanart_nav</include>
+		<include>cover_nav</include>
+		<include>show_case</include>
 
 
 
 		<include>preferences</include>
-
+		<-- Context Menu Fade --/>
 		<control type="image">
 			<visible>Window.IsVisible(106)</visible>
 			<description>overlay image</description>
@@ -1140,9 +1136,6 @@
 			<aspectratio>stretch</aspectratio>
 			<info>ListItem.Property(fanart_image)</info>
 			<fadetime>200</fadetime>
-			
-			<include condition="!Skin.HasSetting(ken_burns)">bg_animation</include>
-			<include>preferences_animation</include>
 		</control>
 		
 		<control type="largeimage">
@@ -1155,29 +1148,25 @@
 			<aspectratio>stretch</aspectratio>
 			<info>FanArt.Image</info>
       		<fadetime>200</fadetime>
-
-			<include condition="!Skin.HasSetting(ken_burns)">bg_animation</include>
-			<include>preferences_animation</include>
 		</control>
 	</include>
 
 	<include name="background">
 			<control type="group">
-				<animation effect="slide" end="0,53" time="0" condition="!Skin.HasSetting(slide) + !Window.isActive(Home) + !Window.isActive(settings) + !Window.isActive(56) + !Window.isActive(12) + !Window.isActive(13) + !Window.isActive(14) + !Window.isActive(15) + !Window.isActive(16) + !Window.isActive(17) + !Window.isActive(18) + !Window.isActive(19)">Conditional</animation>
-				<control type="largeimage">
-				<visible>IsEmpty(ListItem.Property(fanart_image)) | Skin.HasSetting(fanart)</visible>
-				<description>Background Image</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>1280</width>
-				<height>720</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>$INFO[Skin.String(backgroundimage)]</texture>
-				<fadetime>200</fadetime>
-			
 				<include condition="!Skin.HasSetting(ken_burns)">bg_animation</include>
 				<include>preferences_animation</include>
-			</control>
+				<animation effect="slide" end="0,53" time="0" condition="!Skin.HasSetting(slide) + !Window.isActive(Home) + !Window.isActive(settings) + !Window.isActive(56) + !Window.isActive(12) + !Window.isActive(13) + !Window.isActive(14) + !Window.isActive(15) + !Window.isActive(16) + !Window.isActive(17) + !Window.isActive(18) + !Window.isActive(19)">Conditional</animation>
+				<control type="largeimage">
+					<visible>IsEmpty(ListItem.Property(fanart_image)) | Skin.HasSetting(fanart)</visible>
+					<description>Background Image</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>720</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>$INFO[Skin.String(backgroundimage)]</texture>
+					<fadetime>200</fadetime>
+				</control>
 				<include condition="!Skin.HasSetting(fanart)">fanart</include>
 			</control>
 	</include>

@@ -2,6 +2,7 @@
 	<include name="show_case">
 		<control type="group">
 			<include>preferences_animation</include>
+			<include>no_header</include>
 			<visible>Control.IsVisible(58)</visible>
 			<posx>-163</posx>
 			<posy>74</posy>

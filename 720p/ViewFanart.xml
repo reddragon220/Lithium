@@ -13,9 +13,9 @@
 	
 	<!-- Note multiple large image (about 6 or so) crashes Plex as of version 8.3-->
 	<include name="fanart_nav">
-		<visible>Control.IsVisible(52)</visible>
 		<control type="group">
 			<include>preferences_animation</include>
+			<include>no_header</include>
 			<visible>Control.IsVisible(52)</visible>
 			<posx>0</posx>
 			<posy>57</posy>
