@@ -9,7 +9,7 @@
 <!-- <posx>449.5</posx>
 <posy>51</posy> -->
 
-<controls>	
+<controls>
 		<control type="image" id="999">
 			<description>background image</description>
 			<posx>0</posx>
