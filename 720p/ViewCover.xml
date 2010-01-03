@@ -12,6 +12,7 @@
 	<include name="cover_nav">
 		<control type="group">
 			<include>preferences_animation</include>
+			<include>no_header</include>
 			<visible>Control.IsVisible(53)</visible>
 			<posx>36</posx>
 			<posy>82</posy>
@@ -34,7 +35,7 @@
 				 	<include condition="!Skin.HasSetting(horizontal_scroll)">orientation_vertical</include>
 
 					<width>1260</width>
-					<height>612</height>
+					<height>605</height>
 					<posy>-19</posy>
 
 					

@@ -1163,7 +1163,7 @@
 
 	<include name="background">
 			<control type="group">
-				<animation effect="slide" end="0,53" time="0" condition="!Skin.HasSetting(slide) + !Window.isActive(Home)">Conditional</animation>
+				<animation effect="slide" end="0,53" time="0" condition="!Skin.HasSetting(slide) + !Window.isActive(Home) + !Window.isActive(settings) + !Window.isActive(56) + !Window.isActive(12) + !Window.isActive(13) + !Window.isActive(14) + !Window.isActive(15) + !Window.isActive(16) + !Window.isActive(17) + !Window.isActive(18) + !Window.isActive(19)">Conditional</animation>
 				<control type="largeimage">
 				<visible>IsEmpty(ListItem.Property(fanart_image)) | Skin.HasSetting(fanart)</visible>
 				<description>Background Image</description>

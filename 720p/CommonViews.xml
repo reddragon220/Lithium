@@ -16,6 +16,7 @@
 		<control type="group">
 			<visible>Skin.HasSetting(horizontal_scroll) + !control.isvisible(50) + !control.isvisible(51) + !control.isvisible(58) + !Control.IsVisible(54)</visible>
 			<include>preferences_animation</include>
+			<include>no_header</include>
 			<posy>336</posy>
 			<animation type="Conditional" condition="Control.hasfocus(531) + Skin.HasSetting(horizontal_scroll)">
 				<effect type="slide" end="0,-20" center="auto" time="200"/>
@@ -49,6 +50,9 @@
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="image">
+				<include>no_header</include>
+				<include>no_header</include>
+
 				<posx>616</posx>
 				<posy>60</posy>
 				<width>48</width>
@@ -71,6 +75,10 @@
 
 	<include name="preferences_direction">
 		<ondown>101</ondown>
+	</include>
+
+	<include name="no_header">
+		<animation effect="slide" end="0,-26" time="0" condition="Skin.HasSetting(slide)">Conditional</animation>
 	</include>
 
 	<include file="ViewThumbList.xml"/>
