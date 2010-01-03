@@ -23,6 +23,9 @@
 			<orientation>horizontal</orientation>
 			<scrolltime>200</scrolltime>
 			<itemgap>9</itemgap>
+
+			<onleft>1</onleft>
+			<onright>7</onright>
 		
 
 			<control type="button" id="1">
@@ -36,6 +39,7 @@
 
 				<texturefocus>osd/buttons/previous_focused.png</texturefocus>
 				<texturenofocus>osd/buttons/previous_unfocused.png</texturenofocus>
+				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="button" id="2">
 				<width>51</width>
@@ -101,6 +105,69 @@
 				<texturefocus>osd/buttons/next_focused.png</texturefocus>
 				<texturenofocus>osd/buttons/next_unfocused.png</texturenofocus>
 			</control>
+		</control>
+
+		<control type="grouplist" id="102">
+			<posx>1032</posx>
+			<posy>666</posy>
+			<width>360</width>
+			<height>119</height>
+			<orientation>horizontal</orientation>
+			<scrolltime>200</scrolltime>
+			<itemgap>9</itemgap>
+			
+			<onleft>6</onleft>
+			<onright>10</onright>
+			
+			<control type="button" id="7">
+				<width>51</width>
+				<height>51</height>
+		
+				<onleft>6</onleft>
+				<onright>8</onright>
+
+				<onclick></onclick>
+
+				<texturefocus>osd/buttons/subtitles_focused.png</texturefocus>
+				<texturenofocus>osd/buttons/subtitles_unfocused.png</texturenofocus>
+			</control>
+			<control type="button" id="8">
+				<width>51</width>
+				<height>51</height>
+		
+				<onleft>7</onleft>
+				<onright>9</onright>
+
+				<onclick>xbmc.activatewindow(10125)</onclick>
+
+				<texturefocus>osd/buttons/bookmarks_focused.png</texturefocus>
+				<texturenofocus>osd/buttons/bookmarks_unfocused.png</texturenofocus>
+			</control>
+			<control type="button" id="9">
+				<width>51</width>
+				<height>51</height>
+		
+				<onleft>8</onleft>
+				<onright>10</onright>
+
+				<onclick>xbmc.activatewindow(10124)</onclick>
+
+				<texturefocus>osd/buttons/audio_focused.png</texturefocus>
+				<texturenofocus>osd/buttons/audio_unfocused.png</texturenofocus>
+			</control>
+			<control type="button" id="10">
+				<width>51</width>
+				<height>51</height>
+		
+				<onleft>9</onleft>
+				<onright>10</onright>
+
+				<onclick>xbmc.activatewindow(10123)</onclick>
+
+				<texturefocus>osd/buttons/video_focused.png</texturefocus>
+				<texturenofocus>osd/buttons/video_unfocused.png</texturenofocus>
+			</control>
+			
 		</control>
 
 		<control type="progress">
