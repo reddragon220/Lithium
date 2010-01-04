@@ -51,9 +51,22 @@
 							<texture diffuse="fanart/thumb_mask.png"></texture>
 							<bordertexture border="5">fanart/thumb_shadow.png</bordertexture>
 							<bordersize>5</bordersize>
+							<aspectratio>stretch</aspectratio>
 						</control>
 						<control type="image">
-							<visible>Container.Content(albums) | Container.Content(songs) | Container.Content(episodes)</visible>
+							<visible>Container.Content(seasons) | Container.Content(episodes)</visible>
+							<posx>19</posx>
+							<posy>29</posy>
+							<width>382</width>
+							<height>219</height>
+							<info>ListItem.thumb</info>
+							<texture diffuse="fanart/thumb_mask.png"></texture>
+							<bordertexture border="5">fanart/thumb_shadow.png</bordertexture>
+							<bordersize>5</bordersize>
+							<aspectratio>stretch</aspectratio>
+						</control>
+						<control type="image">
+							<visible>Container.Content(albums) | Container.Content(songs)</visible>
 							<posx>19</posx>
 							<posy>29</posy>
 							<width>382</width>
@@ -63,31 +76,6 @@
 							<bordertexture border="5">fanart/thumb_shadow.png</bordertexture>
 							<bordersize>5</bordersize>
 						</control>
-						<!-- Seasons Hack -->
-						<control type="image">
-							<visible>Container.Content(seasons)</visible>
-							<posx>19</posx>
-							<posy>29</posy>
-							<width>382</width>
-							<height>219</height>
-							<info>ListItem.thumb</info>
-							<texture diffuse="fanart/thumb_mask2.png"></texture>
-							<bordertexture border="10">fanart/thumb_shadow.png</bordertexture>
-							<bordersize>10</bordersize>
-						</control>
-						<control type="image">
-							<visible>Container.Content(seasons)</visible>
-							<posx>19</posx>
-							<posy>29</posy>
-							<width>382</width>
-							<height>219</height>
-							<info>ListItem.thumb</info>
-							<texture diffuse="fanart/thumb_mask.png"></texture>
-							<bordertexture border="5"></bordertexture>
-							<bordersize>5</bordersize>
-							<aspectratio scalediffuse="false">scale</aspectratio>
-						</control>
-						
 						<control type="group">
 							<posx>34</posx>
 							<posy>195</posy>
@@ -115,7 +103,7 @@
 								<posy>-5</posy>
 								<width>352</width>
 								<height>40</height>
-								<label>$INFO[ListItem.Season].$INFO[ListItem.Episode] $INFO[listitem.title]</label>
+								<label>Episode $INFO[ListItem.Episode]</label>
 								<font>Large</font>
 								<textcolor>7f000000</textcolor>
 								<align>center</align>
@@ -139,7 +127,7 @@
 								<posy>-3</posy>
 								<width>352</width>
 								<height>40</height>
-								<label>$INFO[ListItem.Season].$INFO[ListItem.Episode] $INFO[listitem.title]</label>
+								<label>Episode $INFO[ListItem.Episode]</label>
 								<font>Large</font>
 								<textcolor>ffe8e8db</textcolor>
 								<align>center</align>

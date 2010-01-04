@@ -1,4 +1,18 @@
 <includes>	
+	<include name="info_low_list_label_horizontal_position">
+		<posx>63</posx>
+	</include>
+	<include name="info_low_list_label_vertical_position">
+		<posx>15</posx>
+	</include>
+	<include name="info_low_list_horizontal_orientaiton">
+		<orientation>horizontal</orientation>
+	</include>
+	<include name="info_low_list_vertical_orientation">
+		<orientation>vertical</orientation>
+		<onright>101</onright>
+	</include>
+	
 	<include name="info_low_list">
 		<control type="group">
 			<include>preferences_animation</include>
@@ -23,7 +37,6 @@
 				<aspectratio>stretch</aspectratio> 
 			</control>
 
-
 			<control type="textbox">
 				<posx>907</posx>
 				<posy>1</posy>
@@ -43,8 +56,8 @@
 					</animation>
 
 					<viewtype label="Info Low List">list</viewtype>
-					<include condition="Skin.HasSetting(horizontal_scroll)">orientation_horizontal</include>
-				 	<include condition="!Skin.HasSetting(horizontal_scroll)">orientation_vertical</include>
+					<include condition="Skin.HasSetting(info_low_list_horizontal_scroll)">info_low_list_horizontal_orientaiton</include>
+				 	<include condition="!Skin.HasSetting(info_low_list_horizontal_scroll)">info_low_list_vertical_orientation</include>
 
 					<posx>320</posx>
 					<posy>1</posy>
@@ -62,7 +75,8 @@
 								!container.content(tvshows) + !container.content(movies) + !container.content(episodes) + !container.content(songs)
 							</visible>
 							<control type="label">
-								<posx>63</posx>
+								<include condition="Skin.HasSetting(low_list_horizontal_scroll)">info_low_list_label_horizontal_position</include>
+								<include condition="!Skin.HasSetting(low_list_horizontal_scroll)">info_low_list_label_vertical_position</include>
 								<posy>8</posy>
 								<width>832</width>
 								<info>ListItem.label</info>
@@ -74,7 +88,8 @@
 						<control type="group">
 							<visible>!container.content(episodes)</visible>
 							<control type="label">
-								<posx>63</posx>
+								<include condition="Skin.HasSetting(low_list_horizontal_scroll)">info_low_list_label_horizontal_position</include>
+								<include condition="!Skin.HasSetting(low_list_horizontal_scroll)">info_low_list_label_vertical_position</include>
 								<posy>8</posy>
 								<width>626</width>
 								<info>ListItem.label</info>
@@ -86,7 +101,8 @@
 						<control type="group">
 							<visible>container.content(episodes)</visible>
 							<control type="label">
-								<posx>63</posx>
+								<include condition="Skin.HasSetting(low_list_horizontal_scroll)">info_low_list_label_horizontal_position</include>
+								<include condition="!Skin.HasSetting(low_list_horizontal_scroll)">info_low_list_label_vertical_position</include>
 								<posy>8</posy>
 								<width>626</width>
 								<label>$INFO[ListItem.Season].$INFO[ListItem.Episode] $INFO[ListItem.title]</label>
@@ -115,7 +131,8 @@
 								!container.content(tvshows) + !container.content(movies) + !container.content(episodes) + !container.content(songs)
 							</visible>
 							<control type="label">
-								<posx>63</posx>
+								<include condition="Skin.HasSetting(low_list_horizontal_scroll)">info_low_list_label_horizontal_position</include>
+								<include condition="!Skin.HasSetting(low_list_horizontal_scroll)">info_low_list_label_vertical_position</include>
 								<posy>6</posy>
 								<width>832</width>
 								<info>ListItem.label</info>
@@ -124,7 +141,8 @@
 								<scroll>true</scroll>
 							</control>
 							<control type="label">
-								<posx>63</posx>
+								<include condition="Skin.HasSetting(low_list_horizontal_scroll)">info_low_list_label_horizontal_position</include>
+								<include condition="!Skin.HasSetting(low_list_horizontal_scroll)">info_low_list_label_vertical_position</include>
 								<posy>8</posy>
 								<width>832</width>
 								<info>ListItem.label</info>
@@ -136,7 +154,8 @@
 						<control type="group">
 							<visible>!container.content(episodes) + !container.content(albums)</visible>
 							<control type="label">
-								<posx>63</posx>
+								<include condition="Skin.HasSetting(low_list_horizontal_scroll)">info_low_list_label_horizontal_position</include>
+								<include condition="!Skin.HasSetting(low_list_horizontal_scroll)">info_low_list_label_vertical_position</include>
 								<posy>6</posy>
 								<width>626</width>
 								<info>ListItem.label</info>
@@ -145,7 +164,8 @@
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
-								<posx>63</posx>
+								<include condition="Skin.HasSetting(low_list_horizontal_scroll)">info_low_list_label_horizontal_position</include>
+								<include condition="!Skin.HasSetting(low_list_horizontal_scroll)">info_low_list_label_vertical_position</include>
 								<posy>8</posy>
 								<width>626</width>
 								<info>ListItem.label</info>
@@ -157,7 +177,8 @@
 						<control type="group">
 							<visible>container.content(episodes)</visible>
 							<control type="label">
-								<posx>63</posx>
+								<include condition="Skin.HasSetting(low_list_horizontal_scroll)">info_low_list_label_horizontal_position</include>
+								<include condition="!Skin.HasSetting(low_list_horizontal_scroll)">info_low_list_label_vertical_position</include>
 								<posy>6</posy>
 								<width>626</width>
 								<label>$INFO[ListItem.Season].$INFO[ListItem.Episode] $INFO[ListItem.title]</label>
@@ -166,7 +187,8 @@
 								<scroll>false</scroll>
 							</control>
 							<control type="label">
-								<posx>63</posx>
+								<include condition="Skin.HasSetting(low_list_horizontal_scroll)">info_low_list_label_horizontal_position</include>
+								<include condition="!Skin.HasSetting(low_list_horizontal_scroll)">info_low_list_label_vertical_position</include>
 								<posy>8</posy>
 								<width>626</width>
 								<label>$INFO[ListItem.Season].$INFO[ListItem.Episode] $INFO[ListItem.title]</label>
@@ -216,22 +238,45 @@
 				</control>
 			</control>
 			<!-- Directionals -->
-			<control type="image">
-				<posx>320</posx>
-				<posy>101</posy>
-				<width>48</width>
-				<height>48</height>
-				<texture>lowlist/arrow_left.png</texture>
-				<aspectratio>stretch</aspectratio>
+			<control type="group">
+				<visible>Skin.HasSetting(info_low_list_horizontal_scroll)</visible>
+				<control type="image">
+					<posx>320</posx>
+					<posy>101</posy>
+					<width>48</width>
+					<height>48</height>
+					<texture>lowlist/arrow_left.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>848</posx>
+					<posy>101</posy>
+					<width>48</width>
+					<height>48</height>
+					<texture>lowlist/arrow_right.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
 			</control>
-			<control type="image">
-				<posx>848</posx>
-				<posy>101</posy>
-				<width>48</width>
-				<height>48</height>
-				<texture>lowlist/arrow_right.png</texture>
-				<aspectratio>stretch</aspectratio>
+			<control type="group">
+				<visible>!Skin.HasSetting(info_low_list_horizontal_scroll)</visible>
+				<control type="image">
+					<posx>848</posx>
+					<posy>1</posy>
+					<width>48</width>
+					<height>48</height>
+					<texture>common/up_arrow.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="image">
+					<posx>848</posx>
+					<posy>201</posy>
+					<width>48</width>
+					<height>48</height>
+					<texture>common/down_arrow.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
 			</control>
+			
 		</control>
 	</include>
 </includes>

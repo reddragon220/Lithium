@@ -163,7 +163,6 @@
 							<height>30</height>
 							<info>ListItem.Overlay</info>
 						</control>
-
 					</itemlayout>
 					<focusedlayout width="960" height="50">
 						<control type="image">
@@ -220,7 +219,6 @@
 								<scroll>true</scroll>
 							</control>
 						</control>
-						
 						<control type="group">
 							<visible>!container.content(episodes) + !container.content(albums)</visible>
 							<control type="label">
@@ -327,13 +325,13 @@
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="image">
-				<posx>1232</posx>
-				<posy>101</posy>
-				<width>48</width>
-				<height>48</height>
-				<texture>lowlist/arrow_right.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
+					<posx>1232</posx>
+					<posy>101</posy>
+					<width>48</width>
+					<height>48</height>
+					<texture>lowlist/arrow_right.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
 			</control>
 			<control type="group">
 				<visible>!Skin.HasSetting(low_list_horizontal_scroll)</visible>

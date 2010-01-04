@@ -299,7 +299,7 @@
 	
 			
 
-					<onup>100</onup>                       <!-- To move between controls insert control id -->				
+					<onup>100</onup>			
 					<onleft>50</onleft>
 
 					<scrolltime>200</scrolltime>
@@ -367,9 +367,34 @@
 						<textureradiofocus>Zen/elements/settings/on_focused.png</textureradiofocus>
 						<textureradionofocus>Zen/elements/settings/off_focused.png</textureradionofocus>
 					</control>
+					<control type="radiobutton" id="2033">
+						<posx>12</posx>
+						<height>52</height>
+						<width>872</width>
+				    	<textcolor>7fffffff</textcolor>
+						<focusedcolor>ffe8e8db</focusedcolor>
+						<disabledcolor>7f7c7c72</disabledcolor>
+						<shadowcolor>7f000000</shadowcolor>
+				    	<align>left</align>
+						<font>Large</font>
+						<textoffsetx>12</textoffsetx>
+				
+						<label>Info Low List horizontal scroll</label>
+						<selected>Skin.HasSetting(info_low_list_horizontal_scroll)</selected>
+						<onclick>Skin.ToggleSetting(info_low_list_horizontal_scroll)</onclick>
+						<onclick>XBMC.ReloadSkin()</onclick>
+						<onclick>Control.Move(50,2)</onclick>				
+
+				    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
+						<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
+
+						<radiowidth>59</radiowidth>
+						<radioheight>39</radioheight>
+						<textureradiofocus>Zen/elements/settings/on_focused.png</textureradiofocus>
+						<textureradionofocus>Zen/elements/settings/off_focused.png</textureradionofocus>
+					</control>
 					<!-- Background Options -->					
 			</control>
-
             <control type="grouplist" id="204">
 					<visible>Container(50).Hasfocus(4)</visible>
 			
@@ -396,9 +421,6 @@
 							<texture>Zen/elements/list/divider.png</texture>
 							<aspectratio>stretch</aspectratio> 
 						</control>
-
-                        
-                        
 					</itemlayout>
 					
 					<control type="radiobutton" id="2041">
@@ -447,8 +469,7 @@
                         <texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
 						<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
                     </control>
-                    
-                    
+                                      
 					<control type="radiobutton" id="2043">
 						<posx>12</posx>
 						<height>52</height>
@@ -500,8 +521,6 @@
                     
                     
 			</control>            
-
-
 			<control type="grouplist" id="206">
 					<visible>Container(50).Hasfocus(6)</visible>
 			

@@ -61,6 +61,7 @@
 			<label>$LOCALIZE[208]</label>
 			<font>Small</font>
 			<textcolor>ffe8e8db</textcolor>
+			<disabledcolor>7fe8e8db</disabledcolor>
 			<width>150</width>
 			<height>48</height>
 			<texturefocus>info/button.png</texturefocus>
@@ -72,6 +73,7 @@
 			<label>$LOCALIZE[13404]</label>
 			<font>Small</font>
 			<textcolor>ffe8e8db</textcolor>
+			<disabledcolor>7fe8e8db</disabledcolor>
 			<width>150</width>
 			<height>48</height>
 			<texturefocus>info/button.png</texturefocus>
@@ -82,6 +84,7 @@
 			<label>$LOCALIZE[206]</label>
 			<font>Small</font>
 			<textcolor>ffe8e8db</textcolor>
+			<disabledcolor>7fe8e8db</disabledcolor>
 			<width>150</width>
 			<height>48</height>
 			<texturefocus>info/button.png</texturefocus>
@@ -92,6 +95,7 @@
 			<label>$LOCALIZE[20410]</label>
 			<font>Small</font>
 			<textcolor>ffe8e8db</textcolor>
+			<disabledcolor>7fe8e8db</disabledcolor>
 			<width>150</width>
 			<height>48</height>
 			<texturefocus>info/button.png</texturefocus>
@@ -102,6 +106,7 @@
 			<label>Thumbnail</label>
 			<font>Small</font>
 			<textcolor>ffe8e8db</textcolor>
+			<disabledcolor>7fe8e8db</disabledcolor>
 			<width>150</width>
 			<height>48</height>
 			<texturefocus>info/button.png</texturefocus>
@@ -112,6 +117,7 @@
 			<label>Fanart</label>
 			<font>Small</font>
 			<textcolor>ffe8e8db</textcolor>
+			<disabledcolor>7fe8e8db</disabledcolor>
 			<width>150</width>
 			<height>48</height>
 			<texturefocus>info/button.png</texturefocus>
@@ -122,6 +128,7 @@
 			<label>$LOCALIZE[184]</label>
 			<font>Small</font>
 			<textcolor>ffe8e8db</textcolor>
+			<disabledcolor>7fe8e8db</disabledcolor>
 			<width>150</width>
 			<height>48</height>
 			<texturefocus>info/button.png</texturefocus>
@@ -194,9 +201,9 @@
 	<control type="textbox" id="4">
 		<description>Plot</description>
 		<posx>507</posx>
-		<posy>266</posy>
+		<posy>239</posy>
 		<width>757</width>
-		<height>454</height>
+		<height>481</height>
 		<spinposx>500</spinposx>
 		<spinposy>-30</spinposy>
 		<spinwidth>20</spinwidth>
