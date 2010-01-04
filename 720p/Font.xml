@@ -23,6 +23,11 @@
 		<size>38</size>
 	</font>
 	<font>
+		<name>Medium</name>
+		<filename>Helvetica Neue Condensed Bold.ttf</filename>
+		<size>35</size>
+	</font>
+	<font>
 		<name>Small</name>
 		<filename>Helvetica Neue Condensed Bold.ttf</filename>
 		<size>31</size>

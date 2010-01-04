@@ -51,9 +51,12 @@
 		<control type="image">
 			<include>preferences_animation</include>
 			<visible>control.isvisible(52) | control.isvisible(53) | control.isvisible(58)</visible>
+			<posx>0</posx>
+			<posy>0</posy>
 			<width>1280</width>
 			<height>720</height>
 			<texture>common/light_bg.png</texture>
+			<aspectratio>stretch</aspectratio>
 		</control>
 		
 		<include>direction_arrows</include>
@@ -727,10 +730,7 @@
 				<width>1280</width>
 				<height>119</height>
 				<orientation>horizontal</orientation>
-				<scrolltime>200</scrolltime>
-				 	
-
-				
+				<scrolltime>200</scrolltime>			
 				
 				<control type="button" id="102">
 					<description>View</description>
@@ -1021,100 +1021,6 @@
 				<aspectratio>stretch</aspectratio>
 			</control>
 		</control>
-	</include>
-	
-	<!-- Preferences Menu Items -->
-	<include name="normal_prefs">
-		<content>
-			<item id="1">
-				<description>View</description>
-				<label>View</label>
-				<onclick>Container.NextViewMode</onclick>
-			</item>
-			<item id="2">
-				<description>Sort Method</description>
-				<label>$INFO[Container.SortMethod]</label>
-				<onclick>Container.NextSortMethod</onclick>
-			</item>
-			<item id="3">
-				<description>Sort Direction</description>
-				<label>584</label>
-				<onclick>Container.SortDirection</onclick>
-			</item>
-			<item id="4">
-				<description>Flags</description>
-				<label>Flags</label>
-				<onclick>XBMC.ReplaceWindow(MyVideoLibrary,tvshowactors,return)</onclick>
-			</item> 
-			<item id="5">
-				<description>Fanart</description>
-				<label>Fanart</label>
-				<onclick>Skin.ToggleSetting(fanart)</onclick>	
-				<onclick>XBMC.ReloadSkin()</onclick>
-			</item>
-			<item id="6">
-				<description>Search</description>
-				<label>Search</label>
-				<onclick>Search</onclick>
-			</item>
-			<item id="7">
-				<description>Library</description>
-				<label>Library</label>
-				<onclick>Library</onclick>
-			</item>
-		</content>
-
-	</include>
-	<include name="dev_prefs">
-		<content>
-			<item id="1">
-				<description>View</description>
-				<label>View</label>
-				<onclick>Container.NextViewMode</onclick>
-			</item>
-			<item id="2">
-				<description>Sort Method</description>
-				<label>$INFO[Container.SortMethod]</label>
-				<onclick>Container.NextSortMethod</onclick>
-			</item>
-			<item id="3">
-				<description>Sort Direction</description>
-				<label>584</label>
-				<onclick>Container.SortDirection</onclick>
-			</item>
-			<item id="4">
-				<description>Flags</description>
-				<label>Flags</label>
-				<onclick>XBMC.ReplaceWindow(MyVideoLibrary,tvshowactors,return)</onclick>
-			</item> 
-			<item id="5">
-				<description>Fanart</description>
-				<label>Fanart</label>
-				<onclick>Skin.ToggleSetting(fanart)</onclick>	
-				<onclick>XBMC.ReloadSkin()</onclick>
-				<onclick>Control.Move(101,4)</onclick>
-			</item>
-			<item id="6">
-				<description>Search</description>
-				<label>Search</label>
-				<onclick>Search</onclick>
-			</item>
-			<item id="7">
-				<description>Library</description>
-				<label>Library</label>
-				<onclick>Library</onclick>
-			</item>
-			<item id="8">
-				<description>Refresh</description>
-				<label>31009</label>
-				<onclick>XBMC.ReloadSkin()</onclick>
-			</item>
-			<item id="9">
-				<description>Memory</description>
-				<label>$INFO[System.FreeMemory]</label>
-				<onclick>$INFO[System.FreeMemory]</onclick>
-			</item>
-		</content>
 	</include>
 	
 	<!-- Background Items -->

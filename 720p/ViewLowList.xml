@@ -118,7 +118,7 @@
 								<posy>8</posy>
 								<width>832</width>
 								<info>ListItem.label</info>
-								<font>Large</font>
+								<font>Medium</font>
 								<textcolor>ffe8e8db</textcolor>
 								<scroll>false</scroll>
 							</control>
@@ -131,7 +131,7 @@
 								<posy>8</posy>
 								<width>626</width>
 								<info>ListItem.label</info>
-								<font>Large</font>
+								<font>Medium</font>
 								<textcolor>ffe8e8db</textcolor>
 								<scroll>false</scroll>
 							</control>
@@ -144,7 +144,7 @@
 								<posy>8</posy>
 								<width>626</width>
 								<label>$INFO[ListItem.Season].$INFO[ListItem.Episode] $INFO[ListItem.title]</label>
-								<font>Large</font>
+								<font>Medium</font>
 								<textcolor>ffe8e8db</textcolor>
 								<scroll>false</scroll>
 							</control>
@@ -205,7 +205,7 @@
 								<posy>6</posy>
 								<width>832</width>
 								<info>ListItem.label</info>
-								<font>Large</font>
+								<font>Medium</font>
 								<textcolor>7f000000</textcolor>
 								<scroll>true</scroll>
 							</control>
@@ -215,7 +215,7 @@
 								<posy>8</posy>
 								<width>832</width>
 								<info>ListItem.label</info>
-								<font>Large</font>
+								<font>Medium</font>
 								<textcolor>ffe8e8db</textcolor>
 								<scroll>true</scroll>
 							</control>
@@ -229,7 +229,7 @@
 								<posy>6</posy>
 								<width>626</width>
 								<info>ListItem.label</info>
-								<font>Large</font>
+								<font>Medium</font>
 								<textcolor>7f000000</textcolor>
 								<scroll>false</scroll>
 							</control>
@@ -239,7 +239,7 @@
 								<posy>8</posy>
 								<width>626</width>
 								<info>ListItem.label</info>
-								<font>Large</font>
+								<font>Medium</font>
 								<textcolor>ffe8e8db</textcolor>
 								<scroll>false</scroll>
 							</control>
@@ -252,7 +252,7 @@
 								<posy>6</posy>
 								<width>626</width>
 								<label>$INFO[ListItem.Season].$INFO[ListItem.Episode] $INFO[ListItem.title]</label>
-								<font>Large</font>
+								<font>Medium</font>
 								<textcolor>7f000000</textcolor>
 								<scroll>false</scroll>
 							</control>
@@ -262,7 +262,7 @@
 								<posy>8</posy>
 								<width>626</width>
 								<label>$INFO[ListItem.Season].$INFO[ListItem.Episode] $INFO[ListItem.title]</label>
-								<font>Large</font>
+								<font>Medium</font>
 								<textcolor>ffe8e8db</textcolor>
 								<scroll>false</scroll>
 							</control>
