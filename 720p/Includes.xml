@@ -156,7 +156,7 @@
 				<control type="label">
 					<visible>Window.IsVisible(10024)</visible>
 					<label>$LOCALIZE[31026]</label>
-					<font>Small</font>
+					<font>Large</font>
 					<textcolor>ffe8e8db</textcolor>
 					<align>left</align>
 				</control>
@@ -164,7 +164,7 @@
 					<visible>Window.IsVisible(10025) + !Control.IsVisible(201) + !Control.IsVisible(202)
 					</visible>
 					<label>$LOCALIZE[31026]</label>
-					<font>Small</font>
+					<font>Large</font>
 					<textcolor>ffe8e8db</textcolor>
 					<align>left</align>
 				</control>
@@ -172,7 +172,7 @@
 					<visible>Container.Content(tvshows)
 					</visible>
 					<label>$LOCALIZE[31032]</label>
-					<font>Small</font>
+					<font>Large</font>
 					<textcolor>ffe8e8db</textcolor>
 					<align>left</align>
 				</control>
@@ -180,14 +180,14 @@
 					<visible>Container.Content(seasons) | Container.Content(episodes)
 					</visible>
 					<label>$LOCALIZE[31032] - $INFO[ListItem.TVShowTitle]</label>
-					<font>Small</font>
+					<font>Large</font>
 					<textcolor>ffe8e8db</textcolor>
 					<align>left</align>
 				</control>
 				<control type="label" id="202">
 					<visible>Container.Content(movies)</visible>
 					<label>$LOCALIZE[31033]</label>
-					<font>Small</font>
+					<font>Large</font>
 					<textcolor>ffe8e8db</textcolor>
 					<align>left</align>
 				</control>
@@ -197,35 +197,35 @@
 						| Container.Content(albums) | Container.Content(artists) | Container.Content(songs)
 					</visible>
 					<label>$LOCALIZE[31027]</label>
-					<font>Small</font>
+					<font>Large</font>
 					<textcolor>ffe8e8db</textcolor>
 					<align>left</align>
 				</control>
 				<control type="label">
 					<visible>Window.IsVisible(10002)</visible>
 					<label>$LOCALIZE[31028]</label>
-					<font>Small</font>
+					<font>Large</font>
 					<textcolor>ffe8e8db</textcolor>
 					<align>left</align>
 				</control>
 				<control type="label">
 					<visible>Window.IsVisible(10001)</visible>
 					<label>$LOCALIZE[31029]</label>
-					<font>Small</font>
+					<font>Large</font>
 					<textcolor>ffe8e8db</textcolor>
 					<align>left</align>
 				</control>
 				<control type="label">
 					<visible>Window.IsVisible(10001)</visible>
 					<label>$LOCALIZE[31029]</label>
-					<font>Small</font>
+					<font>Large</font>
 					<textcolor>ffe8e8db</textcolor>
 					<align>left</align>
 				</control>
 				<control type="label">
 					<visible>Window.IsVisible(10020)</visible>
 					<label>$LOCALIZE[31031]</label>
-					<font>Small</font>
+					<font>Large</font>
 					<textcolor>ffe8e8db</textcolor>
 					<align>left</align>
 				</control>
@@ -806,8 +806,8 @@
 					<onclick>Container.SortDirection</onclick>
 
 					<description>SortDirection</description>
-					<label>584</label>
-		          	<altlabel>585</altlabel>
+					<label>$LOCALIZE[584]</label>
+					<altlabel>$LOCALIZE[585]</altlabel>
 					<font>Small</font>
 					<textcolor>ffe8e8db</textcolor>
 					<focusedcolor>ffe8e8db</focusedcolor>
