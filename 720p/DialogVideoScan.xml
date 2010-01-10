@@ -45,8 +45,11 @@
 			<textcolor>ffe8e8db</textcolor>
 			<align>center</align>
 	  	</control>
+
+		
 		<control type="label" id="401">
 			<description>Header Label</description>
+			<visible>!Control.IsVisible(403) + !Control.IsVisible(404)</visible>
 			<width>340</width>
 	    	<posx>5</posx>
 			<posy>155</posy>
@@ -54,8 +57,12 @@
 			<font>Small</font>
 			<textcolor>ffe8e8db</textcolor>
 			<align>center</align>
+			<scroll>yes</scroll>
 	  	</control>
+		
+		
 		<control type="label" id="402">
+			<visible>Control.IsVisible(403) | Control.IsVisible(404)</visible>
 			<description>Path Label</description>
 			<width>340</width>
 	    	<posx>5</posx>
@@ -65,9 +72,10 @@
 			<textcolor>ffe8e8db</textcolor>
 			<align>center</align>
 			<haspath>yes</haspath>
+			<scroll>yes</scroll>
 	  	</control>
 	
-  
+<!--  
 		<control type="image" id="901">
 			<texture>zen/elements/header/updating.png</texture>
 			<posx>156</posx>
@@ -75,6 +83,37 @@
 			<height>38</height>
 			<width>30</width>
 			<aspectratio>stretch</aspectratio>	
+		</control>
+-->		
+
+		<control type="progress" id="403">
+			<description>Progress bar</description>
+			<posx>105</posx>
+			<posy>32</posy>
+			<width>140</width>
+			<height>110</height>
+			<texturebg>alert dialogue/download_bg.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>alert dialogue/download_mid.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>-</overlaytexture>
+			<reveal>true</reveal>
+			<animation effect="rotate" center="auto" start="-90" end="-90" time="0" condition="true">Conditional</animation>
+		</control>
+
+		<control type="progress" id="404">
+			<description>Progress bar</description>
+			<posx>105</posx>
+			<posy>32</posy>
+			<width>140</width>
+			<height>110</height>
+			<texturebg>alert dialogue/download_bg.png</texturebg>
+			<lefttexture>-</lefttexture>
+			<midtexture>alert dialogue/download_mid.png</midtexture>
+			<righttexture>-</righttexture>
+			<overlaytexture>-</overlaytexture>
+			<reveal>true</reveal>
+			<animation effect="rotate" center="auto" start="-90" end="-90" time="0" condition="true">Conditional</animation>
 		</control>
 		
 		<control type="image">
