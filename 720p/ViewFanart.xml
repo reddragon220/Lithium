@@ -39,8 +39,7 @@
 
 					<pagecontrol>521</pagecontrol>
 
-					<itemlayout width="420" height="287">
-						
+					<itemlayout width="420" height="287">					
 						<control type="image">
 							<visible>!Container.Content(episodes) + !Container.Content(seasons) + !Container.Content(albums) + !Container.Content(songs)</visible>
 							<posx>19</posx>
@@ -53,17 +52,27 @@
 							<bordersize>5</bordersize>
 							<aspectratio>stretch</aspectratio>
 						</control>
-						<control type="image">
+						<control type="group">
 							<visible>Container.Content(seasons) | Container.Content(episodes)</visible>
-							<posx>19</posx>
-							<posy>29</posy>
-							<width>382</width>
-							<height>219</height>
-							<info>ListItem.thumb</info>
-							<texture diffuse="fanart/thumb_mask.png"></texture>
-							<bordertexture border="5">fanart/thumb_shadow.png</bordertexture>
-							<bordersize>5</bordersize>
-							<aspectratio>stretch</aspectratio>
+							<control type="image">
+								<posx>19</posx>
+								<posy>29</posy>
+								<width>382</width>
+								<height>219</height>
+								<texture>fanart/thumb_shadow.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="image">
+								<posx>19</posx>
+								<posy>29</posy>
+								<width>382</width>
+								<height>219</height>
+								<info>ListItem.thumb</info>
+								<texture diffuse="fanart/thumb_mask.png"></texture>
+								<bordertexture border="5"></bordertexture>
+								<bordersize>5</bordersize>
+								<aspectratio scalediffuse="false">scale</aspectratio>
+							</control>
 						</control>
 						<control type="image">
 							<visible>Container.Content(albums) | Container.Content(songs)</visible>
@@ -77,6 +86,7 @@
 							<bordersize>5</bordersize>
 						</control>
 						<control type="group">
+							<visible>!Container.Content(albums) + !Container.Content(songs)</visible>
 							<posx>34</posx>
 							<posy>195</posy>
 							<control type="image">
@@ -140,7 +150,6 @@
 								<aspectratio>stretch</aspectratio>
 							</control>
 						</control>
-
 					</itemlayout>
 					<focusedlayout width="420" height="287">
 						<control type="image">
@@ -153,6 +162,7 @@
 							<texture diffuse="fanart/thumb_mask_big2.png"></texture>
 							<bordertexture border="20">fanart/highlight_bottom.png</bordertexture>
 							<bordersize>10</bordersize>
+							<aspectratio>stretch</aspectratio>
 						</control>
 						<control type="image">
 							<animation effect="zoom" start="96" end="100" center="auto" time="100">Focus</animation>
@@ -164,6 +174,7 @@
 							<info>ListItem.Property(fanart_image)</info>
 							<texture diffuse="cover/dvd/thumb_mask_big.png"></texture>
 							<bordersize>0</bordersize>
+							<aspectratio>stretch</aspectratio>
 						</control>
 						<control type="image">
 							<animation effect="zoom" start="96" end="100" center="auto" time="100">Focus</animation>
@@ -175,11 +186,12 @@
 							<info>ListItem.thumb</info>
 							<texture diffuse="cover/dvd/thumb_mask_big.png"></texture>
 							<bordersize>0</bordersize>
+							<aspectratio>stretch</aspectratio>
 						</control>
 						<control type="image">
 							<animation effect="zoom" start="96" end="100" center="auto" time="100">Focus</animation>
 							<visible>Container.Content(seasons)</visible>
-							<posx>7</posx>
+							<posx>.5</posx>
 							<posy>30</posy>
 							<width>419</width>
 							<height>229</height>
@@ -189,6 +201,7 @@
 							<aspectratio scalediffuse="false">scale</aspectratio>
 						</control>
 						<control type="image">
+							<visible>!Container.Content(episodes)</visible>
 							<animation effect="zoom" start="96" end="100" center="auto" time="100">Focus</animation>
 							<posx>.5</posx>
 							<posy>28</posy>
@@ -198,9 +211,24 @@
 							<texture diffuse="fanart/thumb_mask_big2.png"></texture>
 							<bordertexture border="20">fanart/highlight_top.png</bordertexture>
 							<bordersize>10</bordersize>
+							<aspectratio>stretch</aspectratio>
+						</control>
+						<control type="image">
+							<visible>Container.Content(episodes)</visible>
+							<animation effect="zoom" start="96" end="100" center="auto" time="100">Focus</animation>
+							<posx>.5</posx>
+							<posy>28</posy>
+							<width>419</width>
+							<height>229</height>
+							<info>ListItem.thumb</info>						
+							<texture diffuse="fanart/thumb_mask_big2.png"></texture>
+							<bordertexture border="20">fanart/highlight_top.png</bordertexture>
+							<bordersize>10</bordersize>
+							<aspectratio>stretch</aspectratio>
 						</control>
 
 						<control type="group">
+							<visible>!Container.Content(albums) + !Container.Content(songs)</visible>
 							<posx>34</posx>
 							<posy>195</posy>
 							<control type="image">
@@ -219,6 +247,7 @@
 								<font>Large</font>
 								<textcolor>7f000000</textcolor>
 								<align>center</align>
+								<scroll>false</scroll>
 							</control>
 							<control type="label">
 								<visible>container.content(episodes)</visible>
@@ -226,10 +255,11 @@
 								<posy>-5</posy>
 								<width>352</width>
 								<height>40</height>
-								<label>$INFO[ListItem.Season].$INFO[ListItem.Episode] $INFO[listitem.title]</label>
+								<label>Episode $INFO[ListItem.Episode]</label>
 								<font>Large</font>
 								<textcolor>7f000000</textcolor>
 								<align>center</align>
+								<scroll>false</scroll>
 							</control>							
 							<control type="label">
 								<visible>!container.content(episodes)</visible>
@@ -241,6 +271,7 @@
 								<font>Large</font>
 								<textcolor>ffe8e8db</textcolor>
 								<align>center</align>
+								<scroll>false</scroll>
 							</control>
 							<control type="label">
 								<visible>container.content(episodes)</visible>
@@ -248,10 +279,11 @@
 								<posy>-3</posy>
 								<width>352</width>
 								<height>40</height>
-								<label>$INFO[ListItem.Season].$INFO[ListItem.Episode] $INFO[listitem.title]</label>
+								<label>Episode $INFO[ListItem.Episode]</label>
 								<font>Large</font>
 								<textcolor>ffe8e8db</textcolor>
 								<align>center</align>
+								<scroll>false</scroll>
 							</control>
 							<control type="image">
 								<width>352</width>
@@ -260,10 +292,6 @@
 								<aspectratio>stretch</aspectratio>
 							</control>
 						</control>
-
-
-
-
 					</focusedlayout>
 					
 				</control>
