@@ -40,7 +40,7 @@
 					<pagecontrol>521</pagecontrol>
 
 					<itemlayout width="420" height="287">					
-						<control type="image">
+						<control type="largeimage">
 							<visible>!Container.Content(episodes) + !Container.Content(seasons) + !Container.Content(albums) + !Container.Content(songs)</visible>
 							<posx>19</posx>
 							<posy>29</posy>
@@ -62,7 +62,7 @@
 								<texture>fanart/thumb_shadow.png</texture>
 								<aspectratio>stretch</aspectratio>
 							</control>
-							<control type="image">
+							<control type="largeimage">
 								<posx>19</posx>
 								<posy>29</posy>
 								<width>382</width>
@@ -74,7 +74,7 @@
 								<aspectratio scalediffuse="false">scale</aspectratio>
 							</control>
 						</control>
-						<control type="image">
+						<control type="largeimage">
 							<visible>Container.Content(albums) | Container.Content(songs)</visible>
 							<posx>19</posx>
 							<posy>29</posy>
@@ -152,7 +152,7 @@
 						</control>
 					</itemlayout>
 					<focusedlayout width="420" height="287">
-						<control type="image">
+						<control type="largeimage">
 							<animation effect="zoom" start="96" end="100" center="auto" time="100">Focus</animation>
 							<posx>.5</posx>
 							<posy>28</posy>
@@ -164,7 +164,7 @@
 							<bordersize>10</bordersize>
 							<aspectratio>stretch</aspectratio>
 						</control>
-						<control type="image">
+						<control type="largeimage">
 							<animation effect="zoom" start="96" end="100" center="auto" time="100">Focus</animation>
 							<visible>!Container.Content(episodes) + !Container.Content(seasons) + !Container.Content(albums) + !Container.Content(songs)</visible>
 							<posx>.5</posx>
@@ -176,7 +176,7 @@
 							<bordersize>0</bordersize>
 							<aspectratio>stretch</aspectratio>
 						</control>
-						<control type="image">
+						<control type="largeimage">
 							<animation effect="zoom" start="96" end="100" center="auto" time="100">Focus</animation>
 							<visible>Container.Content(albums) | Container.Content(songs) | Container.Content(episodes)</visible>
 							<posx>.5</posx>
@@ -188,7 +188,7 @@
 							<bordersize>0</bordersize>
 							<aspectratio>stretch</aspectratio>
 						</control>
-						<control type="image">
+						<control type="largeimage">
 							<animation effect="zoom" start="96" end="100" center="auto" time="100">Focus</animation>
 							<visible>Container.Content(seasons)</visible>
 							<posx>.5</posx>
@@ -200,7 +200,7 @@
 							<bordersize>0</bordersize>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 						</control>
-						<control type="image">
+						<control type="largeimage">
 							<visible>!Container.Content(episodes)</visible>
 							<animation effect="zoom" start="96" end="100" center="auto" time="100">Focus</animation>
 							<posx>.5</posx>
@@ -213,7 +213,7 @@
 							<bordersize>10</bordersize>
 							<aspectratio>stretch</aspectratio>
 						</control>
-						<control type="image">
+						<control type="largeimage">
 							<visible>Container.Content(episodes)</visible>
 							<animation effect="zoom" start="96" end="100" center="auto" time="100">Focus</animation>
 							<posx>.5</posx>
