@@ -1,5 +1,6 @@
 ﻿<window id="101">
 <defaultcontrol always="true">10</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
   
 <coordinates>
   <system>1</system>
@@ -8,8 +9,8 @@
 </coordinates>
 
 <controls>
-<!--
-  <include>DialogBack</include>
+
+<include>DialogBack</include>
 
   <control type="label">
     <include>DialogID</include>
@@ -64,7 +65,7 @@
     <onup>10</onup>
     <ondown>10</ondown>
   </control>
--->
+  
 </controls>
-
+  
 </window>
