@@ -3,101 +3,11 @@
 <allowoverlay>yes</allowoverlay>
   
 <controls>
-
-	<!--
-	<control type="image">
-		<description>Background Image</description>
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>1280</width>
-		<height>720</height>
-		<aspectratio>stretch</aspectratio>
-		<info>ListItem.Property(fanart_image)</info>
-	</control>
-	
-	<control type="image">
-		<visible>Container.content(episodes)</visible>
-		<description>Background Image</description>
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>1280</width>
-		<height>720</height>
-		<aspectratio>stretch</aspectratio>
-		<info>FanArt.Image</info>
-	</control>
-	
-
-  	<control type="label">
-    	<include>WindowID</include>
-    	<label>MyVideo.xml</label>
-  	</control>
-  
-	<control type="grouplist" id="9000">
-		<posx>10</posx>
-		<posy>40</posy>
-		<width>150</width>
-    	<height>480</height>
-		<itemgap>2</itemgap>
-    	<onleft>50</onleft>
-    	<onright>50</onright>
-		<onup>9000</onup>
-    	<ondown>9000</ondown>
-		<orientation>vertical</orientation>
-		<control type="button" id="2">
-			<description>View</description>
-      		<width>150</width>
-      		<textcolor>White</textcolor>
-      		<texturefocus border="1">ButtonFo.png</texturefocus>
-      		<texturenofocus border="1">ButtonNF.png</texturenofocus>
-		</control>
-		<control type="button" id="3">
-			<description>Sort</description>
-			<width>150</width>
-      		<textcolor>White</textcolor>
-      		<texturefocus border="1">ButtonFo.png</texturefocus>
-      		<texturenofocus border="1">ButtonNF.png</texturenofocus>
-		</control>
-		<control type="togglebutton" id="4">
-			<description>Ascending</description>
-      <width>150</width>
-      <label>$LOCALIZE[584]</label>
-      <altlabel>$LOCALIZE[585]</altlabel>
-			<textcolor>White</textcolor>
-      <texturenofocus border="1">ButtonNF.png</texturenofocus>
-      <texturefocus border="1">ButtonFo.png</texturefocus>
-      <alttexturenofocus border="1">ButtonNF.png</alttexturenofocus>
-      <alttexturefocus border="1">ButtonFo.png</alttexturefocus>
-		</control>
-    <control type="button" id="99">
-      <description>library</description>
-      <label>$LOCALIZE[14022]</label>
-      <width>150</width>
-      <textcolor>White</textcolor>
-      <texturefocus border="1">ButtonFo.png</texturefocus>
-      <texturenofocus border="1">ButtonNF.png</texturenofocus>
-      <onclick>replacewindow(myvideolibrary)</onclick>
-      <onclick>setfocus(99)</onclick>
-      <selected>window.isvisible(myvideolibrary)</selected>
-    </control>
-    <control type="button" id="7">
-      <description>stacking</description>
-      <width>150</width>
-      <textcolor>White</textcolor>
-      <texturefocus border="1">ButtonFo.png</texturefocus>
-      <texturenofocus border="1">ButtonNF.png</texturenofocus>
-    </control>
-	</control>
-    
-	<include>list</include>
--->
-
 	<include>background</include>
 
 	<include>views</include>
 
 	<include>header</include>
-
-
 </controls>
   
 </window>

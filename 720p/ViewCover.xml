@@ -1,28 +1,25 @@
 <includes>
 
 	<include name="cover_horizontal">
-		<posx>58</posx>
+		<posx>-26</posx>
 		<ondown>531</ondown>
-		<onright>-</onright>
 	</include>
 	<include name="cover_vertical">
-		<posx>45</posx>
-		<ondown>-</ondown>
-		<onright>531</onright>
+		<posx>-26</posx>
+		<ondown>101</ondown>
 	</include>
 	
 	<include name="cover_nav">
-		<visible>Control.IsVisible(53)</visible>
 		<control type="group">
+			<include>preferences_animation</include>
+			<include>no_header</include>
 			<visible>Control.IsVisible(53)</visible>
 			<posx>36</posx>
 			<posy>82</posy>
-			<include condition ="!Skin.HasSetting(container_bg_on)">center_bg</include>
-			<include condition ="!Skin.HasSetting(container_bg_on)">center_fg</include>						
+		
 		
 			<!-- Select List -->
 			<control type="group">
-
 				<control type="panel" id="53">
 					<animation type="Conditional" condition="Control.hasfocus(531) + Skin.HasSetting(horizontal_scroll)">
 						<effect type="slide" end="0,-20" center="auto" time="200"/>
@@ -33,46 +30,64 @@
 						+ !Window.IsActive(pictures)				
 					</visible>
 						
-					<viewtype label="Cover">panel</viewtype>
+					<viewtype label="Wall">panel</viewtype>
 					<include condition="Skin.HasSetting(horizontal_scroll)">orientation_horizontal</include>
 				 	<include condition="!Skin.HasSetting(horizontal_scroll)">orientation_vertical</include>
 
-					<width>1107</width>
-					<height>541</height>
-					<posy>6</posy>
+					<width>1260</width>
+					<height>605</height>
+					<posy>-19</posy>
 
 					
-					<onup>100</onup>
-					<onleft>100</onleft>
 					<include condition="Skin.HasSetting(horizontal_scroll)">cover_horizontal</include>
 				 	<include condition="!Skin.HasSetting(horizontal_scroll)">cover_vertical</include>
 
 					<pagecontrol>531</pagecontrol>
 
-					<itemlayout width="183" height="265">
-
+					<itemlayout width="210" height="288">
 						<control type="image">
-							<posx>11</posx>
-							<posy>12</posy>
-							<width>170</width>
-							<height>250</height>
+							<posx>19</posx>
+							<posy>29</posy>
+							<width>172</width>
+							<height>248</height>
 							<info>ListItem.thumb</info>
-							<texture diffuse="Zen/elements/cover/dvd/thumb_mask.png"></texture>
-							<bordertexture border="6">Zen/elements/cover/dvd/thumb_shadow.png</bordertexture>
-							<bordersize>6</bordersize>
+							<texture diffuse="cover/dvd/thumb_mask.png"></texture>
+							<bordertexture border="5">cover/dvd/thumb_shadow.png</bordertexture>
+							<bordersize>5</bordersize>
 						</control>
 					</itemlayout>
-					<focusedlayout width="193" height="265">
+					<focusedlayout width="210" height="308">
 						<control type="image">
-							<animation effect="zoom" end="120" center="auto" time="100">Focus</animation>
-							<posx>11</posx>
-							<posy>14</posy>
-							<width>170</width>
-							<height>250</height>
+							<animation effect="zoom" start="84" end="100" center="auto" time="100">Focus</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>308</height>
 							<info>ListItem.thumb</info>
-							<texture diffuse="Zen/elements/cover/dvd/thumb_mask.png"></texture>
-							<bordertexture border="11">Zen/elements/cover/dvd/thumb_focus_overlay2.png</bordertexture>
-							<bordersize>11</bordersize>
+							<texture diffuse="cover/dvd/thumb_mask_big2.png"></texture>
+							<bordertexture border="20">cover/dvd/thumb_focus_overlay_bottom.png</bordertexture>
+							<bordersize>10</bordersize>
+						</control>
+						<control type="image">
+							<animation effect="zoom" start="84" end="100" center="auto" time="100">Focus</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>308</height>
+							<info>ListItem.thumb</info>
+							<texture diffuse="cover/dvd/thumb_mask_big.png"></texture>
+							<bordersize>8</bordersize>
+						</control>
+						<control type="image">
+							<animation effect="zoom" start="84" end="100" center="auto" time="100">Focus</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>210</width>
+							<height>308</height>
+							<info>ListItem.thumb</info>
+							<texture diffuse="cover/dvd/thumb_mask_big2.png"></texture>
+							<bordertexture border="20">cover/dvd/thumb_focus_overlay_top.png</bordertexture>
+							<bordersize>10</bordersize>
 						</control>
 					</focusedlayout>
 				</control>
@@ -86,71 +101,68 @@
 						| Window.IsActive(pictures)
 					</visible>
 				
-					<viewtype label="Cover">panel</viewtype>
+					<viewtype label="Wall">panel</viewtype>
 					<include condition="Skin.HasSetting(horizontal_scroll)">orientation_horizontal</include>
 				 	<include condition="!Skin.HasSetting(horizontal_scroll)">orientation_vertical</include>
 
-					<width>1107</width>
-					<height>547</height>
-					
-					<posy>2</posy>
 
-					<onup>100</onup>
-					<onleft>100</onleft>
+					<width>1105</width>
+					<height>576</height>
+					<posy>-2</posy>
+					<posx>47</posx>
+					
 					<include condition="Skin.HasSetting(horizontal_scroll)">cover_horizontal</include>
 				 	<include condition="!Skin.HasSetting(horizontal_scroll)">cover_vertical</include>
 
 					<pagecontrol>531</pagecontrol>
 
-					<itemlayout width="183" height="177">
+					<itemlayout width="184" height="180">
 						<control type="image">
-							<posx>11</posx>
-							<posy>12</posy>
-							<width>170</width>
-							<height>170</height>
+							<posx>6</posx>
+							<posy>6</posy>
+							<width>172</width>
+							<height>172</height>
 							<info>ListItem.thumb</info>
-							<texture diffuse="Zen/elements/cover/album/thumb_mask.png"></texture>
-							<bordertexture border="6">Zen/elements/cover/album/thumb_shadow.png</bordertexture>
-							<bordersize>6</bordersize>
+							<texture diffuse="cover/album/thumb_mask.png"></texture>
+							<bordertexture border="4">cover/album/thumb_shadow.png</bordertexture>
+							<bordersize>4</bordersize>
 						</control>
 					</itemlayout>
-					<focusedlayout width="193" height="193">
+					<focusedlayout width="180" height="180">
 						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>193</width>
-							<height>193</height>
+							<animation effect="zoom" start="95" end="100" center="auto" time="100">Focus</animation>
+							<posx>3</posx>
+							<posy>3</posy>
+							<width>180</width>
+							<height>180</height>
 							<info>ListItem.thumb</info>
-							<texture diffuse="Zen/elements/cover/album/thumb_mask.png"></texture>
-							<bordertexture border="11">Zen/elements/cover/album/thumb_focus_overlay.png</bordertexture>
-							<bordersize>11</bordersize>
+							<texture diffuse="cover/album/thumb_mask_big2.png"></texture>
+							<bordertexture border="20">cover/album/thumb_focus_overlay_bottom.png</bordertexture>
+							<bordersize>10</bordersize>
+						</control>
+						<control type="image">
+							<animation effect="zoom" start="95" end="100" center="auto" time="100">Focus</animation>
+							<posx>3</posx>
+							<posy>3</posy>
+							<width>180</width>
+							<height>180</height>
+							<info>ListItem.thumb</info>
+							<texture diffuse="cover/album/thumb_mask_big.png"></texture>
+						</control>
+						<control type="image">
+							<animation effect="zoom" start="95" end="100" center="auto" time="100">Focus</animation>
+							<posx>3</posx>
+							<posy>3</posy>
+							<width>180</width>
+							<height>180</height>
+							<info>ListItem.thumb</info>
+							<texture diffuse="cover/album/thumb_mask_big2.png"></texture>
+							<bordertexture border="20">cover/album/thumb_focus_overlay_top.png</bordertexture>
+							<bordersize>10</bordersize>
 						</control>
 					</focusedlayout>
 				</control>
 
-			</control>
-			<!-- Scrollbar vertical -->
-			<control type="group">
-				<visible>!Skin.HasSetting(horizontal_scroll)</visible>
-				<posy>155</posy>
-				<posx>1165</posx>
-				<control type="image">
-					<width>26</width>
-					<height>267</height>
-					<posy>7</posy>
-					<texture>Zen/elements/common/scrollbar/scrollbar_bg.png</texture>
-				</control>
-				<control type="scrollbar" id="531">
-					<width>26</width>
-					<height>267</height>
-					<orientation>vertical</orientation>
-					<onup>-</onup>
-					<onleft>53</onleft>
-					<onright>53</onright>
-					<ondown>-</ondown>
-					<textureslidernib>Zen/elements/common/scrollbar/scrollbar_nib.png</textureslidernib>
-					<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
-				</control>
 			</control>
 			<!-- Scrollbar horizontal -->
 			<control type="group">
@@ -173,7 +185,7 @@
 					<onup>50</onup>
 					<onleft>501</onleft>
 					<onright>501</onright>
-					<ondown>-</ondown>
+					<ondown>101</ondown>
 					<textureslidernib>Zen/elements/common/scrollbar/scrollbar_nib.png</textureslidernib>
 					<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
 				</control>

@@ -5,95 +5,67 @@
 	<posx>0</posx>
 	<posy>0</posy>
 </coordinates>  
-  <allowoverlay>yes</allowoverlay>
-<!-- <posx>449.5</posx>
-<posy>51</posy> -->
+<allowoverlay>yes</allowoverlay>
+<animation type="WindowOpen" reversible="false">
+	<effect type="zoom" start="80" end="100" center="640,360" delay="200" easing="out" tween="back" time="300" />
+	<effect type="fade" delay="200" start="0" end="100" time="300" />
+</animation>
+<animation type="WindowClose" reversible="false">
+	<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+	<effect type="fade" start="100" end="0" time="300" />
+</animation>
 
 <controls>
-
 		<control type="image" id="999">
 			<description>background image</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<width>381</width>
-			<texture>Zen/panes/contextmenu/context_menu_bg_middle.png</texture>
+			<width>383</width>
+			<texture>contextmenu/context_menu_bg_middle.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
 
-		<control type="button" width="365" id="1000">
-			<description>Default Button</description>
-			<posx>8</posx>
+		<control type="button" width="373" id="1000">
+			<posx>5</posx>
 			<posy>0</posy>
-			<height>38</height>
-			<width>365</width>
-	    	<textcolor>7fe8e8db</textcolor>
+			<height>47</height>
+			<width>373</width>
+	    	<textcolor>ffe8e8db</textcolor>
 			<focusedcolor>ffe8e8db</focusedcolor>
-			<disabledcolor>7f7c7c72</disabledcolor>
-			<shadowcolor>7f000000</shadowcolor>
+			<disabledcolor>7fe8e8db</disabledcolor>
 	    	<alignx>center</alignx>
 			<aligny>top</aligny>
 			<font>Small</font>
 			<textoffsetx>12</textoffsetx>
 			<textoffsety>0</textoffsety>
 
-	    	<texturefocus>Zen/elements/contextmenu/highlight.png</texturefocus>
-	    	<texturenofocus>-</texturenofocus>		
+	    	<texturefocus>contextmenu/highlight.png</texturefocus>
+	    	<texturenofocus>contextmenu/divider.png</texturenofocus>		
 		</control>
 		
 		<!-- Top -->
 		<control type="group" 	id="997"> 
-			<width>381</width>
-			<height>37</height>
-			<posy>-26</posy>
+
 			<control type="image" >
 				<description>background top image</description>
-				<width>381</width>
-				<height>26</height>
+				<width>383</width>
+				<height>18</height>
+				<posy>-18</posy>
 				<posx>0</posx>
-				<texture>Zen/panes/contextmenu/context_menu_bg_top.png</texture>
+				<texture>contextmenu/context_menu_bg_top.png</texture>
 				<aspectratio>-</aspectratio>
-			</control>
-			<control type="image">
-				<description>background top image</description>
-				<width>381</width>
-				<height>37</height>
-				<posx>0</posx>
-				<texture>Zen/panes/contextmenu/context_menu_shadow_top.png</texture>
-			</control>
-			<control type="image">
-				<description>background top image</description>
-				<width>381</width>
-				<height>26</height>
-				<posx>0</posx>
-				<texture>Zen/panes/contextmenu/context_menu_outline_top.png</texture>
 			</control>
 		</control>
+		<!-- Bottom -->
 		<control type="group" id="998">
-			<width>381</width>
-			<height>37</height>
-			<posy>26</posy>
+			<width>383</width>
+			<height>18</height>
+			<posy>18</posy>
 			<control type="image">
 				<description>background bottom image</description>
-				<width>381</width>
-				<height>26</height>
-				<texture>Zen/panes/contextmenu/context_menu_bg_bottom.png</texture>
-				<aspectratio>-</aspectratio>
-			</control>
-			<control type="image">
-				<description>background bottom image</description>
-				<width>381</width>
-				<height>37</height>
-				<posx>0</posx>
-				<posy>-12</posy>
-				<texture>Zen/panes/contextmenu/context_menu_shadow_bottom.png</texture>
-				<aspectratio>-</aspectratio>
-			</control>
-			<control type="image">
-				<description>background bottom image</description>
-				<width>381</width>
-				<height>26</height>
-				<posx>0</posx>
-				<texture>Zen/panes/contextmenu/context_menu_outline_bottom.png</texture>
+				<width>383</width>
+				<height>18</height>
+				<texture>contextmenu/context_menu_bg_bottom.png</texture>
 				<aspectratio>-</aspectratio>
 			</control>
 		</control>

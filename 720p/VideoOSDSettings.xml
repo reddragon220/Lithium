@@ -3,60 +3,120 @@
   
 <coordinates>
   <system>1</system>
-  <posx>100</posx>
-  <posy>80</posy>
+  <posx>216</posx>
+  <posy>66</posy>
 </coordinates>
   
 <controls>
     
-<include>DialogBack</include>
-
-  <control type="label">
-	  <include>DialogID</include>
-	  <label>VideoOSDSettings.xml</label>
-  </control>
-  
-	<control type="label" id="2">
-		<description>Settings</description>
-		<posx>10</posx>
-		<posy>40</posy>
-		<width>500</width>
-		<align>left</align>
+	<control type="image">
+		<description>overlay image</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>848</width>
+		<height>506</height>
+		<texture>osd/video_settings_bg.png</texture>
+		<aspectratio>stretch</aspectratio>
 	</control>
   
-  <control type="grouplist" id="5">
-    <description>Control Area</description>
-    <posx>10</posx>
-    <posy>72</posy>
-    <width>500</width>
-    <height>350</height>
-    <itemgap>2</itemgap>
-    <orientation>vertical</orientation>
-    <pagecontrol>60</pagecontrol>
-    <onleft>28</onleft>
-    <onright>28</onright>
-    <onup>28</onup>
-    <ondown>28</ondown>
-  </control>
-  <control type="button" id="7">
-    <description>Button</description>
-    <texturefocus border="1">ButtonFo.png</texturefocus>
-    <texturenofocus border="1">ButtonNF.png</texturenofocus>
-  </control>
-  <control type="radiobutton" id="8">
-    <description>Radio Button</description>
-    <texturefocus border="1">ButtonFo.png</texturefocus>
-    <texturenofocus border="1">ButtonNF.png</texturenofocus>
-  </control>
-  <control type="spincontrolex" id="9">
-    <description>Spin Controlex</description>
-    <texturefocus border="1">ButtonFo.png</texturefocus>
-    <texturenofocus border="1">ButtonNF.png</texturenofocus>
-  </control>
+	<control type="grouplist" id="5">
+		<description>Control Area</description>
+		<posx>5</posx>
+		<posy>18</posy>
+		<width>838</width>
+		<height>506</height>
+		<itemgap>0</itemgap>
+		<orientation>vertical</orientation>
+		<pagecontrol>60</pagecontrol>
+		<onleft>28</onleft>
+		<onright>28</onright>
+		<onup>28</onup>
+		<ondown>28</ondown>
+	</control>
+	
+	<control type="button" id="7">
+		<description>Default Category Button</description>
+		<height>47</height>
+		<width>838</width>
+    	<textcolor>ffe8e8db</textcolor>
+		<focusedcolor>ffe8e8db</focusedcolor>
+		<disabledcolor>7fe8e8db</disabledcolor>
+		<shadowcolor>7f000000</shadowcolor>
+		<font>Small</font>
+		<align>left</align>
+    	<textoffsetx>14</textoffsetx>
+    	<texturefocus>osd/video_settings_highlight.png</texturefocus>
+		<texturenofocus>osd/video_settings_divider.png</texturenofocus>
+	</control>
+	<control type="radiobutton" id="8">
+		<description>Default Radio Button</description>
+		<height>47</height>
+		<width>838</width>
+    	<textcolor>ffe8e8db</textcolor>
+		<focusedcolor>ffe8e8db</focusedcolor>
+		<disabledcolor>7fe8e8db</disabledcolor>
+		<shadowcolor>7f000000</shadowcolor>
+    	<align>left</align>
+		<font>Small</font>
+		<align>left</align>
+    	<textoffsetx>14</textoffsetx>
+		
+    	<texturefocus>osd/video_settings_highlight.png</texturefocus>
+		<texturenofocus>osd/video_settings_divider.png</texturenofocus>
+		
+		<radiowidth>59</radiowidth>
+		<radioheight>39</radioheight>
+		<textureradiofocus>Zen/elements/settings/on_focused.png</textureradiofocus>
+		<textureradionofocus>Zen/elements/settings/off_focused.png</textureradionofocus>
+	</control>
+	<control type="spincontrolex" id="9">
+		<description>Default Spin Control Button</description>
+		<height>47</height>
+		<width>838</width>
+    	<textcolor>ffe8e8db</textcolor>
+		<focusedcolor>ffe8e8db</focusedcolor>
+		<disabledcolor>7fe8e8db</disabledcolor>
+		<shadowcolor>7f000000</shadowcolor>
+    	<align>left</align>
+		<font>Small</font>
+		<align>left</align>
+    	<textoffsetx>14</textoffsetx>
+		
+    	<texturefocus>osd/video_settings_highlight.png</texturefocus>
+		<texturenofocus>osd/video_settings_divider.png</texturenofocus>
+		
+		<spinposx>0</spinposx>
+		<spinwidth>31</spinwidth>
+		<spinheight>39</spinheight>
+		<textureup>Zen/elements/settings/spin_up_unfocus.png</textureup>
+		<textureupfocus>Zen/elements/settings/spin_up_focus.png</textureupfocus>
+		<texturedown>Zen/elements/settings/spin_down_unfocus.png</texturedown>
+		<texturedownfocus>Zen/elements/settings/spin_down_focus.png</texturedownfocus>
+	</control>
 	<control type="sliderex" id="10">
-		<description>Slider</description>
-    <texturefocus border="1">ButtonFo.png</texturefocus>
-    <texturenofocus border="1">ButtonNF.png</texturenofocus>
+		<description>Default Spin Control Button</description>
+		<height>47</height>
+		<width>838</width>
+    	<textcolor>ffe8e8db</textcolor>
+		<focusedcolor>ffe8e8db</focusedcolor>
+		<disabledcolor>7fe8e8db</disabledcolor>
+		<shadowcolor>7f000000</shadowcolor>
+    	<align>left</align>
+		<font>Small</font>
+		<align>left</align>
+    	<textoffsetx>14</textoffsetx>
+		
+    	<texturefocus>osd/video_settings_highlight.png</texturefocus>
+		<texturenofocus>osd/video_settings_divider.png</texturenofocus>
+		
+		<sliderwidth>212</sliderwidth>
+		<sliderheight>33</sliderheight>
+		<nibwidth>29</nibwidth>
+		<nibheight>33</nibheight>
+		<textureslidernib>settings/slider_nib_unfocus.png</textureslidernib>
+		<textureslidernibfocus>settings/slider_nib_focus.png</textureslidernibfocus>
+		<texturesliderbar>settings/slider_bg.png</texturesliderbar>
+      
 	</control>
   
 </controls>

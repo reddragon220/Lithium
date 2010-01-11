@@ -39,23 +39,50 @@
 	</include>
 	
 	<!-- My Includes -->
-	<include name="views">
-		<include condition="Skin.HasSetting(dark_bg)">light_bg</include>
-		<include condition="Skin.HasSetting(light_bg)">dark_bg</include>
-		
-
+	<!--
 		<include>thumb list</include>
 		<include>info thumb list</include>
-		
-		<include>fanart_nav</include>
-		<include>cover_nav</include>
-		<include>multiplex</include>
-		
 		<include>episodes</include>
 		<include>songs</include>
-
+		<include>multiplex</include>
 		
+	-->
+	<include name="views">
+		<control type="image">
+			<include>preferences_animation</include>
+			<visible>control.isvisible(52) | control.isvisible(53) | control.isvisible(58)</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>common/light_bg.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		
+		<include>direction_arrows</include>
+
 		<include>footer</include>
+		
+		<include>low_list</include>
+		<include>info_low_list</include>
+		<include>fanart_nav</include>
+		<include>cover_nav</include>
+		<include>show_case</include>
+
+
+
+		<include>preferences</include>
+		<-- Context Menu Fade --/>
+		<control type="image">
+			<visible>Window.IsVisible(106)</visible>
+			<description>overlay image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>contextmenu/bg_overlay.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
 	</include>
 	
 	
@@ -75,25 +102,26 @@
 	
 	
 	
-	<include name="header"> 
+	<include name="header">
 		<!-- Header -->
-		<control type="group" id="100">
-
+		<control type="group">
 			<defaultcontrol>106</defaultcontrol>		
 
 			<include condition="Skin.HasSetting(slide)">slide_on</include>
 			<include condition="!Skin.HasSetting(slide)">slide_off</include>
 
+			<include>preferences_animation</include>
+
 			<control type="image">
 				<width>1280</width>
 				<height>53</height>
 				<aspectratio>stretch</aspectratio>
-				<texture>Zen/panes/common/header_bg.png</texture>
+				<texture>common/header_bg.png</texture>
 			</control>
 
 
 			<!-- Weather -->
-		<!--		<control type="group" id="120">
+			<!--<control type="group" id="120">
 				<visible effect="fade" time="250">system.hasnetwork</visible>
 				<posx>965</posx>
 				<control type="image">
@@ -250,12 +278,12 @@
 			<control type="image">
 				<width>1280</width>
 				<height>53</height>
-				<texture>Zen/panes/common/header_outline.png</texture>
+				<texture>common/header_shadow.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 
 
-			<!-- Options Submenu -->
+			<!-- Options Submenu
 			<control type="group" id="106">
 				<defaultcontrol>107</defaultcontrol>
 				<visible allowhiddenfocus="true">Control.HasFocus(107) | Control.HasFocus(108) | Control.HasFocus(109) | Control.HasFocus(110) | Control.HasFocus(111)</visible>
@@ -493,7 +521,7 @@
 					<texture>Zen/panes/header/options_outline.png</texture>
 				</control>
 			</control>
-			
+		-->
 
 		</control>
 		<control type="image">
@@ -503,15 +531,17 @@
 			<aspectratio>stretch</aspectratio>
 		</control>
 	</include>
-
+	
 	<include name="footer">
 		<!-- Footer Info -->
 		<control type="group">
 			<posy>667</posy>
+			<include>preferences_animation</include>
+			
 			<control type="image">
 				<width>1280</width>
 				<height>53</height>
-				<texture>Zen/panes/common/header_bg.png</texture>
+				<texture>common/footer_bg.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 		
@@ -595,19 +625,6 @@
 				</control>
 
 			</control>
-			<!-- Right 	-->
-			<control type="group">
-				<posx>1073</posx>
-				<posy>11</posy>
-				<control type="image">
-					<visible>Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)</visible>
-					<width>172</width>
-					<height>30</height>
-					<info>ListItem.StarRating</info>
-					<aspectratio>keep</aspectratio>
-					<align>center</align>
-				</control>
-			</control>				
 			<!-- Left 	-->
 			<control type="label">
 				<visible>Container.Content(songs) | Container.Content(albums) | Container.Content(artists)</visible>
@@ -630,10 +647,6 @@
 					<scroll>false</scroll>
 					<align>right</align>
 				</control>
-				<control type=image>
-					<texture>Zen/elements/common/check.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
 				<control type=label>
 					<posx>80</posx>
 					<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
@@ -654,32 +667,362 @@
 			<control type="image">
 				<width>1280</width>
 				<height>53</height>
-				<texture>Zen/panes/common/footer_gradient.png</texture>
+				<texture>common/footer_shadow.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
-			<control type="image">
-				<width>1280</width>
-				<height>53</height>
-				<texture>Zen/panes/common/footer_outline.png</texture>
-				<aspectratio>stretch</aspectratio>
+
+			<!-- Left -->
+			<control type="group">
+				<visible>Container.Content(seasons) | Container.Content(tvshows) | Container.Content(musicvideos)</visible>
+				<width>172</width>
+				<posx>65</posx>
+				<posy>11</posy>
+
+				<control type=image>	
+					<texture>Zen/elements/common/check.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+
+				<control type=image>
+					<posx>83</posx>
+					<posy>-1</posy>
+					<texture>Zen/elements/common/x_mark.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
 			</control>
+			
+			<!-- Right 	-->
+			<control type="group">
+				<posx>1073</posx>
+				<posy>11</posy>
+				<control type="image">
+					<visible>Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)</visible>
+					<width>172</width>
+					<height>30</height>
+					<info>ListItem.StarRating</info>
+					<aspectratio>keep</aspectratio>
+					<align>center</align>
+				</control>
+			</control>				
+
 
 		</control>
-		
 	</include>
 	
+	<include name="preferences_animation">
+		<animation effect="slide" end="0,-119" time="200" condition="Control.HasFocus(101) | Control.HasFocus(102) | Control.HasFocus(103) | Control.HasFocus(104) | Control.HasFocus(105) | Control.HasFocus(106) | Control.HasFocus(107) | Control.HasFocus(108) | Control.HasFocus(109) | Control.HasFocus(1010) | Control.HasFocus(1011)
+			">Conditional</animation>
+	</include>
+	
+	<include name="preferences">
+		<control type="group">
+			<include>preferences_animation</include>	
+			<posy>720</posy>
+			<control type="image">
+				<width>1280</width>
+				<height>119</height>
+				<texture>common/prefs_bg.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="grouplist" id="101">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>119</height>
+				<orientation>horizontal</orientation>
+				<scrolltime>200</scrolltime>			
+				
+				<control type="button" id="102">
+					<description>View</description>
+					
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>170</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>					
+
+					<onup>setfocus(50)</onup>
+					<onleft>1011</onleft>
+					<onright>103</onright>
+					<onclick>Container.NextViewMode</onclick>
+
+					<label>$INFO[Container.Viewmode]</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>	
 
 
+					<texturenofocus></texturenofocus>
+					<texturefocus>common/prefs_highlight_big.png</texturefocus>					
 
+				</control>
+				<control type="button" id="103">
+					<description>Sort Method</description>
+					
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
 
-<!--
-	<animation type="Conditional" condition="true" pulse="true">
-		<effect type="zoom" start="100" end="130" center="auto" time="85000" tween="linear"/>
-		<effect type="slide" delay="85000" start="0,0" end="40,40" time="19000" tween="linear"/>		
-		<effect type="rotate" delay="104000" center="360,640" start="0" end="-4" time="19000" tween="linear" easing="inout"/>
-	</animation>
--->
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>					
 
+					<onleft>102</onleft>
+					<onright>104</onright>
+					<onup>setfocus(50)</onup>
+					<onclick>Container.NextSortMethod</onclick>
+
+					<label>$INFO[Container.SortMethod]</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>	
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>common/prefs_highlight.png</texturefocus>					
+				</control>
+				<control type="togglebutton" id="104">
+					<description>Sort Direction</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+					
+					<onleft>103</onleft>
+					<onright>105</onright>
+					<onup>setfocus(50)</onup>
+					<onclick>Container.SortDirection</onclick>
+
+					<description>SortDirection</description>
+					<label>584</label>
+		          	<altlabel>585</altlabel>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>	
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>common/prefs_highlight.png</texturefocus>					
+					<alttexturenofocus></alttexturenofocus>
+					<alttexturefocus>common/prefs_highlight.png</alttexturefocus>					
+				</control>
+				<control type="button" id="105">
+					<description>Flags</description>
+					
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+					
+					<onleft>104</onleft>
+					<onright>106</onright>
+					<onup>setfocus(50)</onup>
+					<onclick>XBMC.ActivateWindow(settings)</onclick>
+
+					<label>Flags</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>common/prefs_highlight.png</texturefocus>					
+				</control>	
+				<control type="togglebutton" id="106">
+					<description>Sort Direction</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+
+					<onleft>105</onleft>
+					<onright>107</onright>
+					<onup>setfocus(50)</onup>
+					<onclick>Skin.ToggleSetting(fanart)</onclick>	
+					<onclick>XBMC.ReloadSkin()</onclick>
+					
+					<description>SortDirection</description>
+					<label>Fanart</label>
+		          	<altlabel>Fanart</altlabel>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>	
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>common/prefs_highlight.png</texturefocus>					
+					<alttexturenofocus></alttexturenofocus>
+					<alttexturefocus>common/prefs_highlight.png</alttexturefocus>					
+				</control>
+				<control type="button" id="107">
+					<description>Search</description>
+					
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+					
+					<onleft>106</onleft>
+					<onright>108</onright>
+					<onup>setfocus(50)</onup>
+
+					<label>Search</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>common/prefs_highlight.png</texturefocus>					
+				</control>	
+				<control type="button" id="108">
+					<description>Library</description>
+					
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+
+					<onleft>107</onleft>
+					<onright>109</onright>
+					<onup>setfocus(50)</onup>
+
+					<label>Library</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>common/prefs_highlight.png</texturefocus>					
+				</control>	
+				<control type="button" id="109">
+					<visible>Skin.HasSetting(developer)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+
+					<onleft>108</onleft>
+					<onright>1010 </onright>
+					<onup>setfocus(50)</onup>
+					<onclick>XBMC.ActivateWindow(settings)</onclick>
+					
+
+					<description>Settings</description>
+					<label>Preferences</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>common/prefs_highlight.png</texturefocus>					
+				</control>	
+				<control type="button"id="1010">
+					<visible>Skin.HasSetting(developer)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+					
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+
+					<onleft>109</onleft>
+					<onright>1011</onright>
+					<onup>setfocus(50)</onup>
+					<onclick>XBMC.ReloadSkin()</onclick>
+
+					<description>Refresh</description>
+					<label>31009</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>common/prefs_highlight.png</texturefocus>					
+				</control>
+				<control type="button" id="1011">
+					<description>Free Memory</description>
+					
+					<visible>Skin.HasSetting(developer)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+					
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+
+					<onleft>1010</onleft>
+					<onright>102</onright>
+					<onup>setfocus(50)</onup>
+					
+					<label>$INFO[System.FreeMemory]</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>common/prefs_highlight.png</texturefocus>					
+				</control>
+
+				
+			</control>
+			
+			<control type="image">
+				<width>1280</width>
+				<height>119</height>
+				<texture>common/prefs_shadow.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		</control>
+	</include>
+	
 	<!-- Background Items -->
 	<include name="bg_animation">
 		<animation type="Conditional" condition="true" pulse="true">
@@ -687,7 +1030,7 @@
 			<effect type="zoom" delay="19000" start="130" end="100" center="auto" time="85000" tween="linear"/>		
 		</animation>
 	</include>
-	
+
 	<include name="fanart">
 		<control type="largeimage">
 			<visible>!Container.content(episodes) | !Container.content(seasons)</visible>
@@ -699,8 +1042,6 @@
 			<aspectratio>stretch</aspectratio>
 			<info>ListItem.Property(fanart_image)</info>
 			<fadetime>200</fadetime>
-			
-			<include condition="!Skin.HasSetting(ken_burns)">bg_animation</include>
 		</control>
 		
 		<control type="largeimage">
@@ -713,26 +1054,26 @@
 			<aspectratio>stretch</aspectratio>
 			<info>FanArt.Image</info>
       		<fadetime>200</fadetime>
-
-			<include condition="!Skin.HasSetting(ken_burns)">bg_animation</include>
 		</control>
 	</include>
 
 	<include name="background">
-		<control type="largeimage">
-			<visible>IsEmpty(ListItem.Property(fanart_image)) | Skin.HasSetting(fanart)</visible>
-			<description>Background Image</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>1280</width>
-			<height>720</height>
-			<aspectratio>stretch</aspectratio>
-			<texture>$INFO[Skin.String(backgroundimage)]</texture>
-			<fadetime>200</fadetime>
-			
-			<include condition="!Skin.HasSetting(ken_burns)">bg_animation</include>
-		</control>
-		
-		<include condition="!Skin.HasSetting(fanart)">fanart</include>
+			<control type="group">
+				<include condition="!Skin.HasSetting(ken_burns)">bg_animation</include>
+				<include>preferences_animation</include>
+				<animation effect="slide" end="0,53" time="0" condition="!Skin.HasSetting(slide) + !Window.isActive(Home) + !Window.isActive(settings) + !Window.isActive(56) + !Window.isActive(12) + !Window.isActive(13) + !Window.isActive(14) + !Window.isActive(15) + !Window.isActive(16) + !Window.isActive(17) + !Window.isActive(18) + !Window.isActive(19)">Conditional</animation>
+				<control type="largeimage">
+					<visible>IsEmpty(ListItem.Property(fanart_image)) | Skin.HasSetting(fanart)</visible>
+					<description>Background Image</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<height>720</height>
+					<aspectratio>stretch</aspectratio>
+					<texture>$INFO[Skin.String(backgroundimage)]</texture>
+					<fadetime>200</fadetime>
+				</control>
+				<include condition="!Skin.HasSetting(fanart)">fanart</include>
+			</control>
 	</include>
 </includes>

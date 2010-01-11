@@ -7,18 +7,17 @@
 	<include name="song_vertical">
 		<posx>240</posx>
 		
-		<ondown>-</ondown>
+		<ondown>101</ondown>
 		<onright>571</onright>
 		
 	</include>
 	<include name="songs">
-			<visible>Control.IsVisible(57)</visible>
-
 			<control type="group">
+				<include>preferences_animation</include>
+				
 				<visible>Control.IsVisible(57)</visible>
 				<posx>36</posx>
 				<posy>82</posy>
-				<include condition ="!Skin.HasSetting(container_bg_on)">center_bg</include>
 				
 				<control type="label">
 					<posx>18</posx>
@@ -240,7 +239,7 @@
 						<onup>-</onup>
 						<onleft>56</onleft>
 						<onright>56</onright>
-						<ondown>-</ondown>
+						<ondown>101</ondown>
 						<textureslidernib>Zen/elements/common/scrollbar/scrollbar_nib.png</textureslidernib>
 						<textureslidernibfocus>Zen/elements/common/scrollbar/scrollbar_nib_focus.png</textureslidernibfocus>
 					</control>
@@ -248,7 +247,6 @@
 
 				<include condition ="!Skin.HasSetting(container_bg_on)">center_fg</include>
 			</control>
-			<!-- Footer Info -->
 	</include>
 
 </includes>

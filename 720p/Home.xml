@@ -7,28 +7,17 @@
 
 		<include>background</include>
 
-<!--
-	<animation type="Conditional" condition="Window.IsVisible(Home)" reversible="true">
-		<effect type="zoom" start="100" end="130" center="auto" time="85000" tween="linear"/>
-		<effect type="slide" delay="85000" start="0,0" end="40,40" time="19000" tween="linear"/>		
-		<effect type="rotate" delay="104000" center="360,640" start="0" end="-4" time="19000" tween="linear" easing="inout"/>
-	</animation>	
--->
 
-
-
-		<include>header</include>
-	
 		<!-- Main Menu -->
   		<control type="group" id="50">
 			<posx>0</posx>
-			<posy>568</posy>
+			<posy>500</posy>
 			<width>1280</width>
 			<defaultcontrol>2</defaultcontrol>		
 			<control type="image">
 				<width>1280</width>
-				<height>121</height>
-				<texture>Zen/panes/home/home_bg.png</texture>
+				<height>131</height>
+				<texture>home/bg.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 			
@@ -36,7 +25,7 @@
 			<control type="wraplist" id="2">
 				<description>Home Wraplist</description>
 				<posx>0</posx>
-				<posy>7</posy>
+				<posy>12</posy>
 				<width>1280</width>
 				<height>85</height>
 				<aligny>center</aligny>
@@ -47,17 +36,27 @@
 
 
 				<focusposition>1</focusposition>        <!-- Highlighted Item list position-->
-				<scrolltime>200</scrolltime>
-				
+				<scrolltime>200</scrolltime>							
+			    
 				<!-- Unselected Items -->
 				<itemlayout height="56" width="500"> 
 					<control type="label">
 						<posx>140</posx>
-						<posy>16</posy>
+						<posy>15</posy>
 						<width>500</width>  			<!-- can't have height defined in the block -->
 						<info>ListItem.Label</info> 
 						<font>Menu</font>
-					    <shadowcolor>5f000000</shadowcolor>								
+						<textcolor>5f000000</textcolor> <!-- First two are alpha transparency-->
+														<!-- last 6 are regular  rrggbb      -->
+						<scroll>false</scroll>          
+						<align>center</align>
+					</control>
+					<control type="label">
+						<posx>140</posx>
+						<posy>17</posy>
+						<width>500</width>  			<!-- can't have height defined in the block -->
+						<info>ListItem.Label</info> 
+						<font>Menu</font>
 						<textcolor>7fffffff</textcolor> <!-- First two are alpha transparency-->
 														<!-- last 6 are regular  rrggbb      -->
 						<scroll>false</scroll>          
@@ -67,15 +66,22 @@
 
 				<!-- Selected Item -->
 				<focusedlayout height="56" width="500">
-					<!-- Gradient -->
+					<control type="label">
+						<posx>142</posx>
+						<posy>15</posy>
+						<width>500</width>
+						<info>ListItem.Label</info>
+						<font>Menu</font>
+						<textcolor>7f000000</textcolor>
+						<align>center</align>
+					</control>
 					<control type="label">
 						<posx>140</posx>
-						<posy>16</posy>
+						<posy>17</posy>
 						<width>500</width>
 						<info>ListItem.Label</info>
 						<font>Menu</font>
 						<textcolor>ffe8e8db</textcolor>
-						<shadowcolor>7f000000</shadowcolor>								
 						<align>center</align>
 					</control>
 				</focusedlayout>
@@ -138,7 +144,7 @@
 					</item>
 					<item id="9">
 						<description>Quit</description>
-						<label>Quit</label>
+						<label>31012</label>
 						<onclick>ShutDown</onclick>
 					</item>
 					<item id="10">
@@ -192,8 +198,8 @@
 
 			<!-- RSS Feed -->
 			<control type="group">
-				<posx>10</posx>
-				<posy>89</posy>
+				<posx>0</posx>
+				<posy>96</posy>
 				<visible>
 					!Window.IsVisible(134) + !Control.hasfocus(4) + !Control.hasfocus(5) + !Control.hasfocus(6)
 					+ !Control.hasfocus(7) + !Control.hasfocus(8)
@@ -202,7 +208,7 @@
 					<description>RSS Feed</description>
 					<posx>0</posx>
 					<posy>-8</posy>
-					<width>1260</width>
+					<width>1280</width>
 					<height>50</height>
 					<font>RSS</font>
 					<urlset>1</urlset>
@@ -212,16 +218,13 @@
 				</control>
 			</control>
 
-
-
-
 			<!-- TV Sublist -->
 			<control type="list" id="4">
 				<visible allowhiddenfocus="true">Control.hasfocus(4)</visible>
 
 				<description>TV sublist</description>
 				<posx>315</posx>
-				<posy>83</posy>
+				<posy>91</posy>
 				<width>650</width>
 				<height>89</height>
 				<orientation>horizontal</orientation>
@@ -241,8 +244,7 @@
 						<width>130</width>  			<!-- can't have height defined in the block -->
 						<info>ListItem.Label</info> 
 						<font>RSS</font>
-					    <shadowcolor>5f000000</shadowcolor>								
-						<textcolor>7fffffff</textcolor> <!-- First two are alpha transparency-->
+						<textcolor>7fe8e8db</textcolor> <!-- First two are alpha transparency-->
 														<!-- last 6 are regular  rrggbb      -->
 						<scroll>false</scroll>   
 						<align>center</align>      
@@ -253,11 +255,19 @@
 				<focusedlayout width="130">
 					<control type="label">
 						<posx>65</posx>
+						<posy>-2</posy>
+						<width>130</width>
+						<info>ListItem.Label</info>
+						<font>RSS</font>
+						<textcolor>5f000000</textcolor>
+						<align>center</align>							
+					</control>
+					<control type="label">
+						<posx>65</posx>
 						<width>130</width>
 						<info>ListItem.Label</info>
 						<font>RSS</font>
 						<textcolor>ffe8e8db</textcolor>
-						<shadowcolor>7f000000</shadowcolor>
 						<align>center</align>							
 					</control>
 				</focusedlayout>
@@ -293,14 +303,13 @@
 
 			</control>
 
-
 			<!-- Movie Sublist -->
 			<control type="list" id="5">
 				<visible allowhiddenfocus="true">Control.hasfocus(5)</visible>
 
 				<description>Movie sublist</description>
 				<posx>250</posx>
-				<posy>83</posy>
+				<posy>91</posy>
 				<width>780</width>
 				<height>89</height>
 				<orientation>horizontal</orientation>
@@ -316,26 +325,31 @@
 				<itemlayout width="130">
 					<control type="label">
 						<posx>65</posx>
-						<width>130</width>  			<!-- can't have height defined in the block -->
-						<info>ListItem.Label</info> 
+						<width>130</width>
+						<info>ListItem.Label</info>
 						<font>RSS</font>
-					    <shadowcolor>5f000000</shadowcolor>								
-						<textcolor>7fffffff</textcolor> <!-- First two are alpha transparency-->
-														<!-- last 6 are regular  rrggbb      -->
-						<scroll>false</scroll>
-												<align>center</align>
+						<textcolor>7fe8e8db</textcolor>
+						<align>center</align>
 					</control>
 				</itemlayout>
 
 				<!-- Selected Item -->
 				<focusedlayout width="130">
 					<control type="label">
-							<posx>65</posx>
+						<posx>65</posx>
+						<posy>-2</posy>
+						<width>130</width>
+						<info>ListItem.Label</info>
+						<font>RSS</font>
+						<textcolor>5f000000</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<posx>65</posx>
 						<width>130</width>
 						<info>ListItem.Label</info>
 						<font>RSS</font>
 						<textcolor>ffe8e8db</textcolor>
-						<shadowcolor>7f000000</shadowcolor>
 						<align>center</align>
 					</control>
 				</focusedlayout>
@@ -382,7 +396,7 @@
 
 				<description>Music sublist</description>
 				<posx>250</posx>
-				<posy>83</posy>
+				<posy>91</posy>
 				<width>780</width>
 				<height>89</height>
 				<orientation>horizontal</orientation>
@@ -398,26 +412,31 @@
 				<itemlayout width="130">
 					<control type="label">
 						<posx>65</posx>
-						<width>130</width>  			<!-- can't have height defined in the block -->
-						<info>ListItem.Label</info> 
+						<width>130</width>
+						<info>ListItem.Label</info>
 						<font>RSS</font>
-					    <shadowcolor>5f000000</shadowcolor>								
-						<textcolor>7fffffff</textcolor> <!-- First two are alpha transparency-->
-														<!-- last 6 are regular  rrggbb      -->
-						<scroll>false</scroll>
-												<align>center</align>
+						<textcolor>7fe8e8db</textcolor>
+						<align>center</align>
 					</control>
 				</itemlayout>
 
 				<!-- Selected Item -->
 				<focusedlayout width="130">
 					<control type="label">
-							<posx>65</posx>
+						<posx>65</posx>
+						<posy>-2</posy>
+						<width>130</width>
+						<info>ListItem.Label</info>
+						<font>RSS</font>
+						<textcolor>5f000000</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<posx>65</posx>
 						<width>130</width>
 						<info>ListItem.Label</info>
 						<font>RSS</font>
 						<textcolor>ffe8e8db</textcolor>
-						<shadowcolor>7f000000</shadowcolor>
 						<align>center</align>
 					</control>
 				</focusedlayout>
@@ -464,7 +483,7 @@
 
 				<description>Preferences sublist</description>
 				<posx>400</posx>
-				<posy>83</posy>
+				<posy>91</posy>
 				<width>480</width>
 				<height>89</height>
 				<orientation>horizontal</orientation>
@@ -472,34 +491,37 @@
 
 				<onup>setfocus(2)</onup>
 
-
-
 				<scrolltime>200</scrolltime>
 
 				<!-- Unselected Items -->
 				<itemlayout width="160">
 					<control type="label">
-						<posx>74</posx>
-						<width>148</width>  			<!-- can't have height defined in the block -->
-						<info>ListItem.Label</info> 
+						<posx>80</posx>
+						<width>160</width>
+						<info>ListItem.Label</info>
 						<font>RSS</font>
-					    <shadowcolor>5f000000</shadowcolor>								
-						<textcolor>7fffffff</textcolor> <!-- First two are alpha transparency-->
-														<!-- last 6 are regular  rrggbb      -->
-						<scroll>false</scroll>
-												<align>center</align>
+						<textcolor>7fe8e8db</textcolor>
+						<align>center</align>
 					</control>
 				</itemlayout>
 
 				<!-- Selected Item -->
 				<focusedlayout width="160">
 					<control type="label">
-						<posx>74</posx>
-						<width>148</width>
+						<posx>80</posx>
+						<posy>-2</posy>
+						<width>160</width>
+						<info>ListItem.Label</info>
+						<font>RSS</font>
+						<textcolor>5f000000</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<posx>80</posx>
+						<width>160</width>
 						<info>ListItem.Label</info>
 						<font>RSS</font>
 						<textcolor>ffe8e8db</textcolor>
-						<shadowcolor>7f000000</shadowcolor>
 						<align>center</align>
 					</control>
 				</focusedlayout>
@@ -525,14 +547,13 @@
 
 			</control>
 			
-
 			<!-- Preferences Sublist -->
 			<control type="list" id="8">
 				<visible allowhiddenfocus="true">Control.hasfocus(8)</visible>
 
 				<description>Preferences sublist</description>
 				<posx>48</posx>
-				<posy>83</posy>
+				<posy>91</posy>
 				<width>1184</width>
 				<height>89</height>
 				<orientation>horizontal</orientation>
@@ -547,14 +568,11 @@
 				<itemlayout width="148">
 					<control type="label">
 						<posx>74</posx>
-						<width>148</width>  			<!-- can't have height defined in the block -->
-						<info>ListItem.Label</info> 
+						<width>148</width>
+						<info>ListItem.Label</info>
 						<font>RSS</font>
-					    <shadowcolor>5f000000</shadowcolor>								
-						<textcolor>7fffffff</textcolor> <!-- First two are alpha transparency-->
-														<!-- last 6 are regular  rrggbb      -->
-						<scroll>false</scroll>
-												<align>center</align>
+						<textcolor>7fe8e8db</textcolor>
+						<align>center</align>
 					</control>
 				</itemlayout>
 
@@ -562,11 +580,19 @@
 				<focusedlayout width="148">
 					<control type="label">
 						<posx>74</posx>
+						<posy>-2</posy>
+						<width>148</width>
+						<info>ListItem.Label</info>
+						<font>RSS</font>
+						<textcolor>5f000000</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<posx>74</posx>
 						<width>148</width>
 						<info>ListItem.Label</info>
 						<font>RSS</font>
 						<textcolor>ffe8e8db</textcolor>
-						<shadowcolor>7f000000</shadowcolor>
 						<align>center</align>
 					</control>
 				</focusedlayout>
@@ -617,102 +643,20 @@
 
 			</control>
 
-
-
-
 			<control type="image">
 				<width>1280</width>
-				<height>121</height>
-				<texture>Zen/panes/home/home_shadow.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="image">
-				<width>1280</width>
-				<height>121</height>
-				<texture>Zen/panes/home/home_outline.png</texture>
+				<height>131</height>
+				<texture>home/shadow.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
 		</control>
 
-
-
-
-
-		<!-- Favorites Icon -->
-		<!--
-		<control type="button" id="3">
-			<visible>Container(2).hasfocus(11)</visible>
-			<posx>583</posx>
-			<posy>415</posy>
-			<width>50</width>
-			<height>58</height>
-			
-			<onup>50</onup>
-			<ondown>xbmc.activatewindow(favourites)</ondown>
-			<onleft>3</onleft>
-			<onright>4</onright>
-			
-			<onclick>xbmc.activatewindow(favourites)</onclick>		
-			<visible>Container(2).hasfocus(11) + !Window.IsVisible(134)</visible>
-			
-			<description>Favorites</description>
-			<texturenofocus>Zen/panes/common/toolbox/heart.png</texturenofocus>
-			<texturefocus>Zen/panes/common/toolbox/heart.png</texturefocus>
-			<aspectratio>keep</aspectratio>
-		</control>
--->
-		<!-- Search Icon -->
-		<!--
-		<control type="button" id="4">
-			<visible>Container(2).hasfocus(11)</visible>
-			<posx>647</posx>
-			<posy>415</posy>
-			<width>50</width>
-			<height>58</height>
-			
-			<onup>1</onup>
-			<onleft>3</onleft>
-			<onright>4</onright>
-			<ondown>13</ondown>		
-			<visible>Container(2).hasfocus(11) + !Window.IsVisible(134)</visible>
-			
-			<texturenofocus>Zen/panes/common/toolbox/magnifying_glass.png</texturenofocus>
-			<texturefocus>Zen/panes/common/toolbox/magnifying_glass.png</texturefocus>
-			<aspectratio>keep</aspectratio>
-		</control>
--->
-  		<!-- RSS Feed -->
-<!--
-		<control type="group">
-			<posx>41</posx>
-			<posy>650</posy>
-			<visible>!Window.IsVisible(134)</visible>
-			<control type="image">
-				<width>1200</width>
-				<height>52</height>
-				<texture>glass/common/lower_pane_bg.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="rss">
-				<description>RSS Feed</description>
-				<posx>2</posx>
-				<posy>-8</posy>
-				<width>1196</width>
-				<height>50</height>
-				<font>Fanart_Title</font>
-				<urlset>1</urlset>
-				<titlecolor>ffffa533</titlecolor>
-				<headlinecolor>White</headlinecolor>
-				<textcolor>White</textcolor>
-			</control>
-			<control type="image">
-				<width>1200</width>
-				<height>52</height>
-				<texture>glass/common/lower_pane_gradient.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-		</control>
--->
+	<control type="image">
+		<width>1280</width>
+		<height>720</height>
+		<texture>Zen/elements/common/corners.png</texture>
+		<aspectratio>stretch</aspectratio>
+	</control>
 
 	</controls>
 </window>

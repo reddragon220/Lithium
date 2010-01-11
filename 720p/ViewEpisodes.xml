@@ -1,19 +1,19 @@
 <includes>	
 	<include name="episode_horizontal">
 		<posx>387</posx>
-		<ondown>561</ondown>
+		<ondown>101</ondown>
 		<onright>-</onright>
 	</include>
 	<include name="episode_vertical">
 		<posx>374</posx>
-		<ondown>-</ondown>
+		<ondown>101</ondown>
 		<onright>561</onright>
 	</include>
 	
 	<include name="episodes">
-			<visible>Control.IsVisible(56)</visible>
-
 			<control type="group">
+				<include>preferences_animation</include>
+				
 				<visible>Control.IsVisible(56)</visible>
 				<posx>36</posx>
 				<posy>82</posy>
@@ -267,6 +267,5 @@
 
 				<include condition ="!Skin.HasSetting(container_bg_on)">center_fg</include>
 			</control>
-			<!-- Footer Info -->
 	</include>
 </includes>
