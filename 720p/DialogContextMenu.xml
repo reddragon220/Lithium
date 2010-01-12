@@ -1,21 +1,23 @@
 ﻿<window id="106">
-<defaultcontrol>1000</defaultcontrol>
-<coordinates>
-	<system>1</system>
-	<posx>0</posx>
-	<posy>0</posy>
-</coordinates>  
-<allowoverlay>yes</allowoverlay>
-<animation type="WindowOpen" reversible="false">
-	<effect type="zoom" start="80" end="100" center="640,360" delay="200" easing="out" tween="back" time="300" />
-	<effect type="fade" delay="200" start="0" end="100" time="300" />
-</animation>
-<animation type="WindowClose" reversible="false">
-	<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-	<effect type="fade" start="100" end="0" time="300" />
-</animation>
+	<defaultcontrol>1000</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>  
+  	<allowoverlay>yes</allowoverlay>
+
+	<animation type="WindowOpen" reversible="false">
+		<effect type="zoom" start="80" end="100" center="640,360" delay="200" easing="out" tween="back" time="300" />
+		<effect type="fade" delay="200" start="0" end="100" time="300" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+		<effect type="fade" start="100" end="0" time="300" />
+	</animation>
 
 <controls>
+
 		<control type="image" id="999">
 			<description>background image</description>
 			<posx>0</posx>
@@ -24,7 +26,7 @@
 			<texture>contextmenu/context_menu_bg_middle.png</texture>
 			<aspectratio>stretch</aspectratio>
 		</control>
-
+	
 		<control type="button" width="373" id="1000">
 			<posx>5</posx>
 			<posy>0</posy>
@@ -43,20 +45,16 @@
 	    	<texturenofocus>contextmenu/divider.png</texturenofocus>		
 		</control>
 		
-		<!-- Top -->
-		<control type="group" 	id="997"> 
-
-			<control type="image" >
-				<description>background top image</description>
-				<width>383</width>
-				<height>18</height>
-				<posy>-18</posy>
-				<posx>0</posx>
-				<texture>contextmenu/context_menu_bg_top.png</texture>
-				<aspectratio>-</aspectratio>
-			</control>
+		<control type="image" id="997">
+			<description>background top image</description>
+			<width>383</width>
+			<height>18</height>
+			<posy>-18</posy>
+			<posx>0</posx>
+			<texture>contextmenu/context_menu_bg_top.png</texture>
+			<aspectratio>-</aspectratio>
 		</control>
-		<!-- Bottom -->
+
 		<control type="group" id="998">
 			<width>383</width>
 			<height>18</height>
@@ -68,8 +66,6 @@
 				<texture>contextmenu/context_menu_bg_bottom.png</texture>
 				<aspectratio>-</aspectratio>
 			</control>
-		</control>
-
-</controls>
+		</control></controls>
 
 </window>
