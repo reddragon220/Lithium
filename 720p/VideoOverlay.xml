@@ -8,38 +8,39 @@
 </coordinates>
 
 <controls>
+	<control type="group">
+		<visible>Player.HasAudio</visible>
+		<include>DialogBack</include>
 
-  <include>DialogBack</include>
+		<control type="label">
+			<include>DialogID</include>
+			<label>VideoOverlay.xml</label>
+		</control>
 
-  <control type="label">
-    <include>DialogID</include>
-    <label>VideoOverlay.xml</label>
-  </control>
+		<control type="videowindow" id="1">
+			<posx>320</posx>
+			<posy>90</posy>
+			<width>390</width>
+			<height>390</height>
+			<visible>Window.IsActive(0)</visible>
+		</control>
 
-  <control type="videowindow" id="1">
-    <posx>320</posx>
-    <posy>90</posy>
-    <width>390</width>
-    <height>390</height>
-    <visible>Window.IsActive(0)</visible>
-  </control>
-  
-	<control type="label" id="0">
-		<description>Play Time</description>
-		<posx>10</posx>
-		<posy>40</posy>
-		<label>-</label>
-		<info>VideoPlayer.Time</info>
+		<control type="label" id="0">
+			<description>Play Time</description>
+			<posx>10</posx>
+			<posy>40</posy>
+			<label>-</label>
+			<info>VideoPlayer.Time</info>
+		</control>
+		<control type="label" id="0">
+			<description>Album Info</description>
+			<posx>10</posx>
+			<posy>72</posy>
+			<width>500</width>
+			<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, | ]$INFO[VideoPlayer.Director, | ]$INFO[VideoPlayer.Genre, | ]</label>
+			<scroll>true</scroll>
+		</control>
 	</control>
-	<control type="label" id="0">
-		<description>Album Info</description>
-		<posx>10</posx>
-		<posy>72</posy>
-    <width>500</width>
-		<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, | ]$INFO[VideoPlayer.Director, | ]$INFO[VideoPlayer.Genre, | ]</label>
-		<scroll>true</scroll>
-	</control>
-  
 </controls>
 
 </window>
