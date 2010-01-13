@@ -12,30 +12,6 @@
 	<include name="low_list_label_horizontal_position">
 		<posx>63</posx>
 	</include>
-	<include name="low_list_rating_overlay_vertical_position">
-		<posx>963</posx>
-	</include>
-	<include name="low_list_rating_overlay_horizontal_position">
-		<posx>1011</posx>
-	</include>
-	<include name="low_list_rating_vertical_position">
-		<posx>645</posx>
-	</include>
-	<include name="low_list_rating_horizontal_position">
-		<posx>693</posx>
-	</include>
-	<include name="low_list_highlight_overlay_vertical_position">
-		<posx>641</posx>
-	</include>
-	<include name="low_list_highlight_overlay_horizontal_position">
-		<posx>689</posx>
-	</include>
-	<include name="low_list_watched_overlay_vertical_position">
-		<posx>830</posx>
-	</include>
-	<include name="low_list_watched_overlay_horizontal_position">
-		<posx>878</posx>
-	</include>
 
 
 	<include name="low_list">
@@ -57,8 +33,7 @@
 				<visible>
 					container.content(tvshows) | container.content(movies) | container.content(episodes) | container.content(songs)
 				</visible>
-				<include condition="Skin.HasSetting(low_list_horizontal_scroll)">low_list_rating_overlay_horizontal_position</include>
-				<include condition="!Skin.HasSetting(low_list_horizontal_scroll)">low_list_rating_overlay_vertical_position</include>
+				<posx>1011</posx>
 				<posy>1</posy>
 				<width>177</width>
 				<height>247</height>
@@ -99,8 +74,7 @@
 					<itemlayout width="960" height="50">
 						<control type="image">
 							<visible>Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)</visible>
-							<include condition="Skin.HasSetting(low_list_horizontal_scroll)">low_list_rating_horizontal_position</include>
-						 	<include condition="!Skin.HasSetting(low_list_horizontal_scroll)">low_list_rating_vertical_position</include>
+							<posx>693</posx>
 							<posy>8</posy>
 							<width>172</width>
 							<height>30</height>
@@ -157,8 +131,8 @@
 							<texture>lowlist/divider.png</texture>
 						</control>
 						<control type="image">
-							<include condition="Skin.HasSetting(low_list_horizontal_scroll)">low_list_watched_overlay_horizontal_position</include>
-							<include condition="!Skin.HasSetting(low_list_horizontal_scroll)">low_list_watched_overlay_vertical_position</include>							<posy>9</posy>
+							<posx>878</posx>
+							<posy>9</posy>
 							<width>32</width>
 							<height>30</height>
 							<info>ListItem.Overlay</info>
@@ -175,8 +149,7 @@
 							<visible>
 								container.content(tvshows) | container.content(movies) | container.content(episodes) | container.content(songs)
 							</visible>
-							<include condition="Skin.HasSetting(low_list_horizontal_scroll)">low_list_highlight_overlay_horizontal_position</include>
-						 	<include condition="!Skin.HasSetting(low_list_horizontal_scroll)">low_list_highlight_overlay_vertical_position</include>							
+							<posx>689</posx>						
 							<posy>0</posy>
 							<width>181</width>
 							<height>48</height>
@@ -186,8 +159,8 @@
 							<visible>
 								container.content(tvshows) | container.content(movies) | container.content(episodes) | container.content(songs)
 							</visible>
-							<include condition="Skin.HasSetting(low_list_horizontal_scroll)">low_list_rating_horizontal_position</include>
-						 	<include condition="!Skin.HasSetting(low_list_horizontal_scroll)">low_list_rating_vertical_position</include>							<posy>8</posy>
+							<posx>693</posx>							
+							<posy>8</posy>
 							<width>172</width>
 							<height>30</height>
 							<info>ListItem.StarRating</info>
@@ -273,8 +246,7 @@
 							<texture>lowlist/divider.png</texture>
 						</control>
 						<control type="image">
-							<include condition="Skin.HasSetting(low_list_horizontal_scroll)">low_list_watched_overlay_horizontal_position</include>
-							<include condition="!Skin.HasSetting(low_list_horizontal_scroll)">low_list_watched_overlay_vertical_position</include>
+							<posx>878</posx>
 							<posy>9</posy>
 							<width>32</width>
 							<height>30</height>
