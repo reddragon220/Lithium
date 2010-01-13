@@ -2,6 +2,8 @@
 <defaultcontrol always="true">5</defaultcontrol>
 <allowoverlay>no</allowoverlay>
   
+<!-- listitem.mpaa  -->
+
 <controls>
 	<control type="image">
 		<description>Cover Image</description>
@@ -32,12 +34,34 @@
 		<scroll>true</scroll>
 		<textcolor>ffe8e8db</textcolor>
 	</control>
-  
+
+	<control type="image">
+		<visible>Container.Content(episodes) | Container.Content(seasons) | Container.Content(tvshows) | Container.Content(movies) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)</visible>
+		<posx>665</posx>
+		<posy>192</posy>
+		<width>172</width>
+		<height>30</height>
+		<info>ListItem.StarRating</info>
+		<aspectratio>keep</aspectratio>
+		<align>center</align>
+	</control>
+
+	<control type="label">
+		<description>Duration</description>
+		<posx>874</posx>
+		<posy>192</posy>
+		<width>100</width>
+		<label>$INFO[listitem.duration]</label>
+		<font>Small</font>
+		<textcolor>ffe8e8db</textcolor>
+		<scroll>false</scroll>
+	</control>
+
 	<control type="label">
 		<description>Genre</description>
 		<posx>1001</posx>
-		<posy>191</posy>
-		<width>247</width>
+		<posy>192</posy>
+		<width>252</width>
 		<label>$INFO[ListItem.Genre]</label>
 		<font>Small</font>
 		<textcolor>ffe8e8db</textcolor>
