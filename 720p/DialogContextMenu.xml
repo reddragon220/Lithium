@@ -66,6 +66,6 @@
 				<texture>contextmenu/context_menu_bg_bottom.png</texture>
 				<aspectratio>-</aspectratio>
 			</control>
-		</control></controls>
-
+		</control>
+</controls>
 </window>
