@@ -1057,12 +1057,24 @@
 		</control>
 	</include>
 
+	<include name="Custom_Background">
+		<texture>$INFO[Skin.String(Custom_Background)]</texture>
+	</include>
+	<include name="Background1">
+		<texture>background/Bokeh.png</texture>
+	</include>
+	<include name="Background2">
+		<texture>background/stream.png</texture>
+	</include>
+
 	<include name="background">
 			<control type="group">
 				<include condition="!Skin.HasSetting(ken_burns)">bg_animation</include>
 				<include>preferences_animation</include>
 				<animation effect="slide" end="0,53" time="0" condition="!Skin.HasSetting(slide) + !Window.isActive(Home) + !Window.isActive(settings) + !Window.isActive(56) + !Window.isActive(12) + !Window.isActive(13) + !Window.isActive(14) + !Window.isActive(15) + !Window.isActive(16) + !Window.isActive(17) + !Window.isActive(18) + !Window.isActive(19)">Conditional</animation>
-				<control type="largeimage">
+
+
+				<control type="image">
 					<visible>IsEmpty(ListItem.Property(fanart_image)) | Skin.HasSetting(fanart)</visible>
 					<description>Background Image</description>
 					<posx>0</posx>
@@ -1070,10 +1082,22 @@
 					<width>1280</width>
 					<height>720</height>
 					<aspectratio>stretch</aspectratio>
-					<texture>$INFO[Skin.String(backgroundimage)]</texture>
+
+					<include condition="Skin.String(Custom_Background)">Custom_Background</include>
+					
+					<include condition="!Skin.String(Custom_Background) + !Skin.HasSetting(Background1)">Background1</include>
+					<include condition="!Skin.String(Custom_Background) + Skin.HasSetting(Background2)">Background2</include>
 					<fadetime>200</fadetime>
 				</control>
+				
 				<include condition="!Skin.HasSetting(fanart)">fanart</include>
 			</control>
+	</include>
+
+
+	<include name="background_reset">
+		<onclick>Skin.Reset(Custom_Background)</onclick>
+		<onclick>Skin.Reset(Background1)</onclick>
+		<onclick>Skin.Reset(Background2)</onclick>
 	</include>
 </includes>
