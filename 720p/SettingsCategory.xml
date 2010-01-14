@@ -5,140 +5,114 @@
 <controls>
 	<include>background</include>
   
-	<control type="group">
-		<posx>36</posx>
-		<posy>82</posy>
-		<control type="image">
-			<width>1210</width>
-			<height>556</height>
-			<texture>Zen/panes/settings/settings_bg.png</texture>
-			<aspectratio>stretch</aspectratio> 
-		</control>
+	<control type="image">
+		<width>412</width>
+		<height>720</height>
+		<texture>settings/category_bg.png</texture>
+		<aspectratio>stretch</aspectratio> 
+	</control>
+
+	<control type="image">
+		<posx>293</posx>
+		<posy>0</posy>
 		
-		<control type="grouplist" id="3">			
-			<description>Button Area</description>
-	    	<posx>4</posx>
-			<posy>30</posy>
-			<width>237</width>
-			<height>556</height>
-			<aligny>center</aligny>
-			<orientation>vertical</orientation>
-			<visible>-</visible>
-			<itemgap>0</itemgap>
-			
-	    	<onleft>5</onleft>
-	    	<onright>5</onright>
-	    	<onup>3</onup>
-	    	<ondown>3</ondown>	
-	
-	    	<orientation>vertical</orientation>
-	
-			<itemlayout>
-				<control type="image">
-					<posx>7</posx>
-					<posy>82</posy>
-					<width>1118</width>
-					<height>2</height>
-					<texture>Zen/elements/list/divider.png</texture>
-					<aspectratio>stretch</aspectratio> 
-				</control>
-			</itemlayout>
-		</control>
+		<width>987</width>
+		<height>720</height>
+		<texture>settings/item_bg.png</texture>
+		<aspectratio>stretch</aspectratio> 
+	</control>
+
+	<control type="grouplist" id="3">
+		<description>Button Area</description>
+		<posx>30</posx>
+		<posy>118</posy>
+
+		<width>244</width>
+		<height>556</height>
+
+		<aligny>center</aligny>
+		<orientation>vertical</orientation>
+		<visible>-</visible>
+		<itemgap>0</itemgap>
 		
-		<control type="grouplist" id="5">
-			<description>Control Area</description>
-	    	<posx>279</posx>
-	    	<posy>28</posy>
-	    	<width>872</width>
-	    	<height>480</height>
-	    	<itemgap>2</itemgap>
-	    	<onleft>3</onleft>
-	    	<onright>3</onright>
-	    	<onup>5</onup>
-	    	<ondown>5</ondown>
-	    	<orientation>vertical</orientation>
-	
-			<itemlayout>
-				<control type="image">
-					<posx>7</posx>
-					<posy>82</posy>
-					<width>1118</width>
-					<height>2</height>
-					<texture>Zen/elements/list/divider.png</texture>
-					<aspectratio>stretch</aspectratio> 
-				</control>
-			</itemlayout>
-		</control>
-		
-		<control type="image">
-			<width>1210</width>
-			<height>556</height>
-			<texture>Zen/panes/common/center_gradient.png</texture>
-			<aspectratio>stretch</aspectratio> 
-		</control>
-		<control type="image">
-			<width>1210</width>
-			<height>556</height>
-			<texture>Zen/panes/common/center_outline.png</texture>
-			<aspectratio>stretch</aspectratio> 
-		</control>
-		
+    	<onleft>5</onleft>
+    	<onright>5</onright>
+    	<onup>3</onup>
+    	<ondown>3</ondown>	
+
+    	<orientation>vertical</orientation>
 	</control>
 
 
+	<control type="grouplist" id="5">
+		<description>Control Area</description>
+		<posx>323</posx>
+    	<posy>118</posy>
 
+    	<width>927</width>
+    	<height>480</height>
+
+		<aligny>center</aligny>
+		<orientation>vertical</orientation>
+		<visible>-</visible>
+		<itemgap>0</itemgap>
+		
+		<onleft>3</onleft>
+    	<onright>3</onright>
+    	<onup>5</onup>
+    	<ondown>5</ondown>
+	</control>
 	
 	<control type="button" id="10">
 		<description>Default Category Button</description>
-		<height>52</height>
-		<width>237</width>
+		<height>47</height>
+		<width>233</width>
     	<textcolor>7fffffff</textcolor>
 		<focusedcolor>ffe8e8db</focusedcolor>
 		<disabledcolor>7f7c7c72</disabledcolor>
 		<shadowcolor>7f000000</shadowcolor>
-		<font>Large</font>
+		<font>Medium</font>
 		<align>left</align>
-    	<textoffsetx>14</textoffsetx>
-    	<texturefocus>Zen/elements/settings/small_highlight_focused_button.png</texturefocus>
-		<texturenofocus>Zen/elements/settings/small_divider_button.png</texturenofocus>
+		<aligny>top</aligny>
+    	<textoffsetx>12</textoffsetx>
+
+    	<texturefocus>settings/category_highlight.png</texturefocus>
+		<texturenofocus>settings/category_divider.png</texturenofocus>
 	</control>
+
 	
 	<control type="button" id="7">
 		<description>Default Button</description>
-		<posx>12</posx>
-		<height>52</height>
-		<width>872</width>
+		<height>47</height>
+		<width>927</width>
     	<textcolor>7fffffff</textcolor>
 		<focusedcolor>ffe8e8db</focusedcolor>
 		<disabledcolor>7f7c7c72</disabledcolor>
 		<shadowcolor>7f000000</shadowcolor>
     	<align>left</align>
-		<font>Large</font>
+		<aligny>top</aligny>
+		<font>Medium</font>
 		<textoffsetx>12</textoffsetx>
 
-    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
-    	<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
-
+    	<texturefocus>settings/large_highlight.png</texturefocus>
+    	<texturenofocus>settings/large_divider.png</texturenofocus>
 	</control>
-	
-
-	
-	
+		
 	<control type="radiobutton" id="8">
 		<description>Default Radio Button</description>
-		<posx>12</posx>
-		<height>52</height>
-		<width>872</width>
+		<height>47</height>
+		<width>927</width>
     	<textcolor>7fffffff</textcolor>
 		<focusedcolor>ffe8e8db</focusedcolor>
 		<disabledcolor>7f7c7c72</disabledcolor>
 		<shadowcolor>7f000000</shadowcolor>
     	<align>left</align>
-		<font>Large</font>
+		<aligny>top</aligny>
+		<font>Medium</font>
 		<textoffsetx>12</textoffsetx>
 
-    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
-		<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
+    	<texturefocus>settings/large_highlight.png</texturefocus>
+    	<texturenofocus>settings/large_divider.png</texturenofocus>
 		
 		<radiowidth>59</radiowidth>
 		<radioheight>39</radioheight>
@@ -148,19 +122,19 @@
 	
 	<control type="spincontrolex" id="9">
 		<description>Default Spin Control</description>
-    	<posx>12</posx>
-		<height>52</height>
-		<width>872</width>
+		<height>47</height>
+		<width>927</width>
     	<textcolor>7fffffff</textcolor>
 		<focusedcolor>ffe8e8db</focusedcolor>
 		<disabledcolor>7f7c7c72</disabledcolor>
 		<shadowcolor>7f000000</shadowcolor>
     	<align>left</align>
-		<font>Large</font>
+		<aligny>top</aligny>
+		<font>Medium</font>
 		<textoffsetx>12</textoffsetx>
 
-    	<texturefocus>Zen/elements/settings/large_highlight.png</texturefocus>
-		<texturenofocus>Zen/elements/settings/large_divider.png</texturenofocus>
+    	<texturefocus>settings/large_highlight.png</texturefocus>
+    	<texturenofocus>settings/large_divider.png</texturenofocus>
 		
 		<spinposx>0</spinposx>
 		<spinwidth>31</spinwidth>
