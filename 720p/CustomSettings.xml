@@ -33,7 +33,7 @@
 		<aligny>center</aligny>
 		<orientation>vertical</orientation>
 
-		<onup>100</onup>                       <!-- To move between controls insert control id -->				
+		<onup>100</onup>				
 		<onright>200</onright>
 
 		<scrolltime>200</scrolltime>

@@ -1,165 +1,286 @@
 <window id="129">
 <defaultcontrol always="true">10</defaultcontrol>
-  
-<coordinates>
-  <system>1</system>
-  <posx>100</posx>
-  <posy>80</posy>
-</coordinates>
+<animation type="WindowOpen" reversible="false">
+	<effect type="zoom" start="80" end="100" center="640,360" delay="200" easing="out" tween="back" time="300" />
+	<effect type="fade" delay="200" start="0" end="100" time="300" />
+</animation>
+<animation type="WindowClose" reversible="false">
+	<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+	<effect type="fade" start="100" end="0" time="300" />
+</animation>
   
 <controls>
     
-<include>DialogBack</include>
-
-  <control type="label">
-	  <include>DialogID</include>
-	  <label>DialogFavourites.xml</label>
-  </control>
-    
-	<control type="label" id="0">
-		<description>Path</description>
-		<posx>10</posx>
-		<posy>40</posy>
-		<width>500</width>
-		<label>$LOCALIZE[1021]</label>
-	</control>
-
-  <control type="list" id="10">
-    <posx>10</posx>
-    <posy>75</posy>
-    <width>340</width>
-    <height>254</height>
-    <onup>19</onup>
-    <onleft>9000</onleft>
-    <onright>9000</onright>
-    <ondown>12</ondown>
-    <itemlayout height="32">
-      <control type="image">
-        <width>340</width>
-        <height>30</height>
-        <texture>ButtonNF.png</texture>
-      </control>
-      <control type="label">
-        <posx>5</posx>
-        <width>330</width>
-        <height>30</height>
-        <info>ListItem.Label</info>
-        <scroll>false</scroll>
-      </control>
-    </itemlayout>
-    <focusedlayout height="32">
-      <control type="image">
-        <width>500</width>
-        <height>30</height>
-        <texture>ButtonFo.png</texture>
-      </control>
-      <control type="label">
-        <posx>5</posx>
-        <width>330</width>
-        <height>30</height>
-        <textcolor>White</textcolor>
-        <info>ListItem.Label</info>
-      </control>
-    </focusedlayout>
-  </control>
-    
-	<control type="group" id="9000">
-    <posx>360</posx>
-		<control type="button" id="11">
-			<description>Browse</description>
-			<posy>75</posy>
-      <width>150</width>
-      <label>$LOCALIZE[1024]</label>
-      <texturefocus border="1">ButtonFo.png</texturefocus>
-      <texturenofocus border="1">ButtonNF.png</texturenofocus>
-			<onup>18</onup>
-			<onleft>10</onleft>
-			<onright>10</onright>
-			<ondown>13</ondown>
+	<control type="group">
+		<posx>216</posx>
+		<posy>154.5</posy>
+		<control type="image">
+			<width>848</width>
+			<height>411</height>
+			<texture>media source dialog/media_source_bg.png</texture>
+			<aspectratio>stretch</aspectratio>
 		</control>
-		<control type="button" id="13">
-			<description>Add</description>
-			<posy>107</posy>
-      <width>150</width>
-      <label>$LOCALIZE[15019]</label>
-      <texturefocus border="1">ButtonFo.png</texturefocus>
-      <texturenofocus border="1">ButtonNF.png</texturenofocus>
-			<onup>11</onup>
-			<onleft>10</onleft>
-			<onright>10</onright>
-			<ondown>14</ondown>
+		
+		<control type="label">
+			<posx>424</posx>
+			<posy>24</posy>
+			<label>Add Media Locations</label>
+			<align>center</align>
+			<font>Medium</font>
+			<textcolor>ffe8e8db</textcolor>
 		</control>
-		<control type="button" id="14">
-			<description>remove</description>
-			<posy>139</posy>
-      <width>150</width>
-      <label>$LOCALIZE[1210]</label>
-      <texturefocus border="1">ButtonFo.png</texturefocus>
-      <texturenofocus border="1">ButtonNF.png</texturenofocus>
-			<onup>13</onup>
-			<onleft>10</onleft>
-			<onright>10</onright>
+		<control type="label">
+			<posx>520</posx>
+			<posy>306</posy>
+			<label>Media Name</label>
+			<align>center</align>
+			<font>Medium</font>
+			<textcolor>ffe8e8db</textcolor>
+		</control>
+			
+		
+		<control type="list" id="10">
+			<description>Settings Wraplist</description>
+			<posx>197</posx>
+			<posy>65</posy>
+			<width>646</width>
+			<height>235</height>
+			<aligny>center</aligny>
+			<orientation>vertical</orientation>
+
+			<onup>-</onup>
+			<onright>-</onright>
+			<onleft>9000</onleft>
 			<ondown>12</ondown>
-		</control>
-	</control>
-  
-	<control type="label" id="0">
-		<description>Name Label</description>
-		<posx>10</posx>
-		<posy>326</posy>
-		<width>420</width>
-		<label>$LOCALIZE[1022]</label>
-	</control>
-  
-	<control type="button" id="12">
-		<description>Name</description>
-		<posx>10</posx>
-		<posy>358</posy>
-		<label>-</label>
-    <width>500</width>
-    <align>left</align>
-    <textoffsetx>5</textoffsetx>
-		<onup>10</onup>
-		<onleft>12</onleft>
-		<onright>18</onright>
-		<ondown>19</ondown>
-	</control>
 
-  <control type="button" id="20">
-    <description>Set Content</description>
-    <posx>40</posx>
-    <posy>390</posy>
-    <label>$LOCALIZE[20333]</label>
-    <texturefocus border="1">ButtonFo.png</texturefocus>
-    <texturenofocus border="1">ButtonNF.png</texturenofocus>
-    <onup>12</onup>
-    <onleft>19</onleft>
-    <onright>18</onright>
-    <ondown>10</ondown>
-  </control>
-	<control type="button" id="18">
-		<description>Ok</description>
-		<posx>200</posx>
-		<posy>390</posy>
-		<label>$LOCALIZE[186]</label>
-    <texturefocus border="1">ButtonFo.png</texturefocus>
-    <texturenofocus border="1">ButtonNF.png</texturenofocus>
-		<onup>12</onup>
-		<onleft>17</onleft>
-		<onright>20</onright>
-		<ondown>10</ondown>
+			<scrolltime>200</scrolltime>
+
+			<!-- Unselected Items -->
+			<itemlayout height="47" width="646">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>47</height>
+					<width>646</width>
+					<texture>settings/divider.png</texture>
+				</control>
+				<control type="label">
+					<posx>12</posx>
+					<posy>5</posy>
+					<width>634</width>
+					<info>ListItem.Label</info> 
+					<font>Medium</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>          
+					<align>left</align>
+				</control>
+			</itemlayout>
+
+			<!-- Selected Item -->
+			<focusedlayout height="47" width="646">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>47</height>
+					<width>646</width>
+					<texture>settings/divider.png</texture>
+				</control>
+				
+				<control type="image">
+					<visible>!control.hasfocus(10)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>47</height>
+					<width>646</width>
+					<texture>media source dialog/large_highlight_unfocus.png</texture>
+				</control>
+				<control type="image">
+					<visible>control.hasfocus(10)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>47</height>
+					<width>646</width>
+					<texture>media source dialog/large_highlight.png</texture>
+				</control>
+				<control type="label">
+					<posx>12</posx>
+					<posy>5</posy>
+					<width>634</width>
+					<info>ListItem.Label</info> 
+					<font>Medium</font>
+					<textcolor>ffe8e8db</textcolor>
+					<scroll>false</scroll>          
+					<align>left</align>
+				</control>
+			</focusedlayout>
+
+		</control>
+		
+		<control type="button" id="12">
+			<description>Name</description>
+			<posx>197</posx>
+			<posy>347</posy>
+			<width>646</width>
+			<height>47</height>
+			<align>left</align>
+			
+			<label>-</label>
+			<font>Medium</font>
+			<textcolor>ffe8e8db</textcolor>
+			
+			<textoffsetx>12</textoffsetx>
+			
+			<texturefocus>media source dialog/large_highlight.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			
+			<onup>10</onup>
+			<onleft>12</onleft>
+			<onright>9000</onright>
+			<ondown>-</ondown>
+		</control>
+		
+		<control type="image">
+			<posx>196</posx>
+			<posy>63</posy>
+			<width>119</width>
+			<height>331</height>
+			<texture>media source dialog/shadow.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+
+		
+		<control type="group" id="9000">
+		    <posx>5</posx>
+			<control type="button" id="11">
+				<description>Browse</description>
+				<posy>65</posy>
+				<width>191</width>
+				<height>45</height>
+				
+				<label>$LOCALIZE[1024]</label>
+				<font>Medium</font>
+				<textcolor>ffe8e8db</textcolor>
+				<align>left</align>
+				<textoffsetx>12</textoffsetx>
+				
+				
+				<texturefocus>media source dialog/small_highlight_focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				<onup>-</onup>
+			    <onleft>-</onleft>
+			    <onright>10</onright>
+				<ondown>13</ondown>
+			</control>
+			<control type="button" id="13">
+				<description>Add</description>
+				<posy>112</posy>
+				<width>191</width>
+				<height>45</height>
+				
+				<label>$LOCALIZE[15019]</label>
+				<font>Medium</font>
+				<textcolor>ffe8e8db</textcolor>
+				<align>left</align>
+				<textoffsetx>12</textoffsetx>
+				
+				<texturefocus>media source dialog/small_highlight_focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				
+				<onup>11</onup>
+			    <onleft>-</onleft>
+			    <onright>10</onright>
+				<ondown>14</ondown>
+			</control>
+			<control type="button" id="14">
+				<description>remove</description>
+				<posy>159</posy>
+				<width>191</width>
+				<height>45</height>
+				
+				<label>$LOCALIZE[1210]</label>
+				<font>Medium</font>
+				<textcolor>ffe8e8db</textcolor>
+				<align>left</align>
+				<textoffsetx>12</textoffsetx>
+				
+				<texturefocus>media source dialog/small_highlight_focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				
+				<onup>13</onup>
+			    <onleft>-</onleft>
+			    <onright>10</onright>
+				<ondown>20</ondown>
+			</control>
+			
+			<control type="button" id="20">
+			    <description>Set Content</description>
+				<posy>206</posy>
+				<width>191</width>
+				<height>45</height>
+			
+			    <label>$LOCALIZE[20333]</label>
+				<font>Medium</font>
+				<textcolor>ffe8e8db</textcolor>
+				<disabledcolor>7fe8e8db</disabledcolor>
+				<align>left</align>
+				<textoffsetx>12</textoffsetx>
+			
+				<texturefocus>media source dialog/small_highlight_focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+
+			 	<onup>14</onup>
+			    <onleft>-</onleft>
+			    <onright>10</onright>
+			    <ondown>18</ondown>
+		  	</control>
+		
+			<control type="button" id="18">
+				<description>Ok</description>
+				<posy>300</posy>
+				<width>191</width>
+				<height>45</height>
+				
+				<label>$LOCALIZE[186]</label>
+				<font>Medium</font>
+				<textcolor>ffe8e8db</textcolor>
+				<disabledcolor>7fe8e8db</disabledcolor>
+				<align>left</align>
+				<textoffsetx>12</textoffsetx>
+				
+				<texturefocus>media source dialog/small_highlight_focus.png</texturefocus>
+				<texturenofocus>-</texturenofocus>
+				
+				<onup>20</onup>
+				<onleft>-</onleft>
+				<onright>10</onright>
+				<ondown>19</ondown>
+			</control>
+		  <control type="button" id="19">
+		    <description>Cancel</description>
+			<posy>347</posy>
+			<width>191</width>
+			<height>45</height>
+			
+		    <label>$LOCALIZE[222]</label>
+			<font>Medium</font>
+			<textcolor>ffe8e8db</textcolor>
+			<disabledcolor>7fe8e8db</disabledcolor>
+			
+			<align>left</align>
+			<textoffsetx>12</textoffsetx>
+		
+			<texturefocus>media source dialog/small_highlight_focus.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			
+		    <onup>18</onup>
+		    <onleft>-</onleft>
+		    <onright>10</onright>
+		    <ondown>-</ondown>
+		  </control>
+		
+		</control>
+
 	</control>
-  <control type="button" id="19">
-    <description>Cancel</description>
-    <posx>360</posx>
-    <posy>390</posy>
-    <label>$LOCALIZE[222]</label>
-    <texturefocus border="1">ButtonFo.png</texturefocus>
-    <texturenofocus border="1">ButtonNF.png</texturenofocus>
-    <onup>12</onup>
-    <onleft>20</onleft>
-    <onright>18</onright>
-    <ondown>10</ondown>
-  </control>
-	</controls>
+	
+</controls>
 </window>
