@@ -72,8 +72,10 @@
 
 
 		<include>preferences</include>
+		
 		<-- Context Menu Fade --/>
 		<control type="image">
+			<animation effect="fade" time="200">VisibleChange</animation>
 			<visible>Window.IsVisible(106) | Window.Isvisible(129)</visible>
 			<description>overlay image</description>
 			<posx>0</posx>
