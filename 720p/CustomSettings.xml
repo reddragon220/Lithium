@@ -530,7 +530,7 @@
 						<textureradionofocus>settings/off.png</textureradionofocus>
 
 						<label>High Home Menu</label>
-						<selected>!Skin.HasSetting(high_home)</selected>
+						<selected>Skin.HasSetting(high_home)</selected>
 						<onclick>Skin.ToggleSetting(high_home)</onclick>
 					</control>
 			</control>

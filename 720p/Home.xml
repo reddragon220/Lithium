@@ -1,5 +1,5 @@
 <window id="0">
-	<defaultcontrol always="true">300</defaultcontrol>
+	<defaultcontrol always="true">1</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<include>background</include>
@@ -229,7 +229,7 @@
 
 		<control type="group">
 			<posy>300</posy>
-			<animation effect="slide" start="0,0" end="0,180" time="0" delay="0" condition="Skin.HasSetting(high_home)">Conditional</animation>
+			<animation effect="slide" start="0,0" end="0,180" time="0" delay="0" condition="!Skin.HasSetting(high_home)">Conditional</animation>
 			
 			<control type="image">
 				<width>1280</width>
@@ -237,8 +237,25 @@
 				<texture>home/background.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
+			
+			
+			<control type="button" id="1">
+			      <description>Reset</description>
+			      <posx>0</posx>
+			      <posy>0</posy>
+			      <width>0</width>
+			      <height>0</height>
+			      <visible>true</visible>
+			      <colordiffuse>-</colordiffuse>
+			      <texturefocus>-</texturefocus>
+			      <texturenofocus>-</texturenofocus>
+			      <label> </label>
+			      <onfocus>Skin.Reset(Plex_Menu)</onfocus>
+			 	  <onfocus>Setfocus(300)</onfocus>
+			</control>
 		
 			<control type="wraplist" id="300">
+				<visible allowhiddenfocus="true">!Skin.HasSetting(Plex_Menu)</visible>
 				<description>Home Wraplist</description>
 				<posx>0</posx>
 				<posy>11</posy>
@@ -251,6 +268,7 @@
 				<scrolltime>200</scrolltime>
 				<orientation>horizontal</orientation>
 				<focusposition>1</focusposition>
+				<defaultcontrol always="true">0</defaultcontrol>
 				
 				<itemlayout width="500" height="300">
 					<control type="label">
@@ -286,21 +304,86 @@
 				</focusedlayout>
 				<content>
 					<item id="1">
-						<description>Videos</description>
-						<label>Online</label>
-						<onclick>xbmc.activatewindow(6)</onclick>
+						<description>Plex</description>
+						<label>Plex</label>
+						<onclick>Setfocus(301)</onclick>
+						<onclick>Skin.SetBool(Plex_Menu)</onclick>
+					</item>
+				</content>
+			</control>
+
+			<control type="wraplist" id="301">
+				<visible allowhiddenfocus="true">Skin.HasSetting(Plex_Menu)</visible>
+				<description>Home Wraplist</description>
+				<posx>0</posx>
+				<posy>11</posy>
+				<width>1280</width>
+				<height>720</height>
+				<onup>300</onup>
+				<ondown>300</ondown>
+				<onleft>300</onleft>
+				<onright>300</onright>
+				<onfocus>Skin.SetBool(Plex_Menu)</onfocus>
+				<scrolltime>200</scrolltime>
+				<orientation>horizontal</orientation>
+				<focusposition>1</focusposition>
+				<defaultcontrol always="true">1</defaultcontrol>
+				
+				<itemlayout width="500" height="300">
+					<control type="label">
+						<posx>142</posx>
+						<posy>15</posy>
+						<width>500</width>
+						<info>ListItem.Label</info>
+						<textcolor>7fffffff</textcolor>
+						<scroll>false</scroll>
+						<font>Section</font>
+						<align>center</align>
+					</control>
+				</itemlayout>
+				<focusedlayout width="500" height="300">
+					<control type="label">
+						<posx>143</posx>
+						<posy>16</posy>
+						<width>500</width>
+						<info>ListItem.Label</info>
+						<font>Section</font>
+						<textcolor>4b000000</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<posx>142</posx>
+						<posy>15</posy>
+						<width>500</width>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Section</font>
+						<textcolor>ffffffff</textcolor>
+						<align>center</align>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<description>Library</description>
+						<label>Library</label>
+						<onclick>Setfocus(300)</onclick>
+						<onclick>Skin.Reset(Plex_Menu)</onclick>
 					</item>
 					<item id="2">
+						<description>Videos</description>
+						<label>$LOCALIZE[3]</label>
+						<onclick>xbmc.activatewindow(6)</onclick>
+					</item>
+					<item id="3">
 						<description>Music</description>
 						<label>$LOCALIZE[2]</label>
 						<onclick>xbmc.activatewindow(5)</onclick>
 					</item>
-					<item id="3">
+					<item id="4">
 						<description>Pictures</description>
 						<label>$LOCALIZE[1]</label>
 						<onclick>xbmc.activatewindow(2)</onclick>
 					</item>
-					<item id="4">
+					<item id="5">
 						<description>Programs</description>
 						<label>$LOCALIZE[0]</label>
 						<onclick>xbmc.activatewindow(1)</onclick>
@@ -311,18 +394,21 @@
 						<onclick>xbmc.activatewindow(2600)</onclick>
 						<visible>System.HasNetwork</visible>
 					</item>
-					<item id="9">
+					<item id="7">
 						<description>Settings</description>
 						<label>$LOCALIZE[5]</label>
 						<onclick>xbmc.activatewindow(settings)</onclick>
 					</item>
-					<item id="10">
+					<item id="8">
+						<visible>Skin.HasSetting(developer)</visible>
 						<description>Refresh</description>
 						<label>$LOCALIZE[184]</label>
 						<onclick>XBMC.ReloadSkin()</onclick>
+						<onclick>Setfocus(300)</onclick>
 					</item>
 				</content>
 			</control>
+
 
 			<control type="image">
 				<width>1280</width>
