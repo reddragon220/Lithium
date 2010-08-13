@@ -850,6 +850,8 @@
 		<visible>Control.IsVisible(58)</visible>
 		<include>preferences_animation</include>
 		<control type="group">
+			<visible></visible>
+			<animation effect="slide" start="0,0" end="0,663" time="200" condition="Skin.HasSetting(flow_hide)">Conditional</animation>
 			<description>Info</description>
 			<control type="image">
 				<posy>57</posy>
@@ -1064,6 +1066,7 @@
 			</itemlayout>
 			<focusedlayout width="190" height="248">
 				<control type="image">
+					<animation effect="zoom" start="90" end="100" center="auto" time="200">Focus</animation>
 					<posx>9</posx>
 					<posy>0</posy>
 					<width>172</width>
@@ -1130,6 +1133,7 @@
 			</itemlayout>
 			<focusedlayout width="398" height="228">
 				<control type="image">
+					<animation effect="zoom" start="90" end="100" center="auto" time="200">Focus</animation>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>398</width>
@@ -1196,6 +1200,7 @@
 			</itemlayout>
 			<focusedlayout width="266" height="248">
 				<control type="image">
+					<animation effect="zoom" start="86" end="100" center="auto" time="200">Focus</animation>
 					<posx>9</posx>
 					<posy>0</posy>
 					<width>248</width>

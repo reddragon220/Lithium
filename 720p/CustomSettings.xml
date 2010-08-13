@@ -415,6 +415,28 @@
 					<selected>Skin.HasSetting(HighList)</selected>
 					<onclick>Skin.ToggleSetting(HighList)</onclick>
 				</control>
+				<control type="radiobutton" id="30">
+					<height>50</height>
+					<width>962</width>
+					<textcolor>7fffffff</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<disabledcolor>7f7c7c72</disabledcolor>
+					<shadowcolor>7f000000</shadowcolor>
+					<font>Title</font>
+					<textoffsetx>20</textoffsetx>
+					<align>left</align>
+					<texturefocus>settings/highlight_long.png</texturefocus>
+					<texturenofocus>settings/large_divider.png</texturenofocus>
+					<radioposx>877</radioposx>
+					<radiowidth>65</radiowidth>
+					<radioheight>37</radioheight>
+					<textureradiofocus>settings/on.png</textureradiofocus>
+					<textureradionofocus>settings/off.png</textureradionofocus>
+					<label>Hide Flow Info</label>
+					<selected>Skin.HasSetting(flow_hide)</selected>
+					<onclick>Skin.ToggleSetting(flow_hide)</onclick>
+				</control>
+
 			</control>
 			<control type="grouplist" id="206">
 				<visible>Container(50).Hasfocus(6)</visible>
@@ -477,6 +499,42 @@
 					<onclick>Control.Move(50,5)</onclick>
 				</control>
 			</control>
+			<control type="grouplist" id="207">
+					<visible>Container(50).Hasfocus(7)</visible>
+
+					<posx>293</posx>
+					<width>962</width>
+					<height>720</height>
+					<onleft>50</onleft>
+
+			    	<orientation>vertical</orientation>
+
+					<scrolltime>200</scrolltime>
+
+					<control type="radiobutton" id="2021">
+						<height>50</height>
+						<width>962</width>
+						<textcolor>7fffffff</textcolor>
+						<focusedcolor>ffe8e8db</focusedcolor>
+						<disabledcolor>7f7c7c72</disabledcolor>
+						<shadowcolor>7f000000</shadowcolor>
+						<font>Title</font>
+						<textoffsetx>20</textoffsetx>
+						<align>left</align>
+						<texturefocus>settings/highlight_long.png</texturefocus>
+						<texturenofocus>settings/large_divider.png</texturenofocus>
+						<radioposx>877</radioposx>
+						<radiowidth>65</radiowidth>
+						<radioheight>37</radioheight>
+						<textureradiofocus>settings/on.png</textureradiofocus>
+						<textureradionofocus>settings/off.png</textureradionofocus>
+
+						<label>High Home Menu</label>
+						<selected>!Skin.HasSetting(high_home)</selected>
+						<onclick>Skin.ToggleSetting(high_home)</onclick>
+					</control>
+			</control>
+			
 		</control>
 		<control type="image">
 			<width>297</width>
@@ -556,6 +614,11 @@
 				<item id="6">
 					<description>developer</description>
 					<label>Developer</label>
+					<onclick>-</onclick>
+				</item>
+				<item id="7">
+					<description>Home</description>
+					<label>Home</label>
 					<onclick>-</onclick>
 				</item>
 			</content>

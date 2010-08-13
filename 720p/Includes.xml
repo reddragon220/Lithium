@@ -222,7 +222,7 @@
 	</include>
 
 	<include name="preferences_animation">
-		<animation effect="slide" end="0,-119" time="200" condition="Control.HasFocus(101) | Control.HasFocus(102) | Control.HasFocus(103) | Control.HasFocus(104) | Control.HasFocus(105) | Control.HasFocus(106) | Control.HasFocus(107) | Control.HasFocus(108) | Control.HasFocus(109) | Control.HasFocus(1010) | Control.HasFocus(1011) | Control.HasFocus(1012)
+		<animation effect="slide" end="0,-119" time="200" condition="Control.HasFocus(101) | Control.HasFocus(102) | Control.HasFocus(103) | Control.HasFocus(104) | Control.HasFocus(105) | Control.HasFocus(106) | Control.HasFocus(107) | Control.HasFocus(108) | Control.HasFocus(109) | Control.HasFocus(1010) | Control.HasFocus(1011) | Control.HasFocus(1012) | Control.HasFocus(1013)
 			">Conditional</animation>
 	</include>
 
@@ -433,10 +433,62 @@
 					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
 				</control>
 
+				<control type="button" id="109">
+					<visible>!Skin.HasSetting(flow_hide) + Control.IsVisible(58)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+
+					<onup>setfocus(50)</onup>
+					
+					<label>Hide Info</label>
+					<onclick>Skin.ToggleSetting(flow_hide)</onclick>
+					
+
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
+				</control>
+				<control type="button" id="1010">
+					<visible>Skin.HasSetting(flow_hide) + Control.IsVisible(58)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+
+					<onup>setfocus(50)</onup>
+					
+					<label>Show Info</label>
+					<onclick>Skin.ToggleSetting(flow_hide)</onclick>
+					
+
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
+				</control>
 
 
 				
-				<control type="button" id="109">
+				<control type="button" id="1011">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>140</width>
@@ -461,7 +513,7 @@
 					<texturenofocus></texturenofocus>
 					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
 				</control>	
-				<control type="button"id="1010">
+				<control type="button"id="1012">
 					<visible>Skin.HasSetting(developer)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
@@ -488,7 +540,7 @@
 					<texturenofocus></texturenofocus>
 					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
 				</control>
-				<control type="button" id="1011">
+				<control type="button" id="1013">
 					<description>Free Memory</description>
 					
 					<visible>Skin.HasSetting(developer)</visible>

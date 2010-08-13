@@ -228,10 +228,12 @@
 		</control>
 
 		<control type="group">
-			<posy>331</posy>
+			<posy>300</posy>
+			<animation effect="slide" start="0,0" end="0,180" time="0" delay="0" condition="Skin.HasSetting(high_home)">Conditional</animation>
+			
 			<control type="image">
 				<width>1280</width>
-				<height>143</height>
+				<height>120</height>
 				<texture>home/background.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
@@ -239,7 +241,7 @@
 			<control type="wraplist" id="300">
 				<description>Home Wraplist</description>
 				<posx>0</posx>
-				<posy>34</posy>
+				<posy>11</posy>
 				<width>1280</width>
 				<height>720</height>
 				<onup>300</onup>
@@ -324,12 +326,16 @@
 
 			<control type="image">
 				<width>1280</width>
-				<height>143</height>
+				<height>120</height>
 				<texture>home/gradient.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
+			
 			<control type="group">
-				<control type="label">
+				<posy>85</posy>
+				<control type="label" id="900">
+					<animation effect="fade" time="200" delay="200">VisibleChange</animation>
+					<visible>!IsEmpty(Container(300).ListItem(0).Label2)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1280</width>
@@ -338,189 +344,19 @@
 					<textcolor>ff95c9f7</textcolor>
 					<align>center</align>
 				</control>
-<!--
-				<control type="label">
+				<control type="rss">
+					<animation effect="fade" time="200" delay="200">VisibleChange</animation>
+					<visible>IsEmpty(Container(300).ListItem(0).Label2)</visible>
+					<description>RSS Feed</description>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>1280</width>
-					<label>$INFO[Container(300).ListItem(1).Label2]</label>
 					<font>Subtitle</font>
+					<urlset>1</urlset>
+					<titlecolor>ff95c9f7</titlecolor>
+					<headlinecolor>ffffffff</headlinecolor>
 					<textcolor>ff95c9f7</textcolor>
-					<align>center</align>
 				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<label>$INFO[Container(300).ListItem(2).Label2]</label>
-					<font>Subtitle</font>
-					<textcolor>ff95c9f7</textcolor>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<label>$INFO[Container(300).ListItem(3).Label2]</label>
-					<font>Subtitle</font>
-					<textcolor>ff95c9f7</textcolor>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<label>$INFO[Container(300).ListItem(4).Label2]</label>
-					<font>Subtitle</font>
-					<textcolor>ff95c9f7</textcolor>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<label>$INFO[Container(300).ListItem(5).Label2]</label>
-					<font>Subtitle</font>
-					<textcolor>ff95c9f7</textcolor>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<label>$INFO[Container(300).ListItem(6).Label2]</label>
-					<font>Subtitle</font>
-					<textcolor>ff95c9f7</textcolor>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<label>$INFO[Container(300).ListItem(7).Label2]</label>
-					<font>Subtitle</font>
-					<textcolor>ff95c9f7</textcolor>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<label>$INFO[Container(300).ListItem(8).Label2]</label>
-					<font>Subtitle</font>
-					<textcolor>ff95c9f7</textcolor>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<label>$INFO[Container(300).ListItem(9).Label2]</label>
-					<font>Subtitle</font>
-					<textcolor>ff95c9f7</textcolor>
-					<align>center</align>
-				</control>
-				
-				<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<label>$INFO[Container(300).ListItem(10).Label2]</label>
-					<font>Subtitle</font>
-					<textcolor>ff95c9f7</textcolor>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<label>$INFO[Container(300).ListItem(11).Label2]</label>
-					<font>Subtitle</font>
-					<textcolor>ff95c9f7</textcolor>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<label>$INFO[Container(300).ListItem(12).Label2]</label>
-					<font>Subtitle</font>
-					<textcolor>ff95c9f7</textcolor>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<label>$INFO[Container(300).ListItem(13).Label2]</label>
-					<font>Subtitle</font>
-					<textcolor>ff95c9f7</textcolor>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<label>$INFO[Container(300).ListItem(14).Label2]</label>
-					<font>Subtitle</font>
-					<textcolor>ff95c9f7</textcolor>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<label>$INFO[Container(300).ListItem(15).Label2]</label>
-					<font>Subtitle</font>
-					<textcolor>ff95c9f7</textcolor>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<label>$INFO[Container(300).ListItem(16).Label2]</label>
-					<font>Subtitle</font>
-					<textcolor>ff95c9f7</textcolor>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<label>$INFO[Container(300).ListItem(17).Label2]</label>
-					<font>Subtitle</font>
-					<textcolor>ff95c9f7</textcolor>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<label>$INFO[Container(300).ListItem(18).Label2]</label>
-					<font>Subtitle</font>
-					<textcolor>ff95c9f7</textcolor>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<label>$INFO[Container(300).ListItem(19).Label2]</label>
-					<font>Subtitle</font>
-					<textcolor>ff95c9f7</textcolor>
-					<align>center</align>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<label>$INFO[Container(300).ListItem(20).Label2]</label>
-					<font>Subtitle</font>
-					<textcolor>ff95c9f7</textcolor>
-					<align>center</align>
-				</control>
--->
 			</control>
 		</control>
 
