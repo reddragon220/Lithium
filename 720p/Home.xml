@@ -256,6 +256,7 @@
 		
 			<control type="wraplist" id="300">
 				<visible allowhiddenfocus="true">!Skin.HasSetting(Plex_Menu)</visible>
+				<animation effect="fade" time="200" delay="200">VisibleChange</animation>
 				<description>Home Wraplist</description>
 				<posx>0</posx>
 				<posy>11</posy>
@@ -314,6 +315,7 @@
 
 			<control type="wraplist" id="301">
 				<visible allowhiddenfocus="true">Skin.HasSetting(Plex_Menu)</visible>
+				<animation effect="fade" time="200" delay="200">VisibleChange</animation>
 				<description>Home Wraplist</description>
 				<posx>0</posx>
 				<posy>11</posy>
