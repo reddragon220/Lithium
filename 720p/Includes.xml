@@ -100,46 +100,123 @@
 					</control>
 				</control>
 			</control>
-			
-<!--
-			<control type="grouplist">
-				<posx>1162</posx>
-				<posy>12</posy>
-				<orientation>horizontal</orientation>
-				<itemgap>20</itemgap>
-				<align>left</align>
-				<control type="label">
-					<posy>-2</posy>
-					<width min="1" max="300">auto</width>
-					<label>Test</label>
-					<font>Header</font>
-					<textcolor>White</textcolor>
-					<align>left</align>
-				</control>
-				<control type="group">
-					<width min="1" max="300">auto</width>
+
+			<control type="group">
+				<posx>20</posx>
+				<posy>0</posy>
+				<control type="grouplist">
+					<posy>1</posy>
+					<orientation>horizontal</orientation>
+					<control type="image">
+						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(Movies)</visible>
+						<width>75</width>
+						<height>55</height>
+						<texture>-</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<visible>Container.Content(albums) | Container.Content(artists) | Container.Content(songs)</visible>
+						<width>55</width>
+						<height>55</height>
+						<texture>-</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<visible>Container.Content(photos)</visible>
+						<width>70</width>
+						<height>55</height>
+						<texture>-</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>					
 					<control type="label">
-						<posy>-2</posy>
-						<info>System.Time(HH:MM:XX)</info>
-						<font>Header</font>
+						<description>First title</description>
+						<visible>!IsEmpty(Container.FirstTitle)</visible>
+						<label>$INFO[Container.FirstTitle]</label>
+						<font>Section Name</font>
+						<textcolor>4b000000</textcolor>
+						<align>left</align>		
+						<height>40</height>	
+						<width min="1" max="1280">auto</width>			
+					</control>
+					<control type="label">
+						<visible>!IsEmpty(Container.SecondTitle)</visible>
+						<description>Second title</description>
+						<label>.</label>
+						<font>Section Name</font>
 						<textcolor>4b000000</textcolor>
 						<align>left</align>
+						<height>20</height>
+						<width min="1" max="1280">auto</width>
 					</control>
 					<control type="label">
-						<info>System.Time(HH:MM:XX)</info>
-						<font>Header</font>
-						<textcolor>ff95c9f7</textcolor>
+						<description>Second title</description>
+						<label>$INFO[Container.SecondTitle]</label>
+						<font>Section Name</font>
+						<textcolor>4b000000</textcolor>
 						<align>left</align>
+						<height>40</height>
+						<width min="1" max="1280">auto</width>
+					</control>
+				</control>
+				<control type="grouplist">
+					<posy>3</posy>
+					<orientation>horizontal</orientation>
+					<control type="image">
+						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(Movies)</visible>
+						<width>75</width>
+						<height>55</height>
+						<texture>header/icons/television.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<visible>Container.Content(albums) | Container.Content(artists) | Container.Content(songs)</visible>
+						<width>55</width>
+						<height>55</height>
+						<texture>header/icons/music.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<visible>Container.Content(photos)</visible>
+						<width>70</width>
+						<height>55</height>
+						<texture>header/icons/music.png</texture>
+						<aspectratio>stretch</aspectratio>
 					</control>
 					<control type="label">
-						<info>System.Time(HH:MM)</info>
-						<font>Header</font>
-						<textcolor>White</textcolor>
+						<description>First title</description>
+						<visible>!IsEmpty(Container.FirstTitle)</visible>
+						<label>$INFO[Container.FirstTitle]</label>
+						<font>Section Name</font>
+						<textcolor>ffffffff</textcolor>
 						<align>left</align>
+						<height>40</height>
+						<width min="1" max="1280">auto</width>
+					</control>
+					<control type="label">
+						<visible>!IsEmpty(Container.SecondTitle)</visible>
+						<description>Second title</description>
+						<label>.</label>
+						<font>Section Name</font>
+						<textcolor>ffffffff</textcolor>
+						<align>left</align>
+						<height>20</height>
+						<width min="1" max="1280">auto</width>
+					</control>
+					<control type="label">
+						<description>Second title</description>
+						<label>$INFO[Container.SecondTitle]</label>
+						<font>Section Name</font>
+						<textcolor>ffffffff</textcolor>
+						<align>left</align>
+						<height>40</height>
+						<width min="1" max="1280">auto</width>
 					</control>
 				</control>
 			</control>
--->
+			
+
+
+
 
 		</control>
 	</include>

@@ -8,6 +8,12 @@
 			<size>25</size>
 		</font>
 		<font>
+			<name>Section Name</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+			<size>40</size>
+		</font>
+		<font>
 			<name>Header Small</name>
 			<filename>HelveticaNeue</filename>
 			<variant>Bold</variant>
