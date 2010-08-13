@@ -1,0 +1,98 @@
+<fonts>
+	<fontset id="default" unicode="true">
+		<!-- Header -->
+		<font>
+			<name>Header</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+			<size>25</size>
+		</font>
+		<font>
+			<name>Header Small</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+			<size>15</size>
+		</font>
+		<!-- Home -->
+		<font>
+			<name>Section</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+			<size>78</size>
+		</font>
+		<font>
+			<name>Subtitle</name>
+			<filename>Helvetica</filename>
+			<variant>Bold</variant>
+			<size>20</size>
+		</font>
+		<!-- Views -->
+		<font>
+			<name>Title</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+			<size>38</size>
+		</font>
+		<font>
+			<name>Title2</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Regular</variant>
+			<size>25</size>
+		</font>
+		
+		<font>
+			<name>Info_title</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+			<size>25</size>
+		</font>
+		<font>
+			<name>Episode_number</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+			<size>30</size>
+		</font>
+
+		<!-- Context Menu -->
+		<font>
+			<name>Context</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Condensed Bold</variant>
+			<size>34</size>
+		</font>
+		
+		<!-- Video OSD -->
+		<font>
+			<name>OSD</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Condensed Bold</variant>
+			<size>30</size>
+		</font>
+		<font>
+			<name>OSD_Alert</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Condensed Bold</variant>
+			<size>190</size>
+		</font>
+		
+		
+		
+		<!-- Empty -->
+		<font>
+			<name>Large</name>
+			<filename>Arial.ttf</filename>
+			<size>36</size>
+		</font>
+		<font>
+			<name>Small</name>
+			<filename>Arial.ttf</filename>
+			<size>14</size>
+		</font>
+		<!-- Required for system -->
+		<font>
+			<name>font13</name>
+			<filename>Arial.ttf</filename>
+			<size>14</size>
+		</font>
+	</fontset>
+</fonts>

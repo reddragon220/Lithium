@@ -1,0 +1,189 @@
+<window id="2003">
+<defaultcontrol always="true">5</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+  
+<coordinates>
+  <system>1</system>
+  <posx>100</posx>
+  <posy>80</posy>
+</coordinates>
+  
+<controls>
+    
+<include>DialogBack</include>
+
+  <control type="label">
+	  <include>DialogID</include>
+	  <label>DialogVideoInfo.xml</label>
+  </control>
+  
+	<control type="image" id="3">
+		<description>Cover Image</description>
+		<posx>10</posx>
+		<posy>40</posy>
+		<width>150</width>
+		<height>140</height>
+		<texture>-</texture>
+    <aspectratio align="left" aligny="top">keep</aspectratio>
+    <bordertexture border="14">ButtonNF.png</bordertexture>
+    <bordersize>5</bordersize>
+	</control>
+  
+	<control type="label" id="20">
+		<description>Title</description>
+		<posx>170</posx>
+		<posy>40</posy>
+		<width>340</width>
+		<label>-</label>
+    <font>Large</font>
+		<scroll>true</scroll>
+	</control>
+  
+  <control type="label">
+    <description>Genre</description>
+    <posx>170</posx>
+    <posy>72</posy>
+    <width>340</width>
+    <label>$INFO[ListItem.Genre]</label>
+    <font>Small</font>
+    <scroll>true</scroll>
+  </control>
+  
+	<control type="grouplist" id="1">
+		<posx>10</posx>
+		<posy>190</posy>
+		<width>150</width>
+		<height>222</height>
+		<itemgap>2</itemgap>
+		<onup>1</onup>
+		<ondown>1</ondown>
+		<onright>50</onright>
+		<onleft>50</onleft>
+		<orientation>vertical</orientation>
+	  <control type="button" id ="5">
+		  <description>Plot/Cast</description>
+		  <label>$LOCALIZE[206]</label>
+      <width>150</width>
+      <texturefocus border="1">ButtonFo.png</texturefocus>
+      <texturenofocus border="1">ButtonNF.png</texturenofocus>
+	  </control>
+	  <control type="button" id ="8">
+		  <description>Play</description>
+      <label>$LOCALIZE[208]</label>
+      <width>150</width>
+      <texturefocus border="1">ButtonFo.png</texturefocus>
+      <texturenofocus border="1">ButtonNF.png</texturenofocus>
+	  </control>
+	  <control type="button" id ="9">
+		  <description>Resume</description>
+		  <label>$LOCALIZE[13404]</label>
+      <width>150</width>
+      <texturefocus border="1">ButtonFo.png</texturefocus>
+      <texturenofocus border="1">ButtonNF.png</texturenofocus>
+	  </control>
+	  <control type="button" id ="6">
+		  <description>Refresh</description>
+		  <label>$LOCALIZE[184]</label>
+      <width>150</width>
+      <texturefocus border="1">ButtonFo.png</texturefocus>
+      <texturenofocus border="1">ButtonNF.png</texturenofocus>
+	  </control>
+	  <control type="button" id ="10">
+		  <description>Get Thumb</description>
+		  <label>$LOCALIZE[13405]</label>
+      <width>150</width>
+      <texturefocus border="1">ButtonFo.png</texturefocus>
+      <texturenofocus border="1">ButtonNF.png</texturenofocus>
+	  </control>
+    <control type="button" id="11">
+      <description>Trailer button</description>
+      <label>$LOCALIZE[20410]</label>
+      <width>150</width>
+      <texturefocus border="1">ButtonFo.png</texturefocus>
+      <texturenofocus border="1">ButtonNF.png</texturenofocus>
+    </control>
+    <control type="button" id="12">
+      <description>Fanart button</description>
+      <label>$LOCALIZE[20413]</label>
+      <width>150</width>
+      <texturefocus border="1">ButtonFo.png</texturefocus>
+      <texturenofocus border="1">ButtonNF.png</texturenofocus>
+    </control>
+	</control>
+  
+  <control type="list" id="50">
+		<description>Cast</description>
+		<posx>170</posx>
+		<posy>190</posy>
+		<width>350</width>
+		<height>222</height>
+		<onup>50</onup>
+		<ondown>50</ondown>
+		<onleft>1</onleft>
+		<onright>1</onright>
+		<orientation>vertical</orientation>
+    <scrolltime>200</scrolltime>
+    <itemlayout height="32">
+      <control type="image">
+        <width>340</width>
+        <height>30</height>
+        <texture>ButtonNF.png</texture>
+      </control>
+      <control type="image">
+        <posy>2</posy>
+        <width>26</width>
+        <height>26</height>
+        <info>ListItem.Icon</info>
+      </control>
+      <control type="label">
+        <posx>30</posx>
+        <width>304</width>
+        <height>30</height>
+        <info>ListItem.Label</info>
+        <scroll>false</scroll>
+      </control>
+    </itemlayout>
+    <focusedlayout height="32">
+      <control type="image">
+        <width>340</width>
+        <height>30</height>
+        <texture>ButtonFo.png</texture>
+      </control>
+      <control type="image">
+        <posy>2</posy>
+        <width>26</width>
+        <height>26</height>
+        <info>ListItem.Icon</info>
+      </control>
+      <control type="label">
+        <posx>30</posx>
+        <width>304</width>
+        <height>30</height>
+        <textcolor>White</textcolor>
+        <info>ListItem.Label</info>
+      </control>
+    </focusedlayout>
+ </control>
+
+  <control type="textbox" id="4">
+    <description>Plot</description>
+    <posx>170</posx>
+    <posy>190</posy>
+    <width>350</width>
+    <height>222</height>
+    <spinposx>500</spinposx>
+    <spinposy>-30</spinposy>
+    <spinwidth>20</spinwidth>
+    <spinheight>11</spinheight>
+    <font>Small</font>
+    <textcolor>Black</textcolor>
+    <textureup>-</textureup>
+    <texturedown flipy="true">-</texturedown>
+    <textureupfocus>-</textureupfocus>
+    <texturedownfocus flipy="true">-</texturedownfocus>
+    <autoscroll delay="6000" time="2000" repeat="10000"></autoscroll>
+  </control>
+  
+</controls>
+  
+</window>

@@ -1,0 +1,127 @@
+<window id="126">
+<defaultcontrol always="true">450</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+  
+<coordinates>
+  <system>1</system>
+  <posx>100</posx>
+  <posy>80</posy>
+</coordinates>
+  
+<controls>
+    
+<include>DialogBack</include>
+
+  <control type="label">
+	  <include>DialogID</include>
+	  <label>FileBrowser.xml</label>
+  </control>
+  
+	<control type="label" id="411">
+		<description>Heading</description>
+    <posx>10</posx>
+    <posy>40</posy>
+    <width>500</width>
+		<label>$LOCALIZE[1023]</label>
+	</control>
+	<control type="label" id="412">
+		<description>Path</description>
+    <posx>10</posx>
+    <posy>72</posy>
+    <width>500</width>
+		<haspath>true</haspath>
+	</control>
+
+  <control type="image">
+    <description>Large Icon Image</description>
+    <posx>360</posx>
+    <posy>204</posy>
+    <width>150</width>
+    <height>150</height>
+    <info>ListItem.Icon</info>
+    <aspectratio align="left" aligny="top">keep</aspectratio>
+    <bordertexture border="14">ButtonNF.png</bordertexture>
+    <bordersize>5</bordersize>
+  </control>
+
+  <control type="list" id="450">
+    <posx>10</posx>
+    <posy>107</posy>
+    <width>340</width>
+    <height>286</height>
+    <onup>450</onup>
+    <onleft>9000</onleft>
+    <onright>9000</onright>
+    <ondown>450</ondown>
+    <itemlayout height="32">
+      <control type="image">
+        <width>340</width>
+        <height>30</height>
+        <texture>ButtonNF.png</texture>
+      </control>
+      <control type="image">
+        <posy>2</posy>
+        <width>26</width>
+        <height>26</height>
+        <info>ListItem.Icon</info>
+      </control>
+      <control type="label">
+        <posx>30</posx>
+        <width>304</width>
+        <height>30</height>
+        <info>ListItem.Label</info>
+        <scroll>false</scroll>
+      </control>
+    </itemlayout>
+    <focusedlayout height="32">
+      <control type="image">
+        <width>500</width>
+        <height>30</height>
+        <texture>ButtonFo.png</texture>
+      </control>
+      <control type="image">
+        <posy>2</posy>
+        <width>26</width>
+        <height>26</height>
+        <info>ListItem.Icon</info>
+      </control>
+      <control type="label">
+        <posx>30</posx>
+        <width>304</width>
+        <height>30</height>
+        <textcolor>White</textcolor>
+        <info>ListItem.Label</info>
+      </control>
+    </focusedlayout>
+  </control>
+  
+	<control type="grouplist" id="9000">
+		<posx>360</posx>
+		<posy>107</posy>
+		<itemgap>2</itemgap>
+		<orientation>vertical</orientation>
+		<onright>450</onright>
+		<onleft>450</onleft>
+	<control type="button" id="413">
+		<description>Ok</description>
+		<label>$LOCALIZE[186]</label>
+    <texturefocus border="1">ButtonFo.png</texturefocus>
+    <texturenofocus border="1">ButtonNF.png</texturenofocus>
+	</control>
+	<control type="button" id="414">
+		<description>Cancel</description>
+		<label>$LOCALIZE[222]</label>
+    <texturefocus border="1">ButtonFo.png</texturefocus>
+    <texturenofocus border="1">ButtonNF.png</texturenofocus>
+	</control>
+	<control type="button" id="415">
+		<description>Create Folder</description>
+		<label>$LOCALIZE[119]</label>
+    <texturefocus border="1">ButtonFo.png</texturefocus>
+    <texturenofocus border="1">ButtonNF.png</texturenofocus>
+	</control>
+	</control>
+  
+</controls>
+  
+</window>

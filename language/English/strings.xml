@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<strings>
+
+  <string id="31000">Internet</string>
+
+  <string id="35000">Rating</string>
+  <string id="35001">Genre</string>
+  <string id="35002">Runtime</string>
+  <string id="35003">Year</string>
+
+</strings>

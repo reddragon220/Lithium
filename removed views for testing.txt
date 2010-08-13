@@ -1,0 +1,690 @@
+<!-- Wide -->				
+<!-- No Thumb -->
+<!-- !Skin.HasSetting(list_thumb) + !Skin.HasSetting(list_narrow) -->
+<itemlayout condition="
+	Container.Content(tvshows) + !Skin.HasSetting(tv_list_thumb) + !Skin.HasSetting(tv_list_narrow)]
+	" height="44">
+	<control type="label">
+		<visible>!Container.Content(episodes)</visible>
+		<posx>15</posx>
+		<posy>3</posy>
+		<width>1265</width>
+		<height>30</height>
+		<textcolor>White</textcolor>
+		<font>Title</font>
+		<info>ListItem.Label</info>
+		<scroll>false</scroll>
+	</control>
+	<control type="label">
+		<visible>!Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>40</posy>
+		<width>1265</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title2</font>
+		<info>ListItem.firstGenre</info>
+	</control>
+	<!-- Episodes -->
+	<control type="label">
+		<visible>Container.Content(episodes)</visible>
+		<posx>15</posx>
+		<posy>3</posy>
+		<width>1265</width>
+		<height>30</height>
+		<textcolor>White</textcolor>
+		<font>Title</font>
+		<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]  $INFO[ListItem.Label]</label>
+		<scroll>false</scroll>
+	</control>
+	<control type="label">
+		<visible>Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>40</posy>
+		<width>1265</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title2</font>
+		<info>ListItem.firstGenre</info>
+	</control>
+</itemlayout>
+<focusedlayout condition="
+	Container.Content(tvshows) + !Skin.HasSetting(tv_list_thumb) + !Skin.HasSetting(tv_list_narrow)
+	" height="44">
+	<control type="image">
+		<width>1280</width>
+		<height>44</height>
+		<texture>list/thumb_highlight_single.png</texture>
+	</control>
+	<control type="label">
+		<visible>!Container.Content(episodes)</visible>
+		<posx>15</posx>
+		<posy>1</posy>
+		<width>1265</width>
+		<height>30</height>
+		<textcolor>4b000000</textcolor>
+		<font>Title</font>
+		<info>ListItem.Label</info>
+	</control>
+	<control type="label">
+		<visible>!Container.Content(episodes)</visible>
+		<posx>15</posx>
+		<posy>3</posy>
+		<width>1265</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title</font>
+		<info>ListItem.Label</info>
+	</control>
+	<!-- Episodes -->
+	<control type="label">
+		<visible>Container.Content(episodes)</visible>
+		<posx>15</posx>
+		<posy>1</posy>
+		<width>1265</width>
+		<height>30</height>
+		<textcolor>4b000000</textcolor>
+		<font>Title</font>
+		<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]  $INFO[ListItem.Label]</label>
+	</control>
+	<control type="label">
+		<visible>Container.Content(episodes)</visible>
+		<posx>15</posx>
+		<posy>3</posy>
+		<width>1265</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title</font>
+		<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]  $INFO[ListItem.Label]</label>
+	</control>
+</focusedlayout>
+<!-- Thumb -->
+<!-- Skin.HasSetting(list_thumb) + !Skin.HasSetting(list_narrow) + !Container.Content(albums) + !Container.Content(songs)-->
+<itemlayout condition="
+	Container.Content(tvshows) + Skin.HasSetting(tv_list_thumb) + !Skin.HasSetting(tv_list_narrow)
+	" height="77">
+	<control type="image">
+		<posy>3</posy>
+		<posx>15</posx>
+		<width>126</width>
+		<height>71</height>
+		<info>ListItem.Icon</info>
+		<texture diffuse="list/thumb_mask.png"></texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+	</control>
+	<control type="label">
+		<visible>!Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>5</posy>
+		<width>1120</width>
+		<height>30</height>
+		<textcolor>White</textcolor>
+		<font>Title</font>
+		<info>ListItem.Label</info>
+		<scroll>false</scroll>
+	</control>
+	<control type="label">
+		<visible>!Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>40</posy>
+		<width>1120</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title2</font>
+		<info>ListItem.firstGenre</info>
+	</control>
+	<!-- Episodes -->
+	<control type="label">
+		<visible>Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>5</posy>
+		<width>1120</width>
+		<height>30</height>
+		<textcolor>White</textcolor>
+		<font>Title</font>
+		<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]  $INFO[ListItem.Label]</label>
+		<scroll>false</scroll>
+	</control>
+	<control type="label">
+		<visible>Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>40</posy>
+		<width>1120</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title2</font>
+		<info>ListItem.firstGenre</info>
+	</control>
+</itemlayout>
+<focusedlayout condition="
+	Container.Content(tvshows) + Skin.HasSetting(tv_list_thumb) + !Skin.HasSetting(tv_list_narrow)
+	" height="77">
+	<control type="image">
+		<width>1280</width>
+		<height>77</height>
+		<texture>list/thumb_highlight.png</texture>
+	</control>
+	<control type="image">
+		<posy>2</posy>
+		<posx>14</posx>
+		<width>128</width>
+		<height>73</height>
+		<texture diffuse="list/thumb_mask.png">list/thumb_shadow.png</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+	</control>
+	<control type="image">
+		<posy>3</posy>
+		<posx>15</posx>
+		<width>126</width>
+		<height>71</height>
+		<info>ListItem.thumb</info>
+		<texture diffuse="list/thumb_mask.png"></texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<aligny>top</aligny>
+	</control>
+	<control type="label">
+		<visible>!Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>3</posy>
+		<width>1120</width>
+		<height>30</height>
+		<textcolor>4b000000</textcolor>
+		<font>Title</font>
+		<info>ListItem.Label</info>
+	</control>
+	<control type="label">
+		<visible>!Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>5</posy>
+		<width>1120</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title</font>
+		<info>ListItem.Label</info>
+	</control>
+	<control type="label">
+		<visible>!Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>38</posy>
+		<width>1120</width>
+		<height>30</height>
+		<textcolor>4b000000</textcolor>
+		<font>Title2</font>
+		<info>ListItem.firstGenre</info>
+	</control>
+	<control type="label">
+		<visible>!Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>40</posy>
+		<width>1120</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title2</font>
+		<info>ListItem.firstGenre</info>
+	</control>
+	<!-- Episodes -->
+	<control type="label">
+		<visible>Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>3</posy>
+		<width>1120</width>
+		<height>30</height>
+		<textcolor>4b000000</textcolor>
+		<font>Title</font>
+		<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]  $INFO[ListItem.Label]</label>
+	</control>
+	<control type="label">
+		<visible>Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>5</posy>
+		<width>1120</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title</font>
+		<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]  $INFO[ListItem.Label]</label>
+	</control>
+	<control type="label">
+		<visible>Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>38</posy>
+		<width>1120</width>
+		<height>30</height>
+		<textcolor>4b000000</textcolor>
+		<font>Title2</font>
+		<info>ListItem.firstGenre</info>
+	</control>
+	<control type="label">
+		<visible>Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>40</posy>
+		<width>1120</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title2</font>
+		<info>ListItem.firstGenre</info>
+	</control>
+</focusedlayout>
+<!-- Music Thumb -->
+<itemlayout condition="Skin.HasSetting(list_thumb) + !Skin.HasSetting(list_narrow) + [Container.Content(albums) | Container.Content(songs)]" height="77">
+	<control type="image">
+		<posy>3</posy>
+		<posx>15</posx>
+		<width>71</width>
+		<height>71</height>
+		<info>ListItem.Icon</info>
+		<texture diffuse="list/album_thumb_mask.png"></texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+	</control>
+	<control type="label">
+		<posx>105</posx>
+		<posy>5</posy>
+		<width>1175</width>
+		<height>30</height>
+		<textcolor>White</textcolor>
+		<font>Title</font>
+		<info>ListItem.Label</info>
+		<scroll>false</scroll>
+	</control>
+	<control type="label">
+		<posx>105</posx>
+		<posy>40</posy>
+		<width>1175</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title2</font>
+		<info>ListItem.firstGenre</info>
+	</control>
+</itemlayout>
+<focusedlayout condition="Skin.HasSetting(list_thumb) + !Skin.HasSetting(list_narrow) + [Container.Content(albums) | Container.Content(songs)]" height="77">
+	<control type="image">
+		<width>1280</width>
+		<height>77</height>
+		<texture>list/thumb_highlight.png</texture>
+	</control>
+	<control type="image">
+		<posy>2</posy>
+		<posx>14</posx>
+		<width>73</width>
+		<height>73</height>
+		<texture diffuse="list/album_thumb_mask.png">list/thumb_shadow.png</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+	</control>
+	<control type="image">
+		<posy>3</posy>
+		<posx>15</posx>
+		<width>71</width>
+		<height>71</height>
+		<info>ListItem.thumb</info>
+		<texture diffuse="list/album_thumb_mask.png"></texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<aligny>top</aligny>
+	</control>
+	<control type="label">
+		<posx>105</posx>
+		<posy>3</posy>
+		<width>1175</width>
+		<height>30</height>
+		<textcolor>4b000000</textcolor>
+		<font>Title</font>
+		<info>ListItem.Label</info>
+	</control>
+	<control type="label">
+		<posx>105</posx>
+		<posy>5</posy>
+		<width>1175</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title</font>
+		<info>ListItem.Label</info>
+	</control>
+	<control type="label">
+		<posx>105</posx>
+		<posy>38</posy>
+		<width>1175</width>
+		<height>30</height>
+		<textcolor>4b000000</textcolor>
+		<font>Title2</font>
+		<info>ListItem.firstGenre</info>
+	</control>
+	<control type="label">
+		<posx>105</posx>
+		<posy>40</posy>
+		<width>1175</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title2</font>
+		<info>ListItem.firstGenre</info>
+	</control>
+</focusedlayout>
+
+<!-- Narrow -->
+<!-- No Thumb -->
+<itemlayout condition="!Skin.HasSetting(list_thumb) + Skin.HasSetting(list_narrow)" height="44">
+	<control type="label">
+		<visible>!Container.Content(episodes)</visible>
+		<posx>15</posx>
+		<posy>3</posy>
+		<width>630</width>
+		<height>30</height>
+		<textcolor>White</textcolor>
+		<font>Title</font>
+		<info>ListItem.Label</info>
+		<scroll>false</scroll>
+	</control>
+	<!-- Episodes -->
+	<control type="label">
+		<visible>Container.Content(episodes)</visible>
+		<posx>15</posx>
+		<posy>3</posy>
+		<width>630</width>
+		<height>30</height>
+		<textcolor>White</textcolor>
+		<font>Title</font>
+		<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]  $INFO[ListItem.Label]</label>
+		<scroll>false</scroll>
+	</control>
+</itemlayout>
+<focusedlayout condition="!Skin.HasSetting(list_thumb) + Skin.HasSetting(list_narrow)" height="44">
+	<control type="image">
+		<width>805</width>
+		<height>44</height>
+		<texture>list/info_thumb_highlight_single.png</texture>
+	</control>
+	<control type="label">
+		<visible>!Container.Content(episodes)</visible>
+		<posx>15</posx>
+		<posy>1</posy>
+		<width>630</width>
+		<height>30</height>
+		<textcolor>4b000000</textcolor>
+		<font>Title</font>
+		<info>ListItem.Label</info>
+	</control>
+	<control type="label">
+		<visible>!Container.Content(episodes)</visible>
+		<posx>15</posx>
+		<posy>3</posy>
+		<width>630</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title</font>
+		<info>ListItem.Label</info>
+	</control>
+	<!-- Episodes -->
+	<control type="label">
+		<visible>Container.Content(episodes)</visible>
+		<posx>15</posx>
+		<posy>1</posy>
+		<width>630</width>
+		<height>30</height>
+		<textcolor>4b000000</textcolor>
+		<font>Title</font>
+		<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]  $INFO[ListItem.Label]</label>
+	</control>
+	<control type="label">
+		<visible>Container.Content(episodes)</visible>
+		<posx>15</posx>
+		<posy>3</posy>
+		<width>630</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title</font>
+		<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]  $INFO[ListItem.Label]</label>
+	</control>
+</focusedlayout>
+<!-- Thumb -->
+<itemlayout condition="Skin.HasSetting(list_thumb) + Skin.HasSetting(list_narrow) + !Container.Content(albums) + !Container.Content(songs)" height="77">
+	<control type="image">
+		<posy>3</posy>
+		<posx>15</posx>
+		<width>126</width>
+		<height>71</height>
+		<info>ListItem.Icon</info>
+		<texture diffuse="list/thumb_mask.png"></texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+	</control>
+	<control type="label">
+		<visible>!Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>5</posy>
+		<width>630</width>
+		<height>30</height>
+		<textcolor>White</textcolor>
+		<font>Title</font>
+		<label>$INFO[ListItem.Label]</label>
+		<scroll>false</scroll>
+	</control>
+	<control type="label">
+		<visible>!Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>40</posy>
+		<width>630</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title2</font>
+		<label>$INFO[ListItem.firstGenre]</label>
+	</control>
+	<!-- Episodes -->
+	<control type="label">
+		<visible>Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>5</posy>
+		<width>630</width>
+		<height>30</height>
+		<textcolor>White</textcolor>
+		<font>Title</font>
+		<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]  $INFO[ListItem.Label]</label>
+		<scroll>false</scroll>
+	</control>
+	<control type="label">
+		<visible>Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>40</posy>
+		<width>630</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title2</font>
+		<label>$INFO[ListItem.firstGenre]</label>
+	</control>
+</itemlayout>
+<focusedlayout condition="Skin.HasSetting(list_thumb) + Skin.HasSetting(list_narrow) + !Container.Content(albums) + !Container.Content(songs)" height="77">
+	<control type="image">
+		<width>805</width>
+		<height>77</height>
+		<texture>list/info_thumb_highlight.png</texture>
+	</control>
+	<control type="image">
+		<posy>2</posy>
+		<posx>14</posx>
+		<width>128</width>
+		<height>73</height>
+		<texture diffuse="list/thumb_mask.png">list/thumb_shadow.png</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+	</control>
+	<control type="image">
+		<posy>3</posy>
+		<posx>15</posx>
+		<width>126</width>
+		<height>71</height>
+		<info>ListItem.thumb</info>
+		<texture diffuse="list/thumb_mask.png"></texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<aligny>top</aligny>
+	</control>
+	<control type="label">
+		<posx>160</posx>
+		<visible>!Container.Content(episodes)</visible>
+		<posy>3</posy>
+		<width>630</width>
+		<height>30</height>
+		<textcolor>4b000000</textcolor>
+		<font>Title</font>
+		<label>$INFO[ListItem.Label]</label>
+	</control>
+	<control type="label">
+		<visible>!Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>5</posy>
+		<width>630</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title</font>
+		<label>$INFO[ListItem.Label]</label>
+	</control>
+	<control type="label">
+		<visible>!Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>38</posy>
+		<width>630</width>
+		<height>30</height>
+		<textcolor>4b000000</textcolor>
+		<font>Title2</font>
+		<label>$INFO[ListItem.firstGenre]</label>
+	</control>
+	<control type="label">
+		<visible>!Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>40</posy>
+		<width>630</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title2</font>
+		<info>ListItem.firstGenre</info>
+		<label>$INFO[ListItem.firstGenre]</label>
+	</control>
+	<!-- Episodes -->
+	<control type="label">
+		<posx>160</posx>
+		<visible>Container.Content(episodes)</visible>
+		<posy>3</posy>
+		<width>630</width>
+		<height>30</height>
+		<textcolor>4b000000</textcolor>
+		<font>Title</font>
+		<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]  $INFO[ListItem.Label]</label>
+	</control>
+	<control type="label">
+		<visible>Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>5</posy>
+		<width>630</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title</font>
+		<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]  $INFO[ListItem.Label]</label>
+	</control>
+	<control type="label">
+		<visible>Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>38</posy>
+		<width>630</width>
+		<height>30</height>
+		<textcolor>4b000000</textcolor>
+		<font>Title2</font>
+		<label>$INFO[ListItem.firstGenre]</label>
+	</control>
+	<control type="label">
+		<visible>Container.Content(episodes)</visible>
+		<posx>160</posx>
+		<posy>40</posy>
+		<width>630</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title2</font>
+		<info>ListItem.firstGenre</info>
+		<label>$INFO[ListItem.firstGenre]</label>
+	</control>
+
+</focusedlayout>
+<!-- Music Thumb -->
+<itemlayout condition="Skin.HasSetting(list_thumb) + Skin.HasSetting(list_narrow) + [Container.Content(albums) | Container.Content(songs)]" height="77">
+	<control type="image">
+		<posy>3</posy>
+		<posx>15</posx>
+		<width>71</width>
+		<height>71</height>
+		<info>ListItem.Icon</info>
+		<texture diffuse="list/album_thumb_mask.png"></texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+	</control>
+	<control type="label">
+		<posx>105</posx>
+		<posy>5</posy>
+		<width>685</width>
+		<height>30</height>
+		<textcolor>White</textcolor>
+		<font>Title</font>
+		<info>ListItem.Label</info>
+		<scroll>false</scroll>
+	</control>
+	<control type="label">
+		<posx>105</posx>
+		<posy>40</posy>
+		<width>685</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title2</font>
+		<info>ListItem.firstGenre</info>
+	</control>
+</itemlayout>
+<focusedlayout condition="Skin.HasSetting(list_thumb) + Skin.HasSetting(list_narrow) + [Container.Content(albums) | Container.Content(songs)]" height="77">
+	<control type="image">
+		<width>805</width>
+		<height>77</height>
+		<texture>list/info_thumb_highlight.png</texture>
+	</control>
+	<control type="image">
+		<posy>2</posy>
+		<posx>14</posx>
+		<width>73</width>
+		<height>73</height>
+		<texture diffuse="list/album_thumb_mask.png">list/thumb_shadow.png</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+	</control>
+	<control type="image">
+		<posy>3</posy>
+		<posx>15</posx>
+		<width>71</width>
+		<height>71</height>
+		<info>ListItem.thumb</info>
+		<texture diffuse="list/album_thumb_mask.png"></texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+		<aligny>top</aligny>
+	</control>
+	<control type="label">
+		<posx>105</posx>
+		<posy>3</posy>
+		<width>685</width>
+		<height>30</height>
+		<textcolor>4b000000</textcolor>
+		<font>Title</font>
+		<info>ListItem.Label</info>
+	</control>
+	<control type="label">
+		<posx>105</posx>
+		<posy>5</posy>
+		<width>685</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title</font>
+		<info>ListItem.Label</info>
+	</control>
+	<control type="label">
+		<posx>105</posx>
+		<posy>38</posy>
+		<width>685</width>
+		<height>30</height>
+		<textcolor>4b000000</textcolor>
+		<font>Title2</font>
+		<info>ListItem.firstGenre</info>
+	</control>
+	<control type="label">
+		<posx>105</posx>
+		<posy>40</posy>
+		<width>685</width>
+		<height>30</height>
+		<textcolor>ffffffff</textcolor>
+		<font>Title2</font>
+		<info>ListItem.firstGenre</info>
+	</control>
+</focusedlayout>

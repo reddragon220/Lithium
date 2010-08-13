@@ -1,0 +1,135 @@
+<window id="4">
+<defaultcontrol always="true">9000</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+  
+<controls>
+	<control type="image">
+		<width>1280</width>
+		<height>720</height>
+		<texture>settings/settings_bg.png</texture>
+		<aspectratio>stretch</aspectratio>
+	</control>
+
+
+	<control type="image">
+		<width>297</width>
+		<height>720</height>
+		<texture>settings/bar_bg.png</texture>
+		<aspectratio>stretch</aspectratio>
+	</control>
+	
+	<control type="list" id="9000">
+		<description>Home Wraplist</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>294</width>
+		<height>720</height>
+		<onup>300</onup>
+		<ondown>300</ondown>
+		<onleft>300</onleft>
+		<onright>300</onright>
+		<scrolltime>200</scrolltime>
+		<itemlayout height="50">
+			<control type="label">
+				<posx>20</posx>
+				<posy>4</posy>
+				<width>250</width>
+				<info>ListItem.Label</info>
+				<textcolor>White</textcolor>
+				<scroll>false</scroll>
+				<font>Title</font>
+			</control>
+		</itemlayout>
+		<focusedlayout height="50">
+			<control type="image">
+				<width>269</width>
+				<height>45</height>
+				<texture>settings/highlight.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="label">
+				<posx>20</posx>
+				<posy>2</posy>
+				<width>250</width>
+				<info>ListItem.Label</info>
+				<font>Title</font>
+				<textcolor>4b000000</textcolor>
+			</control>
+			<control type="label">
+				<posy>4</posy>
+				<posx>20</posx>
+				<width>250</width>
+				<info>ListItem.Label</info>
+				<font>Title</font>
+				<textcolor>ffffffff</textcolor>
+			</control>
+		</focusedlayout>
+		<content>
+			<item id="1">
+				 <description>Videos</description>
+				 <width>150</width>
+				 <label>$LOCALIZE[3]</label>
+				 <onclick>activatewindow(MyVideosSettings)</onclick>
+			</item>
+			<item id="2">
+				<description>Music</description>
+				<label>$LOCALIZE[2]</label>
+				<onclick>activatewindow(MyMusicSettings)</onclick>
+			</item>
+			<item id="3">
+				<description>Pictures</description>
+				<label>$LOCALIZE[1]</label>
+				<onclick>activatewindow(MyPicturesSettings)</onclick>
+			</item>
+			<item id="4">
+				<description>Programs</description>
+				<label>$LOCALIZE[0]</label>
+				<onclick>activatewindow(MyProgramsSettings)</onclick>
+			</item>
+			<item id="5">
+				<description>Weather</description>
+			    <label>$LOCALIZE[8]</label>
+				<onclick>activatewindow(MyWeatherSettings)</onclick>
+			</item>
+			<item id="6">
+				<description>Network</description>
+			    <label>$LOCALIZE[705]</label>
+				<onclick>activatewindow(NetworkSettings)</onclick>
+			</item>
+			<item id="7">
+			    <description>System</description>
+			    <label>$LOCALIZE[13000]</label>
+			    <onclick>activatewindow(SystemSettings)</onclick>
+			</item>
+			<item id="8">
+			    <description>Appearance</description>
+			    <label>$LOCALIZE[480]</label>
+			    <onclick>activatewindow(AppearanceSettings)</onclick>
+			</item>
+			<item id="9">
+			    <description>Profiles</description>
+			    <label>$LOCALIZE[13200]</label>
+				<onclick>xbmc.activatewindow(34)</onclick>
+			</item>
+			<item id="10">
+			    <description>About</description>
+			    <label>$LOCALIZE[482]</label>
+			    <onclick>xbmc.credits()</onclick>
+			</item>
+			<item id="11">
+			    <description>System Info</description>
+			    <label>$LOCALIZE[130]</label>
+				<onclick>activatewindow(7)</onclick>
+			</item>
+			<item id="12">
+		        <description>Custom Settings</description>
+		        <label>$LOCALIZE[636]</label>
+				<onclick>activatewindow(56)</onclick>
+		        
+			</item>
+		</content>
+	</control>
+
+</controls>
+  
+</window>

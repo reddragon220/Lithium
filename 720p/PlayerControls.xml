@@ -1,0 +1,84 @@
+<window type="dialog" id="400">
+<defaultcontrol always="true">1</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+  
+<coordinates>
+  <system>1</system>
+  <posx>100</posx>
+  <posy>80</posy>
+</coordinates>
+  
+<controls>
+
+<include>DialogBack</include>
+
+  <control type="label">
+    <include>DialogID</include>
+    <label>PlayerControls.xml</label>
+  </control>
+
+	<control type="grouplist" id="1">
+    <posx>10</posx>
+    <posy>40</posy>
+    <width>150</width>
+    <height>350</height>
+    <itemgap>2</itemgap>
+    <orientation>vertical</orientation>
+    <onleft>-</onleft>
+    <onright>-</onright>
+    <onup>1</onup>
+    <ondown>1</ondown>
+    <control type="button" id="400">
+      <description>Skip Back</description>
+      <label>&lt; &lt;</label>
+      <texturefocus border="1">ButtonFo.png</texturefocus>
+      <texturenofocus border="1">ButtonNF.png</texturenofocus>
+      <onclick>xbmc.playercontrol(previous)</onclick>
+    </control>
+    <control type="button" id="401">
+      <description>Rewind</description>
+      <label>&lt;</label>
+      <texturefocus border="1">ButtonFo.png</texturefocus>
+      <texturenofocus border="1">ButtonNF.png</texturenofocus>
+      <onclick>xbmc.playercontrol(rewind)</onclick>
+    </control>
+    <control type="button" id="402">
+      <description>Play</description>
+      <label>$LOCALIZE[208]</label>
+      <texturefocus border="1">ButtonFo.png</texturefocus>
+      <texturenofocus border="1">ButtonNF.png</texturenofocus>
+      <onclick>xbmc.playercontrol(play)</onclick>
+    </control>
+    <control type="button" id="403">
+      <description>Forward</description>
+      <label>&gt;</label>
+      <texturefocus border="1">ButtonFo.png</texturefocus>
+      <texturenofocus border="1">ButtonNF.png</texturenofocus>
+      <onclick>xbmc.playercontrol(forward)</onclick>
+    </control>
+    <control type="button" id="404">
+      <description>Skip Forward</description>
+      <label>&gt; &gt;</label>
+      <texturefocus border="1">ButtonFo.png</texturefocus>
+      <texturenofocus border="1">ButtonNF.png</texturenofocus>
+      <onclick>xbmc.playercontrol(next)</onclick>
+    </control>
+	  <control type="button" id="405">
+		  <description>Repeat</description>
+		  <label>$LOCALIZE[486]</label>
+      <texturefocus border="1">ButtonFo.png</texturefocus>
+      <texturenofocus border="1">ButtonNF.png</texturenofocus>
+		  <onclick>xbmc.playercontrol(repeat)</onclick>
+	  </control>
+	  <control type="button" id="406">
+		  <description>Random</description>
+		  <label>$LOCALIZE[590]</label>
+      <texturefocus border="1">ButtonFo.png</texturefocus>
+      <texturenofocus border="1">ButtonNF.png</texturenofocus>
+		  <onclick>xbmc.playercontrol(random)</onclick>
+	  </control>
+</control>
+  
+</controls>
+  
+</window>

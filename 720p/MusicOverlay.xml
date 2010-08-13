@@ -1,0 +1,45 @@
+<window id="2004">
+<defaultcontrol always="true">2</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+  
+<coordinates>
+  <system>1</system>
+  <posx>100</posx>
+  <posy>80</posy>
+</coordinates>
+
+<controls>
+
+<include>DialogBack</include>
+
+  <control type="label">
+    <include>DialogID</include>
+    <label>MusicOverlay.xml</label>
+  </control>
+  
+  <control type="visualisation" id="1">
+    <posx>10</posx>
+    <posy>110</posy>
+    <width>300</width>
+    <height>300</height>
+  </control>
+  
+	<control type="label" id="0">
+		<description>Play Time</description>
+		<posx>10</posx>
+		<posy>40</posy>
+		<label>-</label>
+		<info>musicplayer.time</info>
+	</control>
+	<control type="label" id="0">
+		<description>Album Info</description>
+		<posx>10</posx>
+		<posy>72</posy>
+    <width>500</width>
+		<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Title, | ]$INFO[MusicPlayer.Album, | ]$INFO[MusicPlayer.DiscNumber, - $LOCALIZE[427]]$INFO[MusicPlayer.Year, | ]</label>
+		<scroll>true</scroll>
+	</control>
+  
+</controls>
+  
+</window>

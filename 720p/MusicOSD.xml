@@ -1,0 +1,91 @@
+﻿<window id="120">
+<defaultcontrol always="true">1</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+  
+<coordinates>
+  <system>1</system>
+  <posx>100</posx>
+  <posy>80</posy>
+</coordinates>
+  
+<controls>
+
+<include>DialogBack</include>
+
+  <control type="label">
+    <include>DialogID</include>
+    <label>MusicOSD.xml</label>
+  </control>
+  
+	<control type="grouplist" id="1">
+    <posx>10</posx>
+    <posy>40</posy>
+    <width>150</width>
+    <height>350</height>
+		<itemgap>2</itemgap>
+		<orientation>vertical</orientation>
+    <onleft>-</onleft>
+    <onright>-</onright>
+    <onup>1</onup>
+    <ondown>1</ondown>
+	  <control type="button" id="2">
+		  <description>Skip Back</description>
+		  <label>&lt; &lt;</label>
+      <texturefocus border="1">ButtonFo.png</texturefocus>
+      <texturenofocus border="1">ButtonNF.png</texturenofocus>
+		  <onclick>xbmc.playercontrol(previous)</onclick>
+	  </control>
+	  <control type="button" id="3">
+		  <description>Rewind</description>
+		  <label>&lt;</label>
+      <texturefocus border="1">ButtonFo.png</texturefocus>
+      <texturenofocus border="1">ButtonNF.png</texturenofocus>
+		  <onclick>xbmc.playercontrol(rewind)</onclick>
+	  </control>
+	  <control type="button" id="4">
+		  <description>Play</description>
+		  <label>$LOCALIZE[208]</label>
+      <texturefocus border="1">ButtonFo.png</texturefocus>
+      <texturenofocus border="1">ButtonNF.png</texturenofocus>
+		  <onclick>xbmc.playercontrol(play)</onclick>
+	  </control>
+	  <control type="button" id="5">
+		  <description>Forward</description>
+		  <label>&gt;</label>
+      <texturefocus border="1">ButtonFo.png</texturefocus>
+      <texturenofocus border="1">ButtonNF.png</texturenofocus>
+		  <onclick>xbmc.playercontrol(forward)</onclick>
+	  </control>
+	  <control type="button" id="6">
+		  <description>Skip Forward</description>
+		  <label>&gt; &gt;</label>
+      <texturefocus border="1">ButtonFo.png</texturefocus>
+      <texturenofocus border="1">ButtonNF.png</texturenofocus>
+		  <onclick>xbmc.playercontrol(next)</onclick>
+	  </control>
+	  <control type="button" id="7">
+		  <description>Playlists</description>
+		  <label>$LOCALIZE[136]</label>
+      <texturefocus border="1">ButtonFo.png</texturefocus>
+      <texturenofocus border="1">ButtonNF.png</texturenofocus>
+		  <onclick>xbmc.activatewindow(500)</onclick>
+	  </control>
+	  <control type="button" id="8">
+		  <description>Visualisation Presets</description>
+		  <label>V $LOCALIZE[13388]</label>
+      <texturefocus border="1">ButtonFo.png</texturefocus>
+      <texturenofocus border="1">ButtonNF.png</texturenofocus>
+		  <onclick>XBMC.ActivateWindow(122)</onclick>
+	  </control>
+	  <control type="button" id="9">
+		  <description>Vis Settings</description>
+		  <label>V $LOCALIZE[5]</label>
+      <texturefocus border="1">ButtonFo.png</texturefocus>
+      <texturenofocus border="1">ButtonNF.png</texturenofocus>
+		  <onclick>XBMC.ActivateWindow(121)</onclick>
+	  </control>
+</control>
+    
+</controls>
+  
+</window>

@@ -1,0 +1,192 @@
+﻿<?xml version="1.0"?>
+<window id="115">
+	<defaultcontrol always="true">901</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<visible>player.seeking | player.displayafterSeek | player.paused | player.forwarding | player.rewinding</visible>
+	<controls>
+		<control type="group">
+			<visible>!Window.IsVisible(videoosd) + Player.HasVideo</visible>
+			<control type="group">
+				<width>1280</width>
+				<height>720</height>
+				<visible>!Player.Playing</visible>
+				<control type="label">
+					<visible>Player.Paused</visible>
+					<width>1280</width>
+					<height>720</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>Paused</label>
+					<font>OSD_Alert</font>
+					<textcolor>c8e8e8db</textcolor>
+				</control>
+				<control type="label">
+					<visible>Player.Seeking</visible>
+					<width>1280</width>
+					<height>720</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>Seeking</label>
+					<font>OSD_Alert</font>
+					<textcolor>c8e8e8db</textcolor>
+				</control>
+				<control type="label">
+					<visible>Player.Forwarding2x</visible>
+					<width>1280</width>
+					<height>720</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>Fast Forward 2x</label>
+					<font>OSD_Alert</font>
+					<textcolor>c8e8e8db</textcolor>
+				</control>
+				<control type="label">
+					<visible>Player.Forwarding4x</visible>
+					<width>1280</width>
+					<height>720</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>Fast Forward 4x</label>
+					<font>OSD_Alert</font>
+					<textcolor>c8e8e8db</textcolor>
+				</control>
+				<control type="label">
+					<visible>Player.Forwarding8x</visible>
+					<width>1280</width>
+					<height>720</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>Fast Forward 8x</label>
+					<font>OSD_Alert</font>
+					<textcolor>c8e8e8db</textcolor>
+				</control>
+				<control type="label">
+					<visible>Player.Forwarding16x</visible>
+					<width>1280</width>
+					<height>720</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>Fast Forward 16x</label>
+					<font>OSD_Alert</font>
+					<textcolor>c8e8e8db</textcolor>
+				</control>
+				<control type="label">
+					<visible>Player.Forwarding32x</visible>
+					<width>1280</width>
+					<height>720</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>Fast Forward 32x</label>
+					<font>OSD_Alert</font>
+					<textcolor>c8e8e8db</textcolor>
+				</control>
+				<control type="label">
+					<visible>Player.Rewinding2x</visible>
+					<width>1280</width>
+					<height>720</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>Rewind 2x</label>
+					<font>OSD_Alert</font>
+					<textcolor>c8e8e8db</textcolor>
+				</control>
+				<control type="label">
+					<visible>Player.Rewinding4x</visible>
+					<width>1280</width>
+					<height>720</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>Rewind 4x</label>
+					<font>OSD_Alert</font>
+					<textcolor>c8e8e8db</textcolor>
+				</control>
+				<control type="label">
+					<visible>Player.Rewinding8x</visible>
+					<width>1280</width>
+					<height>720</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>Rewind 8x</label>
+					<font>OSD_Alert</font>
+					<textcolor>c8e8e8db</textcolor>
+				</control>
+				<control type="label">
+					<visible>Player.Rewinding16x</visible>
+					<width>1280</width>
+					<height>720</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>Rewind 16x</label>
+					<font>OSD_Alert</font>
+					<textcolor>c8e8e8db</textcolor>
+				</control>
+				<control type="label">
+					<visible>Player.Rewinding32x</visible>
+					<width>1280</width>
+					<height>720</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>Rewind 32x</label>
+					<font>OSD_Alert</font>
+					<textcolor>c8e8e8db</textcolor>
+				</control>
+				<control type="label">
+					<visible>Player.Caching + !Player.Playing</visible>
+					<width>1280</width>
+					<height>720</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>Caching...</label>
+					<font>OSD_Alert</font>
+					<textcolor>c8e8e8db</textcolor>
+				</control>
+			</control>
+
+			<control type="group">
+				<posy>56</posy>
+				<control type="image">
+					<posx>0</posx>
+					<posy>632</posy>
+					<width>1280</width>
+					<height>88</height>
+					<texture>osd/osd_bg.png</texture>
+					<aspectratio>streatch</aspectratio>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>637</posy>
+					<width>103</width>
+					<height>25</height>
+					<font>OSD</font>
+					<textcolor>ffffffff</textcolor>
+					<label>$INFO[Player.Time]</label>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<posx>1177</posx>
+					<posy>637</posy>
+					<width>103</width>
+					<height>25</height>
+					<font>OSD</font>
+					<textcolor>ffffffff</textcolor>
+					<label>$INFO[Player.Duration]</label>
+					<align>center</align>
+				</control>
+				<control type="progress">
+					<posx>127.5</posx>
+					<posy>637</posy>
+					<width>1025</width>
+					<height>25</height>
+					<visible>true</visible>
+					<reveal>true</reveal>
+					<texturebg>osd/progress_bg.png</texturebg>
+					<midtexture>osd/progress_center.png</midtexture>
+					<lefttexture>osd/progress_left.png</lefttexture>
+					<righttexture>osd/progress_right.png</righttexture>
+					<overlaytexture>-</overlaytexture>
+					<info>Player.Progress</info>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,708 @@
+<window id="0">
+	<defaultcontrol always="true">300</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<include>background</include>
+		
+
+		<control type="group">
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1000)</visible>
+				<animation effect="fade" end="100" time="600" delay="300">Visible</animation>
+				<animation effect="fade" end="0" time="200">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<visible>true</visible>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1001)</visible>
+				<animation effect="fade" end="100" time="600" delay="300">Visible</animation>
+				<animation effect="fade" end="0" time="200">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<visible>true</visible>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1002)</visible>
+				<animation effect="fade" end="100" time="600" delay="300">Visible</animation>
+				<animation effect="fade" end="0" time="200">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<visible>true</visible>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1003)</visible>
+				<animation effect="fade" end="100" time="600" delay="300">Visible</animation>
+				<animation effect="fade" end="0" time="200">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<visible>true</visible>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1004)</visible>
+				<animation effect="fade" end="100" time="600" delay="300">Visible</animation>
+				<animation effect="fade" end="0" time="200">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<visible>true</visible>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1005)</visible>
+				<animation effect="fade" end="100" time="600" delay="300">Visible</animation>
+				<animation effect="fade" end="0" time="200">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<visible>true</visible>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1006)</visible>
+				<animation effect="fade" end="100" time="600" delay="300">Visible</animation>
+				<animation effect="fade" end="0" time="200">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<visible>true</visible>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1007)</visible>
+				<animation effect="fade" end="100" time="600" delay="300">Visible</animation>
+				<animation effect="fade" end="0" time="200">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<visible>true</visible>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1008)</visible>
+				<animation effect="fade" end="100" time="600" delay="300">Visible</animation>
+				<animation effect="fade" end="0" time="200">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<visible>true</visible>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1009)</visible>
+				<animation effect="fade" end="100" time="600" delay="300">Visible</animation>
+				<animation effect="fade" end="0" time="200">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<visible>true</visible>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1010)</visible>
+				<animation effect="fade" end="100" time="600" delay="300">Visible</animation>
+				<animation effect="fade" end="0" time="200">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<visible>true</visible>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1011)</visible>
+				<animation effect="fade" end="100" time="600" delay="300">Visible</animation>
+				<animation effect="fade" end="0" time="200">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<visible>true</visible>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1012)</visible>
+				<animation effect="fade" end="100" time="600" delay="300">Visible</animation>
+				<animation effect="fade" end="0" time="200">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<visible>true</visible>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1013)</visible>
+				<animation effect="fade" end="100" time="600" delay="300">Visible</animation>
+				<animation effect="fade" end="0" time="200">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<visible>true</visible>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1014)</visible>
+				<animation effect="fade" end="100" time="600" delay="300">Visible</animation>
+				<animation effect="fade" end="0" time="200">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<visible>true</visible>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1015)</visible>
+				<animation effect="fade" end="100" time="600" delay="300">Visible</animation>
+				<animation effect="fade" end="0" time="200">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<visible>true</visible>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1016)</visible>
+				<animation effect="fade" end="100" time="600" delay="300">Visible</animation>
+				<animation effect="fade" end="0" time="200">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<visible>true</visible>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1017)</visible>
+				<animation effect="fade" end="100" time="600" delay="300">Visible</animation>
+				<animation effect="fade" end="0" time="200">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<visible>true</visible>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1018)</visible>
+				<animation effect="fade" end="100" time="600" delay="300">Visible</animation>
+				<animation effect="fade" end="0" time="200">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<visible>true</visible>
+			</control>
+			<control type="largeimage">
+				<visible>Container(300).HasFocus(1019)</visible>
+				<animation effect="fade" end="100" time="600" delay="300">Visible</animation>
+				<animation effect="fade" end="0" time="200">Hidden</animation>
+				<info>Container(300).ListItem.Property(fanart_image)</info>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<visible>true</visible>
+			</control>
+		</control>
+
+		<control type="group">
+			<posy>331</posy>
+			<control type="image">
+				<width>1280</width>
+				<height>143</height>
+				<texture>home/background.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		
+			<control type="wraplist" id="300">
+				<description>Home Wraplist</description>
+				<posx>0</posx>
+				<posy>34</posy>
+				<width>1280</width>
+				<height>720</height>
+				<onup>300</onup>
+				<ondown>300</ondown>
+				<onleft>300</onleft>
+				<onright>300</onright>
+				<scrolltime>200</scrolltime>
+				<orientation>horizontal</orientation>
+				<focusposition>1</focusposition>
+				
+				<itemlayout width="500" height="300">
+					<control type="label">
+						<posx>142</posx>
+						<posy>15</posy>
+						<width>500</width>
+						<info>ListItem.Label</info>
+						<textcolor>7fffffff</textcolor>
+						<scroll>false</scroll>
+						<font>Section</font>
+						<align>center</align>
+					</control>
+				</itemlayout>
+				<focusedlayout width="500" height="300">
+					<control type="label">
+						<posx>143</posx>
+						<posy>16</posy>
+						<width>500</width>
+						<info>ListItem.Label</info>
+						<font>Section</font>
+						<textcolor>4b000000</textcolor>
+						<align>center</align>
+					</control>
+					<control type="label">
+						<posx>142</posx>
+						<posy>15</posy>
+						<width>500</width>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Section</font>
+						<textcolor>ffffffff</textcolor>
+						<align>center</align>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<description>Videos</description>
+						<label>Online</label>
+						<onclick>xbmc.activatewindow(6)</onclick>
+					</item>
+					<item id="2">
+						<description>Music</description>
+						<label>$LOCALIZE[2]</label>
+						<onclick>xbmc.activatewindow(5)</onclick>
+					</item>
+					<item id="3">
+						<description>Pictures</description>
+						<label>$LOCALIZE[1]</label>
+						<onclick>xbmc.activatewindow(2)</onclick>
+					</item>
+					<item id="4">
+						<description>Programs</description>
+						<label>$LOCALIZE[0]</label>
+						<onclick>xbmc.activatewindow(1)</onclick>
+					</item>
+					<item id="6">
+						<description>Weather</description>
+						<label>$LOCALIZE[8]</label>
+						<onclick>xbmc.activatewindow(2600)</onclick>
+						<visible>System.HasNetwork</visible>
+					</item>
+					<item id="9">
+						<description>Settings</description>
+						<label>$LOCALIZE[5]</label>
+						<onclick>xbmc.activatewindow(settings)</onclick>
+					</item>
+					<item id="10">
+						<description>Refresh</description>
+						<label>$LOCALIZE[184]</label>
+						<onclick>XBMC.ReloadSkin()</onclick>
+					</item>
+				</content>
+			</control>
+
+			<control type="image">
+				<width>1280</width>
+				<height>143</height>
+				<texture>home/gradient.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="group">
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<label>$INFO[Container(300).ListItem(0).Label2]</label>
+					<font>Subtitle</font>
+					<textcolor>ff95c9f7</textcolor>
+					<align>center</align>
+				</control>
+<!--
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<label>$INFO[Container(300).ListItem(1).Label2]</label>
+					<font>Subtitle</font>
+					<textcolor>ff95c9f7</textcolor>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<label>$INFO[Container(300).ListItem(2).Label2]</label>
+					<font>Subtitle</font>
+					<textcolor>ff95c9f7</textcolor>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<label>$INFO[Container(300).ListItem(3).Label2]</label>
+					<font>Subtitle</font>
+					<textcolor>ff95c9f7</textcolor>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<label>$INFO[Container(300).ListItem(4).Label2]</label>
+					<font>Subtitle</font>
+					<textcolor>ff95c9f7</textcolor>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<label>$INFO[Container(300).ListItem(5).Label2]</label>
+					<font>Subtitle</font>
+					<textcolor>ff95c9f7</textcolor>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<label>$INFO[Container(300).ListItem(6).Label2]</label>
+					<font>Subtitle</font>
+					<textcolor>ff95c9f7</textcolor>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<label>$INFO[Container(300).ListItem(7).Label2]</label>
+					<font>Subtitle</font>
+					<textcolor>ff95c9f7</textcolor>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<label>$INFO[Container(300).ListItem(8).Label2]</label>
+					<font>Subtitle</font>
+					<textcolor>ff95c9f7</textcolor>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<label>$INFO[Container(300).ListItem(9).Label2]</label>
+					<font>Subtitle</font>
+					<textcolor>ff95c9f7</textcolor>
+					<align>center</align>
+				</control>
+				
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<label>$INFO[Container(300).ListItem(10).Label2]</label>
+					<font>Subtitle</font>
+					<textcolor>ff95c9f7</textcolor>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<label>$INFO[Container(300).ListItem(11).Label2]</label>
+					<font>Subtitle</font>
+					<textcolor>ff95c9f7</textcolor>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<label>$INFO[Container(300).ListItem(12).Label2]</label>
+					<font>Subtitle</font>
+					<textcolor>ff95c9f7</textcolor>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<label>$INFO[Container(300).ListItem(13).Label2]</label>
+					<font>Subtitle</font>
+					<textcolor>ff95c9f7</textcolor>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<label>$INFO[Container(300).ListItem(14).Label2]</label>
+					<font>Subtitle</font>
+					<textcolor>ff95c9f7</textcolor>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<label>$INFO[Container(300).ListItem(15).Label2]</label>
+					<font>Subtitle</font>
+					<textcolor>ff95c9f7</textcolor>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<label>$INFO[Container(300).ListItem(16).Label2]</label>
+					<font>Subtitle</font>
+					<textcolor>ff95c9f7</textcolor>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<label>$INFO[Container(300).ListItem(17).Label2]</label>
+					<font>Subtitle</font>
+					<textcolor>ff95c9f7</textcolor>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<label>$INFO[Container(300).ListItem(18).Label2]</label>
+					<font>Subtitle</font>
+					<textcolor>ff95c9f7</textcolor>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<label>$INFO[Container(300).ListItem(19).Label2]</label>
+					<font>Subtitle</font>
+					<textcolor>ff95c9f7</textcolor>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1280</width>
+					<label>$INFO[Container(300).ListItem(20).Label2]</label>
+					<font>Subtitle</font>
+					<textcolor>ff95c9f7</textcolor>
+					<align>center</align>
+				</control>
+-->
+			</control>
+		</control>
+
+		<include>header</include>
+
+		<!--		
+		<control type="wraplist" id="300">
+			<description>Home Panel</description>
+			<posx>0</posx>
+			<posy>236</posy>
+			<width>1280</width>
+			<height>248</height>
+			<visible>-</visible>
+			<onup>300</onup>
+			<ondown>300</ondown>
+			<onleft>300</onleft>
+			<onright>300</onright>
+			<focusposition>1</focusposition>
+			<scrolltime>250</scrolltime>
+			<orientation>horizontal</orientation>
+			<itemlayout width="443" height="248">
+				<control type="image">
+					<posx>-19</posx>
+					<width>433</width>
+					<height>248</height>
+					<texture>home/pane.png</texture>
+					<bordertexture>home/pane_shadow.png</bordertexture>
+					<bordersize>5</bordersize>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<visible>Container(300).HasFocus(2)</visible>
+					<posx>-19</posx>
+					<width>433</width>
+					<height>248</height>
+					<texture diffuse="home/pane.png">home/music.jpg</texture>
+					<bordertexture>home/pane_shadow.png</bordertexture>
+					<bordersize>5</bordersize>
+					<aspectratio>scale</aspectratio>
+				</control>
+				<control type="image">
+					<visible>!Container(300).HasFocus(2)</visible>
+					<posx>-19</posx>
+					<width>433</width>
+					<height>248</height>
+					<texture diffuse="home/pane.png">home/iron-man-2-original.jpg</texture>
+					<bordertexture>home/pane_shadow.png</bordertexture>
+					<bordersize>5</bordersize>
+					<aspectratio>scale</aspectratio>
+				</control>
+				<control type="image">
+					<posx>-19</posx>
+					<width>433</width>
+					<height>248</height>
+					<texture>home/pane_title.png</texture>
+					<bordersize>5</bordersize>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>400</posx>
+					<posy>174</posy>
+					<width>433</width>
+					<info>ListItem.Label</info>
+					<font>subtitle</font>
+					<textcolor>ff95c9f7</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+				</control>
+				<control type="label">
+					<posx>400</posx>
+					<posy>201</posy>
+					<width>433</width>
+					<info>ListItem.Label</info>
+					<font>Section</font>
+					<textcolor>White</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+				</control>
+			</itemlayout>
+			<focusedlayout width="443" height="248">
+				<control type="image">
+					<posx>-19</posx>
+					<width>433</width>
+					<height>248</height>
+					<texture>home/pane.png</texture>
+					<bordertexture>home/pane_shadow.png</bordertexture>
+					<bordersize>5</bordersize>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="image">
+					<posx>-19</posx>
+					<width>433</width>
+					<height>248</height>
+					<texture diffuse="home/pane.png">home/iron-man-2-original.jpg</texture>
+					<bordertexture>home/pane_shadow.png</bordertexture>
+					<bordersize>5</bordersize>
+					<aspectratio>scale</aspectratio>
+				</control>
+				<control type="image">
+					<posx>-19</posx>
+					<width>433</width>
+					<height>248</height>
+					<texture>home/pane_title.png</texture>
+					<bordersize>5</bordersize>
+					<aspectratio>keep</aspectratio>
+				</control>
+				<control type="label">
+					<posx>400</posx>
+					<posy>174</posy>
+					<width>433</width>
+					<info>ListItem.Label</info>
+					<font>subtitle</font>
+					<textcolor>ff95c9f7</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+				</control>
+				<control type="label">
+					<posx>400</posx>
+					<posy>201</posy>
+					<width>433</width>
+					<info>ListItem.Label</info>
+					<font>Section</font>
+					<textcolor>White</textcolor>
+					<scroll>false</scroll>
+					<align>right</align>
+				</control>
+			</focusedlayout>
+			<content>
+				<item id="1">
+					<description>Online Content</description>
+					<label>$LOCALIZE[31000]</label>
+					<onclick>xbmc.activatewindow(6)</onclick>
+				</item>
+				<item id="2">
+					<description>Music</description>
+					<label>$LOCALIZE[2]</label>
+					<onclick>xbmc.activatewindow(5)</onclick>
+				</item>
+				<item id="3">
+					<description>Pictures</description>
+					<label>$LOCALIZE[1]</label>
+					<onclick>xbmc.activatewindow(2)</onclick>
+				</item>
+				<item id="4">
+					<description>Programs</description>
+					<label>$LOCALIZE[0]</label>
+					<onclick>xbmc.activatewindow(1)</onclick>
+				</item>
+				<item id="5">
+					<description>Favourites</description>
+					<label>$LOCALIZE[1036]</label>
+					<onclick>xbmc.activatewindow(favourites)</onclick>
+				</item>
+				<item id="8">
+					<description>Scripts</description>
+					<label>$LOCALIZE[247]</label>
+					<onclick>xbmc.activatewindow(Scripts)</onclick>
+				</item>
+				<item id="6">
+					<description>Weather</description>
+					<label>$LOCALIZE[8]</label>
+					<onclick>xbmc.activatewindow(2600)</onclick>
+					<visible>System.HasNetwork</visible>
+				</item>
+				<item id="7">
+					<description>Files</description>
+					<label>$LOCALIZE[7]</label>
+					<onclick>xbmc.activatewindow(3)</onclick>
+				</item>
+				<item id="9">
+					<description>Settings</description>
+					<label>$LOCALIZE[5]</label>
+					<onclick>xbmc.activatewindow(settings)</onclick>
+				</item>
+				<item id="10">
+					<description>Refresh</description>
+					<label>$LOCALIZE[184]</label>
+					<onclick>XBMC.ReloadSkin()</onclick>
+				</item>
+			</content>
+		</control>
+		-->
+	</controls>
+</window>

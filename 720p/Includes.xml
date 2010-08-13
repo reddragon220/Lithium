@@ -1,0 +1,547 @@
+<includes>
+	<include name="views">
+		<include>background</include>
+
+		<include>flow</include>
+		<include>list</include>
+		<include>wall</include>	
+		<include>show_case</include>
+		<include>mods</include> <!-- See Mods.xml -->
+		
+		<include>header</include>
+		<include>preferences</include>
+		
+		<-- Context Menu Fade --/>
+		<control type="image">
+			<visible>Window.IsVisible(106)</visible>
+			<animation effect="fade" start="0" end="100" time="200" condition="Window.IsVisible(106)">Conditional</animation>
+			<description>overlay image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<texture>contextmenu/bg_overlay.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+	</include>
+	
+	<include name="header">
+		<control type="group">
+			<visible>!Skin.HasSetting(no_header)</visible>
+			<include>preferences_animation</include>
+			<control type="image">
+				<width>1280</width>
+				<height>191</height>
+				<texture>header/fade.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="group">
+				<posx>1162</posx>
+				<posy>12</posy>
+				<control type="grouplist">
+					<posy>1</posy>
+					<orientation>horizontal</orientation>
+					<control type="label">
+						<height>25</height>
+						<width min="1" max="150">auto</width>
+						<info>System.Time(HH:MM)</info>
+						<font>Header</font>
+						<textcolor>4b000000</textcolor>
+						<align>left</align>
+					</control>
+					<control type="label">
+						<width min="1" max="150">auto</width>
+						<height>33</height>
+						<posy>0</posy>
+						<label>AM</label>
+						<font>Header Small</font>
+						<textcolor>4b000000</textcolor>
+						<align>left</align>
+						<visible>system.time(00:00,11:59)</visible>
+					</control>
+					<control type="label">
+						<width min="1" max="150">auto</width>
+						<height>33</height>
+						<label>PM</label>
+						<font>Header Small</font>
+						<textcolor>4b000000</textcolor>
+						<align>left</align>
+						<visible>system.time(12:00,23:59)</visible>
+					</control>
+				</control>
+				<control type="grouplist">
+					<posy>3</posy>
+					<orientation>horizontal</orientation>
+					<control type="label">
+						<height>25</height>
+						<width min="1" max="150">auto</width>
+						<info>System.Time(HH:MM)</info>
+						<font>Header</font>
+						<textcolor>White</textcolor>
+						<align>left</align>
+					</control>
+					<control type="label">
+						<width min="1" max="150">auto</width>
+						<height>33</height>
+						<label>AM</label>
+						<font>Header Small</font>
+						<textcolor>ff95c9f7</textcolor>
+						<align>left</align>
+						<visible>system.time(00:00,11:59)</visible>
+					</control>
+					<control type="label">
+						<width min="1" max="150">auto</width>
+						<height>33</height>
+						<label>PM</label>
+						<font>Header Small</font>
+						<textcolor>ff95c9f7</textcolor>
+						<align>left</align>
+						<visible>system.time(12:00,23:59)</visible>
+					</control>
+				</control>
+			</control>
+			
+<!--
+			<control type="grouplist">
+				<posx>1162</posx>
+				<posy>12</posy>
+				<orientation>horizontal</orientation>
+				<itemgap>20</itemgap>
+				<align>left</align>
+				<control type="label">
+					<posy>-2</posy>
+					<width min="1" max="300">auto</width>
+					<label>Test</label>
+					<font>Header</font>
+					<textcolor>White</textcolor>
+					<align>left</align>
+				</control>
+				<control type="group">
+					<width min="1" max="300">auto</width>
+					<control type="label">
+						<posy>-2</posy>
+						<info>System.Time(HH:MM:XX)</info>
+						<font>Header</font>
+						<textcolor>4b000000</textcolor>
+						<align>left</align>
+					</control>
+					<control type="label">
+						<info>System.Time(HH:MM:XX)</info>
+						<font>Header</font>
+						<textcolor>ff95c9f7</textcolor>
+						<align>left</align>
+					</control>
+					<control type="label">
+						<info>System.Time(HH:MM)</info>
+						<font>Header</font>
+						<textcolor>White</textcolor>
+						<align>left</align>
+					</control>
+				</control>
+			</control>
+-->
+
+		</control>
+	</include>
+
+	<include name="preferences_animation">
+		<animation effect="slide" end="0,-119" time="200" condition="Control.HasFocus(101) | Control.HasFocus(102) | Control.HasFocus(103) | Control.HasFocus(104) | Control.HasFocus(105) | Control.HasFocus(106) | Control.HasFocus(107) | Control.HasFocus(108) | Control.HasFocus(109) | Control.HasFocus(1010) | Control.HasFocus(1011) | Control.HasFocus(1012)
+			">Conditional</animation>
+	</include>
+
+	<include name="preferences">
+		<control type="group">
+			<include>preferences_animation</include>	
+			<posy>720</posy>
+			<control type="image">
+				<width>1280</width>
+				<height>119</height>
+				<texture>quick_prefs/prefs_bg.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="grouplist" id="101">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>119</height>
+				<orientation>horizontal</orientation>
+				<scrolltime>200</scrolltime>			
+				
+				<control type="button" id="102">
+					<description>View</description>
+					
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>170</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>					
+
+					<onup>setfocus(50)</onup>
+					<onclick>Container.NextViewMode</onclick>
+
+					<label>$INFO[Container.Viewmode]</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>	
+
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>quick_prefs/prefs_highlight_big.png</texturefocus>					
+
+				</control>
+
+				<control type="button" id="103">
+					<visible>[Control.IsVisible(52) | Control.IsVisible(53)] + !Skin.HasSetting(List_Bay_Right)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+
+					<onup>setfocus(104)</onup>
+					
+					<label>Bay Left</label>
+					<onclick>Skin.ToggleSetting(List_Bay_Right)</onclick>
+					
+
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
+				</control>
+				<control type="button" id="104">
+					<visible>[Control.IsVisible(52) | Control.IsVisible(53)] + Skin.HasSetting(List_Bay_Right)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+
+					<onup>setfocus(103)</onup>
+					
+					<label>Bay Right</label>
+					<onclick>Skin.ToggleSetting(List_Bay_Right)</onclick>
+					
+
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
+				</control>
+
+				<control type="button" id="105">
+					<visible>[Control.IsVisible(52) | Control.IsVisible(53)] + !Skin.HasSetting(list_cover)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+
+					<onup>setfocus(104)</onup>
+					
+					<label>Cover</label>
+					<onclick>Skin.ToggleSetting(list_cover)</onclick>
+					
+
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
+				</control>
+				<control type="button" id="106">
+					<visible>[Control.IsVisible(52) | Control.IsVisible(53)] + Skin.HasSetting(list_cover)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+
+					<onup>setfocus(103)</onup>
+					
+					<label>Info</label>
+					<onclick>Skin.ToggleSetting(list_cover)</onclick>
+					
+
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
+				</control>
+
+				<control type="button" id="107">
+					<visible>[Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(52) | Control.IsVisible(53)] + !Skin.HasSetting(HighList)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+
+					<onup>setfocus(104)</onup>
+					
+					<label>High List</label>
+					<onclick>Skin.ToggleSetting(HighList)</onclick>
+					<onclick>XBMC.ReloadSkin()</onclick>
+					
+
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
+				</control>
+				<control type="button" id="108">
+					<visible>[Control.IsVisible(50) | Control.IsVisible(51) |Control.IsVisible(52) | Control.IsVisible(53)] + Skin.HasSetting(HighList)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+
+					<onup>setfocus(103)</onup>
+					
+					<label>Low List</label>
+					<onclick>Skin.ToggleSetting(HighList)</onclick>
+					<onclick>XBMC.ReloadSkin()</onclick>
+					
+
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
+				</control>
+
+
+
+				
+				<control type="button" id="109">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+
+					<onup>setfocus(50)</onup>
+					<onclick>XBMC.ActivateWindow(settings)</onclick>
+					
+
+					<description>Settings</description>
+					<label>Preferences</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
+				</control>	
+				<control type="button"id="1010">
+					<visible>Skin.HasSetting(developer)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+					
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+
+					<onleft>109</onleft>
+					<onright>1011</onright>
+					<onup>setfocus(50)</onup>
+					<onclick>XBMC.ReloadSkin()</onclick>
+
+					<description>Refresh</description>
+					<label>Refresh</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
+				</control>
+				<control type="button" id="1011">
+					<description>Free Memory</description>
+					
+					<visible>Skin.HasSetting(developer)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+					
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+
+					<onup>setfocus(50)</onup>
+					
+					<label>$INFO[System.FreeMemory]</label>
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
+				</control>
+				
+			</control>
+			
+			<control type="image">
+				<width>1280</width>
+				<height>119</height>
+				<texture>quick_prefs/prefs_shadow.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		</control>
+	</include>
+	
+	
+
+
+	<!-- Background -->
+	<include name="bg_animation">
+		<animation type="Conditional" condition="true" pulse="true">
+			<effect type="slide" start="40,40" end="0,0" time="19000" tween="linear"/>
+			<effect type="zoom" delay="19000" start="130" end="100" center="auto" time="85000" tween="linear"/>
+		</animation>
+	</include>
+	<include name="fanart">
+		<control type="largeimage">
+			<description>Background Image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>$INFO[ListItem.Property(fanart_image)]</texture>
+			<fadetime>200</fadetime>
+		</control>
+	</include>
+	<include name="Custom_Background">
+		<control type="largeimage">
+			<description>Background Image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>stretch</aspectratio>
+			<texture>$INFO[Skin.String(Custom_Background)]</texture>
+			<fadetime>200</fadetime>
+		</control>
+	</include>
+	<include name="Background1">
+		<texture>background/Bokeh.png</texture>
+	</include>
+	<include name="Background2">
+		<texture>background/stream.png</texture>
+	</include>
+	<include name="background">
+		<control type="group">
+			<include>preferences_animation</include>
+			<include condition="!Skin.HasSetting(ken_burns)">bg_animation</include>
+			
+			<control type="image">
+				<visible>IsEmpty(ListItem.Property(fanart_image)) | Skin.HasSetting(fanart)</visible>
+				<description>Background Image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<aspectratio>stretch</aspectratio>
+
+				<include condition="Skin.String(Custom_Background)">Custom_Background</include>
+				
+				<include condition="!Skin.String(Custom_Background) + !Skin.HasSetting(Background1)">Background1</include>
+				<include condition="!Skin.String(Custom_Background) + Skin.HasSetting(Background2)">Background2</include>
+				<fadetime>200</fadetime>
+			</control>
+			
+			<include condition="!Skin.HasSetting(fanart)">fanart</include>
+		</control>
+	</include>
+
+	<include name="background_reset">
+		<onclick>Skin.Reset(Custom_Background)</onclick>
+		<onclick>Skin.Reset(Background1)</onclick>
+		<onclick>Skin.Reset(Background2)</onclick>
+	</include>
+
+
+	<include file="Defaults.xml"/>
+	<include file="CommonViews.xml"/>
+	<include name="DialogBack">
+		<control type="image">
+			<width>520</width>
+			<height>424</height>
+			<texture>White.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+	</include>
+	<include name="DialogID">
+		<posx>10</posx>
+		<posy>10</posy>
+		<font>Small</font>
+		<textcolor>Red</textcolor>
+		<align>left</align>
+	</include>
+	<include name="WindowID">
+		<posx>10</posx>
+		<posy>10</posy>
+		<font>Small</font>
+		<textcolor>Red</textcolor>
+		<align>left</align>
+	</include>
+</includes>

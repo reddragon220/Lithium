@@ -1,0 +1,424 @@
+<window id="2901">
+	<defaultcontrol always="true">4</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>632</posy>
+			<width>1280</width>
+			<height>88</height>
+			<texture>osd/osd_bg.png</texture>
+			<aspectratio>streatch</aspectratio>
+		</control>
+
+		<control type="grouplist" id="101">
+			<posx>415</posx>
+			<posy>673</posy>
+			<width>449</width>
+			<height>37</height>
+			<orientation>horizontal</orientation>
+			<scrolltime>200</scrolltime>
+			<itemgap>0</itemgap>
+
+			<onleft>1</onleft>
+			<onright>7</onright>
+		
+
+			<control type="button" id="1">
+				<width>65</width>
+				<height>37</height>
+		
+				<onleft>1</onleft>
+				<onright>2</onright>
+
+				<onclick>xbmc.playercontrol(previous)</onclick>
+
+				<texturefocus>osd/buttons/previous_focused.png</texturefocus>
+				<texturenofocus>osd/buttons/previous_unfocused.png</texturenofocus>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="button" id="2">
+				<width>64</width>
+				<height>37</height>
+		
+				<onleft>1</onleft>
+				<onright>3</onright>
+
+				<onclick>xbmc.playercontrol(rewind)</onclick>
+
+				<texturefocus>osd/buttons/rewind_focused.png</texturefocus>
+				<texturenofocus>osd/buttons/rewind_unfocused.png</texturenofocus>
+			</control>
+			<control type="button" id="3">
+				<width>64</width>
+				<height>37</height>
+		
+				<onleft>2</onleft>
+				<onright>4</onright>
+
+				<onclick>xbmc.playercontrol(stop)</onclick>
+
+				<texturefocus>osd/buttons/stop_focused.png</texturefocus>
+				<texturenofocus>osd/buttons/stop_unfocused.png</texturenofocus>
+			</control>
+			<control type="togglebutton" id="4">
+				<width>64</width>
+				<height>37</height>
+
+				<onleft>3</onleft>
+				<onright>5</onright>
+				<onclick>xbmc.playercontrol(play)</onclick>
+				<onclick>SetFocus(4)</onclick>
+
+				<texturefocus>osd/buttons/pause_focused.png</texturefocus>
+				<texturenofocus>osd/buttons/pause_unfocused.png</texturenofocus>
+			
+				<alttexturefocus>osd/buttons/play_focused.png</alttexturefocus>
+				<alttexturenofocus>osd/buttons/play_unfocused.png</alttexturenofocus>
+				<usealttexture>Player.Paused</usealttexture>
+			</control>
+			<control type="button" id="5">
+				<width>64</width>
+				<height>37</height>
+		
+				<onleft>4</onleft>
+				<onright>6</onright>
+
+				<onclick>xbmc.playercontrol(forward)</onclick>
+
+				<texturefocus>osd/buttons/fastfoward_focused.png</texturefocus>
+				<texturenofocus>osd/buttons/fastfoward_unfocused.png</texturenofocus>
+			</control>
+			<control type="button" id="6">
+				<width>64</width>
+				<height>37</height>
+		
+				<onleft>5</onleft>
+				<onright>7</onright>
+
+				<onclick>xbmc.playercontrol(next)</onclick>
+
+				<texturefocus>osd/buttons/next_focused.png</texturefocus>
+				<texturenofocus>osd/buttons/next_unfocused.png</texturenofocus>
+			</control>
+		</control>
+
+		<control type="grouplist" id="102">
+			<posx>1069</posx>
+			<posy>674</posy>
+			<width>193</width>
+			<height>37</height>
+			<orientation>horizontal</orientation>
+			<scrolltime>200</scrolltime>
+			<itemgap>0</itemgap>
+			
+			<onleft>6</onleft>
+			<onright>10</onright>
+			
+			<control type="button" id="7">
+				<width>65</width>
+				<height>37</height>
+		
+				<onleft>6</onleft>
+				<onright>8</onright>
+
+				<onclick>xbmc.activatewindow(10125)</onclick>
+
+				<texturefocus>osd/buttons/bookmarks_focused.png</texturefocus>
+				<texturenofocus>osd/buttons/bookmarks_unfocused.png</texturenofocus>
+			</control>
+
+			<control type="button" id="8">
+				<width>64</width>
+				<height>37</height>
+		
+				<onleft>7</onleft>
+				<onright>9</onright>
+
+				<onclick></onclick>
+
+				<texturefocus>osd/buttons/subtitles_focused.png</texturefocus>
+				<texturenofocus>osd/buttons/subtitles_unfocused.png</texturenofocus>
+			</control>
+			<control type="button" id="9">
+				<width>64</width>
+				<height>37</height>
+		
+				<onleft>8</onleft>
+				<onright>9</onright>
+
+				<onclick>SetFocus(10)</onclick>
+
+				<texturefocus>osd/buttons/settings_focused.png</texturefocus>
+				<texturenofocus>osd/buttons/settings_unfocused.png</texturenofocus>
+			</control>		
+		</control>
+
+
+		<control type="label">
+			<posx>0</posx>
+			<posy>637</posy>
+			
+			<width>103</width>
+			<height>25</height>
+		
+			<font>OSD</font>
+			<textcolor>ffffffff</textcolor>
+			<label>$INFO[Player.Time]</label>
+			<align>center</align>
+		</control>
+		
+		<control type="label">
+			<posx>1177</posx>
+			<posy>637</posy>
+			
+			<width>103</width>
+			<height>25</height>
+		
+			<font>OSD</font>
+			<textcolor>ffffffff</textcolor>
+			<label>$INFO[Player.Duration]</label>
+			<align>center</align>
+		</control>
+
+		<control type="progress">
+			<posx>127.5</posx>
+			<posy>637</posy>
+			<width>1025</width>
+			<height>25</height>
+			<visible>true</visible>
+			<reveal>true</reveal>
+			<texturebg>osd/progress_bg.png</texturebg>
+			<midtexture>osd/progress_center.png</midtexture>
+			<lefttexture>osd/progress_left.png</lefttexture>
+			<righttexture>osd/progress_right.png</righttexture>
+			<overlaytexture>-</overlaytexture>
+			<info>Player.Progress</info>
+		</control>
+		
+		
+		<control type="group">
+			<width>1280</width>
+			<height>720</height>
+
+			<visible>!Player.Playing</visible>
+			<control type="label">
+				<visible>Player.Paused</visible>
+				<width>1280</width>
+				<height>720</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Paused</label>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
+			</control>		
+			<control type="label">
+				<visible>Player.Seeking</visible>
+				<width>1280</width>
+				<height>720</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Seeking</label>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
+			</control>			
+			<control type="label">
+				<visible>Player.Forwarding2x</visible>
+				<width>1280</width>
+				<height>720</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Fast Forward 2x</label>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
+			</control>
+			<control type="label">
+				<visible>Player.Forwarding4x</visible>
+				<width>1280</width>
+				<height>720</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Fast Forward 4x</label>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
+			</control>
+			<control type="label">
+				<visible>Player.Forwarding8x</visible>
+				<width>1280</width>
+				<height>720</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Fast Forward 8x</label>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
+			</control>
+			<control type="label">
+				<visible>Player.Forwarding16x</visible>
+				<width>1280</width>
+				<height>720</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Fast Forward 16x</label>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
+			</control>
+			<control type="label">
+				<visible>Player.Forwarding32x</visible>
+				<width>1280</width>
+				<height>720</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Fast Forward 32x</label>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
+			</control>
+			<control type="label">
+				<visible>Player.Rewinding2x</visible>
+				<width>1280</width>
+				<height>720</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Rewind 2x</label>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
+			</control>
+			<control type="label">
+				<visible>Player.Rewinding4x</visible>
+				<width>1280</width>
+				<height>720</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Rewind 4x</label>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
+			</control>
+			<control type="label">
+				<visible>Player.Rewinding8x</visible>
+				<width>1280</width>
+				<height>720</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Rewind 8x</label>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
+			</control>
+			<control type="label">
+				<visible>Player.Rewinding16x</visible>
+				<width>1280</width>
+				<height>720</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Rewind 16x</label>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
+			</control>
+			<control type="label">
+				<visible>Player.Rewinding32x</visible>
+				<width>1280</width>
+				<height>720</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Rewind 32x</label>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
+			</control>
+			<control type="label">
+				<visible>Player.Caching + !Player.Playing</visible>
+				<width>1280</width>
+				<height>720</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>Caching...</label>
+				<font>OSD_Alert</font>
+				<textcolor>c8e8e8db</textcolor>
+			</control>
+		</control>
+
+
+		<control type="group">
+			<visible>Control.hasfocus(10) + !window.isvisible(10123) + !window.isvisible(10124)</visible>
+			<posx>448.5</posx>
+			<posy>295</posy>
+			<animation type="Visible" reversible="false">
+				<effect type="zoom" start="80" end="100" center="640,360" delay="200" easing="out" tween="back" time="300" />
+				<effect type="fade" delay="200" start="0" end="100" time="300" />
+			</animation>
+			<animation type="Hidden" reversible="false">
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
+			
+			<control type="image">
+				<width>383</width>
+				<height>130</height>
+				<texture>osd/settings/selection_bg.png</texture>
+			</control>
+				<control type="list" id="10">
+					<posx>5</posx>
+					<posy>17</posy>
+					<width>373</width>
+					<height>94</height>
+					<ondown>9</ondown>
+					<viewtype label="List">list</viewtype>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="47">
+						<control type="image">
+							<width>373</width>
+							<height>47</height>
+							<texture>osd/settings/highlight_unfocused.png</texture>
+						</control>
+						<control type="label">
+							<posx>186.5</posx>
+							<posy>3</posy>
+							<width>373</width>
+							<height>30</height>
+							<textcolor>White</textcolor>
+							<font>Title</font>
+							<info>ListItem.Label</info>
+							<scroll>false</scroll>
+							<align>center</align>
+						</control>
+					</itemlayout>
+					<focusedlayout height="47">
+						<control type="image">
+							<width>373</width>
+							<height>47</height>
+							<texture>osd/settings/highlight_focused.png</texture>
+						</control>
+						<control type="label">
+							<posx>186.5</posx>
+							<posy>1</posy>
+							<width>373</width>
+							<height>30</height>
+							<textcolor>4b000000</textcolor>
+							<font>Title</font>
+							<info>ListItem.Label</info>
+							<align>center</align>
+						</control>
+						<control type="label">
+							<posx>186.5</posx>
+							<posy>3</posy>
+							<width>373</width>
+							<height>30</height>
+							<textcolor>ffffffff</textcolor>
+							<font>Title</font>
+							<info>ListItem.Label</info>
+							<align>center</align>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="1">
+							<description>Video</description>
+							<label>Video</label>
+							<onclick>xbmc.activatewindow(10123)</onclick>
+						</item>
+						<item id="2">
+							<description>Audio</description>
+							<label>Audio</label>
+							<onclick>xbmc.activatewindow(10124)</onclick>
+						</item>
+					</content>
+				</control>		
+		</control>		
+	</controls>
+</window>

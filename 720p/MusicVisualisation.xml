@@ -1,0 +1,15 @@
+<window id="2006">
+<defaultcontrol always="true">-</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+  
+<controls>
+  
+	<control type="visualisation" id="2">
+		<description>visualisation</description>
+		<width>720</width>
+		<height>576</height>
+	</control>
+  
+</controls>
+  
+</window>

@@ -1,0 +1,65 @@
+<window type="buttonMenu" id="111">
+<defaultcontrol always="true">3110</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+  
+<coordinates>
+  <system>1</system>
+  <posx>100</posx>
+  <posy>80</posy>
+</coordinates>
+  
+<controls>
+  
+<include>DialogBack</include>
+
+  <control type="label">
+    <include>DialogID</include>
+    <label>DialogButtonMenu.xml</label>
+  </control>
+  
+	<control type="grouplist" id="1">
+		<posx>10</posx>
+		<posy>40</posy>
+    <width>520</width>
+    <height>382</height>
+		<itemgap>2</itemgap>
+    <onleft>-</onleft>
+    <onright>-</onright>
+    <onup>1</onup>
+    <ondown>1</ondown>
+		<orientation>vertical</orientation>
+    <control type="button" id="3110">
+	    <description>dashboard</description>
+	    <label>$LOCALIZE[13006]</label>
+	    <onclick>xbmc.dashboard()</onclick>
+      <width>500</width>
+    </control>
+    <control type="button" id="3111">
+	    <description>Reboot</description>
+	    <label>$LOCALIZE[13313]</label>
+	    <onclick>XBMC.Reset()</onclick>
+      <width>500</width>
+    </control>
+    <control type="button" id="3112">
+	    <description>Shutdown</description>
+	    <label>$LOCALIZE[13005]</label>
+	    <onclick>XBMC.ShutDown()</onclick>
+      <width>500</width>
+    </control>
+    <control type="button" id="3113">
+      <description>Restart Xbmc</description>
+      <label>$LOCALIZE[13313] XBMC</label>
+      <onclick>xbmc.RestartApp()</onclick>
+      <width>500</width>
+    </control>
+    <control type="button" id="3114">
+	    <description>System Info Button</description>
+	    <label>$LOCALIZE[130]</label>
+	    <onclick>XBMC.ActivateWindow(7)</onclick>
+      <width>500</width>
+    </control>
+	</control>
+  
+</controls>
+  
+</window>
