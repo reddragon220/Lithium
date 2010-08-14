@@ -81,20 +81,10 @@
 				<label>$LOCALIZE[1]</label>
 				<onclick>activatewindow(MyPicturesSettings)</onclick>
 			</item>
-			<item id="4">
-				<description>Programs</description>
-				<label>$LOCALIZE[0]</label>
-				<onclick>activatewindow(MyProgramsSettings)</onclick>
-			</item>
 			<item id="5">
 				<description>Weather</description>
 			    <label>$LOCALIZE[8]</label>
 				<onclick>activatewindow(MyWeatherSettings)</onclick>
-			</item>
-			<item id="6">
-				<description>Network</description>
-			    <label>$LOCALIZE[705]</label>
-				<onclick>activatewindow(NetworkSettings)</onclick>
 			</item>
 			<item id="7">
 			    <description>System</description>
