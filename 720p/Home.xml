@@ -263,10 +263,11 @@
 				<posy>11</posy>
 				<width>1280</width>
 				<height>720</height>
-				<onup>300</onup>
-				<ondown>300</ondown>
-				<onleft>300</onleft>
-				<onright>300</onright>
+				<onup>Skin.Reset(Plex_Menu)</onup>
+				<ondown>Skin.Reset(Plex_Menu)</ondown>
+				<onleft>Skin.Reset(Plex_Menu)</onleft>
+				<onright>Skin.Reset(Plex_Menu)</onright>
+				<onfocus>Skin.Reset(Plex_Menu)</onfocus>
 				<scrolltime>200</scrolltime>
 				<orientation>horizontal</orientation>
 				<focusposition>1</focusposition>
@@ -322,10 +323,10 @@
 				<posy>11</posy>
 				<width>1280</width>
 				<height>720</height>
-				<onup>301</onup>
-				<ondown>301</ondown>
-				<onleft>301</onleft>
-				<onright>301</onright>
+				<onup>Skin.SetBool(Plex_Menu)</onup>
+				<ondown>Skin.SetBool(Plex_Menu)</ondown>
+				<onleft>Skin.SetBool(Plex_Menu)</onleft>
+				<onright>Skin.SetBool(Plex_Menu)</onright>
 				<onfocus>Skin.SetBool(Plex_Menu)</onfocus>
 				<scrolltime>200</scrolltime>
 				<orientation>horizontal</orientation>
