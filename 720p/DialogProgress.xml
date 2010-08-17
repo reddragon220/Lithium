@@ -2,31 +2,75 @@
 <defaultcontrol always="true">10</defaultcontrol>
 <allowoverlay>yes</allowoverlay>
 
+<!--
+<animation type="WindowOpen" reversible="false">
+	<effect type="zoom" start="80" end="100" center="640,360" delay="200" easing="out" tween="back" time="300" />
+	<effect type="fade" delay="200" start="0" end="100" time="300" />
+</animation>
+<animation type="WindowClose" reversible="false">
+	<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+	<effect type="fade" start="100" end="0" time="300" />
+</animation>
+-->
+
 <controls>
+	<control type="group">
+		<posx>465</posx>
+		<posy>235</posy>
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>350</width>
+		<height>250</height>
+		<texture>dialog/progress/background.png</texture>
+		<aspectratio>stretch</aspectratio>
+	</control>
 
-<include>DialogBack</include>
-
-  <control type="label">
-    <include>DialogID</include>
-    <label>DialogProgress.xml</label>
-  </control>
 
   <control type="label" id="1">
     <description>heading</description>
-    <posx>10</posx>
-    <posy>40</posy>
-    <width>500</width>
+	<font>Dialog Header</font>
+	<textcolor>ffffffff</textcolor>
+	<align>center</align>
+    <posx>5</posx>
+    <posy>15</posy>
+    <width>340</width>
     <label>-</label>
   </control>
 
+
   <control type="label" id="2">
     <description>Line 1</description>
-    <posx>10</posx>
-    <posy>72</posy>
-    <width>500</width>
+	<font>Dialog Info</font>
+	<textcolor>ffffffff</textcolor>
+	<align>center</align>
+    <posx>5</posx>
+    <posy>67</posy>
+    <width>340</width>
     <label>-</label>
   </control>
-  <control type="label" id="3">
+
+	<control type="image">
+		<posx>95</posx>
+		<posy>79</posy>
+		<width>160</width>
+		<height>161</height>
+		<texture>dialog/progress/plex.png</texture>
+		<aspectratio>stretch</aspectratio>
+	</control>
+
+
+	<control type="image">
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>350</width>
+		<height>250</height>
+		<texture>dialog/progress/foreground.png</texture>
+		<aspectratio>stretch</aspectratio>
+	</control>
+ 
+<!--
+ <control type="label" id="3">
     <description>Line 2</description>
     <posx>10</posx>
     <posy>104</posy>
@@ -59,8 +103,8 @@
     <onup>10</onup>
     <ondown>10</ondown>
   </control>
-  
-
+--> 
+</control>
 
 </controls>
   

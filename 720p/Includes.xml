@@ -3,6 +3,7 @@
 		<include>background</include>
 
 		<include>flow</include>
+		<!--><include>flow2</include>-->
 		<include>list</include>
 		<include>wall</include>	
 		<include>show_case</include>
@@ -13,7 +14,7 @@
 		
 		<-- Context Menu Fade --/>
 		<control type="image">
-			<visible>Window.IsVisible(106)</visible>
+			<visible>Window.IsVisible(106) | Window.IsVisible(101)</visible>
 			<animation effect="fade" start="0" end="100" time="200" condition="Window.IsVisible(106)">Conditional</animation>
 			<description>overlay image</description>
 			<posx>0</posx>

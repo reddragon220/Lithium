@@ -1512,5 +1512,279 @@
 		</control>
 	</include>
 
+	<include name="flow2">
+		<description>Flow View</description>
+		
+		<control type="group">
+		<visible>Control.IsVisible(55)</visible>
+		<include>preferences_animation</include>
+		<control type="group">
+			<visible></visible>
+			<animation effect="slide" start="0,0" end="0,663" time="200" condition="Skin.HasSetting(flow_hide)">Conditional</animation>
+			<description>Info</description>
+			<control type="image">
+				<posy>57</posy>
+				<width>1280</width>
+				<height>581</height>
+				<texture>flow/info_bg.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="group">
+				<control type="label">
+					<posx>40</posx>
+					<posy>90</posy>
+					<width>598</width>
+					<textcolor>ffffffff</textcolor>
+					<font>Title</font>
+					<label>$INFO[ListItem.Label]</label>
+					<scroll>false</scroll>
+					<align>left</align>
+				</control>
+				<control type="label">
+					<posx>125</posx>
+					<posy>129</posy>
+					<width>299</width>
+					<textcolor>ffffffff</textcolor>
+					<font>Info_title</font>
+					<label>$LOCALIZE[35000]:</label>
+					<scroll>false</scroll>
+					<align>right</align>
+				</control>
+				<control type="label">
+					<posx>135</posx>
+					<posy>130</posy>
+					<width>299</width>
+					<textcolor>ffffffff</textcolor>
+					<font>Title2</font>
+					<label> $INFO[ListItem.Rating]</label>
+					<scroll>false</scroll>
+					<align>left</align>
+				</control>
+				<control type="label">
+					<posx>538</posx>
+					<posy>129</posy>
+					<width>299</width>
+					<textcolor>ffffffff</textcolor>
+					<font>Info_title</font>
+					<label>$LOCALIZE[35002]:</label>
+					<scroll>false</scroll>
+					<align>right</align>
+				</control>
+				<control type="label">
+					<posx>548</posx>
+					<posy>130</posy>
+					<width>299</width>
+					<textcolor>ffffffff</textcolor>
+					<font>Title2</font>
+					<label> $INFO[ListItem.Duration]</label>
+					<scroll>false</scroll>
+					<align>left</align>
+				</control>
+				<control type="group">
+					<visible>!Container.Content(episodes)</visible>
+					<control type="label">
+						<posx>125</posx>
+						<posy>158</posy>
+						<width>299</width>
+						<textcolor>ffffffff</textcolor>
+						<font>Info_title</font>
+						<label>$LOCALIZE[35001]:</label>
+						<scroll>false</scroll>
+						<align>right</align>
+					</control>
+					<control type="label">
+						<posx>135</posx>
+						<posy>159</posy>
+						<width>299</width>
+						<textcolor>ffffffff</textcolor>
+						<font>Title2</font>
+						<label>$INFO[ListItem.FirstGenre]</label>
+						<scroll>false</scroll>
+						<align>left</align>
+					</control>
+					<control type="label">
+						<posx>538</posx>
+						<posy>158</posy>
+						<width>299</width>
+						<textcolor>ffffffff</textcolor>
+						<font>Info_title</font>
+						<label>$LOCALIZE[35003]:</label>
+						<scroll>false</scroll>
+						<align>right</align>
+					</control>
+					<control type="label">
+						<posx>548</posx>
+						<posy>159</posy>
+						<width>299</width>
+						<textcolor>ffffffff</textcolor>
+						<font>Title2</font>
+						<label> $INFO[ListItem.Year]</label>
+						<scroll>false</scroll>
+						<align>left</align>
+					</control>
+				</control>
+				<control type="group">
+					<animation effect="slide" end="0,-30" time="0" condition="Container.Content(episodes)">Conditional</animation>
+					<control type="image">
+						<posx>40</posx>
+						<posy>192</posy>
+						<height>2</height>
+						<width>598</width>
+						<texture>flow/divider.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="textbox">
+						<description>Plot</description>
+						<posx>40</posx>
+						<posy>200</posy>
+						<width>598</width>
+						<height>215</height>
+						<font>Title2</font>
+						<textcolor>FFFFFFFF</textcolor>
+						<label>$INFO[listitem.Plot]</label>
+						<autoscroll delay="9000" time="2000" repeat="10000">true</autoscroll>
+					</control>
+				</control>
+			</control>
+			<control type="largeimage">
+				<visible>!Container.Content(episodes) + !Container.Content(albums) + !Container.Content(songs)</visible>
+				<posx>685</posx>
+				<posy>90</posy>
+				<width>556</width>
+				<height>314</height>
+				<texture>$INFO[ListItem.Property(fanart_image)]</texture>
+				<aspectratio>stretch</aspectratio>
+				<fadetime>200</fadetime>
+				<align>left</align>
+			</control>
+			<control type="largeimage">
+				<visible>Container.Content(albums) | Container.Content(songs)</visible>
+				<posx>685</posx>
+				<posy>90</posy>
+				<width>556</width>
+				<height>314</height>
+				<texture>$INFO[ListItem.icon]</texture>
+				<aspectratio>scale</aspectratio>
+				<fadetime>200</fadetime>
+				<align>left</align>
+			</control>
+			<control type="largeimage">
+				<visible>Container.Content(episodes)</visible>
+				<posx>685</posx>
+				<posy>90</posy>
+				<width>556</width>
+				<height>314</height>
+				<texture>$INFO[ListItem.icon]</texture>
+				<aspectratio>stretch</aspectratio>
+				<fadetime>200</fadetime>
+				<align>left</align>
+			</control>
+			<control type="group">
+				<description>Studio Tag</description>
+				<posx>685</posx>
+				<posy>300</posy>
+				<control type="image">
+					<posx>1</posx>
+					<posy>1</posy>
+					<height>100</height>
+					<width>552</width>
+					<info>Listitem.Property(mediaTag::studio)</info>
+					<colordiffuse>65000000</colordiffuse>
+					<aspectratio align="right" aligny="bottom">keep</aspectratio>
+				</control>
+				<control type="image">
+					<height>100</height>
+					<width>552</width>
+					<info>Listitem.Property(mediaTag::studio)</info>
+					<aspectratio align="right" aligny="bottom">keep</aspectratio>
+				</control>
+			</control>
+		</control>
+		<control type="image">
+			<posy>508</posy>
+			<width>1280</width>
+			<height>212</height>
+			<texture>flow/floor.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+
+		<control type="group">
+			<posx>640</posx>
+			<posy>80</posy>
+			
+			<control type="image">
+				<animation effect="rotatey" end="10" condition="true">conditional</animation>
+				<posx>160</posx>
+				<posy>0</posy>
+				<width>392</width>
+				<height>572</height>
+				<texture diffuse="showcase/thumb_mask_focus.png">$INFO[Listitem(3).Icon]</texture>
+				<bordertexture border="5">showcase/thumb_focus_shadow.png</bordertexture>
+				<bordersize>5</bordersize>
+			</control>
+			<control type="image">
+				<animation effect="rotatey" end="10" condition="true">conditional</animation>
+				<posx>80</posx>
+				<posy>0</posy>
+				<width>392</width>
+				<height>572</height>
+				<texture diffuse="showcase/thumb_mask_focus.png">$INFO[Listitem(2).Icon]</texture>
+				<bordertexture border="5">showcase/thumb_focus_shadow.png</bordertexture>
+				<bordersize>5</bordersize>
+			</control>
+			<control type="image">
+				<animation effect="rotatey" end="10" condition="true">conditional</animation>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>392</width>
+				<height>572</height>
+				<texture diffuse="showcase/thumb_mask_focus.png">$INFO[Listitem(1).Icon]</texture>
+				<bordertexture border="5">showcase/thumb_focus_shadow.png</bordertexture>
+				<bordersize>5</bordersize>
+			</control>
+		</control>
+		
+		<control type="fixedlist" id="55">
+			<ondown>101</ondown>
+			<posx>0</posx>
+			<posy>80</posy>
+			<width>1280</width>
+			<height>612</height>
+			<visible>true</visible>
+			<viewtype label="3d Cover">list</viewtype>
+			<orientation>horizontal</orientation>
+			<pagecontrol>25</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<focusposition>1</focusposition>
+			<itemlayout width="392" height="572">
+			</itemlayout>
+			<focusedlayout width="392" height="572">
+			</focusedlayout>
+		</control>
+		<control type="label">
+			<posx>0</posx>
+			<posy>663</posy>
+			<width>1280</width>
+			<height>48</height>
+			<textcolor>4b000000</textcolor>
+			<font>Title</font>
+			<info>ListItem.Label</info>
+			<scroll>false</scroll>
+			<align>center</align>
+		</control>
+		<control type="label">
+			<posx>0</posx>
+			<posy>665</posy>
+			<width>1280</width>
+			<height>48</height>
+			<textcolor>ffffffff</textcolor>
+			<font>Title</font>
+			<info>ListItem.Label</info>
+			<scroll>false</scroll>
+			<align>center</align>
+		</control>
+		</control>
+	</include>
+
 
 </includes>

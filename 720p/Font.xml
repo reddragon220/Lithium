@@ -81,6 +81,21 @@
 			<size>190</size>
 		</font>
 		
+		<!-- Dialog -->
+		<font>
+			<name>Dialog Header</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Condensed Bold</variant>
+			<size>38</size>
+		</font>
+		
+		<font>
+			<name>Dialog Info</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Condensed Bold</variant>
+			<size>31</size>
+		</font>
+		
 		
 		
 		<!-- Empty -->
