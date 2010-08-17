@@ -1,101 +1,171 @@
 <window id="10140">
-<defaultcontrol always="true">2</defaultcontrol>
-<allowoverlay>yes</allowoverlay>
-
-<coordinates>
-  <system>1</system>
-  <posx>100</posx>
-  <posy>80</posy>
-</coordinates>
-  
-<controls>
-    
-<include>DialogBack</include>
-
-  <control type="label">
-	  <include>DialogID</include>
-	  <label>DialogPluginSettings.xml</label>
-  </control>
-    
-	<control type="label" id="20">
-		<description>Header Label</description>
-		<posx>10</posx>
-		<posy>40</posy>
-		<width>500</width>
-		<label>-</label>
-	</control>
-		
-	<control type="grouplist" id="2">
-		<description>Control Area</description>
-		<posx>10</posx>
-		<posy>72</posy>
-		<width>500</width>
-		<height>275</height>
-		<itemgap>2</itemgap>
-		<onleft>9000</onleft>
-		<onright>60</onright>
-		<onup>9000</onup>
-		<ondown>9000</ondown>
-	</control>
-	<control type="button" id="3">
-		<description>Default Button</description>
-    <align>left</align>
-		<textoffsetx>5</textoffsetx>
-	</control>
-	<control type="radiobutton" id="4">
-		<description>Default RadioButton</description>
-    <align>left</align>
-	</control>
-	<control type="spincontrolex" id="5">
-		<description>Default SpinControlex</description>
-    <align>left</align>
-	</control>
-	<control type="image" id="6">
-		<description>separator image</description>
-		<height>30</height>
-    <width>500</width>
-    <aspectratio>stretch</aspectratio>
-		<texture>-</texture>
-	</control>
+	<defaultcontrol always="true">2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<coordinates>
+		<system>1</system>
+		<posx>216</posx>
+		<posy>204.5</posy>
+	</coordinates>
 	
-	<control type="group" id="9000">
-		<control type="button" id="10">
-      <posx>40</posx>
-      <posy>390</posy>
-			<description>Ok</description>
-			<label>$LOCALIZE[186]</label>
-      <texturefocus border="1">ButtonFo.png</texturefocus>
-      <texturenofocus border="1">ButtonNF.png</texturenofocus>
-			<onleft>12</onleft>
-			<onright>11</onright>
-			<onup>2</onup>
-			<ondown>2</ondown>
+	<animation type="WindowOpen" reversible="false">
+		<effect type="zoom" start="80" end="100" center="640,360" delay="200" easing="out" tween="back" time="300" />
+		<effect type="fade" delay="200" start="0" end="100" time="300" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+		<effect type="fade" start="100" end="0" time="300" />
+	</animation>
+	
+	<controls>
+		<control type="group">
+			<visible allowhiddenfocus="true">!Window.IsVisible(103)</visible>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>848</width>
+			<height>311</height>
+			<texture>dialog/plugin settings/background.png</texture>
+			<aspectratio>stretch</aspectratio>
 		</control>
-		<control type="button" id="11">
-			<description>Cancel</description>
-      <posx>200</posx>
-      <posy>390</posy>
-			<label>$LOCALIZE[222]</label>
-      <texturefocus border="1">ButtonFo.png</texturefocus>
-      <texturenofocus border="1">ButtonNF.png</texturenofocus>
-			<onleft>10</onleft>
-			<onright>12</onright>
-			<onup>2</onup>
-			<ondown>2</ondown>
+		<control type="label" id="20">
+			<description>heading</description>
+			<font>Dialog Header</font>
+			<textcolor>ffffffff</textcolor>
+			<align>center</align>
+			<posx>5</posx>
+			<posy>15</posy>
+			<width>838</width>
+			<label>-</label>
 		</control>
-		<control type="button" id="12">
-			<description>Default</description>
-      <posx>360</posx>
-      <posy>390</posy>
-			<label>$LOCALIZE[409]</label>
-      <texturefocus border="1">ButtonFo.png</texturefocus>
-      <texturenofocus border="1">ButtonNF.png</texturenofocus>
-			<onleft>11</onleft>
-			<onright>10</onright>
-			<onup>2</onup>
-			<ondown>2</ondown>
+		<control type="grouplist" id="2">
+			<description>Control Area</description>
+			<posx>5</posx>
+			<posy>58</posy>
+			<width>657</width>
+			<height>235</height>
+			<itemgap>0</itemgap>
+			<onleft>60</onleft>
+			<onright>9000</onright>
+			<onup>60</onup>
+			<ondown>60</ondown>
 		</control>
-	</control>
-  
-</controls>
+		<control type="button" id="3">
+			<description>Default Button</description>
+			<height>47</height>
+			<width>657</width>
+			<textcolor>7fffffff</textcolor>
+			<focusedcolor>ffe8e8db</focusedcolor>
+			<disabledcolor>7f7c7c72</disabledcolor>
+			<shadowcolor>7f000000</shadowcolor>
+			<font>Dialog Header</font>
+			<textoffsetx>20</textoffsetx>
+			<textoffsety>-5</textoffsety>
+			<texturefocus>dialog/plugin settings/long_highlight.png</texturefocus>
+			<texturenofocus>dialog/plugin settings/long_divider.png</texturenofocus>
+			<align>left</align>
+		</control>
+		<control type="radiobutton" id="4">
+			<description>Default RadioButton</description>
+			<height>47</height>
+			<width>657</width>
+			<textcolor>7fffffff</textcolor>
+			<focusedcolor>ffe8e8db</focusedcolor>
+			<disabledcolor>7f7c7c72</disabledcolor>
+			<shadowcolor>7f000000</shadowcolor>
+			<font>Title</font>
+			<textoffsetx>20</textoffsetx>
+			<textoffsety>-5</textoffsety>
+			<align>left</align>
+			<texturefocus>dialog/plugin settings/long_highlight.png</texturefocus>
+			<texturenofocus>dialog/plugin settings/long_divider.png</texturenofocus>
+			<radioposx>572</radioposx>
+			<radiowidth>65</radiowidth>
+			<radioheight>37</radioheight>
+			<textureradiofocus>settings/on.png</textureradiofocus>
+			<textureradionofocus>settings/off.png</textureradionofocus>
+		</control>
+		<control type="spincontrolex" id="5">
+			<description>Default SpinControlex</description>
+			<align>left</align>
+		</control>
+		<control type="image" id="6">
+			<description>separator image</description>
+			<height>47</height>
+			<width>657</width>
+			<aspectratio>stretch</aspectratio>
+			<texture>-</texture>
+		</control>
+		<control type="grouplist" id="9000">
+			<posx>686</posx>
+			<posy>58</posy>
+			<width>657</width>
+			<height>235</height>
+			<itemgap>0</itemgap>
+			<onleft>2</onleft>
+			<onright>9000</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<control type="button" id="10">
+				<height>47</height>
+				<width>157</width>
+				<textcolor>7fffffff</textcolor>
+				<focusedcolor>ffe8e8db</focusedcolor>
+				<disabledcolor>7f7c7c72</disabledcolor>
+				<shadowcolor>7f000000</shadowcolor>
+				<font>Dialog Header</font>
+				<textoffsetx>20</textoffsetx>
+				<textoffsety>-5</textoffsety>
+				<texturefocus>dialog/plugin settings/short_highlight.png</texturefocus>
+				<texturenofocus>dialog/plugin settings/short_divider.png</texturenofocus>
+				<description>Ok</description>
+				<label>$LOCALIZE[186]</label>
+				<align>left</align>
+			</control>
+			<control type="button" id="11">
+				<posx>47</posx>
+				<description>Cancel</description>
+				<height>47</height>
+				<width>157</width>
+				<textcolor>7fffffff</textcolor>
+				<focusedcolor>ffe8e8db</focusedcolor>
+				<disabledcolor>7f7c7c72</disabledcolor>
+				<shadowcolor>7f000000</shadowcolor>
+				<font>Dialog Header</font>
+				<textoffsetx>20</textoffsetx>
+				<textoffsety>-5</textoffsety>
+				<texturefocus>dialog/plugin settings/short_highlight.png</texturefocus>
+				<texturenofocus>dialog/plugin settings/short_divider.png</texturenofocus>
+				<label>$LOCALIZE[222]</label>
+				<align>left</align>
+			</control>
+			<control type="button" id="12">
+				<posx>94</posx>
+				<description>Default</description>
+				<height>47</height>
+				<width>157</width>
+				<textcolor>7fffffff</textcolor>
+				<focusedcolor>ffe8e8db</focusedcolor>
+				<disabledcolor>7f7c7c72</disabledcolor>
+				<shadowcolor>7f000000</shadowcolor>
+				<font>Dialog Header</font>
+				<textoffsetx>20</textoffsetx>
+				<textoffsety>-5</textoffsety>
+				<texturefocus>dialog/plugin settings/short_highlight.png</texturefocus>
+				<texturenofocus>dialog/plugin settings/short_divider.png</texturenofocus>
+				<label>$LOCALIZE[409]</label>
+				<align>left</align>
+			</control>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>848</width>
+			<height>311</height>
+			<texture>dialog/plugin settings/foreground.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		</control>
+	</controls>
 </window>
