@@ -430,7 +430,7 @@
 						<visible>!Container.Content(episodes)</visible>
 						<posx>15</posx>
 						<posy>3</posy>
-						<width>745</width>
+						<width>775</width>
 						<height>30</height>
 						<textcolor>White</textcolor>
 						<font>Title</font>
@@ -442,7 +442,7 @@
 						<visible>Container.Content(episodes)</visible>
 						<posx>15</posx>
 						<posy>3</posy>
-						<width>745</width>
+						<width>775</width>
 						<height>30</height>
 						<textcolor>White</textcolor>
 						<font>Title</font>
@@ -460,7 +460,7 @@
 						<visible>!Container.Content(episodes)</visible>
 						<posx>15</posx>
 						<posy>1</posy>
-						<width>745</width>
+						<width>775</width>
 						<height>30</height>
 						<textcolor>4b000000</textcolor>
 						<font>Title</font>
@@ -470,7 +470,7 @@
 						<visible>!Container.Content(episodes)</visible>
 						<posx>15</posx>
 						<posy>3</posy>
-						<width>745</width>
+						<width>775</width>
 						<height>30</height>
 						<textcolor>ffffffff</textcolor>
 						<font>Title</font>
