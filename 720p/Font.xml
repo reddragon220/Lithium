@@ -96,6 +96,13 @@
 			<size>31</size>
 		</font>
 		
+		<font>
+			<name>Keyboard</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Regular</variant>
+			<size>31</size>
+		</font>
+		
 		
 		
 		<!-- Empty -->
