@@ -800,6 +800,7 @@
 						<aspectratio>stretch</aspectratio>
 					</control>
 					<control type="textbox">
+						<visible>Skin.HasSetting(HighList)</visible>
 						<description>Plot</description>
 						<posx>11</posx>
 						<posy>49</posy>
@@ -810,11 +811,23 @@
 						<label>$INFO[listitem.Plot]</label>
 						<autoscroll delay="9000" time="2000" repeat="10000">true</autoscroll>
 					</control>
+					<control type="textbox">
+						<visible>!Skin.HasSetting(HighList)</visible>
+						<description>Plot</description>
+						<posx>11</posx>
+						<posy>49</posy>
+						<width>453</width>
+						<height>267</height>
+						<font>Title2</font>
+						<textcolor>FFFFFFFF</textcolor>
+						<label>$INFO[listitem.Plot]</label>
+						<autoscroll delay="9000" time="2000" repeat="10000">true</autoscroll>
+					</control>
 				</control>
 				<control type="group">
 					<visible>Skin.HasSetting(list_cover)</visible>
 					<control type="image">
-						<animation effect="slide" end="0,300" time="0" condition="Control.IsVisible(54) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57)">Conditional</animation>
+						<animation effect="slide" end="0,300" time="0" condition="Skin.HasSetting(HighList)">Conditional</animation>
 						<posx>44</posx>
 						<posy>-278</posy>
 						<width>392</width>
@@ -827,7 +840,7 @@
 					</control>
 				</control>
 				<control type="image">
-					<animation effect="slide" end="0,308" time="0" condition="!Skin.HasSetting(HighList)">Conditional</animation>
+					<animation effect="slide" end="0,308" time="0" condition="Skin.HasSetting(HighList)">Conditional</animation>
 					<width>475</width>
 					<height>309</height>
 					<texture>list/info_bay_bottom_shadow.png</texture>
