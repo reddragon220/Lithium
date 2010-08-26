@@ -799,6 +799,15 @@
 						<texture>list/info_divider.png</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
+					<control type="image">
+						<posx>11</posx>
+						<posy>0</posy>
+						<width>180</width>
+						<height>38</height>
+						<info>listitem.StarRating</info>
+						<aspectratio>stretch</aspectratio>
+					</control>
+
 					<control type="textbox">
 						<visible>Skin.HasSetting(HighList)</visible>
 						<description>Plot</description>
@@ -888,27 +897,25 @@
 					<posx>125</posx>
 					<posy>129</posy>
 					<width>299</width>
-					<textcolor>ffffffff</textcolor>
+					<textcolor>ff95c9f7</textcolor>
 					<font>Info_title</font>
 					<label>$LOCALIZE[35000]:</label>
 					<scroll>false</scroll>
 					<align>right</align>
 				</control>
-				<control type="label">
-					<posx>135</posx>
-					<posy>130</posy>
-					<width>299</width>
-					<textcolor>ffffffff</textcolor>
-					<font>Title2</font>
-					<label> $INFO[ListItem.Rating]</label>
-					<scroll>false</scroll>
-					<align>left</align>
+				<control type="image">
+					<posx>131</posx>
+					<posy>127</posy>
+					<width>180</width>
+					<height>38</height>
+					<info>listitem.StarRating</info>
+					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="label">
 					<posx>538</posx>
 					<posy>129</posy>
 					<width>299</width>
-					<textcolor>ffffffff</textcolor>
+					<textcolor>ff95c9f7</textcolor>
 					<font>Info_title</font>
 					<label>$LOCALIZE[35002]:</label>
 					<scroll>false</scroll>
@@ -930,7 +937,7 @@
 						<posx>125</posx>
 						<posy>158</posy>
 						<width>299</width>
-						<textcolor>ffffffff</textcolor>
+						<textcolor>ff95c9f7</textcolor>
 						<font>Info_title</font>
 						<label>$LOCALIZE[35001]:</label>
 						<scroll>false</scroll>
@@ -950,7 +957,7 @@
 						<posx>538</posx>
 						<posy>158</posy>
 						<width>299</width>
-						<textcolor>ffffffff</textcolor>
+						<textcolor>ff95c9f7</textcolor>
 						<font>Info_title</font>
 						<label>$LOCALIZE[35003]:</label>
 						<scroll>false</scroll>
