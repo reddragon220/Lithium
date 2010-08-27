@@ -410,6 +410,11 @@
 						<onclick>XBMC.ReloadSkin()</onclick>
 						<onclick>Setfocus(300)</onclick>
 					</item>
+					<item id="9">
+						<description>Plex Online Menu</description>
+						<label>Plex Online</label>
+						<onclick>Plex.ActivateWindow(1,plex://localhost/system/plexonline,return)</onclick>
+					</item>
 				</content>
 			</control>
 
