@@ -14,7 +14,7 @@
 		
 		<-- Context Menu Fade --/>
 		<control type="image">
-			<visible>Window.IsVisible(106) | Window.IsVisible(101) | Window.IsVisible(10140) | Window.IsVisible(103)</visible>
+			<visible>Window.IsVisible(106) | Window.IsVisible(101) | Window.IsVisible(10140) | Window.IsVisible(103) | Window.IsVisible(2002)</visible>
 			<animation effect="fade" start="0" end="100" time="200">VisibleChange</animation>
 			<description>overlay image</description>
 			<posx>0</posx>
