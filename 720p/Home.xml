@@ -1,5 +1,5 @@
 <window id="0">
-	<defaultcontrol always="true">1</defaultcontrol>
+	<defaultcontrol always="true">300</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<include>background</include>
@@ -256,18 +256,18 @@
 			</control>
 		
 			<control type="wraplist" id="300">
-				<visible allowhiddenfocus="true">!Skin.HasSetting(Plex_Menu)</visible>
+				<visible allowhiddenfocus="true">Control.HasFocus(300)</visible>
 				<animation effect="fade" time="200" delay="200">VisibleChange</animation>
 				<description>Home Wraplist</description>
 				<posx>0</posx>
 				<posy>11</posy>
 				<width>1280</width>
 				<height>720</height>
-				<onup>Skin.Reset(Plex_Menu)</onup>
-				<ondown>Skin.Reset(Plex_Menu)</ondown>
-				<onleft>Skin.Reset(Plex_Menu)</onleft>
-				<onright>Skin.Reset(Plex_Menu)</onright>
-				<onfocus>Skin.Reset(Plex_Menu)</onfocus>
+				<onup>Setfocus(300)</onup>
+				<ondown>Setfocus(300)</ondown>
+				<onleft>Setfocus(300)</onleft>
+				<onright>Setfocus(300)</onright>
+				<onfocus>Setfocus(300)</onfocus>
 				<scrolltime>200</scrolltime>
 				<orientation>horizontal</orientation>
 				<focusposition>1</focusposition>
@@ -316,18 +316,18 @@
 			</control>
 
 			<control type="wraplist" id="301">
-				<visible allowhiddenfocus="true">Skin.HasSetting(Plex_Menu)</visible>
+				<visible allowhiddenfocus="true">Control.HasFocus(301)</visible>
 				<animation effect="fade" time="200" delay="200">VisibleChange</animation>
 				<description>Home Wraplist</description>
 				<posx>0</posx>
 				<posy>11</posy>
 				<width>1280</width>
 				<height>720</height>
-				<onup>Skin.SetBool(Plex_Menu)</onup>
-				<ondown>Skin.SetBool(Plex_Menu)</ondown>
-				<onleft>Skin.SetBool(Plex_Menu)</onleft>
-				<onright>Skin.SetBool(Plex_Menu)</onright>
-				<onfocus>Skin.SetBool(Plex_Menu)</onfocus>
+				<onup>Setfocus(301)</onup>
+				<ondown>Setfocus(301)</ondown>
+				<onleft>Setfocus(301)</onleft>
+				<onright>Setfocus(301)</onright>
+				<onfocus>Setfocus(301)</onfocus>
 				<scrolltime>200</scrolltime>
 				<orientation>horizontal</orientation>
 				<focusposition>1</focusposition>
