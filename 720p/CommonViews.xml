@@ -179,7 +179,7 @@
 						<scroll>false</scroll>
 					</control>
 					<control type="label">
-						<visible>!Container.Content(episodes)</visible>
+						<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
 						<posx>160</posx>
 						<posy>40</posy>
 						<width>1120</width>
@@ -187,6 +187,16 @@
 						<textcolor>ffffffff</textcolor>
 						<font>Title2</font>
 						<info>ListItem.firstGenre</info>
+					</control>
+					<control type="label">
+						<visible>Container.Content(seasons)</visible>
+						<posx>160</posx>
+						<posy>40</posy>
+						<width>1120</width>
+						<height>30</height>
+						<textcolor>ffffffff</textcolor>
+						<font>Title2</font>
+						<label>$INFO[ListItem.Property(WatchedEpisodes)]/$INFO[ListItem.Episode]</label>
 					</control>
 					<!-- Episodes -->
 					<control type="label">
@@ -256,7 +266,7 @@
 						<info>ListItem.Label</info>
 					</control>
 					<control type="label">
-						<visible>!Container.Content(episodes)</visible>
+						<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
 						<posx>160</posx>
 						<posy>38</posy>
 						<width>1120</width>
@@ -266,7 +276,7 @@
 						<info>ListItem.firstGenre</info>
 					</control>
 					<control type="label">
-						<visible>!Container.Content(episodes)</visible>
+						<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
 						<posx>160</posx>
 						<posy>40</posy>
 						<width>1120</width>
@@ -274,6 +284,26 @@
 						<textcolor>ffffffff</textcolor>
 						<font>Title2</font>
 						<info>ListItem.firstGenre</info>
+					</control>
+					<control type="label">
+						<visible>Container.Content(seasons)</visible>
+						<posx>160</posx>
+						<posy>38</posy>
+						<width>1120</width>
+						<height>30</height>
+						<textcolor>4b000000</textcolor>
+						<font>Title2</font>
+						<label>$INFO[ListItem.Property(WatchedEpisodes)]/$INFO[ListItem.Episode]</label>
+					</control>
+					<control type="label">
+						<visible>Container.Content(seasons)</visible>
+						<posx>160</posx>
+						<posy>40</posy>
+						<width>1120</width>
+						<height>30</height>
+						<textcolor>ffffffff</textcolor>
+						<font>Title2</font>
+						<label>$INFO[ListItem.Property(WatchedEpisodes)]/$INFO[ListItem.Episode]</label>
 					</control>
 					<!-- Episodes -->
 					<control type="label">
@@ -535,7 +565,7 @@
 						<scroll>false</scroll>
 					</control>
 					<control type="label">
-						<visible>!Container.Content(episodes)</visible>
+						<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
 						<posx>160</posx>
 						<posy>40</posy>
 						<width>630</width>
@@ -543,6 +573,16 @@
 						<textcolor>ffffffff</textcolor>
 						<font>Title2</font>
 						<label>$INFO[ListItem.firstGenre]</label>
+					</control>
+					<control type="label">
+						<visible>Container.Content(seasons)</visible>
+						<posx>160</posx>
+						<posy>40</posy>
+						<width>630</width>
+						<height>30</height>
+						<textcolor>ffffffff</textcolor>
+						<font>Title2</font>
+						<label>$INFO[ListItem.Property(WatchedEpisodes)]/$INFO[ListItem.Episode]</label>
 					</control>
 					<!-- Episodes -->
 					<control type="label">
@@ -612,7 +652,7 @@
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
-						<visible>!Container.Content(episodes)</visible>
+						<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
 						<posx>160</posx>
 						<posy>38</posy>
 						<width>630</width>
@@ -622,7 +662,7 @@
 						<label>$INFO[ListItem.firstGenre]</label>
 					</control>
 					<control type="label">
-						<visible>!Container.Content(episodes)</visible>
+						<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
 						<posx>160</posx>
 						<posy>40</posy>
 						<width>630</width>
@@ -631,6 +671,26 @@
 						<font>Title2</font>
 						<info>ListItem.firstGenre</info>
 						<label>$INFO[ListItem.firstGenre]</label>
+					</control>
+					<control type="label">
+						<visible>Container.Content(seasons)</visible>
+						<posx>160</posx>
+						<posy>38</posy>
+						<width>630</width>
+						<height>30</height>
+						<textcolor>4b000000</textcolor>
+						<font>Title2</font>
+						<label>$INFO[ListItem.Property(WatchedEpisodes)]/$INFO[ListItem.Episode]</label>
+					</control>
+					<control type="label">
+						<visible>Container.Content(seasons)</visible>
+						<posx>160</posx>
+						<posy>40</posy>
+						<width>630</width>
+						<height>30</height>
+						<textcolor>ffffffff</textcolor>
+						<font>Title2</font>
+						<label>$INFO[ListItem.Property(WatchedEpisodes)]/$INFO[ListItem.Episode]</label>
 					</control>
 					<!-- Episodes -->
 					<control type="label">
