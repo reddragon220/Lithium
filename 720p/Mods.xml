@@ -12,7 +12,7 @@
 		The mod's include is called by <include name="views"> in Includes.xml and will be available on all Windows.
 	-->
 	<include name="mods">
-		<include>example_mod_name</include>
+		<include>example_mod_name</include>	
 	</includes>
 	
 	<include name="example_mod_name">

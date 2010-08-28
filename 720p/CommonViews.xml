@@ -1544,12 +1544,12 @@
 			
 			<control type="panel" id="55">
 				<viewtype label="Wall">panel</viewtype>
-				
+				<visible>Container.Content(movies) |  Container.Content(tvshows) | Container.Content(seasons)</visible>
+				<!--
 				<visible>
 					!Container.Content(Secondary) + !Container.Content(episodes) + !Container.Content(plugins) + !Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs) + !Window.IsActive(pictures)				
 				</visible>
-				
-
+				-->
 				<width>1260</width>
 				<height>591</height>
 				<posy>63</posy>
@@ -1605,9 +1605,12 @@
 				</focusedlayout>
 			</control>
 			<control type="panel" id="55">
+				<visible>Container.Content(Plugins) | Container.Content(albums) | Container.Content(artists) | Container.Content(songs) | Window.IsActive(pictures)</visible>
+				<!--
 				<visible>
 					!Container.Content(Secondary) + !Container.Content(episodes) + [Container.Content(plugins) | Container.Content(albums) | Container.Content(artists) | Container.Content(songs) | Window.IsActive(pictures)]
 				</visible>
+				-->
 			
 				<viewtype label="Wall">panel</viewtype>
 				<width>1260</width>
