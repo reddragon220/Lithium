@@ -6,8 +6,8 @@
 		like the example below.
 		
 		Modders: 
-		The skin currently uses views views: 50, 51, 52, 53, 54, 58, and 59.
-		The following view id's are available: 55, 56, and 57
+		The skin currently uses views views: 50, 51, 52, 53, 54, 55, and 56.
+		The following view id's are available: 57, 58, and 59
 		
 		The mod's include is called by <include name="views"> in Includes.xml and will be available on all Windows.
 	-->

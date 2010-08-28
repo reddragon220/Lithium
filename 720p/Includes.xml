@@ -2,9 +2,8 @@
 	<include name="views">
 		<include>background</include>
 
-		<include>flow</include>
-		<!--><include>flow2</include>-->
 		<include>list</include>
+		<include>flow</include>
 		<include>wall</include>	
 		<include>show_case</include>
 		<include>mods</include> <!-- See Mods.xml -->
@@ -223,7 +222,7 @@
 	</include>
 
 	<include name="preferences_animation">
-		<animation effect="slide" end="0,-119" time="200" condition="Control.HasFocus(101) | Control.HasFocus(102) | Control.HasFocus(103) | Control.HasFocus(104) | Control.HasFocus(105) | Control.HasFocus(106) | Control.HasFocus(107) | Control.HasFocus(108) | Control.HasFocus(109) | Control.HasFocus(1010) | Control.HasFocus(1011) | Control.HasFocus(1012) | Control.HasFocus(1013)
+		<animation effect="slide" end="0,-119" time="200" condition="Control.HasFocus(9000) | Control.HasFocus(90002) | Control.HasFocus(90003) | Control.HasFocus(90004) | Control.HasFocus(90005) | Control.HasFocus(90006) | Control.HasFocus(90007) | Control.HasFocus(90008) | Control.HasFocus(90009) | Control.HasFocus(900010) | Control.HasFocus(900011) | Control.HasFocus(900012) | Control.HasFocus(900013)
 			">Conditional</animation>
 	</include>
 
@@ -237,15 +236,16 @@
 				<texture>quick_prefs/prefs_bg.png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
-			<control type="grouplist" id="101">
+			<control type="grouplist" id="9000">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1280</width>
 				<height>119</height>
 				<orientation>horizontal</orientation>
-				<scrolltime>200</scrolltime>			
+				<scrolltime>200</scrolltime>
+				<onup>setfocus(50)</onup>			
 				
-				<control type="button" id="102">
+				<control type="button" id="90002">
 					<description>View</description>
 					
 					<posx>0</posx>
@@ -273,7 +273,7 @@
 
 				</control>
 
-				<control type="button" id="103">
+				<control type="button" id="90003">
 					<visible>[Control.IsVisible(52) | Control.IsVisible(53)] + !Skin.HasSetting(List_Bay_Right)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
@@ -284,12 +284,11 @@
 					<aligny></aligny>
 					<textoffsetx></textoffsetx>
 					<textoffsety>83</textoffsety>
-
-					<onup>setfocus(104)</onup>
 					
 					<label>Bay Left</label>
+					<onup>setfocus(50)</onup>
 					<onclick>Skin.ToggleSetting(List_Bay_Right)</onclick>
-					
+					<onclick>setfocus(90004)</onclick>
 
 					<font>Small</font>
 					<textcolor>ffe8e8db</textcolor>
@@ -299,7 +298,7 @@
 					<texturenofocus></texturenofocus>
 					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
 				</control>
-				<control type="button" id="104">
+				<control type="button" id="90004">
 					<visible>[Control.IsVisible(52) | Control.IsVisible(53)] + Skin.HasSetting(List_Bay_Right)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
@@ -311,11 +310,12 @@
 					<textoffsetx></textoffsetx>
 					<textoffsety>83</textoffsety>
 
-					<onup>setfocus(103)</onup>
+					
 					
 					<label>Bay Right</label>
+					<onup>setfocus(50)</onup>
 					<onclick>Skin.ToggleSetting(List_Bay_Right)</onclick>
-					
+					<onclick>setfocus(90003)</onclick>
 
 					<font>Small</font>
 					<textcolor>ffe8e8db</textcolor>
@@ -326,7 +326,7 @@
 					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
 				</control>
 
-				<control type="button" id="105">
+				<control type="button" id="90005">
 					<visible>[Control.IsVisible(52) | Control.IsVisible(53)] + !Skin.HasSetting(list_cover)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
@@ -352,7 +352,7 @@
 					<texturenofocus></texturenofocus>
 					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
 				</control>
-				<control type="button" id="106">
+				<control type="button" id="90006">
 					<visible>[Control.IsVisible(52) | Control.IsVisible(53)] + Skin.HasSetting(list_cover)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
@@ -379,7 +379,7 @@
 					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
 				</control>
 
-				<control type="button" id="107">
+				<control type="button" id="90007">
 					<visible>[Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(52) | Control.IsVisible(53)] + !Skin.HasSetting(HighList)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
@@ -391,7 +391,7 @@
 					<textoffsetx></textoffsetx>
 					<textoffsety>83</textoffsety>
 
-					<onup>setfocus(104)</onup>
+					<onup>setfocus(50)</onup>
 					
 					<label>High List</label>
 					<onclick>Skin.ToggleSetting(HighList)</onclick>
@@ -406,7 +406,7 @@
 					<texturenofocus></texturenofocus>
 					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
 				</control>
-				<control type="button" id="108">
+				<control type="button" id="90008">
 					<visible>[Control.IsVisible(50) | Control.IsVisible(51) |Control.IsVisible(52) | Control.IsVisible(53)] + Skin.HasSetting(HighList)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
@@ -418,7 +418,7 @@
 					<textoffsetx></textoffsetx>
 					<textoffsety>83</textoffsety>
 
-					<onup>setfocus(103)</onup>
+					<onup>setfocus(50)</onup>
 					
 					<label>Low List</label>
 					<onclick>Skin.ToggleSetting(HighList)</onclick>
@@ -434,8 +434,8 @@
 					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
 				</control>
 
-				<control type="button" id="109">
-					<visible>!Skin.HasSetting(flow_hide) + Control.IsVisible(58)</visible>
+				<control type="button" id="90009">
+					<visible>!Skin.HasSetting(flow_hide) + Control.IsVisible(54)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>140</width>
@@ -460,8 +460,8 @@
 					<texturenofocus></texturenofocus>
 					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
 				</control>
-				<control type="button" id="1010">
-					<visible>Skin.HasSetting(flow_hide) + Control.IsVisible(58)</visible>
+				<control type="button" id="900010">
+					<visible>Skin.HasSetting(flow_hide) + Control.IsVisible(54)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>140</width>
@@ -489,7 +489,7 @@
 
 
 				
-				<control type="button" id="1011">
+				<control type="button" id="900011">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>140</width>
@@ -514,7 +514,7 @@
 					<texturenofocus></texturenofocus>
 					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
 				</control>	
-				<control type="button"id="1012">
+				<control type="button"id="900012">
 					<visible>Skin.HasSetting(developer)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
@@ -526,8 +526,6 @@
 					<textoffsetx></textoffsetx>
 					<textoffsety>83</textoffsety>
 
-					<onleft>109</onleft>
-					<onright>1011</onright>
 					<onup>setfocus(50)</onup>
 					<onclick>XBMC.ReloadSkin()</onclick>
 
@@ -541,7 +539,7 @@
 					<texturenofocus></texturenofocus>
 					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
 				</control>
-				<control type="button" id="1013">
+				<control type="button" id="900013">
 					<description>Free Memory</description>
 					
 					<visible>Skin.HasSetting(developer)</visible>
