@@ -1,131 +1,50 @@
 <window id="133">
-<defaultcontrol>401</defaultcontrol>
-<allowoverlay>no</allowoverlay>
-
-<animation type="WindowOpen" reversible="false">
-	<effect type="zoom" start="80" end="100" center="640,360" delay="200" easing="out" tween="back" time="300" />
-	<effect type="fade" delay="200" start="0" end="100" time="300" />
-</animation>
-
-<animation type="WindowClose" reversible="false">	
-	<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" delay="2000" />
-	<effect type="fade" start="100" end="0" time="300" delay="2000" />
-</animation>
-
-
-
-
+<defaultcontrol always="true">401</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
+  
+<coordinates>
+  <system>1</system>
+  <posx>100</posx>
+  <posy>80</posy>
+</coordinates>
 
 <controls>
-	<control type="group">
-		<posx>465</posx>
-		<posy>235</posy>	
-	
-		<control type="image">
-			<width>350</width>
-			<height>250</height>
-			<texture>alert dialogue/alert_bg.png</texture>
-			<aspectratio>stretch</aspectratio>
-		</control>
-	  	<control type="label">
-			<width>340</width>
-	    	<posx>5</posx>
-			<posy>200</posy>
-	    	<label>Updating...</label>
-			<font>Large</font>
-			<textcolor>7f000000</textcolor>
-			<align>center</align>
-	  	</control>	
-	  	<control type="label">
-			<width>340</width>
-	    	<posx>5</posx>
-			<posy>202</posy>
-	    	<label>Updating...</label>
-			<font>Large</font>
-			<textcolor>ffe8e8db</textcolor>
-			<align>center</align>
-	  	</control>
 
-		
-		<control type="label" id="401">
-			<description>Header Label</description>
-			<visible>!Control.IsVisible(403) + !Control.IsVisible(404)</visible>
-			<width>340</width>
-	    	<posx>5</posx>
-			<posy>155</posy>
-	    	<label>-</label>
-			<font>Small</font>
-			<textcolor>ffe8e8db</textcolor>
-			<align>center</align>
-			<scroll>yes</scroll>
-	  	</control>
-		
-		
-		<control type="label" id="402">
-			<visible>Control.IsVisible(403) | Control.IsVisible(404)</visible>
-			<description>Path Label</description>
-			<width>340</width>
-	    	<posx>5</posx>
-			<posy>155</posy>
-	    	<label>-</label>
-			<font>Small</font>
-			<textcolor>ffe8e8db</textcolor>
-			<align>center</align>
-			<haspath>yes</haspath>
-			<scroll>yes</scroll>
-	  	</control>
-	
-<!--  
-		<control type="image" id="901">
-			<texture>zen/elements/header/updating.png</texture>
-			<posx>156</posx>
-			<posy>106</posy>
-			<height>38</height>
-			<width>30</width>
-			<aspectratio>stretch</aspectratio>	
-		</control>
--->		
+<include>DialogBack</include>
 
-		<control type="progress" id="403">
-			<description>Progress bar</description>
-			<posx>105</posx>
-			<posy>32</posy>
-			<width>140</width>
-			<height>110</height>
-			<texturebg>alert dialogue/download_bg.png</texturebg>
-			<lefttexture>-</lefttexture>
-			<midtexture>alert dialogue/download_mid.png</midtexture>
-			<righttexture>-</righttexture>
-			<overlaytexture>-</overlaytexture>
-			<reveal>true</reveal>
-			<animation effect="rotate" center="auto" start="-90" end="-90" time="0" condition="true">Conditional</animation>
-		</control>
+  <control type="label">
+    <include>DialogID</include>
+    <label>DialogVideoScan.xml</label>
+  </control>
 
-		<control type="progress" id="404">
-			<description>Progress bar</description>
-			<posx>105</posx>
-			<posy>32</posy>
-			<width>140</width>
-			<height>110</height>
-			<texturebg>alert dialogue/download_bg.png</texturebg>
-			<lefttexture>-</lefttexture>
-			<midtexture>alert dialogue/download_mid.png</midtexture>
-			<righttexture>-</righttexture>
-			<overlaytexture>-</overlaytexture>
-			<reveal>true</reveal>
-			<animation effect="rotate" center="auto" start="-90" end="-90" time="0" condition="true">Conditional</animation>
-		</control>
-		
-		<control type="image">
-			<width>350</width>
-			<height>250</height>
-			<texture>alert dialogue/alert_overlay.png</texture>
-			<aspectratio>stretch</aspectratio>
-		</control>
-	</control>
+  <control type="label" id="401">
+    <description>Header Label</description>
+    <posx>10</posx>
+    <posy>40</posy>
+    <width>500</width>
+    <label>-</label>
+  </control>
 
-
+  <control type="label" id="402">
+    <description>Path Label</description>
+    <posx>10</posx>
+    <posy>72</posy>
+    <width>500</width>
+    <label>-</label>
+    <haspath>yes</haspath>
+  </control>
+  
+  <control type="progress" id="403">
+    <description>progress control</description>
+    <posx>10</posx>
+    <posy>104</posy>
+  </control>
+  <control type="progress" id="404">
+    <description>progress control</description>
+    <posx>10</posx>
+    <posy>136</posy>
+  </control>
+  
 </controls>
-
-
+  
 </window>

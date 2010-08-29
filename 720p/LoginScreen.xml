@@ -1,9 +1,9 @@
 <window id="29">
 <defaultcontrol always="true">52</defaultcontrol>
-<allowoverlay>no</allowoverlay>
+<allowoverlay>yes</allowoverlay>
   
 <controls>
-	<include>background</include>
+  
 	<control type="label">
 		<include>WindowID</include>
     <label>LoginScreen.xml</label>

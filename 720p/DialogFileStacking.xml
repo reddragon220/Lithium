@@ -1,8 +1,13 @@
 <window id="2008">
-<defaultcontrol>450</defaultcontrol>
+<defaultcontrol always="true">450</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
   
-<controls>
-  
+<coordinates>
+  <system>1</system>
+  <posx>100</posx>
+  <posy>80</posy>
+</coordinates>
+
 <controls>
     
 <include>DialogBack</include>
@@ -65,8 +70,6 @@
 	  </focusedlayout>
   </control>
 
-</controls>
-  
 </controls>
 
 </window>

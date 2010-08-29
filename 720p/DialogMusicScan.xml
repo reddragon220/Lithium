@@ -1,5 +1,6 @@
 <window id="112">
-<defaultcontrol>401</defaultcontrol>
+<defaultcontrol always="true">401</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
   
 <coordinates>
   <system>1</system>
@@ -9,7 +10,7 @@
 
 <controls>
 
-  <include>DialogBack</include>
+<include>DialogBack</include>
 
   <control type="label">
     <include>DialogID</include>

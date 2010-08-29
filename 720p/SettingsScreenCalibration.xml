@@ -1,6 +1,6 @@
 <window id="11">
-<defaultcontrol>8</defaultcontrol>
-<allowoverlay>no</allowoverlay>
+<defaultcontrol always="true">8</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
 
 <controls>
   

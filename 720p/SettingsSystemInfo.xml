@@ -1,6 +1,7 @@
 <window id="7">
 <defaultcontrol always="true">9000</defaultcontrol>
-<allowoverlay>no</allowoverlay>
+<allowoverlay>yes</allowoverlay>
+  
 <controls>
   
   <control type="label">
@@ -568,4 +569,5 @@
 	</control>
 
 </controls>
+  
 </window>

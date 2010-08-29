@@ -1,9 +1,9 @@
 <window id="35">
-<defaultcontrol always="yes">50</defaultcontrol>
+<defaultcontrol always="true">50</defaultcontrol>
 <allowoverlay>yes</allowoverlay>
   
 <controls>
-	
+
   <control type="label">
     <include>WindowID</include>
     <label>MyGameSaves.xml</label>
@@ -47,9 +47,7 @@
 		</control>
 	</control>
     
-	<include>views</include>
-
-	<include>header</include>
+<include>list</include>
     
 </controls>
   

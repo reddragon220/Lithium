@@ -1,36 +1,32 @@
 <window id="2901">
-<defaultcontrol>4</defaultcontrol>
-	
-<controls>
-		
-	
+	<defaultcontrol always="true">4</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
 		<control type="image">
 			<posx>0</posx>
-			<posy>637</posy>
-		
+			<posy>632</posy>
 			<width>1280</width>
-			<height>83</height>
-		
+			<height>88</height>
 			<texture>osd/osd_bg.png</texture>
-			<aspectratio>-</aspectratio>
+			<aspectratio>streatch</aspectratio>
 		</control>
-		
+
 		<control type="grouplist" id="101">
-			<posx>465</posx>
-			<posy>666</posy>
-			<width>360</width>
-			<height>119</height>
+			<posx>415</posx>
+			<posy>673</posy>
+			<width>449</width>
+			<height>37</height>
 			<orientation>horizontal</orientation>
 			<scrolltime>200</scrolltime>
-			<itemgap>9</itemgap>
+			<itemgap>0</itemgap>
 
 			<onleft>1</onleft>
 			<onright>7</onright>
 		
 
 			<control type="button" id="1">
-				<width>51</width>
-				<height>51</height>
+				<width>65</width>
+				<height>37</height>
 		
 				<onleft>1</onleft>
 				<onright>2</onright>
@@ -42,8 +38,8 @@
 				<aspectratio>keep</aspectratio>
 			</control>
 			<control type="button" id="2">
-				<width>51</width>
-				<height>51</height>
+				<width>64</width>
+				<height>37</height>
 		
 				<onleft>1</onleft>
 				<onright>3</onright>
@@ -54,8 +50,8 @@
 				<texturenofocus>osd/buttons/rewind_unfocused.png</texturenofocus>
 			</control>
 			<control type="button" id="3">
-				<width>51</width>
-				<height>51</height>
+				<width>64</width>
+				<height>37</height>
 		
 				<onleft>2</onleft>
 				<onright>4</onright>
@@ -66,8 +62,8 @@
 				<texturenofocus>osd/buttons/stop_unfocused.png</texturenofocus>
 			</control>
 			<control type="togglebutton" id="4">
-				<width>51</width>
-				<height>51</height>
+				<width>64</width>
+				<height>37</height>
 
 				<onleft>3</onleft>
 				<onright>5</onright>
@@ -82,8 +78,8 @@
 				<usealttexture>Player.Paused</usealttexture>
 			</control>
 			<control type="button" id="5">
-				<width>51</width>
-				<height>51</height>
+				<width>64</width>
+				<height>37</height>
 		
 				<onleft>4</onleft>
 				<onright>6</onright>
@@ -94,8 +90,8 @@
 				<texturenofocus>osd/buttons/fastfoward_unfocused.png</texturenofocus>
 			</control>
 			<control type="button" id="6">
-				<width>51</width>
-				<height>51</height>
+				<width>64</width>
+				<height>37</height>
 		
 				<onleft>5</onleft>
 				<onright>7</onright>
@@ -108,72 +104,87 @@
 		</control>
 
 		<control type="grouplist" id="102">
-			<posx>1032</posx>
-			<posy>666</posy>
-			<width>360</width>
-			<height>119</height>
+			<posx>1069</posx>
+			<posy>674</posy>
+			<width>193</width>
+			<height>37</height>
 			<orientation>horizontal</orientation>
 			<scrolltime>200</scrolltime>
-			<itemgap>9</itemgap>
+			<itemgap>0</itemgap>
 			
 			<onleft>6</onleft>
 			<onright>10</onright>
 			
 			<control type="button" id="7">
-				<width>51</width>
-				<height>51</height>
+				<width>65</width>
+				<height>37</height>
 		
 				<onleft>6</onleft>
 				<onright>8</onright>
-
-				<onclick></onclick>
-
-				<texturefocus>osd/buttons/subtitles_focused.png</texturefocus>
-				<texturenofocus>osd/buttons/subtitles_unfocused.png</texturenofocus>
-			</control>
-			<control type="button" id="8">
-				<width>51</width>
-				<height>51</height>
-		
-				<onleft>7</onleft>
-				<onright>9</onright>
 
 				<onclick>xbmc.activatewindow(10125)</onclick>
 
 				<texturefocus>osd/buttons/bookmarks_focused.png</texturefocus>
 				<texturenofocus>osd/buttons/bookmarks_unfocused.png</texturenofocus>
 			</control>
+
+			<control type="button" id="8">
+				<width>64</width>
+				<height>37</height>
+		
+				<onleft>7</onleft>
+				<onright>9</onright>
+
+				<onclick></onclick>
+
+				<texturefocus>osd/buttons/subtitles_focused.png</texturefocus>
+				<texturenofocus>osd/buttons/subtitles_unfocused.png</texturenofocus>
+			</control>
 			<control type="button" id="9">
-				<width>51</width>
-				<height>51</height>
+				<width>64</width>
+				<height>37</height>
 		
 				<onleft>8</onleft>
-				<onright>10</onright>
+				<onright>9</onright>
 
-				<onclick>xbmc.activatewindow(10124)</onclick>
+				<onclick>SetFocus(10)</onclick>
 
-				<texturefocus>osd/buttons/audio_focused.png</texturefocus>
-				<texturenofocus>osd/buttons/audio_unfocused.png</texturenofocus>
-			</control>
-			<control type="button" id="10">
-				<width>51</width>
-				<height>51</height>
-		
-				<onleft>9</onleft>
-				<onright>10</onright>
+				<texturefocus>osd/buttons/settings_focused.png</texturefocus>
+				<texturenofocus>osd/buttons/settings_unfocused.png</texturenofocus>
+			</control>		
+		</control>
 
-				<onclick>xbmc.activatewindow(10123)</onclick>
 
-				<texturefocus>osd/buttons/video_focused.png</texturefocus>
-				<texturenofocus>osd/buttons/video_unfocused.png</texturenofocus>
-			</control>
+		<control type="label">
+			<posx>0</posx>
+			<posy>637</posy>
 			
+			<width>103</width>
+			<height>25</height>
+		
+			<font>OSD</font>
+			<textcolor>ffffffff</textcolor>
+			<label>$INFO[Player.Time]</label>
+			<align>center</align>
+		</control>
+		
+		<control type="label">
+			<posx>1177</posx>
+			<posy>637</posy>
+			
+			<width>103</width>
+			<height>25</height>
+		
+			<font>OSD</font>
+			<textcolor>ffffffff</textcolor>
+			<label>$INFO[Player.Duration]</label>
+			<align>center</align>
 		</control>
 
 		<control type="progress">
-			<posx>0</posx>
+			<posx>127.5</posx>
 			<posy>637</posy>
-			<width>1280</width>
+			<width>1025</width>
 			<height>25</height>
 			<visible>true</visible>
 			<reveal>true</reveal>
@@ -184,30 +195,8 @@
 			<overlaytexture>-</overlaytexture>
 			<info>Player.Progress</info>
 		</control>
-
-		<control type="label">
-			<width>300</width>
-			<posx>-17</posx>
-			<posy>674</posy>
 		
-			<font>Small</font>
-			<textcolor>ffe8e8db</textcolor>
-			<label>$INFO[Player.Time]/$INFO[Player.Duration]</label>
-			<align>center</align>
-		</control>
-
-		<control type="image">
-			<posx>0</posx>
-			<posy>637</posy>
 		
-			<width>1280</width>
-			<height>83</height>
-		
-			<texture>osd/osd_overlay.png</texture>
-			<aspectratio>-</aspectratio>
-		</control>
-
-
 		<control type="group">
 			<width>1280</width>
 			<height>720</height>
@@ -346,99 +335,90 @@
 		</control>
 
 
-
-
-<!--
-  <include>DialogBack</include>
-
-  <control type="label">
-    <include>DialogID</include>
-    <label>VideoOSD.xml</label>
-  </control>
-  
-	<control type="grouplist" id="1">
-    <posx>10</posx>
-    <posy>40</posy>
-    <width>150</width>
-    <height>350</height>
-    <itemgap>2</itemgap>
-    <orientation>vertical</orientation>
-    <onleft>-</onleft>
-    <onright>-</onright>
-    <onup>1</onup>
-    <ondown>1</ondown>
-    <control type="button" id="2">
-      <description>Skip Back</description>
-      <label>&lt; &lt;</label>
-      <texturefocus border="1">ButtonFo.png</texturefocus>
-      <texturenofocus border="1">ButtonNF.png</texturenofocus>
-      <onclick>xbmc.playercontrol(previous)</onclick>
-    </control>
-    <control type="button" id="3">
-      <description>Rewind</description>
-      <label>&lt;</label>
-      <texturefocus border="1">ButtonFo.png</texturefocus>
-      <texturenofocus border="1">ButtonNF.png</texturenofocus>
-      <onclick>xbmc.playercontrol(rewind)</onclick>
-    </control>
-    <control type="button" id="4">
-      <description>Play</description>
-      <label>$LOCALIZE[208]</label>
-      <texturefocus border="1">ButtonFo.png</texturefocus>
-      <texturenofocus border="1">ButtonNF.png</texturenofocus>
-      <onclick>xbmc.playercontrol(play)</onclick>
-    </control>
-    <control type="button" id="5">
-      <description>Forward</description>
-      <label>&gt;</label>
-      <texturefocus border="1">ButtonFo.png</texturefocus>
-      <texturenofocus border="1">ButtonNF.png</texturenofocus>
-      <onclick>xbmc.playercontrol(forward)</onclick>
-    </control>
-    <control type="button" id="6">
-      <description>Skip Forward</description>
-      <label>&gt; &gt;</label>
-      <texturefocus border="1">ButtonFo.png</texturefocus>
-      <texturenofocus border="1">ButtonNF.png</texturenofocus>
-      <onclick>xbmc.playercontrol(next)</onclick>
-    </control>
-    <control type="button" id="7">
-      <description>Playlists</description>
-      <label>$LOCALIZE[136]</label>
-      <texturefocus border="1">ButtonFo.png</texturefocus>
-      <texturenofocus border="1">ButtonNF.png</texturenofocus>
-      <onclick>xbmc.activatewindow(500)</onclick>
-    </control>
-	  <control type="button" id="8">
-		  <description>Bookmarks</description>
-		  <label>$LOCALIZE[298]</label>
-      <texturefocus border="1">ButtonFo.png</texturefocus>
-      <texturenofocus border="1">ButtonNF.png</texturenofocus>
-		  <onclick>XBMC.ActivateWindow(125)</onclick>
-	  </control>
-    <control type="button" id="9">
-      <description>Audio Settings</description>
-      <label>$LOCALIZE[445]</label>
-      <texturefocus border="1">ButtonFo.png</texturefocus>
-      <texturenofocus border="1">ButtonNF.png</texturenofocus>
-      <onclick>xbmc.activatewindow(124)</onclick>
-    </control>
-    <control type="button" id="10">
-      <description>Video Settings</description>
-      <label>$LOCALIZE[444]</label>
-      <texturefocus border="1">ButtonFo.png</texturefocus>
-      <texturenofocus border="1">ButtonNF.png</texturenofocus>
-      <onclick>xbmc.activatewindow(123)</onclick>
-    </control>
-    <control type="button" id="11">
-      <description>DVD Menu</description>
-      <label>$LOCALIZE[446]</label>
-      <texturefocus border="1">ButtonFo.png</texturefocus>
-      <texturenofocus border="1">ButtonNF.png</texturenofocus>
-      <onclick>xbmc.playercontrol(showvideomenu)</onclick>
-    </control>
-	</control>
--->
-</controls>
-  
+		<control type="group">
+			<visible>Control.hasfocus(10) + !window.isvisible(10123) + !window.isvisible(10124)</visible>
+			<posx>448.5</posx>
+			<posy>295</posy>
+			<animation type="Visible" reversible="false">
+				<effect type="zoom" start="80" end="100" center="640,360" delay="200" easing="out" tween="back" time="300" />
+				<effect type="fade" delay="200" start="0" end="100" time="300" />
+			</animation>
+			<animation type="Hidden" reversible="false">
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
+			
+			<control type="image">
+				<width>383</width>
+				<height>130</height>
+				<texture>osd/settings/selection_bg.png</texture>
+			</control>
+				<control type="list" id="10">
+					<posx>5</posx>
+					<posy>17</posy>
+					<width>373</width>
+					<height>94</height>
+					<ondown>9</ondown>
+					<viewtype label="List">list</viewtype>
+					<scrolltime>200</scrolltime>
+					<itemlayout height="47">
+						<control type="image">
+							<width>373</width>
+							<height>47</height>
+							<texture>osd/settings/highlight_unfocused.png</texture>
+						</control>
+						<control type="label">
+							<posx>186.5</posx>
+							<posy>3</posy>
+							<width>373</width>
+							<height>30</height>
+							<textcolor>White</textcolor>
+							<font>Title</font>
+							<info>ListItem.Label</info>
+							<scroll>false</scroll>
+							<align>center</align>
+						</control>
+					</itemlayout>
+					<focusedlayout height="47">
+						<control type="image">
+							<width>373</width>
+							<height>47</height>
+							<texture>osd/settings/highlight_focused.png</texture>
+						</control>
+						<control type="label">
+							<posx>186.5</posx>
+							<posy>1</posy>
+							<width>373</width>
+							<height>30</height>
+							<textcolor>4b000000</textcolor>
+							<font>Title</font>
+							<info>ListItem.Label</info>
+							<align>center</align>
+						</control>
+						<control type="label">
+							<posx>186.5</posx>
+							<posy>3</posy>
+							<width>373</width>
+							<height>30</height>
+							<textcolor>ffffffff</textcolor>
+							<font>Title</font>
+							<info>ListItem.Label</info>
+							<align>center</align>
+						</control>
+					</focusedlayout>
+					<content>
+						<item id="1">
+							<description>Video</description>
+							<label>Video</label>
+							<onclick>xbmc.activatewindow(10123)</onclick>
+						</item>
+						<item id="2">
+							<description>Audio</description>
+							<label>Audio</label>
+							<onclick>xbmc.activatewindow(10124)</onclick>
+						</item>
+					</content>
+				</control>		
+		</control>		
+	</controls>
 </window>

@@ -1,5 +1,6 @@
 <window id="127">
-<defaultcontrol>5</defaultcontrol>
+<defaultcontrol always="true">5</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
   
 <coordinates>
   <system>1</system>
@@ -13,7 +14,7 @@
 
   <control type="label">
 	  <include>DialogID</include>
-	  <label>DialogContentSettings.xml</label>
+	  <label>TrainerSettings.xml</label>
   </control>
   
 	<control type="label" id="2">
@@ -43,24 +44,20 @@
 		<ondown>5</ondown>
 	</control>
 	<control type="button" id="7">
-		<description>Default Button</description>
     <align>left</align>
 	</control>
 	<control type="radiobutton" id="8">
-		<description>Default Radiobutton</description>
     <align>left</align>
 	</control>
 	<control type="spincontrolex" id="9">
-		<description>Default Spincontrolex</description>
     <align>left</align>
 	</control>
 	<control type="sliderex" id="10">
-		<description>default_slider</description>
     <align>left</align>
 	</control>
   
 	<control type="button" id="28">
-		<description>ok</description>
+		<description>OK Button</description>
 		<posx>200</posx>
 		<posy>390</posy>
 		<label>$LOCALIZE[186]</label>
@@ -70,7 +67,7 @@
 		<ondown>5</ondown>
 	</control>
 	<control type="button" id="29">
-		<description>cancel</description>
+		<description>Cancel button</description>
 		<posx>360</posx>
 		<posy>390</posy>
 		<label>$LOCALIZE[222]</label>
@@ -80,4 +77,5 @@
 		<ondown>5</ondown>
 	</control>
 	</controls>
+  
 </window>

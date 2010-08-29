@@ -1,51 +1,73 @@
 <window type="dialog" id="134">
 <defaultcontrol always="true">450</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
 
+<coordinates>
+  <system>1</system>
+  <posx>100</posx>
+  <posy>80</posy>
+</coordinates>
   
-<controls>		
-	<!-- Favorites Menu-->
-	<control type="wraplist" id="450">
-		<posy>424</posy>
-		<posx>39</posx>
-		<width>1205</width>
-		<height>300</height>
+<controls>
+    
+<include>DialogBack</include>
 
-		<onleft>450</onleft>
-		<onright>450</onright>
-		<onup>Dialog.close(134)</onup>
-		<ondown>450</ondown>
-		
-		<orientation>horizontal</orientation>
-		<focusposition>3</focusposition>
-		
-		<itemlayout width="168" height="274">
-			<control type="image">
-				<width>158</width>
-				<height>274</height>
-				<info>ListItem.thumb</info>
-				<texture diffuse="thumbnails/poster_mask_small.png"></texture>
-			</control>
+  <control type="label">
+	  <include>DialogID</include>
+	  <label>DialogFavourites.xml</label>
+  </control>
 
-			<control type="image">
-				<posy>21</posy>
-				<texture>thumbnails/poster_glass_small.png</texture>
-			</control>
-		</itemlayout>
+  <control type="list" id="450">
+	  <posx>10</posx>
+	  <posy>40</posy>
+	  <width>520</width>
+	  <height>382</height>
+	  <onleft>450</onleft>
+	  <onright>450</onright>
+	  <onup>450</onup>
+	  <ondown>450</ondown>
+	  <itemlayout height="32">
+      <control type="image">
+        <width>500</width>
+        <height>30</height>
+        <texture>ButtonNF.png</texture>
+      </control>
+      <control type="image">
+        <posy>2</posy>
+        <width>26</width>
+        <height>26</height>
+        <info>ListItem.Icon</info>
+      </control>
+		  <control type="label">
+			  <posx>30</posx>
+			  <width>465</width>
+        <height>30</height>
+			  <info>ListItem.Label</info>
+        <scroll>false</scroll>
+		  </control>
+	  </itemlayout>
+	  <focusedlayout height="32">
+		  <control type="image">
+			  <width>500</width>
+			  <height>30</height>
+			  <texture>ButtonFo.png</texture>
+		  </control>
+      <control type="image">
+        <posy>2</posy>
+        <width>26</width>
+        <height>26</height>
+        <info>ListItem.Icon</info>
+      </control>
+		  <control type="label">
+			  <posx>30</posx>
+			  <width>465</width>
+			  <height>30</height>
+        <textcolor>White</textcolor>
+			  <info>ListItem.Label</info>
+		  </control>
+	  </focusedlayout>
+  </control>
 
-		<focusedlayout width="207"height="290" >
-			<control type="image">
-				<width>197</width>
-				<height>290</height>
-				<info>ListItem.thumb</info>
-				<texture diffuse="thumbnails/poster_mask_focused.png"></texture>
-			</control>
-			<control type="image">
-				<width>197</width>
-				<height>290</height>
-				<texture>thumbnails/poster_glass_focused.png</texture>
-			</control>
-		</focusedlayout>
-	</control>
 </controls>
   
 </window>

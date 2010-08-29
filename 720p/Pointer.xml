@@ -1,5 +1,6 @@
 <window id="105">
-<defaultcontrol>1</defaultcontrol>
+<defaultcontrol always="true">1</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
   
 <controls>
   

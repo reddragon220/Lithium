@@ -1,5 +1,6 @@
 <window id="129">
 <defaultcontrol always="true">10</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
   
 <coordinates>
   <system>1</system>
@@ -13,7 +14,7 @@
 
   <control type="label">
 	  <include>DialogID</include>
-	  <label>DialogFavourites.xml</label>
+	  <label>DialogMediaSource.xml</label>
   </control>
     
 	<control type="label" id="0">

@@ -1,79 +1,126 @@
 <fonts>
-<fontset id="default" unicode="true">
+	<fontset id="default" unicode="true">
+		<!-- Header -->
+		<font>
+			<name>Header</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+			<size>25</size>
+		</font>
+		<font>
+			<name>Section Name</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+			<size>40</size>
+		</font>
+		<font>
+			<name>Header Small</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+			<size>15</size>
+		</font>
+		<!-- Home -->
+		<font>
+			<name>Section</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+			<size>78</size>
+		</font>
+		<font>
+			<name>Subtitle</name>
+			<filename>Helvetica</filename>
+			<variant>Bold</variant>
+			<size>20</size>
+		</font>
+		<!-- Views -->
+		<font>
+			<name>Title</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+			<size>38</size>
+		</font>
+		<font>
+			<name>Title2</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Regular</variant>
+			<size>25</size>
+		</font>
+		
+		<font>
+			<name>Info_title</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+			<size>25</size>
+		</font>
+		<font>
+			<name>Episode_number</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+			<size>30</size>
+		</font>
 
-
-	<font>
-		<name>Menu</name>
-		<filename>Helvetica Neue Condensed Bold.ttf</filename>
-		<size>78</size>
-	</font>
-	<font>
-		<name>RSS</name>
-		<filename>Helvetica Neue Condensed Bold.ttf</filename>
-		<size>31</size>
-	</font>
-	<font>
-		<name>Title</name>
-		<filename>Helvetica Neue Condensed Bold.ttf</filename>
-		<size>48</size>
-	</font>
-	<font>
-		<name>Large</name>
-		<filename>Helvetica Neue Condensed Bold.ttf</filename>
-		<size>38</size>
-	</font>
-	<font>
-		<name>Medium</name>
-		<filename>Helvetica Neue Condensed Bold.ttf</filename>
-		<size>35</size>
-	</font>
-	<font>
-		<name>Small</name>
-		<filename>Helvetica Neue Condensed Bold.ttf</filename>
-		<size>31</size>
-	</font>
-	<font>
-		<name>Mini</name>
-		<filename>Helvetica Neue Condensed Bold.ttf</filename>
-		<size>28</size>
-	</font>
-	<font>
-		<name>OSD_Alert</name>
-		<filename>Helvetica Neue Condensed Bold.ttf</filename>
-		<size>185</size>
-	</font>
-	
-	
-	
-	
-
-	<font>
-		<name>Info_Title</name>
-		<filename>Helvetica Bold.ttf</filename>
-		<size>40</size>
-	</font>
-	<font>
-		<name>Info_Year</name>
-		<filename>Helvetica Bold.ttf</filename>
-		<size>25</size>
-	</font>
-	<font>
-		<name>Info_Plot</name>
-		<filename>Helvetica Bold.ttf</filename>
-		<size>30</size>
-	</font>
-	<font>
-		<name>Info_Header</name>
-		<filename>Helvetica Bold.ttf</filename>
-		<size>30</size>
-	</font>
-
-  <!-- Required for system -->
-  <font>
-    <name>font13</name>
-    <filename>Arial.ttf</filename>
-    <size>14</size>
-  </font>
-  
-</fontset>
+		<!-- Context Menu -->
+		<font>
+			<name>Context</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Condensed Bold</variant>
+			<size>34</size>
+		</font>
+		
+		<!-- Video OSD -->
+		<font>
+			<name>OSD</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Condensed Bold</variant>
+			<size>30</size>
+		</font>
+		<font>
+			<name>OSD_Alert</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Condensed Bold</variant>
+			<size>190</size>
+		</font>
+		
+		<!-- Dialog -->
+		<font>
+			<name>Dialog Header</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Condensed Bold</variant>
+			<size>38</size>
+		</font>
+		
+		<font>
+			<name>Dialog Info</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Condensed Bold</variant>
+			<size>31</size>
+		</font>
+		
+		<font>
+			<name>Keyboard</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Regular</variant>
+			<size>31</size>
+		</font>
+		
+		
+		
+		<!-- Empty -->
+		<font>
+			<name>Large</name>
+			<filename>Arial.ttf</filename>
+			<size>36</size>
+		</font>
+		<font>
+			<name>Small</name>
+			<filename>Arial.ttf</filename>
+			<size>14</size>
+		</font>
+		<!-- Required for system -->
+		<font>
+			<name>font13</name>
+			<filename>Arial.ttf</filename>
+			<size>14</size>
+		</font>
+	</fontset>
 </fonts>

@@ -1,4 +1,6 @@
 <window id="136">
+<defaultcontrol always="true">-</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
   
 <coordinates>
   <system>1</system>
@@ -12,7 +14,7 @@
     <posy>40</posy>
     <include>DialogID</include>
     <align>right</align>
-    <label>[COLOR=White]$LOCALIZE[20186]...[/COLOR] DialogBusy.xml</label>
+    <label>[COLOR=White]DialogBusy.xml[/COLOR]</label>
   </control>
   
 </controls>

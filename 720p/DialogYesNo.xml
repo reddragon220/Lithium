@@ -1,5 +1,6 @@
 ﻿<window id="100">
 <defaultcontrol always="true">10</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
   
 <coordinates>
   <system>1</system>

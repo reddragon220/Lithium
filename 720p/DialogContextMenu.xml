@@ -17,7 +17,6 @@
 	</animation>
 
 <controls>
-
 		<control type="image" id="999">
 			<description>background image</description>
 			<posx>0</posx>
@@ -32,13 +31,13 @@
 			<posy>0</posy>
 			<height>47</height>
 			<width>373</width>
-	    	<textcolor>ffe8e8db</textcolor>
-			<focusedcolor>ffe8e8db</focusedcolor>
+	    	<textcolor>ffffffff</textcolor>
+			<focusedcolor>ffffffff</focusedcolor>
 			<disabledcolor>7fe8e8db</disabledcolor>
 	    	<alignx>center</alignx>
 			<aligny>top</aligny>
-			<font>Small</font>
-			<textoffsetx>12</textoffsetx>
+			<font>Context</font>
+			<textoffsetx>8</textoffsetx>
 			<textoffsety>0</textoffsety>
 
 	    	<texturefocus>contextmenu/highlight.png</texturefocus>
@@ -55,17 +54,12 @@
 			<aspectratio>-</aspectratio>
 		</control>
 
-		<control type="group" id="998">
+		<control type="image" id="998">
+			<description>background bottom image</description>
 			<width>383</width>
 			<height>18</height>
-			<posy>18</posy>
-			<control type="image">
-				<description>background bottom image</description>
-				<width>383</width>
-				<height>18</height>
-				<texture>contextmenu/context_menu_bg_bottom.png</texture>
-				<aspectratio>-</aspectratio>
-			</control>
+			<texture>contextmenu/context_menu_bg_bottom.png</texture>
+			<aspectratio>-</aspectratio>
 		</control>
 </controls>
 </window>

@@ -1,5 +1,6 @@
 <window id="125">
 <defaultcontrol always="true">1</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
   
 <coordinates>
   <system>1</system>
@@ -27,13 +28,13 @@
     <onleft>11</onleft>
     <onright>11</onright>
 		<control type="button" id="2">
-			<description>Create</description>
+			<description>Create Button</description>
 			<label>$LOCALIZE[294]</label>
       <texturefocus border="1">ButtonFo.png</texturefocus>
       <texturenofocus border="1">ButtonNF.png</texturenofocus>
 		</control>
 		<control type="button" id="3">
-			<description>Clear</description>
+			<description>Clear Button</description>
 			<label>$LOCALIZE[296]</label>
       <texturefocus border="1">ButtonFo.png</texturefocus>
       <texturenofocus border="1">ButtonNF.png</texturenofocus>

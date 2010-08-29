@@ -1,59 +1,26 @@
 <window id="113">
-<defaultcontrol>901</defaultcontrol>
-<animation type="WindowOpen" reversible="false">
-	<effect type="zoom" start="80" end="100" center="640,360" delay="200" easing="out" tween="back" time="300" />
-	<effect type="fade" delay="200" start="0" end="100" time="300" />
-	
-	<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" delay="2000" />
-	<effect type="fade" start="100" end="0" time="300" delay="2000" />
-</animation>
-
-<controls>
-	<control type="group">
-		<posx>465</posx>
-		<posy>235</posy>	
-	
-		<control type="image">
-			<width>350</width>
-			<height>250</height>
-			<texture>alert dialogue/alert_bg.png</texture>
-			<aspectratio>stretch</aspectratio>
-		</control>
-
-	  	<control type="label">
-			<width>340</width>
-	    	<posx>5</posx>
-			<posy>200</posy>
-	    	<label>Audio Muted</label>
-			<font>Large</font>
-			<textcolor>7f000000</textcolor>
-			<align>center</align>
-	  	</control>	
-	  	<control type="label">
-			<width>340</width>
-	    	<posx>5</posx>
-			<posy>202</posy>
-	    	<label>Audio Muted</label>
-			<font>Large</font>
-			<textcolor>ffe8e8db</textcolor>
-			<align>center</align>
-	  	</control>
+<defaultcontrol always="true">901</defaultcontrol>
+<allowoverlay>yes</allowoverlay>
   
-		<control type="image" id="901">
-			<texture>zen/elements/header/mute.png</texture>
-			<posx>156</posx>
-			<posy>106</posy>
-			<height>38</height>
-			<width>38</width>
-			<aspectratio>stretch</aspectratio>
-			
-		</control>
-		<control type="image">
-			<width>350</width>
-			<height>250</height>
-			<texture>alert dialogue/alert_overlay.png</texture>
-			<aspectratio>stretch</aspectratio>
-		</control>
+<coordinates>
+  <system>1</system>
+  <posx>10</posx>
+  <posy>480</posy>
+</coordinates>
+  
+<controls>
+
+  <control type="label">
+    <posx>45</posx>
+    <include>DialogID</include>
+    <label>DialogMuteBug.xml</label>
+  </control>
+  
+	<control type="image" id="901">
+		<description>Mute Image</description>
+		<width>40</width>
+		<height>40</height>
+		<texture>Mute.png</texture>
 	</control>
     
 </controls>
