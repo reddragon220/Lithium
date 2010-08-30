@@ -38,7 +38,111 @@
 			<control type="group">
 				<posx>1162</posx>
 				<posy>12</posy>
+
+
 				<control type="grouplist">
+					<description>right</description>
+					<posy>3</posy>
+					<posx>2</posx>
+					<orientation>horizontal</orientation>
+					<control type="label">
+						<height>25</height>
+						<width min="1" max="150">auto</width>
+						<info>System.Time(HH:MM)</info>
+						<font>Header</font>
+						<textcolor>4b000000</textcolor>
+						<align>left</align>
+					</control>
+					<control type="label">
+						<width min="1" max="150">auto</width>
+						<height>33</height>
+						<posy>0</posy>
+						<label>AM</label>
+						<font>Header Small</font>
+						<textcolor>4b000000</textcolor>
+						<align>left</align>
+						<visible>system.time(00:00,11:59)</visible>
+					</control>
+					<control type="label">
+						<width min="1" max="150">auto</width>
+						<height>33</height>
+						<label>PM</label>
+						<font>Header Small</font>
+						<textcolor>4b000000</textcolor>
+						<align>left</align>
+						<visible>system.time(12:00,23:59)</visible>
+					</control>
+				</control>
+
+				<control type="grouplist">
+					<description>left</description>
+					<posy>3</posy>
+					<posx>-2</posx>
+					<orientation>horizontal</orientation>
+					<control type="label">
+						<height>25</height>
+						<width min="1" max="150">auto</width>
+						<info>System.Time(HH:MM)</info>
+						<font>Header</font>
+						<textcolor>4b000000</textcolor>
+						<align>left</align>
+					</control>
+					<control type="label">
+						<width min="1" max="150">auto</width>
+						<height>33</height>
+						<posy>0</posy>
+						<label>AM</label>
+						<font>Header Small</font>
+						<textcolor>4b000000</textcolor>
+						<align>left</align>
+						<visible>system.time(00:00,11:59)</visible>
+					</control>
+					<control type="label">
+						<width min="1" max="150">auto</width>
+						<height>33</height>
+						<label>PM</label>
+						<font>Header Small</font>
+						<textcolor>4b000000</textcolor>
+						<align>left</align>
+						<visible>system.time(12:00,23:59)</visible>
+					</control>
+				</control>
+				
+				<control type="grouplist">
+					<description>bottom</description>
+					<posy>5</posy>
+					<orientation>horizontal</orientation>
+					<control type="label">
+						<height>25</height>
+						<width min="1" max="150">auto</width>
+						<info>System.Time(HH:MM)</info>
+						<font>Header</font>
+						<textcolor>4b000000</textcolor>
+						<align>left</align>
+					</control>
+					<control type="label">
+						<width min="1" max="150">auto</width>
+						<height>33</height>
+						<posy>0</posy>
+						<label>AM</label>
+						<font>Header Small</font>
+						<textcolor>4b000000</textcolor>
+						<align>left</align>
+						<visible>system.time(00:00,11:59)</visible>
+					</control>
+					<control type="label">
+						<width min="1" max="150">auto</width>
+						<height>33</height>
+						<label>PM</label>
+						<font>Header Small</font>
+						<textcolor>4b000000</textcolor>
+						<align>left</align>
+						<visible>system.time(12:00,23:59)</visible>
+					</control>
+				</control>
+				
+				<control type="grouplist">
+					<description>top</description>
 					<posy>1</posy>
 					<orientation>horizontal</orientation>
 					<control type="label">
@@ -69,6 +173,7 @@
 						<visible>system.time(12:00,23:59)</visible>
 					</control>
 				</control>
+
 				<control type="grouplist">
 					<posy>3</posy>
 					<orientation>horizontal</orientation>
@@ -104,7 +209,177 @@
 			<control type="group">
 				<posx>20</posx>
 				<posy>0</posy>
+
+
 				<control type="grouplist">
+					<description>right</description>
+					<posy>3</posy>
+					<posx>2</posx>
+					<orientation>horizontal</orientation>
+					<control type="image">
+						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(Movies)</visible>
+						<width>75</width>
+						<height>55</height>
+						<texture>-</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<visible>Container.Content(albums) | Container.Content(artists) | Container.Content(songs)</visible>
+						<width>55</width>
+						<height>55</height>
+						<texture>-</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<visible>Container.Content(photos)</visible>
+						<width>70</width>
+						<height>55</height>
+						<texture>-</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>					
+					<control type="label">
+						<description>First title</description>
+						<visible>!IsEmpty(Container.FirstTitle)</visible>
+						<label>$INFO[Container.FirstTitle]</label>
+						<font>Section Name</font>
+						<textcolor>4b000000</textcolor>
+						<align>left</align>		
+						<height>40</height>	
+						<width min="1" max="1280">auto</width>			
+					</control>
+					<control type="label">
+						<visible>!IsEmpty(Container.SecondTitle)</visible>
+						<description>Second title</description>
+						<label>.</label>
+						<font>Section Name</font>
+						<textcolor>4b000000</textcolor>
+						<align>left</align>
+						<height>20</height>
+						<width min="1" max="1280">auto</width>
+					</control>
+					<control type="label">
+						<description>Second title</description>
+						<label>$INFO[Container.SecondTitle]</label>
+						<font>Section Name</font>
+						<textcolor>4b000000</textcolor>
+						<align>left</align>
+						<height>40</height>
+						<width min="1" max="1280">auto</width>
+					</control>
+				</control>
+				<control type="grouplist">
+					<description>left</description>
+					<posy>3</posy>
+					<posx>-2</posx>
+					<orientation>horizontal</orientation>
+					<control type="image">
+						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(Movies)</visible>
+						<width>75</width>
+						<height>55</height>
+						<texture>-</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<visible>Container.Content(albums) | Container.Content(artists) | Container.Content(songs)</visible>
+						<width>55</width>
+						<height>55</height>
+						<texture>-</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<visible>Container.Content(photos)</visible>
+						<width>70</width>
+						<height>55</height>
+						<texture>-</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>					
+					<control type="label">
+						<description>First title</description>
+						<visible>!IsEmpty(Container.FirstTitle)</visible>
+						<label>$INFO[Container.FirstTitle]</label>
+						<font>Section Name</font>
+						<textcolor>4b000000</textcolor>
+						<align>left</align>		
+						<height>40</height>	
+						<width min="1" max="1280">auto</width>			
+					</control>
+					<control type="label">
+						<visible>!IsEmpty(Container.SecondTitle)</visible>
+						<description>Second title</description>
+						<label>.</label>
+						<font>Section Name</font>
+						<textcolor>4b000000</textcolor>
+						<align>left</align>
+						<height>20</height>
+						<width min="1" max="1280">auto</width>
+					</control>
+					<control type="label">
+						<description>Second title</description>
+						<label>$INFO[Container.SecondTitle]</label>
+						<font>Section Name</font>
+						<textcolor>4b000000</textcolor>
+						<align>left</align>
+						<height>40</height>
+						<width min="1" max="1280">auto</width>
+					</control>
+				</control>
+				<control type="grouplist">
+					<description>bottom</description>
+					<posy>5</posy>
+					<orientation>horizontal</orientation>
+					<control type="image">
+						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(Movies)</visible>
+						<width>75</width>
+						<height>55</height>
+						<texture>-</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<visible>Container.Content(albums) | Container.Content(artists) | Container.Content(songs)</visible>
+						<width>55</width>
+						<height>55</height>
+						<texture>-</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<visible>Container.Content(photos)</visible>
+						<width>70</width>
+						<height>55</height>
+						<texture>-</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>					
+					<control type="label">
+						<description>First title</description>
+						<visible>!IsEmpty(Container.FirstTitle)</visible>
+						<label>$INFO[Container.FirstTitle]</label>
+						<font>Section Name</font>
+						<textcolor>4b000000</textcolor>
+						<align>left</align>		
+						<height>40</height>	
+						<width min="1" max="1280">auto</width>			
+					</control>
+					<control type="label">
+						<visible>!IsEmpty(Container.SecondTitle)</visible>
+						<description>Second title</description>
+						<label>.</label>
+						<font>Section Name</font>
+						<textcolor>4b000000</textcolor>
+						<align>left</align>
+						<height>20</height>
+						<width min="1" max="1280">auto</width>
+					</control>
+					<control type="label">
+						<description>Second title</description>
+						<label>$INFO[Container.SecondTitle]</label>
+						<font>Section Name</font>
+						<textcolor>4b000000</textcolor>
+						<align>left</align>
+						<height>40</height>
+						<width min="1" max="1280">auto</width>
+					</control>
+				</control>
+				<control type="grouplist">
+					<description>top</description>
 					<posy>1</posy>
 					<orientation>horizontal</orientation>
 					<control type="image">
@@ -158,6 +433,7 @@
 						<width min="1" max="1280">auto</width>
 					</control>
 				</control>
+
 				<control type="grouplist">
 					<posy>3</posy>
 					<orientation>horizontal</orientation>
