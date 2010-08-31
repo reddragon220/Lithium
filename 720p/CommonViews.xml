@@ -1080,7 +1080,7 @@
 					<width>299</width>
 					<textcolor>ff95c9f7</textcolor>
 					<font>Info_title</font>
-					<label>$LOCALIZE[35000]:</label>
+					<label>Rating:</label>
 					<scroll>false</scroll>
 					<align>right</align>
 				</control>
@@ -1098,7 +1098,7 @@
 					<width>299</width>
 					<textcolor>ff95c9f7</textcolor>
 					<font>Info_title</font>
-					<label>$LOCALIZE[35002]:</label>
+					<label>Duration:</label>
 					<scroll>false</scroll>
 					<align>right</align>
 				</control>
@@ -1120,7 +1120,7 @@
 						<width>299</width>
 						<textcolor>ff95c9f7</textcolor>
 						<font>Info_title</font>
-						<label>$LOCALIZE[35001]:</label>
+						<label>Genre:</label>
 						<scroll>false</scroll>
 						<align>right</align>
 					</control>
@@ -1140,7 +1140,7 @@
 						<width>299</width>
 						<textcolor>ff95c9f7</textcolor>
 						<font>Info_title</font>
-						<label>$LOCALIZE[35003]:</label>
+						<label>Year:</label>
 						<scroll>false</scroll>
 						<align>right</align>
 					</control>
