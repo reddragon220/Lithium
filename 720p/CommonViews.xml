@@ -850,143 +850,147 @@
 				</control>
 				<control type="group">
 					<visible>!Skin.HasSetting(list_cover) + !Container.content(albums) + !Container.content(songs)</visible>
-					<control type="image">
-						<posx>11</posx>
-						<posy>41</posy>
-						<width>453</width>
-						<height>2</height>
-						<texture>list/info_divider.png</texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
-					<control type="grouplist">
-						<posx>11</posx>
-						<orientation>horizontal</orientation>
-						<itemgap>2</itemgap>
-						<control type="label">
-							<posy>6</posy>
-							<textcolor>ff95c9f7</textcolor>
-							<width min="1" max="400">auto</width>
-							<height>38</height>
-							<font>Info_title</font>
-							<label>Rating:</label>
-							<scroll>false</scroll>
-							<alignx>left</alignx>
-							<aligny>center</aligny>
-						</control>
-						<control type="image">
-							<posx>11</posx>
-							<posy>0</posy>
-							<width>180</width>
-							<height>38</height>
-							<info>listitem.StarRating</info>
-							<aspectratio>stretch</aspectratio>
-						</control>
-					</control>
+
 					
-					<control type="grouplist">
-						<posx>344</posx>
-						<orientation>horizontal</orientation>
-						<itemgap>2</itemgap>
-						
-						<control type="label">
-							<textcolor>ff95c9f7</textcolor>
-							<width min="1" max="400">auto</width>
-							<height>38</height>
-							<font>Info_title</font>
-							<label>Year:</label>
-							<scroll>false</scroll>
-							<alignx>left</alignx>
-							<aligny>center</aligny>
-						</control>
-						<control type="label">
-							<textcolor>ffffffff</textcolor>
-							<width min="1" max="400">auto</width>
-							<height>40</height>
-							<font>Title2</font>
-							<label>$INFO[ListItem.Year]</label>
-							<scroll>false</scroll>
-							<alignx>left</alignx>
-						</control>
-					</control>
-
-
 					<control type="group">
-						<visible>Container.Content(movies) | Container.Content(episodes)</visible>
+						<visible>!Container.content(artists) + !Container.content(albums) + !Container.content(songs)</visible>
 						<control type="image">
 							<posx>11</posx>
-							<posy>92</posy>
+							<posy>41</posy>
 							<width>453</width>
 							<height>2</height>
 							<texture>list/info_divider.png</texture>
 							<aspectratio>stretch</aspectratio>
 						</control>
 						<control type="grouplist">
+							<posx>11</posx>
 							<orientation>horizontal</orientation>
-							<itemgap>30</itemgap>
-							<posy>47</posy>
-							<posx>11</posx>
+							<itemgap>2</itemgap>
+							<control type="label">
+								<posy>6</posy>
+								<textcolor>ff95c9f7</textcolor>
+								<width min="1" max="400">auto</width>
+								<height>38</height>
+								<font>Info_title</font>
+								<label>Rating:</label>
+								<scroll>false</scroll>
+								<alignx>left</alignx>
+								<aligny>center</aligny>
+							</control>
+							<control type="image">
+								<posx>11</posx>
+								<posy>0</posy>
+								<width>180</width>
+								<height>38</height>
+								<info>listitem.StarRating</info>
+								<aspectratio>stretch</aspectratio>
+							</control>
+						</control>
+						<control type="grouplist">
+							<posx>344</posx>
+							<orientation>horizontal</orientation>
+							<itemgap>2</itemgap>
 						
-							<control type="image">
-								<visible>!IsEmpty(Listitem.Property(mediaTag::videoResolution))</visible>
-								<height>40</height>
-								<width min="1" max="95">auto</width>
-								<info>Listitem.Property(mediaTag::videoResolution)</info>
-								<aspectratio>keep</aspectratio>
+							<control type="label">
+								<textcolor>ff95c9f7</textcolor>
+								<width min="1" max="400">auto</width>
+								<height>38</height>
+								<font>Info_title</font>
+								<label>Year:</label>
+								<scroll>false</scroll>
+								<alignx>left</alignx>
+								<aligny>center</aligny>
 							</control>
-
-							<control type="image">
-								<visible>!IsEmpty(Listitem.Property(mediaTag::videoCodec))</visible>
+							<control type="label">
+								<textcolor>ffffffff</textcolor>
+								<width min="1" max="400">auto</width>
 								<height>40</height>
-								<width min="1" max="95">auto</width>
-								<info>Listitem.Property(mediaTag::videoCodec)</info>
-								<aspectratio>keep</aspectratio>
-							</control>
-
-							<control type="image">
-								<visible>!IsEmpty(Listitem.Property(mediaTag::audioCodec))</visible>
-								<height>40</height>
-								<width min="1" max="95">auto</width>
-								<info>Listitem.Property(mediaTag::audioCodec)</info>
-								<aspectratio>keep</aspectratio>
-							</control>
-
-				 			<control type="image">
-								<visible>!IsEmpty(Listitem.Property(mediaTag::audioChannels))</visible>
-								<height>40</height>
-								<width min="1" max="95">auto</width>
-								<info>Listitem.Property(mediaTag::audioChannels)</info>
-								<aspectratio>keep</aspectratio>
+								<font>Title2</font>
+								<label>$INFO[ListItem.Year]</label>
+								<scroll>false</scroll>
+								<alignx>left</alignx>
 							</control>
 						</control>
-						<control type="textbox">
-							<visible>Skin.HasSetting(HighList)</visible>
-							<description>Plot</description>
-							<posx>11</posx>
-							<posy>96</posy>
-							<width>453</width>
-							<height>520</height>
-							<font>Title2</font>
-							<textcolor>FFFFFFFF</textcolor>
-							<label>$INFO[listitem.Plot]</label>
-							<autoscroll delay="9000" time="2000" repeat="10000">true</autoscroll>
+						<control type="group">
+							<visible>Container.Content(movies) | Container.Content(episodes)</visible>
+							<control type="image">
+								<posx>11</posx>
+								<posy>92</posy>
+								<width>453</width>
+								<height>2</height>
+								<texture>list/info_divider.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="grouplist">
+								<orientation>horizontal</orientation>
+								<itemgap>30</itemgap>
+								<posy>47</posy>
+								<posx>11</posx>
+
+								<control type="image">
+									<visible>!IsEmpty(Listitem.Property(mediaTag::videoResolution))</visible>
+									<height>40</height>
+									<width min="1" max="95">auto</width>
+									<info>Listitem.Property(mediaTag::videoResolution)</info>
+									<aspectratio>keep</aspectratio>
+								</control>
+
+								<control type="image">
+									<visible>!IsEmpty(Listitem.Property(mediaTag::videoCodec))</visible>
+									<height>40</height>
+									<width min="1" max="95">auto</width>
+									<info>Listitem.Property(mediaTag::videoCodec)</info>
+									<aspectratio>keep</aspectratio>
+								</control>
+
+								<control type="image">
+									<visible>!IsEmpty(Listitem.Property(mediaTag::audioCodec))</visible>
+									<height>40</height>
+									<width min="1" max="95">auto</width>
+									<info>Listitem.Property(mediaTag::audioCodec)</info>
+									<aspectratio>keep</aspectratio>
+								</control>
+
+					 			<control type="image">
+									<visible>!IsEmpty(Listitem.Property(mediaTag::audioChannels))</visible>
+									<height>40</height>
+									<width min="1" max="95">auto</width>
+									<info>Listitem.Property(mediaTag::audioChannels)</info>
+									<aspectratio>keep</aspectratio>
+								</control>
+							</control>
+							<control type="textbox">
+								<visible>Skin.HasSetting(HighList)</visible>
+								<description>Plot</description>
+								<posx>11</posx>
+								<posy>96</posy>
+								<width>453</width>
+								<height>520</height>
+								<font>Title2</font>
+								<textcolor>FFFFFFFF</textcolor>
+								<label>$INFO[listitem.Plot]</label>
+								<autoscroll delay="9000" time="2000" repeat="10000">true</autoscroll>
+							</control>
+							<control type="textbox">
+								<visible>!Skin.HasSetting(HighList)</visible>
+								<description>Plot</description>
+								<posx>11</posx>
+								<posy>96</posy>
+								<width>453</width>
+								<height>220</height>
+								<font>Title2</font>
+								<textcolor>FFFFFFFF</textcolor>
+								<label>$INFO[listitem.Plot]</label>
+								<autoscroll delay="9000" time="2000" repeat="10000">true</autoscroll>
+							</control>
 						</control>
-						<control type="textbox">
-							<visible>!Skin.HasSetting(HighList)</visible>
-							<description>Plot</description>
-							<posx>11</posx>
-							<posy>96</posy>
-							<width>453</width>
-							<height>220</height>
-							<font>Title2</font>
-							<textcolor>FFFFFFFF</textcolor>
-							<label>$INFO[listitem.Plot]</label>
-							<autoscroll delay="9000" time="2000" repeat="10000">true</autoscroll>
-						</control>
+						
 					</control>
 
 
+
 					<control type="group">
-						<visible>!Container.Content(movies) + !Container.Content(episodes)</visible>
+						<visible>!Container.Content(movies) + !Container.Content(episodes) + !Container.content(artists) + !Container.content(albums) + !Container.content(songs)</visible>
 						<control type="textbox">
 							<visible>Skin.HasSetting(HighList)</visible>
 							<description>Plot</description>
@@ -1013,6 +1017,35 @@
 							<autoscroll delay="9000" time="2000" repeat="10000">true</autoscroll>
 						</control>
 					</control>
+					<control type="group">
+						<visible>Container.content(artists) | Container.content(albums) | Container.content(songs)</visible>
+						<control type="textbox">
+							<visible>Skin.HasSetting(HighList)</visible>
+							<description>Plot</description>
+							<posx>11</posx>
+							<posy>6</posy>
+							<width>453</width>
+							<height>610</height>
+							<font>Title2</font>
+							<textcolor>FFFFFFFF</textcolor>
+							<label>$INFO[listitem.Plot]</label>
+							<autoscroll delay="9000" time="2000" repeat="10000">true</autoscroll>
+						</control>
+
+						<control type="textbox">
+							<visible>!Skin.HasSetting(HighList)</visible>
+							<description>Plot</description>
+							<posx>11</posx>
+							<posy>6</posy>
+							<width>453</width>
+							<height>310</height>
+							<font>Title2</font>
+							<textcolor>FFFFFFFF</textcolor>
+							<label>$INFO[listitem.Plot]</label>
+							<autoscroll delay="9000" time="2000" repeat="10000">true</autoscroll>
+						</control>
+					</control>
+					
 				</control>
 				<control type="group">
 					<visible>Skin.HasSetting(list_cover) | Container.content(albums) | Container.content(songs)</visible>
