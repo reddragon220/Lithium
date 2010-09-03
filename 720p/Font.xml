@@ -103,6 +103,14 @@
 			<size>31</size>
 		</font>
 		
+		<!-- Settings -->
+		<font>
+			<name>Settings</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Condensed Bold</variant>
+			<size>38</size>
+		</font>
+		
 		
 		
 		<!-- Empty -->

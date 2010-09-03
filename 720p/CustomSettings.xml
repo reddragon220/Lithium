@@ -32,7 +32,7 @@
 					<focusedcolor>ffe8e8db</focusedcolor>
 					<disabledcolor>7f7c7c72</disabledcolor>
 					<shadowcolor>7f000000</shadowcolor>
-					<font>Title</font>
+					<font>Settings</font>
 					<textoffsetx>20</textoffsetx>
 					<align>left</align>
 					<texturefocus>settings/highlight_long.png</texturefocus>
@@ -50,7 +50,7 @@
 					<focusedcolor>ffe8e8db</focusedcolor>
 					<disabledcolor>7f7c7c72</disabledcolor>
 					<shadowcolor>7f000000</shadowcolor>
-					<font>Title</font>
+					<font>Settings</font>
 					<textoffsetx>20</textoffsetx>
 					<align>left</align>
 					<texturefocus>settings/highlight_long.png</texturefocus>
@@ -68,7 +68,7 @@
 					<focusedcolor>ffe8e8db</focusedcolor>
 					<disabledcolor>7f7c7c72</disabledcolor>
 					<shadowcolor>7f000000</shadowcolor>
-					<font>Title</font>
+					<font>Settings</font>
 					<textoffsetx>40</textoffsetx>
 					<align>left</align>
 					<texturefocus>settings/highlight_long.png</texturefocus>
@@ -92,7 +92,7 @@
 					<focusedcolor>ffe8e8db</focusedcolor>
 					<disabledcolor>7f7c7c72</disabledcolor>
 					<shadowcolor>7f000000</shadowcolor>
-					<font>Title</font>
+					<font>Settings</font>
 					<textoffsetx>40</textoffsetx>
 					<align>left</align>
 					<texturefocus>settings/highlight_long.png</texturefocus>
@@ -118,7 +118,7 @@
 					<focusedcolor>ffe8e8db</focusedcolor>
 					<disabledcolor>7f7c7c72</disabledcolor>
 					<shadowcolor>7f000000</shadowcolor>
-					<font>Title</font>
+					<font>Settings</font>
 					<textoffsetx>20</textoffsetx>
 					<align>left</align>
 					<texturefocus>settings/highlight_long.png</texturefocus>
@@ -141,7 +141,7 @@
 					<focusedcolor>ffe8e8db</focusedcolor>
 					<disabledcolor>7f7c7c72</disabledcolor>
 					<shadowcolor>7f000000</shadowcolor>
-					<font>Title</font>
+					<font>Settings</font>
 					<textoffsetx>20</textoffsetx>
 					<align>left</align>
 					<texturefocus>settings/highlight_long.png</texturefocus>
@@ -166,7 +166,7 @@
 					<focusedcolor>ffe8e8db</focusedcolor>
 					<disabledcolor>7f7c7c72</disabledcolor>
 					<shadowcolor>7f000000</shadowcolor>
-					<font>Title</font>
+					<font>Settings</font>
 					<textoffsetx>20</textoffsetx>
 					<texturefocus>settings/highlight_long.png</texturefocus>
 					<texturenofocus>settings/large_divider.png</texturenofocus>
@@ -182,7 +182,7 @@
 					<focusedcolor>ffe8e8db</focusedcolor>
 					<disabledcolor>7f7c7c72</disabledcolor>
 					<shadowcolor>7f000000</shadowcolor>
-					<font>Title</font>
+					<font>Settings</font>
 					<textoffsetx>20</textoffsetx>
 					<texturefocus>settings/highlight_long.png</texturefocus>
 					<texturenofocus>settings/large_divider.png</texturenofocus>
@@ -196,7 +196,7 @@
 					<focusedcolor>ffe8e8db</focusedcolor>
 					<disabledcolor>7f7c7c72</disabledcolor>
 					<shadowcolor>7f000000</shadowcolor>
-					<font>Title</font>
+					<font>Settings</font>
 					<textoffsetx>20</textoffsetx>
 					<texturefocus>settings/highlight_long.png</texturefocus>
 					<texturenofocus>settings/large_divider.png</texturenofocus>
@@ -212,7 +212,7 @@
 					<focusedcolor>ffe8e8db</focusedcolor>
 					<disabledcolor>7f7c7c72</disabledcolor>
 					<shadowcolor>7f000000</shadowcolor>
-					<font>Title</font>
+					<font>Settings</font>
 					<textoffsetx>20</textoffsetx>
 					<texturefocus>settings/highlight_long.png</texturefocus>
 					<texturenofocus>settings/large_divider.png</texturenofocus>
@@ -229,7 +229,7 @@
 					<focusedcolor>ffe8e8db</focusedcolor>
 					<disabledcolor>7f7c7c72</disabledcolor>
 					<shadowcolor>7f000000</shadowcolor>
-					<font>Title</font>
+					<font>Settings</font>
 					<textoffsetx>20</textoffsetx>
 					<texturefocus>settings/highlight_long.png</texturefocus>
 					<texturenofocus>settings/large_divider.png</texturenofocus>
@@ -245,7 +245,7 @@
 					<focusedcolor>ffe8e8db</focusedcolor>
 					<disabledcolor>7f7c7c72</disabledcolor>
 					<shadowcolor>7f000000</shadowcolor>
-					<font>Title</font>
+					<font>Settings</font>
 					<textoffsetx>20</textoffsetx>
 					<texturefocus>settings/highlight_long.png</texturefocus>
 					<texturenofocus>settings/large_divider.png</texturenofocus>
@@ -261,7 +261,7 @@
 					<focusedcolor>ffe8e8db</focusedcolor>
 					<disabledcolor>7f7c7c72</disabledcolor>
 					<shadowcolor>7f000000</shadowcolor>
-					<font>Title</font>
+					<font>Settings</font>
 					<textoffsetx>20</textoffsetx>
 					<texturefocus>settings/highlight_long.png</texturefocus>
 					<texturenofocus>settings/large_divider.png</texturenofocus>
@@ -277,7 +277,7 @@
 					<focusedcolor>ffe8e8db</focusedcolor>
 					<disabledcolor>7f7c7c72</disabledcolor>
 					<shadowcolor>7f000000</shadowcolor>
-					<font>Title</font>
+					<font>Settings</font>
 					<textoffsetx>20</textoffsetx>
 					<texturefocus>settings/highlight_long.png</texturefocus>
 					<texturenofocus>settings/large_divider.png</texturenofocus>
@@ -305,7 +305,7 @@
 						<focusedcolor>ffe8e8db</focusedcolor>
 						<disabledcolor>7f7c7c72</disabledcolor>
 						<shadowcolor>7f000000</shadowcolor>
-						<font>Title</font>
+						<font>Settings</font>
 						<textoffsetx>20</textoffsetx>
 						<align>left</align>
 						<texturefocus>settings/highlight_long.png</texturefocus>
@@ -338,7 +338,7 @@
 					<focusedcolor>ffe8e8db</focusedcolor>
 					<disabledcolor>7f7c7c72</disabledcolor>
 					<shadowcolor>7f000000</shadowcolor>
-					<font>Title</font>
+					<font>Settings</font>
 					<textoffsetx>20</textoffsetx>
 					<align>left</align>
 					<texturefocus>settings/highlight_long.png</texturefocus>
@@ -359,7 +359,7 @@
 					<focusedcolor>ffe8e8db</focusedcolor>
 					<disabledcolor>7f7c7c72</disabledcolor>
 					<shadowcolor>7f000000</shadowcolor>
-					<font>Title</font>
+					<font>Settings</font>
 					<textoffsetx>20</textoffsetx>
 					<align>left</align>
 					<texturefocus>settings/highlight_long.png</texturefocus>
@@ -380,7 +380,7 @@
 					<focusedcolor>ffe8e8db</focusedcolor>
 					<disabledcolor>7f7c7c72</disabledcolor>
 					<shadowcolor>7f000000</shadowcolor>
-					<font>Title</font>
+					<font>Settings</font>
 					<textoffsetx>20</textoffsetx>
 					<align>left</align>
 					<texturefocus>settings/highlight_long.png</texturefocus>
@@ -401,7 +401,7 @@
 					<focusedcolor>ffe8e8db</focusedcolor>
 					<disabledcolor>7f7c7c72</disabledcolor>
 					<shadowcolor>7f000000</shadowcolor>
-					<font>Title</font>
+					<font>Settings</font>
 					<textoffsetx>20</textoffsetx>
 					<align>left</align>
 					<texturefocus>settings/highlight_long.png</texturefocus>
@@ -422,7 +422,7 @@
 					<focusedcolor>ffe8e8db</focusedcolor>
 					<disabledcolor>7f7c7c72</disabledcolor>
 					<shadowcolor>7f000000</shadowcolor>
-					<font>Title</font>
+					<font>Settings</font>
 					<textoffsetx>20</textoffsetx>
 					<align>left</align>
 					<texturefocus>settings/highlight_long.png</texturefocus>
@@ -453,7 +453,7 @@
 					<focusedcolor>ffe8e8db</focusedcolor>
 					<disabledcolor>7f7c7c72</disabledcolor>
 					<shadowcolor>7f000000</shadowcolor>
-					<font>Title</font>
+					<font>Settings</font>
 					<textoffsetx>20</textoffsetx>
 					<align>left</align>
 					<texturefocus>settings/highlight_long.png</texturefocus>
@@ -474,7 +474,7 @@
 					<focusedcolor>ffe8e8db</focusedcolor>
 					<disabledcolor>7f7c7c72</disabledcolor>
 					<shadowcolor>7f000000</shadowcolor>
-					<font>Title</font>
+					<font>Settings</font>
 					<textoffsetx>20</textoffsetx>
 					<texturefocus>settings/highlight_long.png</texturefocus>
 					<texturenofocus>settings/large_divider.png</texturenofocus>
@@ -490,7 +490,7 @@
 					<focusedcolor>ffe8e8db</focusedcolor>
 					<disabledcolor>7f7c7c72</disabledcolor>
 					<shadowcolor>7f000000</shadowcolor>
-					<font>Title</font>
+					<font>Settings</font>
 					<textoffsetx>20</textoffsetx>
 					<texturefocus>settings/highlight_long.png</texturefocus>
 					<texturenofocus>settings/large_divider.png</texturenofocus>
@@ -518,7 +518,7 @@
 						<focusedcolor>ffe8e8db</focusedcolor>
 						<disabledcolor>7f7c7c72</disabledcolor>
 						<shadowcolor>7f000000</shadowcolor>
-						<font>Title</font>
+						<font>Settings</font>
 						<textoffsetx>20</textoffsetx>
 						<align>left</align>
 						<texturefocus>settings/highlight_long.png</texturefocus>
@@ -558,7 +558,7 @@
 					<info>ListItem.Label</info>
 					<textcolor>White</textcolor>
 					<scroll>false</scroll>
-					<font>Title</font>
+					<font>Settings</font>
 				</control>
 			</itemlayout>
 			<focusedlayout height="50">
@@ -573,7 +573,7 @@
 					<posy>2</posy>
 					<width>250</width>
 					<info>ListItem.Label</info>
-					<font>Title</font>
+					<font>Settings</font>
 					<textcolor>4b000000</textcolor>
 				</control>
 				<control type="label">
@@ -581,7 +581,7 @@
 					<posx>20</posx>
 					<width>250</width>
 					<info>ListItem.Label</info>
-					<font>Title</font>
+					<font>Settings</font>
 					<textcolor>ffffffff</textcolor>
 				</control>
 			</focusedlayout>

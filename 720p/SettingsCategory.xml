@@ -60,8 +60,9 @@
 			<focusedcolor>ffe8e8db</focusedcolor>
 			<disabledcolor>7f7c7c72</disabledcolor>
 			<shadowcolor>7f000000</shadowcolor>
-			<font>Title</font>
+			<font>Settings</font>
 	    	<textoffsetx>20</textoffsetx>
+			<align>left</align>
 
 	    	<texturefocus>settings/highlight_category.png</texturefocus>
 			<texturenofocus>settings/category_divider.png</texturenofocus>
@@ -76,7 +77,7 @@
 			<focusedcolor>ffe8e8db</focusedcolor>
 			<disabledcolor>7f7c7c72</disabledcolor>
 			<shadowcolor>7f000000</shadowcolor>
-			<font>Title</font>
+			<font>Settings</font>
 	    	<textoffsetx>20</textoffsetx>
 
 	    	<texturefocus>settings/highlight_long.png</texturefocus>
@@ -90,7 +91,7 @@
 			<focusedcolor>ffe8e8db</focusedcolor>
 			<disabledcolor>7f7c7c72</disabledcolor>
 			<shadowcolor>7f000000</shadowcolor>
-			<font>Title</font>
+			<font>Settings</font>
 	    	<textoffsetx>20</textoffsetx>
 			<align>left</align>
 	
@@ -111,7 +112,7 @@
 			<focusedcolor>ffe8e8db</focusedcolor>
 			<disabledcolor>7f7c7c72</disabledcolor>
 			<shadowcolor>7f000000</shadowcolor>
-			<font>Title</font>
+			<font>Settings</font>
 	    	<textoffsetx>20</textoffsetx>
 
 			<texturefocus>settings/highlight_long.png</texturefocus>

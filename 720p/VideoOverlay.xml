@@ -1,6 +1,7 @@
 <window id="2004">
 <defaultcontrol always="true">2</defaultcontrol>
 <allowoverlay>yes</allowoverlay>
+<visible>false</visible>
 
 <coordinates>
   <system>1</system>

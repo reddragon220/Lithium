@@ -37,7 +37,7 @@
 				<info>ListItem.Label</info>
 				<textcolor>White</textcolor>
 				<scroll>false</scroll>
-				<font>Title</font>
+				<font>Settings</font>
 			</control>
 		</itemlayout>
 		<focusedlayout height="50">
@@ -52,7 +52,7 @@
 				<posy>2</posy>
 				<width>250</width>
 				<info>ListItem.Label</info>
-				<font>Title</font>
+				<font>Settings</font>
 				<textcolor>4b000000</textcolor>
 			</control>
 			<control type="label">
@@ -60,7 +60,7 @@
 				<posx>20</posx>
 				<width>250</width>
 				<info>ListItem.Label</info>
-				<font>Title</font>
+				<font>Settings</font>
 				<textcolor>ffffffff</textcolor>
 			</control>
 		</focusedlayout>
