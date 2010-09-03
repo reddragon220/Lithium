@@ -849,7 +849,7 @@
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="group">
-					<visible>!Skin.HasSetting(list_cover)</visible>
+					<visible>!Skin.HasSetting(list_cover) + !Container.content(albums) + !Container.content(songs)</visible>
 					<control type="image">
 						<posx>11</posx>
 						<posy>41</posy>
@@ -1015,7 +1015,7 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>Skin.HasSetting(list_cover)</visible>
+					<visible>Skin.HasSetting(list_cover) | Container.content(albums) | Container.content(songs)</visible>
 					<control type="image">
 						<animation effect="slide" end="0,300" time="0" condition="Skin.HasSetting(HighList)">Conditional</animation>
 						<posx>44</posx>

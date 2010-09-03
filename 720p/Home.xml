@@ -400,7 +400,7 @@
 					</item>
 					<item id="7">
 						<description>Settings</description>
-						<label>$LOCALIZE[5]</label>
+						<label>Preferences</label>
 						<onclick>xbmc.activatewindow(settings)</onclick>
 					</item>
 					<item id="8">
