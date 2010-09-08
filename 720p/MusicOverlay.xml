@@ -1,45 +1,261 @@
 <window id="2004">
-<defaultcontrol always="true">2</defaultcontrol>
-<allowoverlay>yes</allowoverlay>
-  
-<coordinates>
-  <system>1</system>
-  <posx>100</posx>
-  <posy>80</posy>
-</coordinates>
+	<defaultcontrol always="true">2</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<controls>
+		<control type="group">
+			<visible>Window.IsActive(50)</visible>
+			<control type="largeimage">
+				<include condition="!Skin.HasSetting(ken_burns)">bg_animation</include>
+				<description>Background Image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+				<aspectratio>stretch</aspectratio>
+				<texture>$INFO[MusicPlayer.Fanart]</texture>
+				<fadetime>200</fadetime>
+			</control>
+			<control type="image">
+				<posx>200</posx>
+				<posy>0</posy>
+				<width>392</width>
+				<height>572</height>
+				<texture diffuse="list/cover.png">$INFO[MusicPlayer.Cover]</texture>
+				<bordertexture border="5">list/cover_shadow.png</bordertexture>
+				<bordersize>5</bordersize>
+				<aspectratio scalediffuse="true" align="center" aligny="bottom">keep</aspectratio>
+			</control>
+			<control type="group">
+				<posx>602</posx>
+				<posy>260</posy>
+				<control type="grouplist">
+					<posy>-1</posy>
+					<control type="label">
+						<description>Play Time</description>
+						<label>-</label>
+						<label>$INFO[musicplayer.time]/$INFO[musicplayer.duration]</label>
+						<font>Music OSD Time</font>
+						<textcolor>4b000000</textcolor>
+						<height>60</height>
+					</control>
+					<control type="label">
+						<description>Song Title</description>
+						<posx>402</posx>
+						<posy>72</posy>
+						<width>500</width>
+						<label>$INFO[MusicPlayer.Title]</label>
+						<scroll>true</scroll>
+						<font>Music OSD Artist Info</font>
+						<textcolor>4b000000</textcolor>
+						<height>40</height>
+					</control>
+					<control type="label">
+						<description>Artist</description>
+						<posx>402</posx>
+						<posy>72</posy>
+						<width>500</width>
+						<label>$INFO[MusicPlayer.Artist]</label>
+						<scroll>true</scroll>
+						<font>Music OSD Artist Info</font>
+						<textcolor>4b000000</textcolor>
+						<height>40</height>
+					</control>
+					<control type="label">
+						<description>Album</description>
+						<posx>402</posx>
+						<posy>72</posy>
+						<width>500</width>
+						<label>$INFO[MusicPlayer.Album] $INFO[MusicPlayer.DiscNumber, - $LOCALIZE[427]]</label>
+						<scroll>true</scroll>
+						<font>Music OSD Artist Info</font>
+						<textcolor>4b000000</textcolor>
+						<height>40</height>
+					</control>
+				</control>
+				<control type="grouplist">
+					<posy>1</posy>
+					<control type="label">
+						<description>Play Time</description>
+						<label>-</label>
+						<label>$INFO[musicplayer.time]/$INFO[musicplayer.duration]</label>
+						<font>Music OSD Time</font>
+						<textcolor>4b000000</textcolor>
+						<height>60</height>
+					</control>
+					<control type="label">
+						<description>Song Title</description>
+						<posx>402</posx>
+						<posy>72</posy>
+						<width>500</width>
+						<label>$INFO[MusicPlayer.Title]</label>
+						<scroll>true</scroll>
+						<font>Music OSD Artist Info</font>
+						<textcolor>4b000000</textcolor>
+						<height>40</height>
+					</control>
+					<control type="label">
+						<description>Artist</description>
+						<posx>402</posx>
+						<posy>72</posy>
+						<width>500</width>
+						<label>$INFO[MusicPlayer.Artist]</label>
+						<scroll>true</scroll>
+						<font>Music OSD Artist Info</font>
+						<textcolor>4b000000</textcolor>
+						<height>40</height>
+					</control>
+					<control type="label">
+						<description>Album</description>
+						<posx>402</posx>
+						<posy>72</posy>
+						<width>500</width>
+						<label>$INFO[MusicPlayer.Album] $INFO[MusicPlayer.DiscNumber, - $LOCALIZE[427]]</label>
+						<scroll>true</scroll>
+						<font>Music OSD Artist Info</font>
+						<textcolor>4b000000</textcolor>
+						<height>40</height>
+					</control>
+				</control>
+				<control type="grouplist">
+					<posx>-1</posx>
+					<control type="label">
+						<description>Play Time</description>
+						<label>-</label>
+						<label>$INFO[musicplayer.time]/$INFO[musicplayer.duration]</label>
+						<font>Music OSD Time</font>
+						<textcolor>4b000000</textcolor>
+						<height>60</height>
+					</control>
+					<control type="label">
+						<description>Song Title</description>
+						<posx>402</posx>
+						<posy>72</posy>
+						<width>500</width>
+						<label>$INFO[MusicPlayer.Title]</label>
+						<scroll>true</scroll>
+						<font>Music OSD Artist Info</font>
+						<textcolor>4b000000</textcolor>
+						<height>40</height>
+					</control>
+					<control type="label">
+						<description>Artist</description>
+						<posx>402</posx>
+						<posy>72</posy>
+						<width>500</width>
+						<label>$INFO[MusicPlayer.Artist]</label>
+						<scroll>true</scroll>
+						<font>Music OSD Artist Info</font>
+						<textcolor>4b000000</textcolor>
+						<height>40</height>
+					</control>
+					<control type="label">
+						<description>Album</description>
+						<posx>402</posx>
+						<posy>72</posy>
+						<width>500</width>
+						<label>$INFO[MusicPlayer.Album] $INFO[MusicPlayer.DiscNumber, - $LOCALIZE[427]]</label>
+						<scroll>true</scroll>
+						<font>Music OSD Artist Info</font>
+						<textcolor>4b000000</textcolor>
+						<height>40</height>
+					</control>
+				</control>
+				<control type="grouplist">
+					<posx>1</posx>
+					<control type="label">
+						<description>Play Time</description>
+						<label>-</label>
+						<label>$INFO[musicplayer.time]/$INFO[musicplayer.duration]</label>
+						<font>Music OSD Time</font>
+						<textcolor>4b000000</textcolor>
+						<height>60</height>
+					</control>
+					<control type="label">
+						<description>Song Title</description>
+						<posx>402</posx>
+						<posy>72</posy>
+						<width>500</width>
+						<label>$INFO[MusicPlayer.Title]</label>
+						<scroll>true</scroll>
+						<font>Music OSD Artist Info</font>
+						<textcolor>4b000000</textcolor>
+						<height>40</height>
+					</control>
+					<control type="label">
+						<description>Artist</description>
+						<posx>402</posx>
+						<posy>72</posy>
+						<width>500</width>
+						<label>$INFO[MusicPlayer.Artist]</label>
+						<scroll>true</scroll>
+						<font>Music OSD Artist Info</font>
+						<textcolor>4b000000</textcolor>
+						<height>40</height>
+					</control>
+					<control type="label">
+						<description>Album</description>
+						<posx>402</posx>
+						<posy>72</posy>
+						<width>500</width>
+						<label>$INFO[MusicPlayer.Album] $INFO[MusicPlayer.DiscNumber, - $LOCALIZE[427]]</label>
+						<scroll>true</scroll>
+						<font>Music OSD Artist Info</font>
+						<textcolor>4b000000</textcolor>
+						<height>40</height>
+					</control>
+				</control>
+				<control type="grouplist">
+					<control type="label">
+						<description>Play Time</description>
+						<label>-</label>
+						<label>$INFO[musicplayer.time]/$INFO[musicplayer.duration]</label>
+						<font>Music OSD Time</font>
+						<textcolor>ff95c9f7</textcolor>
+						<height>60</height>
+					</control>
+					<control type="label">
+						<description>Song Title</description>
+						<posx>402</posx>
+						<posy>72</posy>
+						<width>500</width>
+						<label>$INFO[MusicPlayer.Title]</label>
+						<scroll>true</scroll>
+						<font>Music OSD Artist Info</font>
+						<textcolor>ffffffff</textcolor>
+						<height>40</height>
+					</control>
+					<control type="label">
+						<description>Artist</description>
+						<posx>402</posx>
+						<posy>72</posy>
+						<width>500</width>
+						<label>$INFO[MusicPlayer.Artist]</label>
+						<scroll>true</scroll>
+						<font>Music OSD Artist Info</font>
+						<textcolor>ffffffff</textcolor>
+						<height>40</height>
+					</control>
+					<control type="label">
+						<description>Album</description>
+						<posx>402</posx>
+						<posy>72</posy>
+						<width>500</width>
+						<label>$INFO[MusicPlayer.Album] $INFO[MusicPlayer.DiscNumber, - $LOCALIZE[427]]</label>
+						<scroll>true</scroll>
+						<font>Music OSD Artist Info</font>
+						<textcolor>ffffffff</textcolor>
+						<height>40</height>
+					</control>
+				</control>
+			</control>
 
-<controls>
+			<control type="visualisation" id="1">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>720</height>
+			</control>
 
-<include>DialogBack</include>
-
-  <control type="label">
-    <include>DialogID</include>
-    <label>MusicOverlay.xml</label>
-  </control>
-  
-  <control type="visualisation" id="1">
-    <posx>10</posx>
-    <posy>110</posy>
-    <width>300</width>
-    <height>300</height>
-  </control>
-  
-	<control type="label" id="0">
-		<description>Play Time</description>
-		<posx>10</posx>
-		<posy>40</posy>
-		<label>-</label>
-		<info>musicplayer.time</info>
-	</control>
-	<control type="label" id="0">
-		<description>Album Info</description>
-		<posx>10</posx>
-		<posy>72</posy>
-    <width>500</width>
-		<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Title, | ]$INFO[MusicPlayer.Album, | ]$INFO[MusicPlayer.DiscNumber, - $LOCALIZE[427]]$INFO[MusicPlayer.Year, | ]</label>
-		<scroll>true</scroll>
-	</control>
-  
-</controls>
-  
+		</control>
+	</controls>
 </window>

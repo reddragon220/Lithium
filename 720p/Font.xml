@@ -81,6 +81,22 @@
 			<size>190</size>
 		</font>
 		
+		<!-- Music OSD -->
+		<font>
+			<name>Music OSD Time</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+			<size>60</size>
+		</font>
+		<font>
+			<name>Music OSD Artist Info</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+			<size>40</size>
+		</font>
+		
+		
+		
 		<!-- Dialog -->
 		<font>
 			<name>Dialog Header</name>
