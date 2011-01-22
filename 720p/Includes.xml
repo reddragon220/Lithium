@@ -217,8 +217,15 @@
 					<posx>2</posx>
 					<orientation>horizontal</orientation>
 					<control type="image">
-						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(Movies)</visible>
+						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
 						<width>75</width>
+						<height>55</height>
+						<texture>-</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<visible>Container.Content(Movies)</visible>
+						<width>71</width>
 						<height>55</height>
 						<texture>-</texture>
 						<aspectratio>stretch</aspectratio>
@@ -273,8 +280,15 @@
 					<posx>-2</posx>
 					<orientation>horizontal</orientation>
 					<control type="image">
-						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(Movies)</visible>
+						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
 						<width>75</width>
+						<height>55</height>
+						<texture>-</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<visible>Container.Content(Movies)</visible>
+						<width>71</width>
 						<height>55</height>
 						<texture>-</texture>
 						<aspectratio>stretch</aspectratio>
@@ -328,8 +342,15 @@
 					<posy>5</posy>
 					<orientation>horizontal</orientation>
 					<control type="image">
-						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(Movies)</visible>
+						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
 						<width>75</width>
+						<height>55</height>
+						<texture>-</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<visible>Container.Content(Movies)</visible>
+						<width>71</width>
 						<height>55</height>
 						<texture>-</texture>
 						<aspectratio>stretch</aspectratio>
@@ -383,8 +404,15 @@
 					<posy>1</posy>
 					<orientation>horizontal</orientation>
 					<control type="image">
-						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(Movies)</visible>
+						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
 						<width>75</width>
+						<height>55</height>
+						<texture>-</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<visible>Container.Content(Movies)</visible>
+						<width>71</width>
 						<height>55</height>
 						<texture>-</texture>
 						<aspectratio>stretch</aspectratio>
@@ -438,10 +466,17 @@
 					<posy>3</posy>
 					<orientation>horizontal</orientation>
 					<control type="image">
-						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(Movies)</visible>
+						<visible>Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
 						<width>75</width>
 						<height>55</height>
 						<texture>header/icons/television.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="image">
+						<visible>Container.Content(Movies)</visible>
+						<width>71</width>
+						<height>55</height>
+						<texture>header/icons/movies.png</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
 					<control type="image">
