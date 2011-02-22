@@ -58,6 +58,12 @@
 			<variant>Bold</variant>
 			<size>30</size>
 		</font>
+		<font>
+			<name>Fanart_highlight</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Bold</variant>
+			<size>40</size>
+		</font>
 
 		<!-- Context Menu -->
 		<font>

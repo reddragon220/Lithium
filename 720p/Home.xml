@@ -255,7 +255,7 @@
 			 	  <onfocus>Setfocus(300)</onfocus>
 			</control>
 		
-			<control type="wraplist" id="300">
+			<control type="fixedlist" id="300">
 				<visible allowhiddenfocus="true">Control.HasFocus(300)</visible>
 				<animation effect="fade" time="200" delay="200">VisibleChange</animation>
 				<description>Home Wraplist</description>
@@ -315,7 +315,7 @@
 				</content>
 			</control>
 
-			<control type="wraplist" id="301">
+			<control type="fixedlist" id="301">
 				<visible allowhiddenfocus="true">Control.HasFocus(301)</visible>
 				<animation effect="fade" time="200" delay="200">VisibleChange</animation>
 				<description>Home Wraplist</description>
@@ -399,23 +399,24 @@
 						<visible>System.HasNetwork</visible>
 					</item>
 					<item id="7">
-						<description>Settings</description>
+						<description>Plex Online Menu</description>
+						<label>Plex Online</label>
+					    <onclick>Plex.ActivateWindow(1,plex://localhost/system/plexonline,return)</onclick>
+					</item>
+					<item id="8">
+						<description>Preferences</description>
 						<label>Preferences</label>
 						<onclick>xbmc.activatewindow(settings)</onclick>
 					</item>
-					<item id="8">
+					<item id="9">
 						<visible>Skin.HasSetting(developer)</visible>
 						<description>Refresh</description>
 						<label>$LOCALIZE[184]</label>
 						<onclick>XBMC.ReloadSkin()</onclick>
 						<onclick>Setfocus(300)</onclick>
 					</item>
-					<item id="9">
-						<description>Plex Online Menu</description>
-						<label>Plex Online</label>
-						<onclick>Plex.ActivateWindow(1,plex://localhost/system/plexonline,return)</onclick>
-					</item>
 				</content>
+
 			</control>
 
 

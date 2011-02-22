@@ -1088,6 +1088,7 @@
 		<control type="group">
 			<visible></visible>
 			<animation effect="slide" start="0,0" end="0,663" time="200" condition="Skin.HasSetting(flow_hide)">Conditional</animation>
+
 			<description>Info</description>
 			<control type="image">
 				<posy>57</posy>
@@ -1310,6 +1311,7 @@
 					<bordersize>5</bordersize>
 					<bordertexture border="5">flow/large_thumb_shadow.png</bordertexture>
 					<aspectratio scalediffuse="false" align="center" aligny="bottom">stretch</aspectratio>
+					<onfocus>skin.ToggleSetting(info_panel_timer)</onfocus>
 				</control>
 			</focusedlayout>
 		</control>
@@ -1777,11 +1779,390 @@
 					</focusedlayout>
 				</control>
 			</control>
-			
-			
 		</control>
 	</include>
 
+	<include name="fanart_view">
+		<description>Fanart View</description>
+		<control type="group">
+			<visible>Control.IsVisible(57)</visible>
+			<include>preferences_animation</include>
+			
+			<control type="panel" id="57">
+				<viewtype label="Multiplex">panel</viewtype>
+				<visible>Container.Content(movies) |  Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(Plugins)</visible>
+				<width>1280</width>
+				<height>677</height>
+				<posx>0</posx>
+				<posy>68</posy>
+				
+
+				<ondown>9000</ondown>
+				<itemlayout condition="!Container.Content(episodes) + !Container.Content(seasons)" width="412" height="242">
+					<control type="image">
+						<posx>37</posx>
+						<posy>24</posy>
+						<width>382</width>
+						<height>219</height>
+						<info>ListItem.Property(fanart_image)</info>
+						<texture diffuse="fanart/thumb_mask.png"></texture>
+						<bordertexture border="0">fanart/thumb_shadow.png</bordertexture>
+						<bordersize>0</bordersize>
+						<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+					</control>
+					<control type="image">
+						<posx>37</posx>
+						<posy>25</posy>
+						<width>382</width>
+						<height>219</height>
+						<info>-</info>
+						<texture diffuse="fanart/thumb_mask.png">fanart/thumb_title.png</texture>
+						<bordertexture border="0"></bordertexture>
+						<bordersize>0</bordersize>
+						<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+					</control>
+
+					<control type="group">
+						<posx>228</posx>
+						<posy>199</posy>						
+						<control type="label">
+							<visible>!Container.Content(episodes)</visible>
+							<posy>0</posy>
+							<width>352</width>
+							<height>30</height>
+							<textcolor>4b000000</textcolor>
+							<font>Episode_number</font>
+							<info>ListItem.Label</info>
+							<align>center</align>
+							<scroll>False</scroll>
+						</control>
+						<control type="label">
+							<visible>!Container.Content(episodes)</visible>
+							<posy>2</posy>
+							<width>352</width>
+							<height>30</height>
+							<textcolor>ffffffff</textcolor>
+							<font>Episode_number</font>
+							<info>ListItem.Label</info>
+							<align>center</align>
+							<scroll>False</scroll>
+						</control>
+
+						<!-- Episodes -->
+						<control type="label">
+							<visible>Container.Content(episodes)</visible>
+							<posy>0</posy>
+							<width>352</width>
+							<height>30</height>
+							<textcolor>4b000000</textcolor>
+							<font>Episode_number</font>
+							<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]  $INFO[ListItem.Label]</label>
+							<align>center</align>
+							<scroll>False</scroll>
+						</control>
+						<control type="label">
+							<visible>Container.Content(episodes)</visible>
+							<posy>2</posy>
+							<width>352</width>
+							<height>30</height>
+							<textcolor>ffffffff</textcolor>
+							<font>Episode_number</font>
+							<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]  $INFO[ListItem.Label]</label>
+							<align>center</align>
+							<scroll>False</scroll>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout condition="!Container.Content(episodes) + !Container.Content(seasons)" width="456" height="267">
+					<control type="image">
+						<animation effect="zoom" start="84" end="100" center="auto" time="100">Focus</animation>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>456</width>
+						<height>267</height>
+						<info>ListItem.Property(fanart_image)</info>
+						<texture diffuse="fanart/thumb_mask_big.png"></texture>
+						<bordertexture border="0"></bordertexture>
+						<bordersize>7</bordersize>
+						<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+					</control>
+					<control type="image">
+						<animation effect="zoom" start="84" end="100" center="auto" time="100">Focus</animation>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>456</width>
+						<height>267</height>
+						<info>-</info>
+						<texture diffuse="fanart/thumb_mask.png">fanart/thumb_title_big.png</texture>
+						<bordertexture border="0"></bordertexture>
+						<bordersize>0</bordersize>
+						<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+					</control>
+					<control type="image">
+						<animation effect="zoom" start="84" end="100" center="auto" time="100">Focus</animation>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>456</width>
+						<height>267</height>
+						<info>ListItem.Property(fanart_image)</info>
+						<texture diffuse="fanart/thumb_mask_big2.png"></texture>
+						<bordertexture border="0">fanart/thumb_overlay_top.png</bordertexture>
+						<bordersize>0</bordersize>
+						<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+					</control>
+
+					<control type="group">
+						<posx>228</posx>
+						<posy>199</posy>
+						<control type="label">
+							<animation type="Focus">
+								<effect type="slide" end="0,11" time="100"/>
+								<effect type="zoom" start="75" end="100" center="0,0" time="100"/>
+							</animation>
+							<visible>!Container.Content(episodes)</visible>
+							<posy>0</posy>
+							<width>408</width>
+							<height>30</height>
+							<textcolor>4b000000</textcolor>
+							<font>Fanart_highlight</font>
+							<info>ListItem.Label</info>
+							<align>center</align>
+						</control>
+						<control type="label">
+							<animation type="Focus">
+								<effect type="slide" end="0,11" time="100"/>
+								<effect type="zoom" start="75" end="100" center="0,0" time="100"/>
+							</animation>
+							<visible>!Container.Content(episodes)</visible>
+							<posy>2</posy>
+							<width>408</width>
+							<height>30</height>
+							<textcolor>ffffffff</textcolor>
+							<font>Fanart_highlight</font>
+							<info>ListItem.Label</info>
+							<align>center</align>
+						</control>
+
+						<!-- Episodes -->
+						<control type="label">
+							<animation type="Focus">
+								<effect type="slide" end="0,11" time="100"/>
+								<effect type="zoom" start="75" end="100" center="0,0" time="100"/>
+							</animation>
+
+							<visible>Container.Content(episodes)</visible>
+							<posy>0</posy>
+							<width>408</width>
+							<height>30</height>
+							<textcolor>4b000000</textcolor>
+							<font>Episode_number</font>
+							<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]  $INFO[ListItem.Label]</label>
+							<align>center</align>
+						</control>
+						<control type="label">
+							<animation type="Focus">
+								<effect type="slide" end="0,11" time="100"/>
+								<effect type="zoom" start="75" end="100" center="0,0" time="100"/>
+							</animation>
+
+							<visible>Container.Content(episodes)</visible>
+							<posy>2</posy>
+							<width>408</width>
+							<height>30</height>
+							<textcolor>ffffffff</textcolor>
+							<font>Episode_number</font>
+							<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]  $INFO[ListItem.Label]</label>
+							<align>center</align>
+						</control>
+					</control>
+				</focusedlayout>
+				<itemlayout condition="Container.Content(episodes) | Container.Content(seasons)" width="412" height="242">
+					<control type="image">
+						<posx>37</posx>
+						<posy>24</posy>
+						<width>382</width>
+						<height>219</height>
+						<info>ListItem.Thumb</info>
+						<texture diffuse="fanart/thumb_mask.png"></texture>
+						<bordertexture border="0"></bordertexture>
+						<bordersize>0</bordersize>
+						<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+					</control>
+					<control type="image">
+						<posx>37</posx>
+						<posy>25</posy>
+						<width>382</width>
+						<height>219</height>
+						<info>-</info>
+						<texture diffuse="fanart/thumb_mask.png">fanart/thumb_title.png</texture>
+						<bordertexture border="0">fanart/thumb_shadow.png</bordertexture>
+						<bordersize>0</bordersize>
+						<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+					</control>
+
+					<control type="group">
+						<posx>228</posx>
+						<posy>199</posy>						
+						<control type="label">
+							<visible>!Container.Content(episodes)</visible>
+							<posy>0</posy>
+							<width>352</width>
+							<height>30</height>
+							<textcolor>4b000000</textcolor>
+							<font>Episode_number</font>
+							<info>ListItem.Label</info>
+							<align>center</align>
+							<scroll>False</scroll>
+						</control>
+						<control type="label">
+							<visible>!Container.Content(episodes)</visible>
+							<posy>2</posy>
+							<width>352</width>
+							<height>30</height>
+							<textcolor>ffffffff</textcolor>
+							<font>Episode_number</font>
+							<info>ListItem.Label</info>
+							<align>center</align>
+							<scroll>False</scroll>
+						</control>
+
+						<!-- Episodes -->
+						<control type="label">
+							<visible>Container.Content(episodes)</visible>
+							<posy>0</posy>
+							<width>352</width>
+							<height>30</height>
+							<textcolor>4b000000</textcolor>
+							<font>Episode_number</font>
+							<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]  $INFO[ListItem.Label]</label>
+							<align>center</align>
+							<scroll>False</scroll>
+						</control>
+						<control type="label">
+							<visible>Container.Content(episodes)</visible>
+							<posy>2</posy>
+							<width>352</width>
+							<height>30</height>
+							<textcolor>ffffffff</textcolor>
+							<font>Episode_number</font>
+							<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]  $INFO[ListItem.Label]</label>
+							<align>center</align>
+							<scroll>False</scroll>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout condition="Container.Content(episodes) | Container.Content(seasons)" width="456" height="267">
+					<control type="image">
+						<animation effect="zoom" start="84" end="100" center="auto" time="100">Focus</animation>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>456</width>
+						<height>267</height>
+						<info>ListItem.Thumb</info>
+						<texture diffuse="fanart/thumb_mask_big.png"></texture>
+						<bordertexture border="0"></bordertexture>
+						<bordersize>7</bordersize>
+						<aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
+					</control>
+					<control type="image">
+						<animation effect="zoom" start="84" end="100" center="auto" time="100">Focus</animation>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>456</width>
+						<height>267</height>
+						<info>-</info>
+						<texture diffuse="fanart/thumb_mask.png">fanart/thumb_title_big.png</texture>
+						<bordertexture border="0"></bordertexture>
+						<bordersize>0</bordersize>
+						<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+					</control>
+					<control type="image">
+						<animation effect="zoom" start="84" end="100" center="auto" time="100">Focus</animation>
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>456</width>
+						<height>267</height>
+						<info>ListItem.Thumb</info>
+						<texture diffuse="fanart/thumb_mask_big2.png"></texture>
+						<bordertexture border="0">fanart/thumb_overlay_top.png</bordertexture>
+						<bordersize>0</bordersize>
+						<aspectratio scalediffuse="false" align="center" aligny="center">stretch</aspectratio>
+					</control>
+
+					<control type="group">
+						<posx>228</posx>
+						<posy>199</posy>
+						<control type="label">
+							<animation type="Focus">
+								<effect type="slide" end="0,11" time="100"/>
+								<effect type="zoom" start="75" end="100" center="0,0" time="100"/>
+							</animation>
+							<visible>!Container.Content(episodes)</visible>
+							<posy>0</posy>
+							<width>408</width>
+							<height>30</height>
+							<textcolor>4b000000</textcolor>
+							<font>Fanart_highlight</font>
+							<info>ListItem.Label</info>
+							<align>center</align>
+						</control>
+						<control type="label">
+							<animation type="Focus">
+								<effect type="slide" end="0,11" time="100"/>
+								<effect type="zoom" start="75" end="100" center="0,0" time="100"/>
+							</animation>
+							<visible>!Container.Content(episodes)</visible>
+							<posy>2</posy>
+							<width>408</width>
+							<height>30</height>
+							<textcolor>ffffffff</textcolor>
+							<font>Fanart_highlight</font>
+							<info>ListItem.Label</info>
+							<align>center</align>
+						</control>
+
+						<!-- Episodes -->
+						<control type="label">
+							<animation type="Focus">
+								<effect type="slide" end="0,11" time="100"/>
+								<effect type="zoom" start="75" end="100" center="0,0" time="100"/>
+							</animation>
+
+							<visible>Container.Content(episodes)</visible>
+							<posy>0</posy>
+							<width>408</width>
+							<height>30</height>
+							<textcolor>4b000000</textcolor>
+							<font>Episode_number</font>
+							<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]  $INFO[ListItem.Label]</label>
+							<align>center</align>
+						</control>
+						<control type="label">
+							<animation type="Focus">
+								<effect type="slide" end="0,11" time="100"/>
+								<effect type="zoom" start="75" end="100" center="0,0" time="100"/>
+							</animation>
+
+							<visible>Container.Content(episodes)</visible>
+							<posy>2</posy>
+							<width>408</width>
+							<height>30</height>
+							<textcolor>ffffffff</textcolor>
+							<font>Episode_number</font>
+							<label>$INFO[ListItem.Season].$INFO[ListItem.Episode]  $INFO[ListItem.Label]</label>
+							<align>center</align>
+						</control>
+					</control>
+				</focusedlayout>
+				
+				
+			</control>
+			
+			
+			<include>info_bar</include>
+		</control>
+
+	</include>
 
 
 </includes>

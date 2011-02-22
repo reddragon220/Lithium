@@ -1,11 +1,12 @@
 <includes>
 	<include name="views">
+		
 		<include>background</include>
-
 		<include>list</include>
 		<include>flow</include>
 		<include>wall</include>	
 		<include>show_case</include>
+		<include>fanart_view</include>
 		<include>mods</include> <!-- See Mods.xml -->
 		
 		<include>header</include>
@@ -533,7 +534,7 @@
 	</include>
 
 	<include name="preferences_animation">
-		<animation effect="slide" end="0,-119" time="200" condition="Control.HasFocus(9000) | Control.HasFocus(90002) | Control.HasFocus(90003) | Control.HasFocus(90004) | Control.HasFocus(90005) | Control.HasFocus(90006) | Control.HasFocus(90007) | Control.HasFocus(90008) | Control.HasFocus(90009) | Control.HasFocus(900010) | Control.HasFocus(900011) | Control.HasFocus(900012) | Control.HasFocus(900013)
+		<animation effect="slide" end="0,-119" time="200" condition="Control.HasFocus(9000) | Control.HasFocus(90002) | Control.HasFocus(90003) | Control.HasFocus(90004) | Control.HasFocus(90005) | Control.HasFocus(90006) | Control.HasFocus(90007) | Control.HasFocus(90008) | Control.HasFocus(90009) | Control.HasFocus(900010) | Control.HasFocus(900011) | Control.HasFocus(900012) | Control.HasFocus(900013) | Control.HasFocus(900014) | Control.HasFocus(900015)
 			">Conditional</animation>
 	</include>
 
@@ -760,8 +761,8 @@
 					<onup>setfocus(50)</onup>
 					
 					<label>Hide Info</label>
-					<onclick>Skin.ToggleSetting(flow_hide)</onclick>
-					
+					<onclick>Skin.ToggleSetting(flow_hide)</onclick>			
+
 
 					<font>Small</font>
 					<textcolor>ffe8e8db</textcolor>
@@ -797,10 +798,62 @@
 					<texturenofocus></texturenofocus>
 					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
 				</control>
+			
+				<control type="button" id="900011">
+					<visible>!Skin.HasSetting(flow_hide) + !Skin.HasSetting(flow_panel_delay) + Control.IsVisible(54)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
 
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+
+					<onup>setfocus(50)</onup>
+					
+					<label>Panel On</label>
+					<onclick>Skin.ToggleSetting(flow_panel_delay)</onclick>
+					
+
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
+				</control>
+				<control type="button" id="900012">
+					<visible>!Skin.HasSetting(flow_hide) + Skin.HasSetting(flow_panel_delay) + Control.IsVisible(54)</visible>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>140</width>
+					<height>119</height>
+
+					<align>center</align>
+					<aligny></aligny>
+					<textoffsetx></textoffsetx>
+					<textoffsety>83</textoffsety>
+
+					<onup>setfocus(50)</onup>
+					
+					<label>Panel Delay</label>
+					<onclick>Skin.ToggleSetting(flow_panel_delay)</onclick>
+					
+
+					<font>Small</font>
+					<textcolor>ffe8e8db</textcolor>
+					<focusedcolor>ffe8e8db</focusedcolor>
+					<shadowcolor>5f000000</shadowcolor>			
+
+					<texturenofocus></texturenofocus>
+					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
+				</control>
 
 				
-				<control type="button" id="900011">
+				<control type="button" id="900013">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>140</width>
@@ -825,7 +878,7 @@
 					<texturenofocus></texturenofocus>
 					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
 				</control>	
-				<control type="button"id="900012">
+				<control type="button"id="900014">
 					<visible>Skin.HasSetting(developer)</visible>
 					<posx>0</posx>
 					<posy>0</posy>
@@ -850,7 +903,7 @@
 					<texturenofocus></texturenofocus>
 					<texturefocus>quick_prefs/prefs_highlight.png</texturefocus>					
 				</control>
-				<control type="button" id="900013">
+				<control type="button" id="900015">
 					<description>Free Memory</description>
 					
 					<visible>Skin.HasSetting(developer)</visible>
