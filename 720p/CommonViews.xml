@@ -1079,6 +1079,185 @@
 		<height>616</height>
 	</include>
 
+	<include name="Flow_info">
+		<description>Info</description>
+		<control type="image">
+			<posy>57</posy>
+			<width>1280</width>
+			<height>581</height>
+			<texture>flow/info_bg.png</texture>
+			<aspectratio>stretch</aspectratio>
+		</control>
+		<control type="group">
+			<control type="label">
+				<posx>40</posx>
+				<posy>90</posy>
+				<width>598</width>
+				<textcolor>ffffffff</textcolor>
+				<font>Title</font>
+				<label>$INFO[ListItem.Label]</label>
+				<scroll>false</scroll>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<posx>125</posx>
+				<posy>129</posy>
+				<width>299</width>
+				<textcolor>ff95c9f7</textcolor>
+				<font>Info_title</font>
+				<label>Rating:</label>
+				<scroll>false</scroll>
+				<align>right</align>
+			</control>
+			<control type="image">
+				<posx>131</posx>
+				<posy>127</posy>
+				<width>180</width>
+				<height>38</height>
+				<info>listitem.StarRating</info>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="label">
+				<posx>538</posx>
+				<posy>129</posy>
+				<width>299</width>
+				<textcolor>ff95c9f7</textcolor>
+				<font>Info_title</font>
+				<label>Duration:</label>
+				<scroll>false</scroll>
+				<align>right</align>
+			</control>
+			<control type="label">
+				<posx>548</posx>
+				<posy>130</posy>
+				<width>299</width>
+				<textcolor>ffffffff</textcolor>
+				<font>Title2</font>
+				<label> $INFO[ListItem.Duration]</label>
+				<scroll>false</scroll>
+				<align>left</align>
+			</control>
+			<control type="group">
+				<visible>!Container.Content(episodes)</visible>
+				<control type="label">
+					<posx>125</posx>
+					<posy>158</posy>
+					<width>299</width>
+					<textcolor>ff95c9f7</textcolor>
+					<font>Info_title</font>
+					<label>Genre:</label>
+					<scroll>false</scroll>
+					<align>right</align>
+				</control>
+				<control type="label">
+					<posx>135</posx>
+					<posy>159</posy>
+					<width>299</width>
+					<textcolor>ffffffff</textcolor>
+					<font>Title2</font>
+					<label>$INFO[ListItem.FirstGenre]</label>
+					<scroll>false</scroll>
+					<align>left</align>
+				</control>
+				<control type="label">
+					<posx>538</posx>
+					<posy>158</posy>
+					<width>299</width>
+					<textcolor>ff95c9f7</textcolor>
+					<font>Info_title</font>
+					<label>Year:</label>
+					<scroll>false</scroll>
+					<align>right</align>
+				</control>
+				<control type="label">
+					<posx>548</posx>
+					<posy>159</posy>
+					<width>299</width>
+					<textcolor>ffffffff</textcolor>
+					<font>Title2</font>
+					<label> $INFO[ListItem.Year]</label>
+					<scroll>false</scroll>
+					<align>left</align>
+				</control>
+			</control>
+			<control type="group">
+				<animation effect="slide" end="0,-30" time="0" condition="Container.Content(episodes)">Conditional</animation>
+				<control type="image">
+					<posx>40</posx>
+					<posy>192</posy>
+					<height>2</height>
+					<width>598</width>
+					<texture>flow/divider.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="textbox">
+					<description>Plot</description>
+					<posx>40</posx>
+					<posy>200</posy>
+					<width>598</width>
+					<height>215</height>
+					<font>Title2</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<label>$INFO[listitem.Plot]</label>
+					<autoscroll delay="9000" time="2000" repeat="10000">true</autoscroll>
+				</control>
+			</control>
+		</control>
+		<control type="largeimage">
+			<visible>!Container.Content(episodes) + !Container.Content(albums) + !Container.Content(songs)</visible>
+			<posx>685</posx>
+			<posy>90</posy>
+			<width>556</width>
+			<height>314</height>
+			<texture>$INFO[ListItem.Property(fanart_image)]</texture>
+			<aspectratio>stretch</aspectratio>
+			<fadetime>200</fadetime>
+			<align>left</align>
+		</control>
+		<control type="largeimage">
+			<visible>Container.Content(albums) | Container.Content(songs)</visible>
+			<posx>685</posx>
+			<posy>90</posy>
+			<width>556</width>
+			<height>314</height>
+			<texture>$INFO[ListItem.icon]</texture>
+			<aspectratio>scale</aspectratio>
+			<fadetime>200</fadetime>
+			<align>left</align>
+		</control>
+		<control type="largeimage">
+			<visible>Container.Content(episodes)</visible>
+			<posx>685</posx>
+			<posy>90</posy>
+			<width>556</width>
+			<height>314</height>
+			<texture>$INFO[ListItem.icon]</texture>
+			<aspectratio>stretch</aspectratio>
+			<fadetime>200</fadetime>
+			<align>left</align>
+		</control>
+		<control type="group">
+			<description>Studio Tag</description>
+			<posx>685</posx>
+			<posy>300</posy>
+			<control type="image">
+				<posx>1</posx>
+				<posy>1</posy>
+				<height>100</height>
+				<width>552</width>
+				<info>Listitem.Property(mediaTag::studio)</info>
+				<colordiffuse>65000000</colordiffuse>
+				<aspectratio align="right" aligny="bottom">keep</aspectratio>
+			</control>
+			<control type="image">
+				<height>100</height>
+				<width>552</width>
+				<info>Listitem.Property(mediaTag::studio)</info>
+				<aspectratio align="right" aligny="bottom">keep</aspectratio>
+			</control>
+		</control>
+	</include>
+
 	<include name="flow">
 		<description>Flow View</description>
 		
@@ -1086,185 +1265,35 @@
 		<visible>Control.IsVisible(54)</visible>
 		<include>preferences_animation</include>
 		<control type="group">
-			<visible></visible>
+			<visible>!Skin.HasSetting(flow_hide) + !Skin.HasSetting(flow_panel_delay) + ![Container(54).OnNext | Container(54).OnPrevious]</visible>
+				<animation effect="slide" start="0,633" end="0,0" time="200" delay="1500">Visible</animation>
+			
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="0"/>
+				</animation>
+			
+			<include>Flow_info</include>
+		</control>
+		<control type="group">
+			<visible>!Skin.HasSetting(flow_hide) + Skin.HasSetting(flow_panel_delay)</visible>
 			<animation effect="slide" start="0,0" end="0,663" time="200" condition="Skin.HasSetting(flow_hide)">Conditional</animation>
-
-			<description>Info</description>
-			<control type="image">
-				<posy>57</posy>
-				<width>1280</width>
-				<height>581</height>
-				<texture>flow/info_bg.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="group">
-				<control type="label">
-					<posx>40</posx>
-					<posy>90</posy>
-					<width>598</width>
-					<textcolor>ffffffff</textcolor>
-					<font>Title</font>
-					<label>$INFO[ListItem.Label]</label>
-					<scroll>false</scroll>
-					<align>left</align>
-				</control>
-				<control type="label">
-					<posx>125</posx>
-					<posy>129</posy>
-					<width>299</width>
-					<textcolor>ff95c9f7</textcolor>
-					<font>Info_title</font>
-					<label>Rating:</label>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type="image">
-					<posx>131</posx>
-					<posy>127</posy>
-					<width>180</width>
-					<height>38</height>
-					<info>listitem.StarRating</info>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type="label">
-					<posx>538</posx>
-					<posy>129</posy>
-					<width>299</width>
-					<textcolor>ff95c9f7</textcolor>
-					<font>Info_title</font>
-					<label>Duration:</label>
-					<scroll>false</scroll>
-					<align>right</align>
-				</control>
-				<control type="label">
-					<posx>548</posx>
-					<posy>130</posy>
-					<width>299</width>
-					<textcolor>ffffffff</textcolor>
-					<font>Title2</font>
-					<label> $INFO[ListItem.Duration]</label>
-					<scroll>false</scroll>
-					<align>left</align>
-				</control>
-				<control type="group">
-					<visible>!Container.Content(episodes)</visible>
-					<control type="label">
-						<posx>125</posx>
-						<posy>158</posy>
-						<width>299</width>
-						<textcolor>ff95c9f7</textcolor>
-						<font>Info_title</font>
-						<label>Genre:</label>
-						<scroll>false</scroll>
-						<align>right</align>
-					</control>
-					<control type="label">
-						<posx>135</posx>
-						<posy>159</posy>
-						<width>299</width>
-						<textcolor>ffffffff</textcolor>
-						<font>Title2</font>
-						<label>$INFO[ListItem.FirstGenre]</label>
-						<scroll>false</scroll>
-						<align>left</align>
-					</control>
-					<control type="label">
-						<posx>538</posx>
-						<posy>158</posy>
-						<width>299</width>
-						<textcolor>ff95c9f7</textcolor>
-						<font>Info_title</font>
-						<label>Year:</label>
-						<scroll>false</scroll>
-						<align>right</align>
-					</control>
-					<control type="label">
-						<posx>548</posx>
-						<posy>159</posy>
-						<width>299</width>
-						<textcolor>ffffffff</textcolor>
-						<font>Title2</font>
-						<label> $INFO[ListItem.Year]</label>
-						<scroll>false</scroll>
-						<align>left</align>
-					</control>
-				</control>
-				<control type="group">
-					<animation effect="slide" end="0,-30" time="0" condition="Container.Content(episodes)">Conditional</animation>
-					<control type="image">
-						<posx>40</posx>
-						<posy>192</posy>
-						<height>2</height>
-						<width>598</width>
-						<texture>flow/divider.png</texture>
-						<aspectratio>stretch</aspectratio>
-					</control>
-					<control type="textbox">
-						<description>Plot</description>
-						<posx>40</posx>
-						<posy>200</posy>
-						<width>598</width>
-						<height>215</height>
-						<font>Title2</font>
-						<textcolor>FFFFFFFF</textcolor>
-						<label>$INFO[listitem.Plot]</label>
-						<autoscroll delay="9000" time="2000" repeat="10000">true</autoscroll>
-					</control>
-				</control>
-			</control>
-			<control type="largeimage">
-				<visible>!Container.Content(episodes) + !Container.Content(albums) + !Container.Content(songs)</visible>
-				<posx>685</posx>
-				<posy>90</posy>
-				<width>556</width>
-				<height>314</height>
-				<texture>$INFO[ListItem.Property(fanart_image)]</texture>
-				<aspectratio>stretch</aspectratio>
-				<fadetime>200</fadetime>
-				<align>left</align>
-			</control>
-			<control type="largeimage">
-				<visible>Container.Content(albums) | Container.Content(songs)</visible>
-				<posx>685</posx>
-				<posy>90</posy>
-				<width>556</width>
-				<height>314</height>
-				<texture>$INFO[ListItem.icon]</texture>
-				<aspectratio>scale</aspectratio>
-				<fadetime>200</fadetime>
-				<align>left</align>
-			</control>
-			<control type="largeimage">
-				<visible>Container.Content(episodes)</visible>
-				<posx>685</posx>
-				<posy>90</posy>
-				<width>556</width>
-				<height>314</height>
-				<texture>$INFO[ListItem.icon]</texture>
-				<aspectratio>stretch</aspectratio>
-				<fadetime>200</fadetime>
-				<align>left</align>
-			</control>
-			<control type="group">
-				<description>Studio Tag</description>
-				<posx>685</posx>
-				<posy>300</posy>
-				<control type="image">
-					<posx>1</posx>
-					<posy>1</posy>
-					<height>100</height>
-					<width>552</width>
-					<info>Listitem.Property(mediaTag::studio)</info>
-					<colordiffuse>65000000</colordiffuse>
-					<aspectratio align="right" aligny="bottom">keep</aspectratio>
-				</control>
-				<control type="image">
-					<height>100</height>
-					<width>552</width>
-					<info>Listitem.Property(mediaTag::studio)</info>
-					<aspectratio align="right" aligny="bottom">keep</aspectratio>
-				</control>
-			</control>
+			<animation effect="slide" start="0,0" end="0,633" time="200">Hidden</animation>
+				
+			<!--
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" time="300" delay="0"/>
+				</animation>
+				<animation type="Focus">
+					<effect type="fade" start="0" end="100" time="300" delay="0"/>
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" time="0"/>
+				</animation>
+				<animation type="Unfocus">
+					<effect type="fade" start="100" end="0" time="0"/>
+				</animation>
+				-->	
+			<include>Flow_info</include>
 		</control>
 		<control type="image">
 			<posy>508</posy>
