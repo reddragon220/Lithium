@@ -1265,7 +1265,7 @@
 		<visible>Control.IsVisible(54)</visible>
 		<include>preferences_animation</include>
 		<control type="group">
-			<visible>!Skin.HasSetting(flow_hide) + !Skin.HasSetting(flow_panel_delay) + ![Container(54).OnNext | Container(54).OnPrevious]</visible>
+			<visible>!Skin.HasSetting(flow_hide) + [[!Container.content(episodes) + !Skin.HasSetting(flow_panel_delay)] | [Container.content(episodes) + Skin.HasSetting(flow_panel_delay_episode)]] + ![Container(54).OnNext | Container(54).OnPrevious]</visible>
 				<animation effect="slide" start="0,633" end="0,0" time="200" delay="1500">Visible</animation>
 			
 				<animation type="Hidden">
@@ -1275,7 +1275,7 @@
 			<include>Flow_info</include>
 		</control>
 		<control type="group">
-			<visible>!Skin.HasSetting(flow_hide) + Skin.HasSetting(flow_panel_delay)</visible>
+			<visible>!Skin.HasSetting(flow_hide) + [[!Container.content(episodes) + Skin.HasSetting(flow_panel_delay)] | [Container.content(episodes) + !Skin.HasSetting(flow_panel_delay_episode)]]</visible>
 			<animation effect="slide" start="0,0" end="0,663" time="200" condition="Skin.HasSetting(flow_hide)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,633" time="200">Hidden</animation>
 				
