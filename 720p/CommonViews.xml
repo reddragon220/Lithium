@@ -1265,7 +1265,7 @@
 		<visible>Control.IsVisible(54)</visible>
 		<include>preferences_animation</include>
 		<control type="group">
-			<visible>!Skin.HasSetting(flow_hide) + [[!Container.content(episodes) + !Skin.HasSetting(flow_panel_delay)] | [Container.content(episodes) + Skin.HasSetting(flow_panel_delay_episode)]] + ![Container(54).OnNext | Container(54).OnPrevious]</visible>
+			<visible>!Skin.HasSetting(flow_hide) + !Skin.HasSetting(flow_panel_delay) + ![Container(54).OnNext | Container(54).OnPrevious]</visible>
 				<animation effect="slide" start="0,633" end="0,0" time="200" delay="1500">Visible</animation>
 			
 				<animation type="Hidden">
@@ -1275,7 +1275,7 @@
 			<include>Flow_info</include>
 		</control>
 		<control type="group">
-			<visible>!Skin.HasSetting(flow_hide) + [[!Container.content(episodes) + Skin.HasSetting(flow_panel_delay)] | [Container.content(episodes) + !Skin.HasSetting(flow_panel_delay_episode)]]</visible>
+			<visible>!Skin.HasSetting(flow_hide) + Skin.HasSetting(flow_panel_delay)</visible>
 			<animation effect="slide" start="0,0" end="0,663" time="200" condition="Skin.HasSetting(flow_hide)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,633" time="200">Hidden</animation>
 				
@@ -1614,12 +1614,202 @@
 
 	
 	</include>
+	<include name="info_float">
+		<animation type="Visible">
+			<effect type="fade" start="0" end="100" time="300" delay="1500"/>
+		</animation>
+		<animation type="Focus">
+			<effect type="fade" start="0" end="100" time="300" delay="1500"/>
+		</animation>
+		<animation type="Hidden">
+			<effect type="fade" start="100" end="0" time="0"/>
+		</animation>
+		<animation type="Unfocus">
+			<effect type="fade" start="100" end="0" time="0"/>
+		</animation>
+		
+		<control type="group">
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>412</width>
+				<height>384</height>
+				<texture>cover/info_float.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+
+			<control type="group">	
+				<posx>0</posx>
+				<posy>20</posy>				
+				<control type="group">
+					<visible>!Container.content(artists) + !Container.content(albums) + !Container.content(songs)</visible>
+					<control type="image">
+						<posx>5</posx>
+						<posy>41</posy>
+						<width>402</width>
+						<height>2</height>
+						<texture>list/info_divider.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="grouplist">
+						<posx>15</posx>
+						<orientation>horizontal</orientation>
+						<itemgap>2</itemgap>
+						<control type="label">
+							<posy>6</posy>
+							<textcolor>ff95c9f7</textcolor>
+							<width min="1" max="400">auto</width>
+							<height>38</height>
+							<font>Info_title</font>
+							<label>Duration:</label>
+							<scroll>false</scroll>
+							<alignx>left</alignx>
+							<aligny>center</aligny>
+						</control>
+						<control type="label">
+							<textcolor>ffffffff</textcolor>
+							<width min="1" max="400">auto</width>
+							<height>40</height>
+							<font>Title2</font>
+							<label>$INFO[ListItem.Duration]</label>
+							<scroll>false</scroll>
+							<alignx>left</alignx>
+						</control>
+					</control>
+					<control type="grouplist">
+						<posx>278</posx>
+						<orientation>horizontal</orientation>
+						<itemgap>2</itemgap>
+
+						<control type="label">
+							<textcolor>ff95c9f7</textcolor>
+							<width min="1" max="400">auto</width>
+							<height>38</height>
+							<font>Info_title</font>
+							<label>Year:</label>
+							<scroll>false</scroll>
+							<alignx>left</alignx>
+							<aligny>center</aligny>
+						</control>
+						<control type="label">
+							<textcolor>ffffffff</textcolor>
+							<width min="1" max="400">auto</width>
+							<height>40</height>
+							<font>Title2</font>
+							<label>$INFO[ListItem.Year]</label>
+							<scroll>false</scroll>
+							<alignx>left</alignx>
+						</control>
+					</control>
+					<control type="group">
+						<visible>Container.Content(movies) | Container.Content(episodes)</visible>
+						<control type="image">
+							<posx>5</posx>
+							<posy>92</posy>
+							<width>402</width>
+							<height>2</height>
+							<texture>cover/info_float_divider.png</texture>
+							<aspectratio>stretch</aspectratio>
+						</control>
+						<control type="grouplist">
+							<orientation>horizontal</orientation>
+							<itemgap>15</itemgap>
+							<posy>47</posy>
+							<posx>15</posx>
+
+							<control type="image">
+								<visible>!IsEmpty(Listitem.Property(mediaTag::videoResolution))</visible>
+								<height>40</height>
+								<width min="1" max="95">auto</width>
+								<info>Listitem.Property(mediaTag::videoResolution)</info>
+								<aspectratio>keep</aspectratio>
+							</control>
+
+							<control type="image">
+								<visible>!IsEmpty(Listitem.Property(mediaTag::videoCodec))</visible>
+								<height>40</height>
+								<width min="1" max="95">auto</width>
+								<info>Listitem.Property(mediaTag::videoCodec)</info>
+								<aspectratio>keep</aspectratio>
+							</control>
+
+							<control type="image">
+								<visible>!IsEmpty(Listitem.Property(mediaTag::audioCodec))</visible>
+								<height>40</height>
+								<width min="1" max="95">auto</width>
+								<info>Listitem.Property(mediaTag::audioCodec)</info>
+								<aspectratio>keep</aspectratio>
+							</control>
+
+				 			<control type="image">
+								<visible>!IsEmpty(Listitem.Property(mediaTag::audioChannels))</visible>
+								<height>40</height>
+								<width min="1" max="95">auto</width>
+								<info>Listitem.Property(mediaTag::audioChannels)</info>
+								<aspectratio>keep</aspectratio>
+							</control>
+						</control>
+						<control type="textbox">
+							<description>Plot</description>
+							<posx>15</posx>
+							<posy>96</posy>
+							<width>382</width>
+							<height>263</height>
+							<font>Title2</font>
+							<textcolor>FFFFFFFF</textcolor>
+							<label>$INFO[listitem.Plot]</label>
+							<autoscroll delay="9000" time="2000" repeat="10000">true</autoscroll>
+						</control>
+					</control>
+				</control>
+
+				<control type="group">
+					<visible>!Container.Content(movies) + !Container.Content(episodes) + !Container.content(artists) + !Container.content(albums) + !Container.content(songs)</visible>
+					<control type="textbox">
+						<description>Plot</description>
+						<posx>15</posx>
+						<posy>49</posy>
+						<width>382</width>
+						<height>310</height>
+						<font>Title2</font>
+						<textcolor>FFFFFFFF</textcolor>
+						<label>$INFO[listitem.Plot]</label>
+						<autoscroll delay="9000" time="2000" repeat="10000">true</autoscroll>
+					</control>
+				</control>
+				
+				<control type="group">
+					<visible>Container.content(artists) | Container.content(albums) | Container.content(songs)</visible>
+					<control type="textbox">
+						<description>Plot</description>
+						<posx>15</posx>
+						<posy>6</posy>
+						<width>382</width>
+						<height>353</height>
+						<font>Title2</font>
+						<textcolor>FFFFFFFF</textcolor>
+						<label>$INFO[listitem.Plot]</label>
+						<autoscroll delay="9000" time="2000" repeat="10000">true</autoscroll>
+					</control>
+				</control>
+
+			</control>
+
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>412</width>
+				<height>384</height>
+				<texture>cover/info_float_shadow.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
+		</control>
+	</include>
 
 	<include name="wall">
 		<control type="group">
 			<include>preferences_animation</include>
 			<visible>Control.IsVisible(55)</visible>
-			<include>info_bar</include>
 			
 			<control type="panel" id="55">
 				<viewtype label="Wall">panel</viewtype>
@@ -1630,13 +1820,13 @@
 				</visible>
 				-->
 				<width>1260</width>
-				<height>591</height>
-				<posy>63</posy>
+				<height>657</height>
+				<posy>55</posy>
 				<posx>10</posx>
 				
 				<ondown>9000</ondown>
 
-				<itemlayout width="210" height="283">
+				<itemlayout width="210" height="270">
 					<control type="image">
 						<posx>19</posx>
 						<posy>29</posy>
@@ -1694,7 +1884,7 @@
 				<viewtype label="Wall">panel</viewtype>
 				<width>1260</width>
 				<height>610</height>
-				<posy>40</posy>
+				<posy>45</posy>
 				<posx>10</posx>
 				
 				
@@ -1751,6 +1941,22 @@
 				</focusedlayout>
 			</control>
 			
+			<include>info_bar</include>
+			<control type="group">
+				<posy>56</posy>
+				<posx>10</posx>
+				<visible>Control.HasFocus(55) + ![Container(55).OnNext | Container(55).OnPrevious]</visible>
+				
+				<animation effect="slide" end="210,0" time="0" condition="Container(55).Column(0)">Conditional</animation>
+				<animation effect="slide" end="420,0" time="0" condition="Container(55).Column(1)">Conditional</animation>
+				<animation effect="slide" end="630,0" time="0" condition="Container(55).Column(2)">Conditional</animation>
+				<animation effect="slide" end="840,0" time="0" condition="Container(55).Column(3)">Conditional</animation>
+				<animation effect="slide" end="428,0" time="0" condition="Container(55).Column(4)">Conditional</animation>
+				<animation effect="slide" end="638,0" time="0" condition="Container(55).Column(5)">Conditional</animation>
+				<animation effect="slide" end="0,206" time="0" condition="Container(55).Row(1)">Conditional</animation>
+				
+				<include>info_float</include>
+			</control>
 			
 		</control>
 	</include>
@@ -1760,8 +1966,7 @@
 			<include>preferences_animation</include>
 			<visible>Control.IsVisible(56)</visible>
 
-			<include>info_bar</include>
-			
+			<include>info_bar</include>			
 
 			<!-- Select List -->
 			<control type="group">
@@ -1808,6 +2013,14 @@
 					</focusedlayout>
 				</control>
 			</control>
+			
+			<control type="group">
+				<posy>154</posy>
+				<posx>841</posx>
+				<visible>Control.HasFocus(56) + ![Container(56).OnNext | Container(56).OnPrevious]</visible>					
+				<include>info_float</include>
+			</control>
+
 		</control>
 	</include>
 
@@ -2189,6 +2402,20 @@
 			
 			
 			<include>info_bar</include>
+			
+			<control type="group">
+				<posy>68</posy>
+				<posx>10</posx>
+				<visible>Control.HasFocus(57) + ![Container(57).OnNext | Container(57).OnPrevious]</visible>
+				
+				<animation effect="slide" end="439,0" time="0" condition="Container(57).Column(0)">Conditional</animation>
+				<animation effect="slide" end="851,0" time="0" condition="Container(57).Column(1)">Conditional</animation>
+				<animation effect="slide" end="409,0" time="0" condition="Container(57).Column(2)">Conditional</animation>
+				
+				<animation effect="slide" end="0,184" time="0" condition="Container(57).Row(1)">Conditional</animation>			
+				<include>info_float</include>
+			</control>
+			
 		</control>
 
 	</include>
