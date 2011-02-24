@@ -1629,7 +1629,7 @@
 		</animation>
 		
 		<control type="group">
-			<visible>!Container.content(albums) + !Container.content(songs)</visible>
+			<visible>!Container.content(albums) + !Container.content(songs) + !Container.content(seasons)</visible>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -2033,7 +2033,7 @@
 			
 			<control type="panel" id="57">
 				<viewtype label="Multiplex">panel</viewtype>
-				<visible>Container.Content(movies) |  Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(Plugins)</visible>
+				<visible>Container.Content(movies) |  Container.Content(tvshows) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(Plugins) | Container.Content(artists)</visible>
 				<width>1280</width>
 				<height>677</height>
 				<posx>0</posx>
