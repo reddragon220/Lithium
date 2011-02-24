@@ -91,6 +91,7 @@
 	    <onright>10</onright>
 	    <onup>11</onup>
 	    <ondown>11</ondown>
+		<onclick>Dialog.Close(2002)</onclick>
 	</control>
   
 	<control type="image">

@@ -400,7 +400,7 @@
 					</item>
 					<item id="7">
 						<description>Plex Online Menu</description>
-						<label>Plex Online</label>
+						<label>Plex Connect</label>
 					    <onclick>Plex.ActivateWindow(1,plex://localhost/system/plexonline,return)</onclick>
 					</item>
 					<item id="8">
@@ -409,6 +409,11 @@
 						<onclick>xbmc.activatewindow(settings)</onclick>
 					</item>
 					<item id="9">
+						<description>Quit</description>
+						<label>Quit</label>
+						<onclick>Plex.ShutDown</onclick>
+					</item>
+					<item id="10">
 						<visible>Skin.HasSetting(developer)</visible>
 						<description>Refresh</description>
 						<label>$LOCALIZE[184]</label>
