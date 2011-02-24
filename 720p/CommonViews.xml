@@ -1304,7 +1304,7 @@
 		</control>
 		<control type="fixedlist" id="54">
 			<ondown>9000</ondown>
-			<visible>!Container.Content(Secondary) + !Container.Content(episodes) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs)</visible>
+			<visible>!Container.Content(Secondary) + !Container.Content(episodes) + !Container.Content(artists) + !Container.Content(albums) + !Container.Content(songs) + !Container.Content(plugins)</visible>
 			<posx>-151</posx>
 			<posy>420</posy>
 			<width>1431</width>
@@ -1439,7 +1439,7 @@
 		</control>
 		<control type="fixedlist" id="54">
 			<ondown>9000</ondown>
-			<visible>!Container.Content(Secondary) + [Container.Content(artists) | Container.Content(albums) | Container.Content(songs)]</visible>
+			<visible>!Container.Content(Secondary) + [Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.content(plugins)]</visible>
 			<posx>-189</posx>
 			<posy>420</posy>
 			<width>1469</width>
@@ -1629,6 +1629,7 @@
 		</animation>
 		
 		<control type="group">
+			<visible>!Container.content(albums) + !Container.content(songs)</visible>
 			<control type="image">
 				<posx>0</posx>
 				<posy>0</posy>
