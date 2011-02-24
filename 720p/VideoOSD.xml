@@ -203,7 +203,7 @@
 
 			<visible>!Player.Playing</visible>
 			<control type="label">
-				<visible>Player.Paused</visible>
+				<visible>Player.Paused + !Player.Caching</visible>
 				<width>1280</width>
 				<height>720</height>
 				<align>center</align>
