@@ -133,6 +133,12 @@
 			<size>38</size>
 		</font>
 		
+		<font>
+			<name>OSDSettings</name>
+			<filename>HelveticaNeue</filename>
+			<variant>Condensed Bold</variant>
+			<size>34</size>
+		</font>
 		
 		
 		<!-- Empty -->

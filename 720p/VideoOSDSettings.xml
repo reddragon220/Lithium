@@ -1,61 +1,119 @@
 <window id="123">
-<defaultcontrol always="true">5</defaultcontrol>
-<allowoverlay>yes</allowoverlay>
-  
-<coordinates>
-  <system>1</system>
-  <posx>100</posx>
-  <posy>80</posy>
-</coordinates>
-  
-<controls>
-    
-<include>DialogBack</include>
+	<defaultcontrol always="true">5</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<animation type="WindowOpen" reversible="false">
+		<effect type="zoom" start="80" end="100" center="640,360" delay="200" easing="out" tween="back" time="300" />
+		<effect type="fade" delay="200" start="0" end="100" time="300" />
+	</animation>
+	<animation type="WindowClose" reversible="false">
+		<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
+		<effect type="fade" start="100" end="0" time="300" />
+	</animation>
+	
+	<controls>
+		<control type="group">
+			<posx>221</posx>
+			<posy>66</posy>
+			<control type="image">
+				<width>848</width>
+				<height>506</height>
+				<texture>osd/settings/dialog_bg.png</texture>
+			</control>
+			<control type="grouplist" id="5">
+				<description>Control Area</description>
+				<posx>5</posx>
+				<posy>18</posy>
+				<width>838</width>
+				<height>488</height>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+				<pagecontrol>60</pagecontrol>
+				<onleft>28</onleft>
+				<onright>28</onright>
+				<onup>28</onup>
+				<ondown>28</ondown>
+			</control>
+			<control type="button" id="7">
+				<width>838</width>
+				<height>47</height>
+			
+				<textcolor>7fffffff</textcolor>
+				<focusedcolor>ffe8e8db</focusedcolor>
+				<disabledcolor>7f7c7c72</disabledcolor>
+				<shadowcolor>7f000000</shadowcolor>
+				<font>OSDSettings</font>
+		    	<textoffsetx>20</textoffsetx>
+			
+				<texturefocus>osd/settings/dialog_highlight_focused.png</texturefocus>
+				<texturenofocus>osd/settings/dialog_highlight_unfocused.png</texturenofocus>
+			</control>
+			<control type="radiobutton" id="8">
+				<width>838</width>
+				<height>47</height>
 
-  <control type="label">
-	  <include>DialogID</include>
-	  <label>VideoOSDSettings.xml</label>
-  </control>
-  
-	<control type="label" id="2">
-		<description>Settings</description>
-		<posx>10</posx>
-		<posy>40</posy>
-		<width>500</width>
-		<align>left</align>
-	</control>
-  
-  <control type="grouplist" id="5">
-    <description>Control Area</description>
-    <posx>10</posx>
-    <posy>72</posy>
-    <width>500</width>
-    <height>350</height>
-    <itemgap>2</itemgap>
-    <orientation>vertical</orientation>
-    <pagecontrol>60</pagecontrol>
-    <onleft>28</onleft>
-    <onright>28</onright>
-    <onup>28</onup>
-    <ondown>28</ondown>
-  </control>
-  <control type="button" id="7">
-    <texturefocus border="1">ButtonFo.png</texturefocus>
-    <texturenofocus border="1">ButtonNF.png</texturenofocus>
-  </control>
-  <control type="radiobutton" id="8">
-    <texturefocus border="1">ButtonFo.png</texturefocus>
-    <texturenofocus border="1">ButtonNF.png</texturenofocus>
-  </control>
-  <control type="spincontrolex" id="9">
-    <texturefocus border="1">ButtonFo.png</texturefocus>
-    <texturenofocus border="1">ButtonNF.png</texturenofocus>
-  </control>
-	<control type="sliderex" id="10">
-    <texturefocus border="1">ButtonFo.png</texturefocus>
-    <texturenofocus border="1">ButtonNF.png</texturenofocus>
-	</control>
-  
-</controls>
+		    	<textcolor>7fffffff</textcolor>
+				<focusedcolor>ffe8e8db</focusedcolor>
+				<disabledcolor>7f7c7c72</disabledcolor>
+				<shadowcolor>7f000000</shadowcolor>
+				<font>OSDSettings</font>
+		    	<textoffsetx>20</textoffsetx>
+				<align>left</align>
+			
+				<texturefocus>osd/settings/dialog_highlight_focused.png</texturefocus>
+				<texturenofocus>osd/settings/dialog_highlight_unfocused.png</texturenofocus>
+			
+				<radioposx>753</radioposx>
+				<radiowidth>65</radiowidth>
+				<radioheight>37</radioheight>
+				<textureradiofocus>settings/on.png</textureradiofocus>
+				<textureradionofocus>settings/off.png</textureradionofocus>
+			</control>
+			<control type="spincontrolex" id="9">
+				<description>Default Spin Control</description>
+				<width>838</width>
+				<height>47</height>
+			
+		    	<textcolor>7fffffff</textcolor>
+				<focusedcolor>ffe8e8db</focusedcolor>
+				<disabledcolor>7f7c7c72</disabledcolor>
+				<shadowcolor>7f000000</shadowcolor>
+				<font>OSDSettings</font>
+		    	<textoffsetx>20</textoffsetx>
 
+				<texturefocus>osd/settings/dialog_highlight_focused.png</texturefocus>
+				<texturenofocus>osd/settings/dialog_highlight_unfocused.png</texturenofocus>
+
+
+				<spinposx>0</spinposx>
+				<spinwidth>65</spinwidth>
+				<spinheight>37</spinheight>
+				<textureup>settings/spin_up_unfocus.png</textureup>
+				<textureupfocus>settings/spin_up_focus.png</textureupfocus>
+				<texturedown>settings/spin_down_unfocus.png</texturedown>
+				<texturedownfocus>settings/spin_down_focus.png</texturedownfocus>
+			</control>
+			<control type="sliderex" id="10">
+				<width>838</width>
+				<height>47</height>
+			
+		    	<textcolor>7fffffff</textcolor>
+				<focusedcolor>ffe8e8db</focusedcolor>
+				<disabledcolor>7f7c7c72</disabledcolor>
+				<shadowcolor>7f000000</shadowcolor>
+				<font>OSDSettings</font>
+		    	<textoffsetx>20</textoffsetx>
+
+				<texturefocus>osd/settings/dialog_highlight_focused.png</texturefocus>
+				<texturenofocus>osd/settings/dialog_highlight_unfocused.png</texturenofocus>
+			
+			
+				<sliderwidth>129</sliderwidth>
+			    <sliderheight>28</sliderheight>
+				<texturesliderbar>settings/slide_bar.png</texturesliderbar>
+				<textureslidernib>settings/slide_nib_unfocus.png</textureslidernib>
+				<textureslidernibfocus>settings/slide_nib_focus.png</textureslidernibfocus>
+			
+			</control>
+		</control>
+	</controls>
 </window>
